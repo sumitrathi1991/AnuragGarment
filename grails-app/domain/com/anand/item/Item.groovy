@@ -3,8 +3,6 @@ package com.anand.item
 class Item {
 	String itemName
 	String itemCode
-	String itemSize
-	String itemColor
 	String itemDescription
 	String itemBrand
 	String itemType
@@ -15,9 +13,9 @@ class Item {
 	int qtyPending
 	boolean isItemDiscountable
 	
+	static hasMany = [itemSize : ItemSize]
+	
 	static constraints = {
-		itemSize nullable:true
-		itemColor nullable:true
 		itemDescription nullable:true
 	}
 	

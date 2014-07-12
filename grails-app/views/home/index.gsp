@@ -24,8 +24,8 @@
         <link rel="stylesheet" type="text/css" href="/css/global_red.css">    
         
         <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery.easing.js"></script>
+		<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.easing.js"></script>
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
 		<!--[if IE 8]>
