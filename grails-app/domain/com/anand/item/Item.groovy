@@ -19,6 +19,11 @@ class Item {
 		itemDescription nullable:true
 	}
 	
+	static mapping = {
+		itemSize cascade :'all'
+		version false
+	}
+	
 	float getSalePrice(){
 		float salePrice = 0.00
 		if(isItemDiscountable)

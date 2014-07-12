@@ -1,5 +1,7 @@
 package com.anand.image
 
+import com.anand.item.ItemColor
+
 class Image {
 
 	String name
@@ -11,6 +13,8 @@ class Image {
 	static mapping ={
 		version false
 	}
+	
+	static belongsTo = [itemColor : ItemColor]
 	
     static constraints = {
     }

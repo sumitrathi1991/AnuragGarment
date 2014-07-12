@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="/css/blockpermanentlinks.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/custommenu.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/nivo-slider.css" type="text/css" media="all">
-        <link rel="stylesheet" type="text/css" href="/css/global_red.css">    
+        <link rel="stylesheet" href="/css/global_red.css" type="text/css">    
         
         <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
