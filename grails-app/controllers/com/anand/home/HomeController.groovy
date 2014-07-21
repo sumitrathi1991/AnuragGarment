@@ -1,6 +1,11 @@
 package com.anand.home
 
+import com.anand.item.Item
+
 class HomeController {
 
-    def index() { }
+    def index() {
+		List itemList = Item.list()
+		[itemList : itemList]
+	}
 }

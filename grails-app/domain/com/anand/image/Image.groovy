@@ -14,8 +14,6 @@ class Image {
 		version false
 	}
 	
-	static belongsTo = [itemColor : ItemColor]
-	
     static constraints = {
     }
 }

@@ -144,12 +144,13 @@
 				<div class="tab-content">
 					<!-- Products list -->
 					<ul id="blocknewproducts" class="product_list grid row blocknewproducts tab-pane active">
+						<g:each var="item" in="${itemList}">
 						<li class="ajax_block_product  col-sm-4 col-md-3">
 							<div class="product-container" itemscope="" itemtype="">
                                 <div class="left-block">
                                     <div class="product-image-container">
                                         <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product2.jpg" alt="Red Belly" title="Red Belly" width="270" height="270" itemprop="image">
+                                            <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemSize[0].itemColor[0].image[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                         </a>
                                        <a class="quick-view" href="" rel=""><span>Quick view</span></a>
 										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
@@ -166,13 +167,13 @@
                                         </div>
 									</div>
                                         <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >Red Belly</a>
+                                            <a class="product-name" href="#" title="${item.itemName}" >${item.itemName}</a>
                                         </h5>
                                           <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
+                                          ${item.itemDescription}
                                           </p>
                                             <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
+                                                <span itemprop="price" class="price product-price">&#8377;${item.itemPrice}</span>
                                             </div>
                                             <div class="button-container">
                                                 <div class="actions">                                  				 											
@@ -189,323 +190,8 @@
 								</div>
                            	 	<!-- .product-container> -->
 							</li>
-                        <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product3.jpg" alt="Blue Belly" title="Blue Belly" width="270" height="270" itemprop="image">
-                                        </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note" itemprop="aggregateRating">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >Blue Belly</a>
-                                        </h5>
-                                          <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-                        <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product4.jpg" alt="Black Belly" title="Black Belly" width="270" height="270" itemprop="image">
-                                        </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note" itemprop="aggregateRating">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >Black Belly</a>
-                                        </h5>
-                                          <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-                        <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product5.jpg" alt="Black Belly" title="Black Belly" width="270" height="270" itemprop="image">
-                                        </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note" itemprop="aggregateRating">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >Brown Belly</a>
-                                        </h5>
-                                          <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-                         
-                        <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product6.jpg" alt="White Sport Shoes" title="White Sport Shoes" width="270" height="270" itemprop="image">
-                                        </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note" itemprop="aggregateRating">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >White Sport Shoes</a>
-                                        </h5>
-                                          <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-                        <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product7.jpg" alt="Blue Sport Shoes" title="Blue Sport Shoes" width="270" height="270" itemprop="image">
-                                        </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note" itemprop="aggregateRating">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >Blue Sport Shoes</a>
-                                        </h5>
-                                          <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-                        <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product8.jpg" alt="Dark Brown Shoes" title="Dark Brown Shoes" width="270" height="270" itemprop="image">
-                                        </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note" itemprop="aggregateRating">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >Dark Brown Shoes</a>
-                                        </h5>
-                                          <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-                        <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="/images/product/product9.jpg" alt="Light Grey Sport Shoes" title="Light Grey Sport Shoes" width="270" height="270" itemprop="image">
-                                        </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note" itemprop="aggregateRating">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="Sed posuere" >Light Grey Sport Shoes</a>
-                                        </h5>
-                                          <p class="product-desc" itemprop="description">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span itemprop="price" class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-				</ul>
+							</g:each>
+                    </ul>
 	
                 <!-- Products list -->
                 <ul id="blockbestsellers" class="product_list grid row blockbestsellers tab-pane">
