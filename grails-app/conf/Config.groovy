@@ -86,6 +86,7 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+		grails.serverURL = "http://localhost:8080/"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -119,3 +120,15 @@ log4j = {
 		   'grails.app.tests',
 		   'com.anand.item'
 }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.anand.auth.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.anand.auth.UserRole'
+grails.plugin.springsecurity.authority.className = 'com.anand.auth.Role'
+grails.plugin.springsecurity.logout.afterLogoutUrl = '/admin'
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/home'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/**/**/**': ['permitAll']
+]
+

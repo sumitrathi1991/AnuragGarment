@@ -34,7 +34,7 @@ grails.project.dependency.resolution = {
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
-
+		mavenRepo "http://repo.spring.io/milestone/"
         grailsPlugins()
         grailsHome()
         mavenLocal()
@@ -66,6 +66,7 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.11.0"
         runtime ":resources:1.2.1"
 		compile ":asset-pipeline:1.7.2"
+		compile ":spring-security-core:2.0-RC2"
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
