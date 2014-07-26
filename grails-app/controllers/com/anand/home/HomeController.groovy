@@ -8,4 +8,7 @@ class HomeController {
 		List itemList = Item.list()
 		[itemList : itemList]
 	}
+	def loginView(){
+		render template:"/home/loginView"
+	}
 }
