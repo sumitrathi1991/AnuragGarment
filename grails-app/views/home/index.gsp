@@ -19,9 +19,11 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 	
-
-		
-	<div class="pos-slideshow-container">
+		<div id="loginViewID">
+			<g:render template="/home/loginView" />
+		</div>
+	<div id="homeViewId">
+	<div class="pos-slideshow-container" >
         <div class="flexslider ma-nivoslider">
             <div class="pos-loading"></div>
                 <div id="pos-slideshow-home" class="slides">
@@ -29,19 +31,16 @@
                       <img style ="display:none" src="/images/banner/03.jpg" data-thumb="/images/banner/03.jpg" alt="" title="">
                       <img style ="display:none" src="/images/banner/01.jpg" data-thumb="/images/banner/01.jpg" alt="" title="">
              	</div>
-        </div>
-    </div>
-
- 
-
-	<div class="columns-container">
-		<div id="columns" class="container">
-			<div class="row">
-				<div id="center_column" class="center_column  col-sm-12">
-	            <ul id="home-page-tabs" class="nav nav-tabs clearfix">
-					<li class="active"><a data-toggle="tab" href="#" class="blocknewproducts">New products</a></li>
-					<li><a data-toggle="tab" href="" class="blockbestsellers">Best Sellers</a></li>
-				</ul>
+        	</div>
+    	</div>
+		<div class="columns-container">
+			<div id="columns" class="container">
+				<div class="row">
+					<div id="center_column" class="center_column  col-sm-12">
+		           		<ul id="home-page-tabs" class="nav nav-tabs clearfix">
+							<li class="active"><a data-toggle="tab" href="#" class="blocknewproducts">New products</a></li>
+							<li><a data-toggle="tab" href="" class="blockbestsellers">Best Sellers</a></li>
+						</ul>
 				<div class="tab-content">
 					<!-- Products list -->
 					<ul id="blocknewproducts" class="product_list grid row blocknewproducts tab-pane active">
@@ -501,7 +500,7 @@
 			</div>
 		</div>
 	</div>
-				  	  
+	</div>			  	  
 			 
   
 <!-- #page -->
@@ -522,6 +521,7 @@ var CUSTOMMENU_POPUP_EFFECT = 0;
 var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
 //]]>
 $(window).load(function() {
+	$("#loginViewID").hide();
         $('#pos-slideshow-home').nivoSlider({
 			effect: 'random',
 			slices: 15,
@@ -573,6 +573,15 @@ $('.pos-logo .bxslider').bxSlider({
             pager: false,
 		});
 		$.scrollTo( '#options-examples', 800, {easing:'elasout'} );
+
+function loginView(){
+	$("#loginViewID").show();
+	$("#homeViewId").hide();
+}
+function homeView(){
+	$("#loginViewID").hide();
+	$("#homeViewId").show();
+}
 </script>
 </body>
 </html>

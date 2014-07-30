@@ -47,6 +47,7 @@
 	<g:render template="/layouts/header" />
 		<g:layoutBody/>
 		<g:render template="/layouts/footer" />
+		
 		<r:layoutResources />
 	</body>
 </html>

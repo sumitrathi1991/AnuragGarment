@@ -54,8 +54,8 @@
        <div class="container">
             <div id="pt_custommenu" class="pt_custommenu clearfix">
                 <div id="pt_menu_home" class="pt_menu act">
-                	<div class="parentMenu">
-                    	<a href="index.htm"><span>Home</span></a>
+                	<div class="parentMenu" onClick="homeView()">
+                    	<a ><span>Home</span></a>
                     </div>
                 </div>
                 <div id="pt_menu3" class="pt_menu nav-1">
