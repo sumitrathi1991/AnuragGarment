@@ -1,26 +1,31 @@
 package com.anand.item
 
+import com.anand.image.Image
+
 class Item {
 	String itemName
 	String itemCode
 	String itemDescription
 	String itemBrand
 	String itemType
+	String itemSize
+	String itemColor
 	float itemPrice
 	float discountRate
 	int quantity
 	int qtyOrdered
 	int qtyPending
+	int rating
 	boolean isItemDiscountable
+	boolean isNew
 	
-	static hasMany = [itemSize : ItemSize]
+	static hasMany = [images : Image]
 	
 	static constraints = {
 		itemDescription nullable:true
 	}
 	
 	static mapping = {
-		itemSize cascade :'all'
 		version false
 	}
 	

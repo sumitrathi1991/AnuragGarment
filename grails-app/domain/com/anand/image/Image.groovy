@@ -1,6 +1,5 @@
 package com.anand.image
 
-import com.anand.item.ItemColor
 
 class Image {
 

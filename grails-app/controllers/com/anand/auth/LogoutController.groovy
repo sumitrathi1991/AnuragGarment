@@ -16,9 +16,7 @@ package com.anand.auth
 
 import javax.servlet.http.HttpServletResponse
 
-import org.springframework.security.access.annotation.Secured
-
-@Secured('permitAll')
+//@Secured('permitAll')
 class LogoutController {
 
 	/**

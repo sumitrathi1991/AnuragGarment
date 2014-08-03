@@ -50,9 +50,9 @@
                                 <div class="left-block">
                                     <div class="product-image-container">
                                         <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
-                                            <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemSize[0].itemColor[0].image[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
+                                            <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                         </a>
-                                       <a class="quick-view" href="" rel=""><span>Quick view</span></a>
+                                       <g:link class="quick-view" action="productView" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
 										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
                                 </div>
 								

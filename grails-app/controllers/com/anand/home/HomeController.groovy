@@ -8,7 +8,12 @@ class HomeController {
 		List itemList = Item.list()
 		[itemList : itemList]
 	}
+	
 	def _loginView(){
 		render template:"/home/loginView.gsp"
+	}
+	
+	def productView(){
+		log.debug"in productView = "+params.productId
 	}
 }
