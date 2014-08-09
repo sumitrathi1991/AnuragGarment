@@ -191,7 +191,7 @@
                                             		<h3>
                                                     <a class="product-name" href="#" title="Printed Chiffon Dress">Puma Sport Shoes</a>		 													</h3>
 													<div class="content_price">
-                                                    	<span class="special-price">$160.40</span> 						    													 														<span class="old-price">$200.50</span>
+                                                    	<span class="special-price">&#8377;${item.itemPrice}</span> 						    													 														<span class="old-price">$200.50</span>
                                            			 </div>
                                                	</div>
                             				</li>
@@ -293,7 +293,7 @@
 			<h1 itemprop="name">Puma Sport Shoes</h1>
                 <div class="price">
                     <p class="our_price_display" >
-						 <span id="our_price_display" itemprop="price">$160.40</span>
+						 <span id="our_price_display" itemprop="price">&#8377;${item.itemPrice}</span>
                      </p>             
 					<p id="old_price">
 						<span id="old_price_display"></span>
@@ -332,8 +332,8 @@
                     <span class="editable" itemprop="sku">demo_2</span>
 				</p>
 				<p id="product_condition">
-                    <label>Condition </label>
-                    <span class="editable" itemprop="condition">New</span>
+                    <label>Quantity </label>
+                    <input type="text" id="quantity"/>
 				</p>
                   <div id="short_description_block">
                       <div id="short_description_content" class="rte align_justify" itemprop="description"><p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p></div>
@@ -353,8 +353,8 @@
 					<span id="availability_value">In stock</span>				
 				</p>
 				
-				<button id="addToCart">Add To Cart</button>
-				
+				<button id="addToCart" itemId="${productId}">Add To Cart</button>
+				<div id="errorMessage" style="display: none;"></div>
 				<p class="warning_inline" id="last_quantities" style="display: none">Warning: Last items in stock!</p>
 				<p id="availability_date" style="display: none;">
 				<span id="availability_date_label">Availability date:</span>
@@ -969,6 +969,31 @@ $('.pos-logo .bxslider').bxSlider({
 			controls: 1,
             pager: false,
 		});
+		
+$('#addToCart').on('click', function(){
+var itemId = $(this).attr('itemId');
+var quantity = $('#quantity').val()
+var price = $('#our_price_display').text().slice(1)
+var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
+			jQuery.ajax({
+				type : 'POST',
+				url : addToCartUrl,
+				async : false,
+				data : 'quantity='+quantity+'&item='+itemId+'&price='+price,
+				success : function(data, textStatus) {
+					if(data.result == false){
+						$('#errorMessage').html(data.message);
+						$('#errorMessage').show().delay(2000).fadeOut();
+						}
+					else{
+						$('#usercart').show();
+				}
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown) {
+				}
+			});
+
+})		
 </script>
 </body>
 </html>

@@ -14,7 +14,6 @@ class Item {
 	float discountRate
 	int quantity
 	int qtyOrdered
-	int qtyPending
 	int rating
 	boolean isItemDiscountable
 	boolean isNew
@@ -39,7 +38,7 @@ class Item {
 	}
 	
 	int getAvailableQuantity(){
-		return (this.quantity - (this.qtyOrdered + this.qtyPending))
+		return (this.quantity - this.qtyOrdered)
 	}
 
    

@@ -15,5 +15,8 @@ class HomeController {
 	
 	def productView(){
 		log.debug"in productView = "+params.productId
+		Item item =Item.get(params.productId)
+		log.debug"item :"+item
+		[productId:params.productId,item : item]
 	}
 }

@@ -10,7 +10,6 @@ class CartLine {
 	BigDecimal salePrice
 	
     static constraints = {
-		item unique:true
 		item nullable : true
 		salePrice nullable : true
 		price nullable : true
