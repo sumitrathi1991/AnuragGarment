@@ -14,16 +14,53 @@
 					<!---->
 					<div class="row">
 						<div class="col-xs-12 col-sm-6">
-							<form action="" method="" id="create-account_form" class="box">
+							<form id="createAccountForm" name="createAccountForm" onsubmit="return false" class="box">
 								<h3 class="page-subheading">Create an account</h3>
                                 <div class="form_content clearfix">
-                                    <p>Please enter your email address to create an account.</p>
+                                    <p>Please enter your your information to create an account.</p>
+                                    <div class="form-group">
+                                        <label for="email_create">First Name</label>
+                                        <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                   <div class="form-group">
+                                        <label for="email_create">Last Name</label>
+                                        <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
                                     <div class="form-group">
                                         <label for="email_create">Email address</label>
                                         <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
                                     </div>
-                                    <div class="submit">				
-                                        <button class="btn btn-default button button-medium exclusive" type="button" id="SubmitBtn" name="SubmitCreate">
+                                   <div class="form-group">
+                                        <label for="email_create">Address</label>
+                                        <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_create">City</label>
+                                        <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_create">State</label>
+                                        <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_create">Zip code</label>
+                                        <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_create">Contact</label>
+                                        <input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_create">Password</label>
+                                        <input type="password" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_create">Re password</label>
+                                        <input type="password" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="">
+                                    </div>
+                                   
+                                    <div class="submit">	
+                                    	<button class="btn btn-default button button-medium exclusive" type="button" id="SubmitBtn" name="SubmitCreate" onClick="registerValidation()">
                                             <span>
                                                 <i class="fa fa-user fa-lg"></i>
                                                 Create an account

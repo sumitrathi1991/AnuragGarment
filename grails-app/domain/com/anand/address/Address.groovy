@@ -14,5 +14,5 @@ class Address {
 	
 	static constraints = {
 	}
-	    
+	
 }

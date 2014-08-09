@@ -1,4 +1,5 @@
 package com.anand.auth
+import com.anand.address.Address
 
 class User {
 
@@ -6,6 +7,7 @@ class User {
 
 	String username
 	String password
+	
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
@@ -17,7 +19,7 @@ class User {
 		username blank: false, unique: true
 		password blank: false
 	}
-
+	static hasMany = [address : Address]
 	static mapping = {
 		password column: '`password`'
 	}
