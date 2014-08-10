@@ -79,11 +79,11 @@
                                                 <div class="actions">                                  				 											
                                                     <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
                                                     <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
+                                                        <g:link class="addToWishlist wishlistProd_13" action="productView" controller="home" params="[productId : "${item.id}"]">
+                                                            View Details
+                                                        </g:link>
                                                     </div>
-                                                     <a itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
+                                                     <g:link action="showMoreItems" controller="home" params="[itemBrand:"${item.itemBrand}"]" itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></g:link>
                                                 </div>
                                             </div>
 									</div>                    

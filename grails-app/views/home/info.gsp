@@ -16,30 +16,30 @@
             <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
             <meta name="apple-mobile-web-app-capable" content="yes"> 
 			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-            <link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/highdpi.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/product_list.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blockcart.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blockcurrencies.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blocklanguages.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/jquery.ui.core.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/jquery.ui.slider.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/jquery.ui.theme.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blocklayered.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/jquery.autocomplete.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blocksearch.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blockuserinfo.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blockwishlist.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/productcomments.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blockpermanentlinks.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/ph_simpleblog.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/pos.cltool.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/custommenu.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="all">
-			<link rel="stylesheet" href="css/blockcategories.css" type="text/css" media="all">
-			<link rel="stylesheet" type="text/css" href="css/global_red.css">                
-        	<link rel="stylesheet" type="text/css" href="null"><style type="text/css">.fancybox-margin{margin-right:17px;}</style>
+            <link rel="stylesheet" href="/css/font-awesome.min.css">
+			<link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/product_list.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blockcart.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blockcurrencies.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blocklanguages.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/jquery.ui.core.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/jquery.ui.slider.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/jquery.ui.theme.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blocklayered.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/jquery.autocomplete.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blocksearch.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blockuserinfo.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blockwishlist.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/productcomments.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blockpermanentlinks.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/ph_simpleblog.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/pos.cltool.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/custommenu.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/nivo-slider.css" type="text/css" media="all">
+			<link rel="stylesheet" href="/css/blockcategories.css" type="text/css" media="all">
+			<link rel="stylesheet" type="text/css" href="/css/global_red.css">                
+        	<%--<link rel="stylesheet" type="text/css" href="null"><style type="text/css">.fancybox-margin{margin-right:17px;}</style>--%>
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
 		<!--[if IE 8]>
@@ -55,7 +55,7 @@
 					 <div class="row">
                      <div id="header_logo">
                             <a href="index.htm" title="ANAND TRADING">
-                                <img class="logo img-responsive" src="images/logo.png" alt="ANAND TRADING" width="304" height="41">
+                                <img class="logo img-responsive" src="/images/logo.png" alt="ANAND TRADING" width="304" height="41">
                             </a>
 						</div>
                             <!-- Block permanent links module HEADER -->
@@ -184,38 +184,13 @@
 						            <div class="layered_subtitle_heading">
                            				 <span class="layered_subtitle">Brand</span>
 									</div>
-                                        <ul id="ul_layered_category_0" class="col-lg-12 layered_filter_ul">																																						 											<li class="nomargin hiddable col-lg-6">
-                                                <div class="checker" id="uniform-layered_category_4">
-                                                    <span>
-                                                        <input type="checkbox" class="checkbox" name="layered_category_4" id="layered_category_4" value="4">
-                                                    </span>
-                                                </div> 
-                                                    <label for="layered_category_4"><a href="#">Adidas</a></label>
-                                            </li>
-                                                                                                                                                                                           <li class="nomargin hiddable col-lg-6">
-                                                <div class="checker" id="uniform-layered_category_8">
-                                                    <span><input type="checkbox" class="checkbox" name="layered_category_8" id="layered_category_8" value="8"></span>
-                                                </div> 
-                                                    <label for="layered_category_8"><a href="#" rel="nofollow">Nike</a></label>
-                                            </li>
-                                            <li class="nomargin hiddable col-lg-6">
-                                                <div class="checker" id="uniform-layered_category_8">
-                                                    <span><input type="checkbox" class="checkbox" name="layered_category_8" id="layered_category_8" value="8"></span>
-                                                </div> 
-                                                    <label for="layered_category_8"><a href="#" rel="nofollow">Puma</a></label>
-                                            </li>
-                                            <li class="nomargin hiddable col-lg-6">
-                                                <div class="checker" id="uniform-layered_category_8">
-                                                    <span><input type="checkbox" class="checkbox" name="layered_category_8" id="layered_category_8" value="8"></span>
-                                                </div> 
-                                                    <label for="layered_category_8"><a href="#" rel="nofollow">Zumba</a></label>
-                                            </li>
-                                            <li class="nomargin hiddable col-lg-6">
-                                                <div class="checker" id="uniform-layered_category_8">
-                                                    <span><input type="checkbox" class="checkbox" name="layered_category_8" id="layered_category_8" value="8"></span>
-                                                </div> 
-                                                    <label for="layered_category_8"><a href="#" rel="nofollow">Bloch</a></label>
-                                            </li>
+                                        <ul id="ul_layered_category_0" class="col-lg-12 layered_filter_ul brands">																																						 											<li class="nomargin hiddable col-lg-6">
+                                          <g:each in="${brandList}" var="brand">
+                                           <li>
+                                                <input type="checkbox" class="checkbox" name="layered_category_8" id="" value="${brand}">
+                                                <label for="layered_category_8"><a href="#" rel="nofollow">${brand}</a></label>
+                                           </li>
+                                          </g:each>
                                         </ul>
 								</div>
                                 <div class="layered_filter clearfix">
@@ -224,9 +199,9 @@
 									</div>
 										<ul id="ul_layered_id_feature_5" class="col-lg-12 layered_filter_ul">																																 											<li class="nomargin hiddable col-lg-6">
 												<div class="checker" id="uniform-layered_id_feature_5">
-                                                	<span><input type="checkbox" class="checkbox" name="layered_id_feature_5" id="layered_id_feature_5" value="5_5"></span>
+                                                	<span><input type="checkbox" class="checkbox" name="layered_id_feature_5" id="layered_id_feature_5" value=""></span>
                                                 </div> 
-                                                	<label for="layered_id_feature_5"><a href="#">$50.00 and Under<span> (3)</span></a></label>
+                                                	<label for="layered_id_feature_5"><a href="#">&#8377;500.00 and Under<span></span></a></label>
 											</li>
 																																							 											<li class="nomargin hiddable col-lg-6">
 												<div class="checker" id="uniform-layered_id_feature_1">
@@ -234,112 +209,59 @@
                                                     	<input type="checkbox" class="checkbox" name="layered_id_feature_1" id="layered_id_feature_1" value="1_5">
                                                      </span>
                                                 </div> 
-													<label for="layered_id_feature_1"><a href="#">$100.00 and Under</a></label>
+													<label for="layered_id_feature_1"><a href="#">&#8377;800.00 and Under</a></label>
 											</li>
 																																									 											<li class="nomargin hiddable col-lg-6">
 												<div class="checker" id="uniform-layered_id_feature_3">
                                                 	<span><input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5"></span>
                                                     </div> 
-													<label for="layered_id_feature_3"><a href="#">$200.00 and Under</a></label>
+													<label for="layered_id_feature_3"><a href="#">&#8377;1000.00 and Under</a></label>
 											</li>
                                             <li class="nomargin hiddable col-lg-6">
 												<div class="checker" id="uniform-layered_id_feature_3">
                                                 	<span><input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5"></span>
                                                     </div> 
-													<label for="layered_id_feature_3"><a href="#">$300.00 and Under</a></label>
+													<label for="layered_id_feature_3"><a href="#">&#8377;1500.00 and Under</a></label>
 											</li>
                                             <li class="nomargin hiddable col-lg-6">
 												<div class="checker" id="uniform-layered_id_feature_3">
                                                 	<span><input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5"></span>
                                                     </div> 
-													<label for="layered_id_feature_3"><a href="#">$400.00 and Under</a></label>
+													<label for="layered_id_feature_3"><a href="#">&#8377;2000.00 and Under</a></label>
 											</li>
 																																															  										</ul>
 							</div>
-                            	<div class="layered_filter clearfix">
-									<div class="layered_subtitle_heading">
-                            			<span class="layered_subtitle">Styles</span>
-									</div>
-									<ul id="ul_layered_id_feature_6" class="col-lg-12 layered_filter_ul">																																	 										<li class="nomargin hiddable col-lg-6">
-											<div class="checker" id="uniform-layered_id_feature_11">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_11" id="layered_id_feature_11" value="11_6"></span>
-                                            </div> 
-												<label for="layered_id_feature_11"><a href="#">Casual</a></label>
-										</li>
-																																												 										<li class="nomargin hiddable col-lg-6">
-											<div class="checker" id="uniform-layered_id_feature_16">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_16" id="layered_id_feature_16" value="16_6"></span>
-                                            </div> 	
-                                            <label for="layered_id_feature_16"><a href="#">Dressy</a></label>
-										</li>
-																																									 										<li class="nomargin hiddable col-lg-6">			
-                                                                                                                                                                                                   <div class="checker" id="uniform-layered_id_feature_13">
-                                                                                                                                                                                                    <span> <input type="checkbox" class="checkbox" name="layered_id_feature_13" id="layered_id_feature_13" value="13_6"></span>
-                                                                                                                                                                                                    </div> 
-                                           <label for="layered_id_feature_13"><a href="#">Girly</a></label>
-										</li>
-																																															  									</ul>
-								</div>
                                 <div class="layered_filter clearfix">
                                     <div class="layered_subtitle_heading">
                                         <span class="layered_subtitle">Color</span>
                                     </div>
 										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul">
-																																															 										<li class="nomargin hiddable col-lg-6">
+										<g:each in="${colorList}" var="color">
+										<li>
 											<div class="checker" id="uniform-layered_id_feature_18">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_18" id="layered_id_feature_18" value="18_7"></span>
+                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_18" id="layered_id_feature_18" value="${color}"></span>
                                             </div> 
-												<label for="layered_id_feature_18"><a href="#">Red</a></label>
+												<label for="layered_id_feature_18"><a href="#">${color}</a></label>
 										</li>
-																															 													 										<li class="nomargin hiddable col-lg-6">
-											<div class="checker" id="uniform-layered_id_feature_21">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_21" id="layered_id_feature_21" value="21_7"></span>
-                                            </div> 
-												<label for="layered_id_feature_21"><a href="#">Green</a></label>
-										</li>
-																																								 										<li class="nomargin hiddable col-lg-6">
- 											<div class="checker" id="uniform-layered_id_feature_20">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_20" id="layered_id_feature_20" value="20_7"></span>
-                                             </div> 
-											 <label for="layered_id_feature_20"><a href="#">Black</a></label>
-										</li>
-																																									 										<li class="nomargin hiddable col-lg-6">
-											<div class="checker" id="uniform-layered_id_feature_19"><span>
-                                            	<input type="checkbox" class="checkbox" name="layered_id_feature_19" id="layered_id_feature_19" value="19_7"></span>
-                                            </div> 
-                                              <label for="layered_id_feature_19"><a href="#">Orange</a></label>
-										</li>																													 																																															 									</ul>
-								</div>
-								<div class="layered_filter clearfix">
-									<div class="layered_subtitle_heading">
-										<span class="layered_subtitle">Availability</span>                          
-									</div>
-                                    <ul id="ul_layered_quantity_0" class="col-lg-12 layered_filter_ul">
-										<li class="nomargin hiddable col-lg-6">
-											<div class="checker" id="uniform-layered_quantity_1">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_quantity_1" id="layered_quantity_1" value="1"></span>
-                                             </div> 
-												 <label for="layered_quantity_1"><a href="#" rel="nofollow">In stock</a></label>
-                                         </li>
-									</ul>
-								</div>
-								<div class="layered_filter clearfix">
-									<div class="layered_subtitle_heading">
-                           				 <span class="layered_subtitle">Condition</span>
-									</div>
-                                        <ul id="ul_layered_condition_0" class="col-lg-12 layered_filter_ul">                                                                                                      			 													 											<li class="nomargin hiddable col-lg-6">
-                                                 <div class="checker" id="uniform-layered_condition_new">
-                                                    <span>
-                                                        <input type="checkbox" class="checkbox" name="layered_condition_new" id="layered_condition_new" value="new">	 									</span>
-                                                 </div> 
-                                                <label for="layered_condition_new"><a href="#" rel="nofollow">New</a></label>
-                                           </li>
+										</g:each>
 										</ul>
 								</div>
 								
-								
-								
-								
+								<div class="layered_filter clearfix">
+                                    <div class="layered_subtitle_heading">
+                                        <span class="layered_subtitle">Size</span>
+                                    </div>
+										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul">
+										 <g:each in="${sizeList}" var="size">
+										 <li>																																															 										<li class="nomargin hiddable col-lg-6">
+											<div class="checker" id="uniform-layered_id_feature_18">
+                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_18" id="layered_id_feature_18" value="18_7"></span>
+                                            </div> 
+												<label for="layered_id_feature_18"><a href="#">${size}</a></label>
+										</li>
+										</g:each>
+										</ul>
+								</div>
 							</div>
 								<input type="hidden" name="id_category_layered" value="3">																																																			 						</form>
 						</div>
@@ -356,17 +278,12 @@
                     
                     <!-- /Block layered navigation module -->
 
-                    <!-- MODULE Block advertising -->
-                    <div class="advertising_block">
-                        <a href="#" title="PrestaShop"><img src="images/banner-static2.jpg" alt="PrestaShop" title="PrestaShop" width="270" height="112"></a>
-                    </div>
-                    <!-- /MODULE Block advertising -->
 			</div>
 						
                         <div id="center_column" class="center_column  col-sm-9">
 	    				<div class="content_scene_cat">
 							<!-- Category image -->
-                    			<div class="content_scene_cat_bg" style="background:url(images/banner1.jpg) 0 center no-repeat; min-height:217px;"></div>
+                    			<div class="content_scene_cat_bg" style="background:url(/images/banner1.jpg) 0 center no-repeat; min-height:217px;"></div>
                         </div>
 							<div class="content_sortPagiBar clearfix">
 								<div class="sortPagiBar clearfix">
@@ -407,16 +324,15 @@
 	
 							<!-- Products list -->
        						 <ul class="product_list grid row" style="opacity: 1;">
+       						 <g:each var="item" in="${items}">
                                     <li class="ajax_block_product col-sm-6 col-md-4">
                 						<div class="product-container clearfix">
                                             <div class="left-block">
                                                 <div class="product-image-container">
                                                     <a class="product_img_link" href="#" title="White Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product6.jpg" alt="White Sport Shoes" title="White Sport Shoes" width="270" height="270" itemprop="image">
+                                                        <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                                     </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
+                                                    <g:link class="quick-view" action="productView" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
 													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
                                             </div>
                     						<div class="right-block">           
@@ -429,27 +345,21 @@
                                                           <div class="star"></div>
                                                     </div>
                                                 </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="White Sport Shoes" itemprop="url">White Sport Shoes </a></h5>
+                                                	<h5 itemprop="name"><a class="product-name" href="" title="${item.itemName}" itemprop="url">${item.itemName}</a></h5>
                                                         <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
+                                                        ${item.itemDescription}    
                                                         </p>
                                             			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
+                                                            <span itemprop="price" class="price product-price">&#8377;${item.itemPrice}</span>
                                                              <meta itemprop="priceCurrency" content="1">
 														</div>
                                             			<div class="button-container">
                                                             <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
                                                                                                                 
                                                             <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
+                                                                <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>
                                                             </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
+                                                                <g:link action="showMoreItems" controller="home" params="[itemBrand:"${item.itemBrand}"]" itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></g:link>
                                                             </div>
                         								</div>
                                                 			<div class="color-list-container"> </div>
@@ -458,415 +368,7 @@
                                                  </div>
                                 				</div><!-- .product-container> -->
            								 </li>
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="Light Grey Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product9.jpg" alt="White Sport Shoes" title="Light Grey Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="White Sport Shoes" itemprop="url">Light Grey Sport Shoes </a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="Blue Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product7.jpg" alt="White Sport Shoes" title="Light Grey Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="Blue Sport Shoes" itemprop="url">Blue Sport Shoes</a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="White Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product6.jpg" alt="White Sport Shoes" title="White Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="White Sport Shoes" itemprop="url">White Sport Shoes </a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="Light Grey Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product9.jpg" alt="White Sport Shoes" title="Light Grey Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="White Sport Shoes" itemprop="url">Light Grey Sport Shoes </a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="Blue Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product7.jpg" alt="White Sport Shoes" title="Light Grey Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="Blue Sport Shoes" itemprop="url">Blue Sport Shoes</a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                   	<li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="White Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product6.jpg" alt="White Sport Shoes" title="White Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="White Sport Shoes" itemprop="url">White Sport Shoes </a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="Light Grey Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product9.jpg" alt="White Sport Shoes" title="Light Grey Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="White Sport Shoes" itemprop="url">Light Grey Sport Shoes </a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="Blue Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="images/product/product7.jpg" alt="White Sport Shoes" title="Light Grey Sport Shoes" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <a class="quick-view" href="#" rel="#">
-                                                        <span>Quick view</span>
-                                                     </a>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="Blue Sport Shoes" itemprop="url">Blue Sport Shoes</a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                            Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price"></span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                                                            																<a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart" data-id-product="1"><span>Add to cart</span></a>
-                                                                                            
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="addToWishlist wishlistProd_1" href="#" rel="1" >
-                                                                    Add to Wishlist
-                                                                </a>
-                                                            </div>
-                                                                <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                                    <span>More</span>
-                                                                </a>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-                                         
+           								 </g:each>
             						</ul>
                                     
 
@@ -896,97 +398,97 @@
                     		<ul class="bxslider">
                             	<li >
                                     <a href="#">
-                                        <img src="images/2(1).jpg" alt="Logo">
+                                        <img src="/images/2(1).jpg" alt="Logo">
                                     </a>
 								</li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/3(1).jpg" alt="Logo">
+                                        <img src="/images/3(1).jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/4.jpg" alt="Logo">
+                                        <img src="/images/4.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/5.jpg" alt="Logo">
+                                        <img src="/images/5.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/6.jpg" alt="Logo">
+                                        <img src="/images/6.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/7.jpg" alt="Logo">
+                                        <img src="/images/7.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/1(1).jpg" alt="Logo">
+                                        <img src="/images/1(1).jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/2(1).jpg" alt="Logo">
+                                        <img src="/images/2(1).jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/3(1).jpg" alt="Logo">
+                                        <img src="/images/3(1).jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/4.jpg" alt="Logo">
+                                        <img src="/images/4.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/5.jpg" alt="Logo">
+                                        <img src="/images/5.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/6.jpg" alt="Logo">
+                                        <img src="/images/6.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/7.jpg" alt="Logo">
+                                        <img src="/images/7.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/1(1).jpg" alt="Logo">
+                                        <img src="/images/1(1).jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/2(1).jpg" alt="Logo">
+                                        <img src="/images/2(1).jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/3(1).jpg" alt="Logo">
+                                        <img src="/images/3(1).jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/4.jpg" alt="Logo">
+                                        <img src="/images/4.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/5.jpg" alt="Logo">
+                                        <img src="/images/5.jpg" alt="Logo">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="images/6.jpg" alt="Logo">
+                                        <img src="/images/6.jpg" alt="Logo">
                                     </a>
                                 </li>
                            </ul>
@@ -1145,41 +647,50 @@
   </div>
 </div><!-- #footer -->
 <!-- #page -->
-<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.easing.js"></script>
-<script type="text/javascript" src="js/tools.js"></script>
-<script type="text/javascript" src="js/global.js"></script>
-<script type="text/javascript" src="js/10-bootstrap.min.js"></script>
-<script type="text/javascript" src="js/15-jquery.total-storage.min.js"></script>
-<script type="text/javascript" src="js/15-jquery.uniform-modified.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="js/products-comparison.js"></script>
-<script type="text/javascript" src="js/category.js"></script>
-<script type="text/javascript" src="js/ajax-cart.js"></script>
-<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="js/jquery.serialScroll.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.js"></script>
-<script type="text/javascript" src="js/blocklayered.js"></script>
-<script type="text/javascript" src="js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="js/jquery.ui.mouse.min.js"></script>
-<script type="text/javascript" src="js/jquery.ui.slider.min.js"></script>
-<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
-<script type="text/javascript" src="js/blocksearch.js"></script>
-<script type="text/javascript" src="js/ajax-wishlist.js"></script>
-<script type="text/javascript" src="js/scrolltop.js"></script>
-<script type="text/javascript" src="js/ph_simpleblog.js"></script>
-<script type="text/javascript" src="js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="js/colorpicker.js"></script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="js/custommenu.js"></script>
-<script type="text/javascript" src="js/mobile_menu.js"></script>
-<script type="text/javascript" src="js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
-<script type="text/javascript" src="js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="js/treeManagement.js"></script>
+<script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.js"></script>
+<script type="text/javascript" src="/js/tools.js"></script>
+<%--<script type="text/javascript" src="/js/global.js"></script>--%>
+<script type="text/javascript" src="/js/10-bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/15-jquery.total-storage.min.js"></script>
+<script type="text/javascript" src="/js/15-jquery.uniform-modified.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="/js/products-comparison.js"></script>
+<script type="text/javascript" src="/js/category.js"></script>
+<%--<script type="text/javascript" src="/js/ajax-cart.js"></script>--%>
+<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="/js/jquery.serialScroll.js"></script>
+<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+<%--<script type="text/javascript" src="/js/blocklayered.js"></script>--%>
+<script type="text/javascript" src="/js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="/js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="/js/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/js/jquery.ui.slider.min.js"></script>
+<script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+<%--<script type="text/javascript" src="/js/blocksearch.js"></script>--%>
+<script type="text/javascript" src="/js/ajax-wishlist.js"></script>
+<script type="text/javascript" src="/js/scrolltop.js"></script>
+<script type="text/javascript" src="/js/ph_simpleblog.js"></script>
+<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/colorpicker.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/custommenu.js"></script>
+<script type="text/javascript" src="/js/mobile_menu.js"></script>
+<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/treeManagement.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var brand = '${brand}'
+	$('.brands li').each(function(){
+		if($(this).find('.checkbox').val() == brand)
+			$(this).find('span').addClass('checked');
+		})
+});
+</script>
 <script type="text/javascript">
 				$('.control').click(function(){
 					if($(this).hasClass('inactive')) {
@@ -1213,6 +724,7 @@ $(window).load(function() {
 			nextText: 'Next',
                         afterLoad: function(){
                          $('.pos-loading').css("display","none");
+                         
                         },     
                         beforeChange: function(){ 
                             $('.pos-slideshow-title, .pos-slideshow-des').css("left","-100%" );

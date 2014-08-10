@@ -13,7 +13,7 @@ class CartController {
 		JSONObject addTocartResponse  = new JSONObject()
 		Item item = Item.get(params.item)
 		Cart cart
-		if(item.getAvailableQuantity() > (params.quantity as int)){
+		if(item.getAvailableQuantity() >= (params.quantity as int)){
 		def cartId = session.getAttribute("cartId")
 		if(!cartId)
 		cart = new Cart()

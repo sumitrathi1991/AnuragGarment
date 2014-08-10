@@ -19,4 +19,14 @@ class HomeController {
 		log.debug"item :"+item
 		[productId:params.productId,item : item]
 	}
+	
+	def showMoreItems(){
+		log.debug"in showMoreItems == "+params
+		List items = Item.findAllByItemBrand(params.itemBrand)
+		List sizeList = Item.findAll()?.itemSize?.unique()
+		List colorList = Item.findAll()?.itemColor?.unique()
+		List brandList =  Item.findAll()?.itemBrand?.unique()
+		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand]
+	}
+	
 }
