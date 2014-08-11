@@ -24,21 +24,24 @@
 		<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="/js/jquery.easing.js"></script>
 		<script type="text/javascript" src="/js/tools.js"></script>
-<script type="text/javascript" src="/js/global.js"></script>
-<script type="text/javascript" src="/js/10-bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/15-jquery.uniform-modified.js"></script>
-<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="/js/jquery.serialScroll.js"></script>
-<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
-<script type="text/javascript" src="/js/blocksearch.js"></script>
-<script type="text/javascript" src="/js/ajax-wishlist.js"></script>
-<script type="text/javascript" src="/js/scrolltop.js"></script>
-<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="/js/custommenu.js"></script>
-<script type="text/javascript" src="/js/mobile_menu.js"></script>
-<script type="text/javascript" src="/js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript" src="/js/global.js"></script>
+		<script type="text/javascript" src="/js/10-bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/15-jquery.uniform-modified.js"></script>
+		<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
+		<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
+		<script type="text/javascript" src="/js/jquery.serialScroll.js"></script>
+		<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="/js/blocksearch.js"></script>
+		<script type="text/javascript" src="/js/ajax-wishlist.js"></script>
+		<script type="text/javascript" src="/js/scrolltop.js"></script>
+		<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/js/custommenu.js"></script>
+		<script type="text/javascript" src="/js/mobile_menu.js"></script>
+		<script type="text/javascript" src="/js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
+		<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidation.js')}"></script>
+		
 		<g:layoutHead/>
 		<g:javascript library="application"/>		
 		<r:layoutResources />

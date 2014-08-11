@@ -6,11 +6,6 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>org.eclipse.wst.common.project.facet.core.builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
 			<arguments>
 			</arguments>
@@ -26,7 +21,7 @@
 		<link>
 			<name>.link_to_grails_plugins</name>
 			<type>2</type>
-			<location>/home/oodles/shiv/ubuntu/Untitled Folder/MySpace/AnuragGarment/target/work/plugins</location>
+			<location>C:/Users/Sumit Oodles/git/AnuragGarment/target/work/plugins</location>
 		</link>
 	</linkedResources>
 </projectDescription>

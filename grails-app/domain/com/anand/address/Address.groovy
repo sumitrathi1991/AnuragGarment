@@ -2,17 +2,20 @@ package com.anand.address
 
 class Address {
 
-	String fullName
-	String phoneNumber
 	String emailAddress
-	String address1
-	String address2
+	String address
 	String zipcode
 	String city
 	String state
 	boolean isSameAddress
 	
 	static constraints = {
+		emailAddress nullable:true;
+		address nullable:true;
+		zipcode nullable:true;
+		city nullable:true;
+		state nullable:true;
+		
 	}
 	
 }
