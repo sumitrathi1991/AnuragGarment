@@ -516,7 +516,8 @@
 						$('.pos-demo-wrap').animate({left:'-210px'}, 500);
 					}
 				});
-//<![CDATA[
+registerValidation();
+var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
 var CUSTOMMENU_POPUP_EFFECT = 0;
 var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
 //]]>
