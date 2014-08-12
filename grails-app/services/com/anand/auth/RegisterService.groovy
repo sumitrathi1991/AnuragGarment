@@ -27,6 +27,6 @@ class RegisterService {
 			log.error address.errors
 		}
 		return address;
-		}
+	}
 	
 }
