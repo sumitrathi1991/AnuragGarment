@@ -233,9 +233,9 @@
   position: absolute;
   display: none;
   z-index: 99;
-  width: 84%;
-  margin-right: 8%;
-  margin-left: 8%;
+  width: 100%;
+ /* margin-right: 8%;
+  margin-left: 8%;*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -249,7 +249,7 @@
       font: 400 23px/29px Arial, Helvetica, sans-serif;
       color: #46a74e;
       margin-bottom: 22px;
-      padding-right: 100px; }
+      /*padding-right: 100px;*/ }
       @media (max-width: 767px) {
         #layer_cart .layer_cart_product h2 {
           font-size: 18px;

@@ -6,9 +6,11 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 	<head>
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/product_list.css" type="text/css" media="all">
+        <link rel="stylesheet" href="css/product.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/blockcart.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/blockcurrencies.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/blocklanguages.css" type="text/css" media="all">
@@ -18,10 +20,12 @@
         <link rel="stylesheet" href="/css/blockpermanentlinks.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/custommenu.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/nivo-slider.css" type="text/css" media="all">
+        <link rel="stylesheet" href="css/etalage.css">
         <link rel="stylesheet" href="/css/global_red.css" type="text/css">    
         
         <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
 		<script type="text/javascript" src="/js/jquery.easing.js"></script>
 		<script type="text/javascript" src="/js/tools.js"></script>
 		<script type="text/javascript" src="/js/global.js"></script>
@@ -31,7 +35,7 @@
 		<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
 		<script type="text/javascript" src="/js/jquery.serialScroll.js"></script>
 		<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
-		<script type="text/javascript" src="/js/blocksearch.js"></script>
+<%--		<script type="text/javascript" src="/js/blocksearch.js"></script>--%>
 		<script type="text/javascript" src="/js/ajax-wishlist.js"></script>
 		<script type="text/javascript" src="/js/scrolltop.js"></script>
 		<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
@@ -39,6 +43,7 @@
 		<script type="text/javascript" src="/js/custommenu.js"></script>
 		<script type="text/javascript" src="/js/mobile_menu.js"></script>
 		<script type="text/javascript" src="/js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.etalage.min.js"></script>
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidation.js')}"></script>
 		
