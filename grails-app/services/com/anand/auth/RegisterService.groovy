@@ -1,7 +1,7 @@
 package com.anand.auth
 
 import com.anand.address.Address;
-
+import org.apache.commons.lang.RandomStringUtils
 import grails.transaction.Transactional
 
 @Transactional
@@ -12,9 +12,10 @@ class RegisterService {
     }
 	
 	User registerUser(params){
+		String token = RandomStringUtils.randomAlphanumeric(32)
 		Address address = addUserAddress(params); 
 		String fullName = params.firstName +" "+ params.lastName;
-		User user = new User(username:params.emailAddress,password:params.password,fullName:fullName,phoneNumber:params.contact,address:address);
+		User user = new User(username:params.emailAddress,password:params.password,fullName:fullName,phoneNumber:params.contact,address:address,token:token);
 		if(!user.save(flush:true)){
 			log.error user.errors
 		}

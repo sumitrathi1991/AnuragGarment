@@ -5,13 +5,13 @@ class User {
 
 	transient springSecurityService
 
-	String username, fullName, phoneNumber
+	String username, fullName, phoneNumber,token
 	String password
 	
 	boolean enabled = true
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+	boolean accountExpired,isTokenExpired,accountLocked,passwordExpired
+
+	
 
 	static transients = ['springSecurityService']
 
@@ -20,6 +20,7 @@ class User {
 		password blank: false
 		phoneNumber nullable:true
 		fullName nullable:true
+		token nullable:true
 	}
 	static hasMany = [address : Address]
 	static mapping = {
