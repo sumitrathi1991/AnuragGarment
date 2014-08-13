@@ -15,7 +15,7 @@
                                 <li><a class="link-wishlist wishlist_block" href="#" title="My wishlist">Wishlist</a></li>
                                 <li><a class="link-mycart" href="#" title="My cart">My cart</a></li>
                                 <li><a class="link-checkout" href="#" title="checkout">Checkout</a></li>-->
-                                <li class="last"><a class="link-login" onClick="loginView()" title="Login" rel="nofollow">Login</a></li>  
+                                <li class="last"><span class="welcome-user">Welcome! Sumit Rathi</span><a href="" class="link-login" onClick="loginView()" title="Login" rel="nofollow">Login</a></li>  
                             </ul>
                             <!-- /Block permanent links module HEADER -->
 					</div>

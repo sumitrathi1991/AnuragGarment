@@ -1417,9 +1417,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   color: #9c9b9b;
   vertical-align: middle;
   background-color: white;
-  border: none;
   border-radius: 0px;
-  border-bottom: 1px solid #D5D5D5;
+  border: 1px solid #D5D5D5;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -5273,6 +5272,7 @@ header {
 #header .nav #header_links{float: right; margin: 0 !important; padding: 10px 0 5px;}
 #header .nav #header_links li{float: left; padding: 0 15px;}
 #header .nav #header_links li a{padding-left: 20px; display: inline-block;}
+#header .nav #header_links li .welcome-user{padding-right: 20px; color:#B9B9B9;}
 #header .nav #header_links li a:hover{color: #E5574E;}
 #header .nav #header_links li a.link-myaccount{
     background: url("../images/icons/my_account.png") no-repeat scroll 0 0px ;
@@ -5291,7 +5291,7 @@ header {
 }
 #header .nav #header_links li a.link-mycart:hover{background-position: 0 99%;}
 #header .nav #header_links li a.link-checkout{
-    background: url("../images/icons/checkout.png") no-repeat scroll 0 -1px ;
+    background: url("../images/icons/checkout.png") no-repeat scrmoll 0 -1px ;
     height: 16px;
 }
 #header .nav #header_links li a.link-checkout:hover{background-position: 0 101%;}
