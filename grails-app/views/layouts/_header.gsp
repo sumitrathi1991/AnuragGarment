@@ -11,11 +11,11 @@
 						</div>
                             <!-- Block permanent links module HEADER -->
                             <ul id="header_links">
-                                <!--<li><a class="link-myaccount" href="#" title="My account">My account</a></li>
-                                <li><a class="link-wishlist wishlist_block" href="#" title="My wishlist">Wishlist</a></li>
-                                <li><a class="link-mycart" href="#" title="My cart">My cart</a></li>
-                                <li><a class="link-checkout" href="#" title="checkout">Checkout</a></li>-->
-                                <li class="last"><span class="welcome-user">Welcome! Sumit Rathi</span><a href="" class="link-login" onClick="loginView()" title="Login" rel="nofollow">Login</a></li>  
+                                <li><a class="link-myaccount cursor" title="My account">My account</a></li>
+                                <li><a class="link-wishlist wishlist_block cursor"  title="My wishlist">Wishlist</a></li>
+                                <li><a class="link-mycart cursor" title="My cart">My cart</a></li>
+                                <li><a class="link-checkout cursor" title="checkout">Checkout</a></li>
+                                <li class="last"><span class="welcome-user">Welcome! Sumit Rathi</span><a  class="link-login cursor" onClick="loginView()" title="Login" rel="nofollow">Login</a></li>  
                             </ul>
                             <!-- /Block permanent links module HEADER -->
 					</div>
@@ -37,12 +37,12 @@
                         </a>
                         <span class="brand">Category</span>
                     </div>
-                    <ul id="ma-mobilemenu" class="tree  mobilemenu nav-collapse collapse dynamized" style="display: block;">
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Women</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Men</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Clothing</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Interiors</a></li>
-                        <li class="last"><span class="grower CLOSE"> </span><a href="#" title="">Accessories</a></li>
+                    <ul id="ma-mobilemenu" class="tree  mobilemenu nav-collapse collapse dynamized cursor" style="display: block;">
+                        <li><span class="grower CLOSE cursor"> </span><a title="">Women</a></li>
+                        <li><span class="grower CLOSE cursor"> </span><a title="">Men</a></li>
+                        <li><span class="grower CLOSE cursor"> </span><a title="">Clothing</a></li>
+                        <li><span class="grower CLOSE cursor"> </span><a title="">Interiors</a></li>
+                        <li class="last"><span class="grower CLOSE cursor"> </span><a title="">Accessories</a></li>
                     </ul>               
                 </div>
             </div>
@@ -54,27 +54,27 @@
        <div class="container">
             <div id="pt_custommenu" class="pt_custommenu clearfix">
                 <div id="pt_menu_home" class="pt_menu act">
-                	<div class="parentMenu" onClick="homeView()">
+                	<div class="parentMenu cursor" onClick="homeView()">
                     	<a ><span>Home</span></a>
                     </div>
                 </div>
                 <div id="pt_menu3" class="pt_menu nav-1">
-                    <div class="parentMenu">
-                    	<a href="#"><span>Women</span></a>
+                    <div class="parentMenu cursor">
+                    	<a ><span>Women</span></a>
                     </div>
    				 </div>
                 <div id="pt_menu12" class="pt_menu nav-2">
-                    <div class="parentMenu">
-                        <a href="#"><span>Men</span></a>
+                    <div class="parentMenu cursor">
+                        <a><span>Men</span></a>
                     </div>
                 </div>
                 <div id="pt_menu13" class="pt_menu nav-3">
-                    <div class="parentMenu">
-                    	<a href="#"><span>Kid</span></a>
+                    <div class="parentMenu cursor">
+                    	<a ><span>Kid</span></a>
                     </div>
                 </div>
                 <div id="pt_menu14" class="pt_menu nav-4">
-                    <div class="parentMenu">
+                    <div class="parentMenu cursor">
                     	<a href="#wholesaler"><span>Wholesaler</span></a>
                     </div>
                 </div>

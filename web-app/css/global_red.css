@@ -9424,3 +9424,7 @@ header .row #header_logo{width: 100%; text-align: center;}
 
 /*============================================= Custom Styles =================================================*/
 #noSlide{ display:none }
+
+.cursor {
+	cursor: pointer;
+}
