@@ -4,7 +4,7 @@ import com.anand.auth.User;
 
 class AdminController {
 	static allowedMethods = [registerUser : "POST"]
-	def registerService
+	def registerService,emailSenderService
     def index() { 
 		log.debug"hello admin"
 	}
@@ -27,7 +27,7 @@ class AdminController {
 		User user = registerService.registerUser(params);
 		if(user){
 			registerService.addUserRole(user);
-			
+			emailSenderService.userRegistrationEmail(user);
 			resultMap.status = "success";
 			resultMap.message = "register successfully "
 			log.debug" result "+resultMap
@@ -42,6 +42,10 @@ class AdminController {
 		}
 		
 	}
+	def testMail(){
+		emailSenderService.sendMail("sumitrathi44@yahoo.com","sumit","hello");
+	}
+	
 }
 
 class registerCommand{

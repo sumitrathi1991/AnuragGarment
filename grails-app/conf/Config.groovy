@@ -123,6 +123,20 @@ log4j = {
 		   'com.anand.item'
 }
 
+// Mail configuration
+grails {
+	mail {
+			host = "smtp.gmail.com"
+			port = 465
+			username = "Coooolsapphire@gmail.com"
+			password = "sapphirecool"
+			props = ["mail.smtp.auth":"true",
+				"mail.smtp.socketFactory.port":"465",
+				"mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+				"mail.smtp.socketFactory.fallback":"false"]
+	}
+}
+
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.anand.auth.User'
@@ -133,8 +147,8 @@ grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/home'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/**/**': ['permitAll']
 ]
-grails.plugins.springsecurity.useSecurityEventListener = true
-grails.plugins.springsecurity.onInteractiveAuthenticationSuccessEvent = { e, appCtx ->
+grails.plugin.springsecurity.useSecurityEventListener = true
+grails.plugin.springsecurity.onInteractiveAuthenticationSuccessEvent = { e, appCtx ->
 	def user = com.anand.auth.User.get(appCtx.springSecurityService.principal.id)
 	com.anand.auth.User.withTransaction {
 		if (!user.isAttached())
