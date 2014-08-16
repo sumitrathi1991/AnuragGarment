@@ -11,11 +11,24 @@
 						</div>
                             <!-- Block permanent links module HEADER -->
                             <ul id="header_links">
-                                <li><a class="link-myaccount cursor" title="My account">My account</a></li>
+                            <sec:ifLoggedIn>
+                            	<li><span class="welcome-user">Welcome!  ${userFullName }</span></li>
+                            	<li><a class="link-myaccount cursor" title="My account">My account</a></li>
                                 <li><a class="link-wishlist wishlist_block cursor"  title="My wishlist">Wishlist</a></li>
                                 <li><a class="link-mycart cursor" title="My cart">My cart</a></li>
                                 <li><a class="link-checkout cursor" title="checkout">Checkout</a></li>
-                                <li class="last"><span class="welcome-user">Welcome! Sumit Rathi</span><a  class="link-login cursor" onClick="loginView()" title="Login" rel="nofollow">Login</a></li>  
+                                <li class="last">
+                                	<a  class="link-login cursor" onClick="loginOut()" title="Logout" rel="nofollow">Logout</a>
+                                </li> 
+                                </sec:ifLoggedIn>	
+                                <sec:ifNotLoggedIn>
+                               		<li class="last">
+        							 <a class="link-login cursor" onClick="loginView()" title="Login" rel="nofollow">Login</a>
+        							 </li>
+      							</sec:ifNotLoggedIn>
+         							
+     								 
+                                
                             </ul>
                             <!-- /Block permanent links module HEADER -->
 					</div>

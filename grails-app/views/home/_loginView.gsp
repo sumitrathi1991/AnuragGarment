@@ -71,20 +71,22 @@
 						</form>
 					</div>
                     <div class="col-xs-12 col-sm-6">
-                        <form action="" method="" id="login_form" class="box">
+                        <form action='${request.contextPath}/j_spring_security_check' method='POST'
+			 						 id="loginForm" class="box" >
                             <h3 class="page-subheading">Already registered?</h3>
                             <div class="form_content clearfix">
                                 <div class="form-group">
                                     <label for="email">Email address</label>
-                                    <input class="is_required validate account_input form-control" data-validate="isEmail" type="text" id="email" name="email" value="">
+                                    <input class="is_required validate account_input form-control" data-validate="isEmail" type="text" id="j_username" name="j_username" >
                                 </div>
                                 <div class="form-group">
                                     <label for="passwd">Password</label>
-                                    <span><input class="is_required validate account_input form-control" type="password" data-validate="isPasswd" id="passwd" name="passwd" value=""></span>
+                                    <span><input class="is_required validate account_input form-control" type="password"  id="j_password" name="j_password" ></span>
                                 </div>
                                 <p class="lost_password form-group"><a href="#" title="Recover your forgotten password" rel="nofollow">Forgot your password?</a></p>
                                 <p class="submit">
-                                    <input type="hidden" class="hidden" name="back" value="my-account">						<button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
+                                    <input type="hidden" class="hidden" name="back" value="my-account">	
+                                    <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
                                         <span>
                                             <i class="fa fa-lock fa-lg"></i>
                                             Sign in

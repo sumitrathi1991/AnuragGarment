@@ -75,8 +75,75 @@
 				});
 			}
 		});
+	
+	$("#loginForm").validate({
+		rules: {
+			j_username: {
+				required:true,
+				email:true
+				},
+				j_password: {
+					required: true
+				}
+		 },
+			messages: {
+				
+				j_username: "Please enter a valid email address.",
+				j_password: {
+					required: "Please provide a password.",
+				}
+			},
+			submitHandler : function() {
+				var logingFormdata = $('#loginForm').serialize();
+				var registerFormUrl = $('#loginForm').attr('action');
+				console.log("url "+registerFormUrl);
+				console.log('${request.contextPath}/j_spring_security_check');
+				jQuery
+				.ajax({
+					type : 'POST',
+					url :  '/j_spring_security_check',
+					data : logingFormdata,
+					dataType : 'JSON',
+					success : function(data, status, headers, config) {
+						console.log("success json ");
+						console.log(data.success);
+						if(data.success){
+							console.log(data);
+							location.reload();
+							
+						}else{
+							console.log(data.error);
+						}
+					},
+					error : function (data, status, headers, config) {
+						
+						console.log("error json ");
+						console.log(data);
+					}
+				});
+			}
+		});
+	
 	$("#SubmitBtn").click(function(){
         $("#registerForm").submit();
         return false;
     });
+	$("#SubmitLogin").click(function(){
+        $("#loginForm").submit();
+        return false;
+    });
+ }
+ function loginOut(){
+	jQuery
+		.ajax({
+			type : 'POST',
+			url :  '/logout',
+			success : function(data, status, headers, config) {
+				console.log("logout success ");
+				location.reload();
+			},
+			error : function(XMLHttpRequest,textStatus,errorThrown) {
+				alert("error")
+			}
+		});
  }

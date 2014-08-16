@@ -1,15 +1,26 @@
 package com.anand.home
 
+import com.anand.auth.User;
 import com.anand.item.Item
 
 class HomeController {
-
+	def springSecurityService
     def index() {
 		List itemList = Item.list()
-		[itemList : itemList]
+		User user = springSecurityService.currentUser 
+		if(user){
+			log.debug"user name "+user.fullName
+			[itemList : itemList,userFullName:user.fullName]
+		}else{
+			[itemList : itemList]
+		}
+			
+		
+		
 	}
 	
 	def _loginView(){
+		
 		render template:"/home/loginView.gsp"
 	}
 	

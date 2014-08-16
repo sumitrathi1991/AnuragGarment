@@ -755,6 +755,7 @@ $(document).ready(function() {
 				});
 registerValidation();
 var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
+
 var CUSTOMMENU_POPUP_EFFECT = 0;
 var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
 //]]>
@@ -820,6 +821,7 @@ function homeView(){
 	$("#loginViewID").hide();
 	$("#homeViewId").show();
 }
+
 </script>
 </body>
 </html>

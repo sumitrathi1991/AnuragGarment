@@ -8,7 +8,9 @@ class AdminController {
     def index() { 
 		log.debug"hello admin"
 	}
-	
+	def login(){
+		
+	}
 	def registerUser = {registerCommand command ->
 		log.debug"params "+params
 		HashMap resultMap = new HashMap();
