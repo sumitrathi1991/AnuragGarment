@@ -10,7 +10,7 @@ class User {
 	
 	boolean enabled = true
 	boolean accountExpired,isTokenExpired,accountLocked,passwordExpired
-
+	Date lastLogin
 	
 
 	static transients = ['springSecurityService']
@@ -21,6 +21,7 @@ class User {
 		phoneNumber nullable:true
 		fullName nullable:true
 		token nullable:true
+		lastLogin nullable:true
 	}
 	static hasMany = [address : Address]
 	static mapping = {

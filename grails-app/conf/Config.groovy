@@ -128,9 +128,19 @@ log4j = {
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.anand.auth.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.anand.auth.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.anand.auth.Role'
-grails.plugin.springsecurity.logout.afterLogoutUrl = '/admin'
+grails.plugin.springsecurity.logout.afterLogoutUrl = '/home'
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/home'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/**/**': ['permitAll']
 ]
+grails.plugins.springsecurity.useSecurityEventListener = true
+grails.plugins.springsecurity.onInteractiveAuthenticationSuccessEvent = { e, appCtx ->
+	def user = com.anand.auth.User.get(appCtx.springSecurityService.principal.id)
+	com.anand.auth.User.withTransaction {
+		if (!user.isAttached())
+			user.attach()
+		user.lastLogin = new Date()
+		user.save(flush: true)
+	}
+}
 

@@ -26,6 +26,8 @@ class AdminController {
 		}
 		User user = registerService.registerUser(params);
 		if(user){
+			registerService.addUserRole(user);
+			
 			resultMap.status = "success";
 			resultMap.message = "register successfully "
 			log.debug" result "+resultMap

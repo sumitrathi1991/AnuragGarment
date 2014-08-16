@@ -30,4 +30,13 @@ class RegisterService {
 		return address;
 	}
 	
+	boolean addUserRole(User user){
+		UserRole userRole = new UserRole(user:user,role:Role.findWhere(authority:'ROLE_BUYER'))
+		if(!userRole.save(flush:true)){
+			log.error userRole.errors
+			return false
+		}
+		return true
+	}
+	
 }
