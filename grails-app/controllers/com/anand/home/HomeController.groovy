@@ -7,6 +7,7 @@ class HomeController {
 	def springSecurityService
     def index() {
 		List itemList = Item.list()
+		log.debug"itemList "+itemList
 		User user = springSecurityService.currentUser 
 		if(user){
 			log.debug"user name "+user.fullName

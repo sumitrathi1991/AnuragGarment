@@ -75,19 +75,181 @@
                     <div class="parentMenu cursor">
                     	<a ><span>Women</span></a>
                     </div>
-   				 </div>
+   				 <div id="popup3" class="popup" style="display:none">
+                            <div class="block1" id="block13">
+                                <div class="column first col1">
+                                    <div class="itemMenu level1">
+                                    <div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Sports Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Running Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Heels</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Wedges</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column col2">
+                                    <div class="itemMenu level1">
+                                    <a class="itemMenuName level3" href="#"><span></span></a>
+                                    	 <div class="itemSubMenu level3">
+                                                <div class="itemMenu level4">
+                                                	<a class="itemMenuName level4" href="#"><span>Formal Shoes</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Casual Shoes</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Sneakers</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Loafers</span></a>
+                                                  </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="column col3">
+                                    <div class="itemMenu level1">
+                                    	<div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Sandals</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Floater Sandals</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Slipper & Flip Flops</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Boots</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column last col4">
+                                    <div class="itemMenu level1">
+                                    	<div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Combo Offers</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="clearBoth"></div>
+                            </div>
+                      </div>
+				</div>
                 <div id="pt_menu12" class="pt_menu nav-2">
                     <div class="parentMenu cursor">
                         <a><span>Men</span></a>
                     </div>
-                </div>
+                <div id="popup3" class="popup" style="display:none">
+                            <div class="block1" id="block13">
+                                <div class="column first col1">
+                                    <div class="itemMenu level1">
+                                    <div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Sports Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Running Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Football Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Cricket Shoes</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column col2">
+                                    <div class="itemMenu level1">
+                                    <a class="itemMenuName level3" href="#"><span></span></a>
+                                    	 <div class="itemSubMenu level3">
+                                                <div class="itemMenu level4">
+                                                	<a class="itemMenuName level4" href="#"><span>Formal Shoes</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Casual Shoes</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Sneakers</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Loafers</span></a>
+                                                  </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="column col3">
+                                    <div class="itemMenu level1">
+                                    	<div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Sandals</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Floater Sandals</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Slipper & Flip Flops</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Boots</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column last col4">
+                                    <div class="itemMenu level1">
+                                    	<div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Combo Offers</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="clearBoth"></div>
+                            </div>
+                      </div>
+				</div>
                 <div id="pt_menu13" class="pt_menu nav-3">
                     <div class="parentMenu cursor">
                     	<a ><span>Kid</span></a>
                     </div>
-                </div>
-                <div id="pt_menu14" class="pt_menu nav-4">
-                    <div class="parentMenu cursor">
+                 <div id="popup3" class="popup" style="display:none">
+                            <div class="block1" id="block13">
+                                <div class="column first col1">
+                                    <div class="itemMenu level1">
+                                    <div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Sports Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Running Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Football Shoes</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Cricket Shoes</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column col2">
+                                    <div class="itemMenu level1">
+                                    <a class="itemMenuName level3" href="#"><span></span></a>
+                                    	 <div class="itemSubMenu level3">
+                                                <div class="itemMenu level4">
+                                                	<a class="itemMenuName level4" href="#"><span>Formal Shoes</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Casual Shoes</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Sneakers</span></a>
+                                                    <a class="itemMenuName level4" href="#"><span>Loafers</span></a>
+                                                  </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="column col3">
+                                    <div class="itemMenu level1">
+                                    	<div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Sandals</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Floater Sandals</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Slipper & Flip Flops</span></a>
+                                                <a class="itemMenuName level4" href="#"><span>Boots</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column last col4">
+                                    <div class="itemMenu level1">
+                                    	<div class="itemSubMenu level3">
+                                            <div class="itemMenu level4">
+                                            	<a class="itemMenuName level4" href="#"><span>Combo Offers</span></a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="clearBoth"></div>
+                            </div>
+                      </div>
+				</div>
+                 <div id="pt_menu14" class="pt_menu nav-4">
+                    <div class="parentMenu" id="BrandsType">
                     	<a href="#wholesaler"><span>Wholesaler</span></a>
                     </div>
                 </div>

@@ -32,11 +32,11 @@
                             	<h3>CONTACT US</h3>
                                 <div class="footer-static-content row-fluid toggle-footer" style="">
                                     <div class="phone">0123.456.789</div>
-                                    <div class="mail">plazathemes@gmail.com</div>
-                                    <div class="skype">prestashop</div>
+                                    <div class="mail">anurag@gmail.com</div>
+                                    
                                 </div>
                             </div>
-                            <div class="f-col f-col3 col-md-3 col-sms-12 col-smb-12 col-sm-3 footer-block">
+                            <%--<div class="f-col f-col3 col-md-3 col-sms-12 col-smb-12 col-sm-3 footer-block">
                             	<h3>THEME FEATURES</h3>
                                 <div class="footer-static-content row-fluid toggle-footer" style="">
                                     <ul>
@@ -59,11 +59,32 @@
                                     <div class="display">50+ placeholders to display custom content</div>
                                 </div>
                             </div>
+						--%>
+						 <div class="f-col f-col2 col-sm-3 col-md-3 col-sms-6 col-smb-12 footer-block" style="">
+                                <h4>Information</h4>
+                                    <ul class="footer-static-content row-fluid toggle-footer">
+                                        <li class="first_item"><a href="#" title="Specials">Specials</a></li>
+                                        <li class="item"><a href="#" title="New products">New products</a></li>
+                                        <li class="item"><a href="#" title="Best sellers">Best sellers</a></li>
+                                        <li class="item"><a href="#" title="Our stores">Our stores</a></li>
+                                    </ul>
+                            </div>
+                          <!-- /MODULE Block footer -->
+                          <div class="f-col f-col2 col-sm-3 col-md-3 col-sms-6 col-smb-12 footer-block">
+                              <h4>CUSTOMER SERVICE</h4>
+                              <div class="footer-static-content row-fluid toggle-footer" style="">
+                                  <ul>
+                                      <li class="first"><a href="#">Contact Us</a></li>
+                                      <li><a href="#">orders and Returns</a></li>
+                                      <li class="last"><a href="#">Site Map</a></li>
+                                  </ul>
+                              </div>
+                          </div>
 						</div>
 					</div>	
 				</div>
 			</div>
-		</div>
+		</div><%--
     
     <div class="pos-footer-center">
         <div class="container">
@@ -120,7 +141,7 @@
 			</div>
 		</div>
 	</div>
-    <div class="pos-footer-bottom">
+    --%><div class="pos-footer-bottom">
         <div class="container">
             <div class="container-inner">
                 <div class="footer-bottom">

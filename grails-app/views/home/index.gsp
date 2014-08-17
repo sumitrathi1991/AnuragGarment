@@ -49,11 +49,12 @@
 							<div class="product-container" itemscope="" itemtype="">
                                 <div class="left-block">
                                     <div class="product-image-container">
-                                        <a class="product_img_link" href="" title="Sed posuere" itemprop="url">
+                                        <a class="product_img_link"  title="Sed posuere" itemprop="url">
                                             <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                         </a>
                                        <g:link class="quick-view" action="productView" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
+										<span class="new-box"><span class="new-label">New</span></span>																										 									
+									</div>
                                 </div>
 								
                                 <div class="right-block">
@@ -67,7 +68,7 @@
                                         </div>
 									</div>
                                         <h5 itemprop="name">
-                                            <a class="product-name" href="#" title="${item.itemName}" >${item.itemName}</a>
+                                            <a class="product-name" href="" title="${item.itemName}" >${item.itemName}</a>
                                         </h5>
                                           <p class="product-desc" itemprop="description">
                                           ${item.itemDescription}
@@ -741,18 +742,18 @@ $(document).ready(function() {
 				click_callback: function(image_anchor, instance_id){
 					alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
 				}
+		});
 	});
-});
-				$('.control').click(function(){
-					if($(this).hasClass('inactive')) {
-						$(this).removeClass('inactive');
-						$(this).addClass('active');
-						$('.pos-demo-wrap').animate({left:'0'}, 500);
-					} else {
-						$(this).addClass('inactive');
-						$('.pos-demo-wrap').animate({left:'-210px'}, 500);
-					}
-				});
+	$('.control').click(function(){
+		if($(this).hasClass('inactive')) {
+			$(this).removeClass('inactive');
+			$(this).addClass('active');
+			$('.pos-demo-wrap').animate({left:'0'}, 500);
+		} else {
+			$(this).addClass('inactive');
+			$('.pos-demo-wrap').animate({left:'-210px'}, 500);
+		}
+	});
 registerValidation();
 var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
 
@@ -811,8 +812,24 @@ $('.pos-logo .bxslider').bxSlider({
 			controls: 1,
             pager: false,
 		});
-		$.scrollTo( '#options-examples', 800, {easing:'elasout'} );
-
+jQuery(function( $ ){
+		
+				$.easing.elasout = function(x, t, b, c, d) {
+					var s=1.70158;var p=0;var a=c;
+					if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+					if (a < Math.abs(c)) { a=c; var s=p/4; }
+					else var s = p/(2*Math.PI) * Math.asin (c/a);
+					return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+				};
+				
+				
+			
+			// TOC, shows how to scroll the whole window
+			$('#BrandsType a').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+				$.scrollTo( this.hash, 1500, { easing:'elasout' });
+				
+			});
+});
 function loginView(){
 	$("#loginViewID").show();
 	$("#homeViewId").hide();
