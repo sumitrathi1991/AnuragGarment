@@ -3,6 +3,7 @@
 <html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>Anand Trading</title>
+		<meta name='layout' content='main' />
 		<meta name="description" content="Shop powered by PrestaShop">
 		<meta name="generator" content="PrestaShop">
 		<meta name="robots" content="index,follow">
@@ -10,35 +11,12 @@
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
        <head>
             <meta charset="utf-8">
-            <title>Women - Pos Alexis</title>
+            <title>Anand Trading</title>
             <meta name="generator" content="PrestaShop">
             <meta name="robots" content="index,follow">
             <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
             <meta name="apple-mobile-web-app-capable" content="yes"> 
 			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-            <link rel="stylesheet" href="/css/font-awesome.min.css">
-			<link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/product_list.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blockcart.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blockcurrencies.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blocklanguages.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/jquery.ui.core.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/jquery.ui.slider.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/jquery.ui.theme.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blocklayered.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/jquery.autocomplete.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blocksearch.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blockuserinfo.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blockwishlist.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/productcomments.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blockpermanentlinks.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/ph_simpleblog.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/pos.cltool.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/custommenu.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/nivo-slider.css" type="text/css" media="all">
-			<link rel="stylesheet" href="/css/blockcategories.css" type="text/css" media="all">
-			<link rel="stylesheet" type="text/css" href="/css/global_red.css">                
         	<%--<link rel="stylesheet" type="text/css" href="null"><style type="text/css">.fancybox-margin{margin-right:17px;}</style>--%>
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
@@ -48,103 +26,6 @@
 		<![endif]-->
 	
 <div id="page">
-	<div class="header-container">
-		<header id="header">
-			<div class="nav">
-				<div class="container">
-					 <div class="row">
-                     <div id="header_logo">
-                            <a href="index.htm" title="ANAND TRADING">
-                                <img class="logo img-responsive" src="/images/logo.png" alt="ANAND TRADING" width="304" height="41">
-                            </a>
-						</div>
-                            <!-- Block permanent links module HEADER -->
-                            <ul id="header_links">
-                                <!--<li><a class="link-myaccount" href="#" title="My account">My account</a></li>
-                                <li><a class="link-wishlist wishlist_block" href="#" title="My wishlist">Wishlist</a></li>
-                                <li><a class="link-mycart" href="#" title="My cart">My cart</a></li>
-                                <li><a class="link-checkout" href="#" title="checkout">Checkout</a></li>-->
-                                <li class="last"><a class="link-login" href="login-createaccount.htm" title="Login" rel="nofollow">Login</a></li>  
-                            </ul>
-                            <!-- /Block permanent links module HEADER -->
-					</div>
-				</div>
-			</div>
-	 	</header>
-	</div>
-			
-    <!-- Block categories module -->
-	<div class="ma-nav-mobile-container visible-xs visible-sm">
-		<div class="container">
-            <div class="navbar">
-                <div id="navbar-inner" class="navbar-inner navbar-inactive">
-                    <div class="menu-mobile">
-                        <a class="btn btn-navbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <span class="brand">Category</span>
-                    </div>
-                    <ul id="ma-mobilemenu" class="tree  mobilemenu nav-collapse collapse dynamized" style="display: block;">
-                    	<li><span class="grower CLOSE"> </span><a href="index.htm" title="">Home</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Women</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Men</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Kid</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Wholesaler</a></li>
-                       
-                    </ul>               
-                </div>
-            </div>
-		</div>
-	</div>
-	<!-- /Block categories module -->
-
-    <div class="nav-container visible-lg visible-md">
-       <div class="container">
-            <div id="pt_custommenu" class="pt_custommenu clearfix">
-                <div id="pt_menu_home" class="pt_menu">
-                	<div class="parentMenu">
-                    	<a href="index.htm"><span>Home</span></a>
-                    </div>
-                </div>
-                <div id="pt_menu3" class="pt_menu nav-1">
-                    <div class="parentMenu">
-                    	<a href="#"><span>Women</span></a>
-                    </div>
-   				 </div>
-                <div id="pt_menu12" class="pt_menu nav-2">
-                    <div class="parentMenu">
-                        <a href="#"><span>Men</span></a>
-                    </div>
-                </div>
-                <div id="pt_menu13" class="pt_menu nav-3">
-                    <div class="parentMenu">
-                    	<a href="#"><span>Kid</span></a>
-                    </div>
-                </div>
-                <div id="pt_menu14" class="pt_menu nav-4">
-                    <div class="parentMenu" id="BrandsType">
-                    	<a href="#"><span>Clothing</span></a>
-                    </div>
-                </div>
-                 <div id="pt_menu15" class="pt_menu nav-4">
-                    <div class="parentMenu" id="BrandsType">
-                    	<a href="#"><span>Cosmetic</span></a>
-                    </div>
-                </div>
-                <div id="pt_menu14" class="pt_menu nav-4">
-                    <div class="parentMenu">
-                    	<a href="#wholesaler"><span>Wholesaler</span></a>
-                    </div>
-                </div>
-                
-              
-            </div>
-        </div>
-    </div>
-
-
 	<div class="columns-container">
 		<div id="columns" class="container">
 											
@@ -332,7 +213,7 @@
                                                     <a class="product_img_link" href="#" title="White Sport Shoes" itemprop="url">
                                                         <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                                     </a>
-                                                    <g:link class="quick-view" action="productView" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
+                                                    <g:link class="quick-view" action="productDetail" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
 													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
                                             </div>
                     						<div class="right-block">           
@@ -359,7 +240,7 @@
                                                             <div class="wishlist">
                                                                 <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>
                                                             </div>
-                                                                <g:link action="showMoreItems" controller="home" params="[itemBrand:"${item.itemBrand}"]" itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></g:link>
+                                                                <g:link action="productDetail" controller="home" params="[productId : "${item.id}"]" title="Product Detail" class="button lnk_view btn btn-default"><span>More</span></g:link>
                                                             </div>
                         								</div>
                                                 			<div class="color-list-container"> </div>

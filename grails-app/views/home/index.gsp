@@ -19,7 +19,7 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 	
-		<div id="loginViewID">
+		<div id="loginViewID" style="display: none;">
 			<g:render template="/home/loginView" />
 		</div>
 	<div id="homeViewId">
@@ -52,9 +52,9 @@
                                         <a class="product_img_link"  title="Sed posuere" itemprop="url">
                                             <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                         </a>
-                                       <g:link class="quick-view" action="productView" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									
-									</div>
+
+                                       <g:link class="quick-view" action="productDetail" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
+										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
                                 </div>
 								
                                 <div class="right-block">
@@ -80,11 +80,11 @@
                                                 <div class="actions">                                  				 											
                                                     <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
                                                     <div class="wishlist">
-                                                        <g:link class="addToWishlist wishlistProd_13" action="productView" controller="home" params="[productId : "${item.id}"]">
+                                                        <g:link class="addToWishlist wishlistProd_13" action="productDetail" controller="home" params="[productId : "${item.id}"]" title="Product Detail">
                                                             View Details
                                                         </g:link>
                                                     </div>
-                                                     <g:link action="showMoreItems" controller="home" params="[itemBrand:"${item.itemBrand}"]" itemprop="url" class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></g:link>
+                                                     <g:link action="showProducts" controller="home" params="[itemBrand:"${item.itemBrand}"]" itemprop="url" class="button lnk_view btn btn-default" href="#" title="More Products"><span>More Items</span></g:link>
                                                 </div>
                                             </div>
 									</div>                    
@@ -836,7 +836,7 @@ function loginView(){
 }
 function homeView(){
 	$("#loginViewID").hide();
-	$("#homeViewId").show();
+	//$("#homeViewId").show();
 }
 
 </script>
