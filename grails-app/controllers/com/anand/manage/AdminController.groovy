@@ -11,6 +11,9 @@ class AdminController {
 	def login(){
 		
 	}
+	def uploadItem(){
+		render template:"/upload_item.gsp"
+	}
 	def registerUser = {registerCommand command ->
 		log.debug"params "+params
 		HashMap resultMap = new HashMap();
