@@ -67,6 +67,8 @@
 
 #layered_block_left ul li input.checkbox {
   vertical-align: middle;
+  display:inline;
+  margin-top:0;
   margin-left: 2px; }
 
 #layered_block_left ul li .disabled {

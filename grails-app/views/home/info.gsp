@@ -78,38 +78,27 @@
 									 <div class="layered_subtitle_heading">
                            				 <span class="layered_subtitle">Price</span>
 									</div>
-										<ul id="ul_layered_id_feature_5" class="col-lg-12 layered_filter_ul">																																 											<li class="nomargin hiddable col-lg-6">
-												<div class="checker" id="uniform-layered_id_feature_5">
-                                                	<span><input type="checkbox" class="checkbox" name="layered_id_feature_5" id="layered_id_feature_5" value=""></span>
-                                                </div> 
-                                                	<label for="layered_id_feature_5"><a href="#">&#8377;500.00 and Under<span></span></a></label>
-											</li>
-																																							 											<li class="nomargin hiddable col-lg-6">
-												<div class="checker" id="uniform-layered_id_feature_1">
-                                                	<span>
-                                                    	<input type="checkbox" class="checkbox" name="layered_id_feature_1" id="layered_id_feature_1" value="1_5">
-                                                     </span>
-                                                </div> 
+										<ul id="ul_layered_id_feature_5" class="col-lg-12 layered_filter_ul">																																 											
+												<li class="nomargin hiddable col-lg-6">
+													<input type="checkbox" class="checkbox" name="layered_id_feature_5" id="layered_id_feature_5" value="">
+	                                                <label for="layered_id_feature_5"><a href="#">&#8377;500.00 and Under<span></span></a></label>
+												</li>
+												<li class="nomargin hiddable col-lg-6">
+                                                    <input type="checkbox" class="checkbox" name="layered_id_feature_1" id="layered_id_feature_1" value="1_5">
 													<label for="layered_id_feature_1"><a href="#">&#8377;800.00 and Under</a></label>
-											</li>
-																																									 											<li class="nomargin hiddable col-lg-6">
-												<div class="checker" id="uniform-layered_id_feature_3">
-                                                	<span><input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5"></span>
-                                                    </div> 
+												</li>
+												<li class="nomargin hiddable col-lg-6">
+													<input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5">                                                   
 													<label for="layered_id_feature_3"><a href="#">&#8377;1000.00 and Under</a></label>
-											</li>
-                                            <li class="nomargin hiddable col-lg-6">
-												<div class="checker" id="uniform-layered_id_feature_3">
-                                                	<span><input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5"></span>
-                                                    </div> 
+												</li>
+                                            	<li class="nomargin hiddable col-lg-6">
+													<input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5">
 													<label for="layered_id_feature_3"><a href="#">&#8377;1500.00 and Under</a></label>
-											</li>
-                                            <li class="nomargin hiddable col-lg-6">
-												<div class="checker" id="uniform-layered_id_feature_3">
-                                                	<span><input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5"></span>
-                                                    </div> 
+												</li>
+	                                            <li class="nomargin hiddable col-lg-6">
+													<input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5">
 													<label for="layered_id_feature_3"><a href="#">&#8377;2000.00 and Under</a></label>
-											</li>
+												</li>
 																																															  										</ul>
 							</div>
                                 <div class="layered_filter clearfix">
@@ -535,7 +524,7 @@
 <%--<script type="text/javascript" src="/js/global.js"></script>--%>
 <script type="text/javascript" src="/js/10-bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/15-jquery.total-storage.min.js"></script>
-<script type="text/javascript" src="/js/15-jquery.uniform-modified.js"></script>
+<%--<script type="text/javascript" src="/js/15-jquery.uniform-modified.js"></script>--%>
 <script type="text/javascript" src="/js/jquery.fancybox.js"></script>
 <script type="text/javascript" src="/js/products-comparison.js"></script>
 <script type="text/javascript" src="/js/category.js"></script>
