@@ -149,7 +149,7 @@
                 </div>
                 <div id="pt_menu16" class="pt_menu nav-4">
                     <div class="parentMenu" id="BrandsType">
-                    	<a href="#wholesaler"><span>Wholesaler</span></a>
+                    	<a href="#wholesaler"><span>Wholesale</span></a>
                     </div>
                 </div>
                 

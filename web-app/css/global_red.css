@@ -5544,7 +5544,8 @@ span.exclusive {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
-.submit #SubmitBtn, .submit #SubmitLogin{margin: 15px 0 0 0;}
+.submit #SubmitBtn, .submit #SubmitLogin{float:left; margin: 15px 0 0 0;}
+.submit > .fa-spinner{ float:left; margin:17px 0 0 10px }
 .button.button-medium .total-compare-val{color: #fff;}
   .button.button-medium span {
     display: block;
@@ -7309,8 +7310,7 @@ p.cheque-indent {
   margin-bottom: 20px; }
 
 #password {
-  padding-top: 0;
-  border: none; }
+  padding-top: 0; }
   #password .box p {
     margin-bottom: 9px; }
   #password .box .form-group {

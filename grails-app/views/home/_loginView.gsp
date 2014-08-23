@@ -47,6 +47,7 @@
                                                 Create an account
                                             </span>
                                         </button>
+                                        <span class="fa fa-spinner fa-spin fa-2x"></span>
                                     </div>
                                 </div>
 						</form>
@@ -65,7 +66,7 @@
                                     <span><input class="is_required validate account_input form-control" type="password"  id="j_password" name="j_password" ></span>
                                 </div>
                                 <p class="lost_password form-group"><a href="#" title="Recover your forgotten password" rel="nofollow">Forgot your password?</a></p>
-                                <p class="submit">
+                                <div class="submit">
                                     <input type="hidden" class="hidden" name="back" value="my-account">	
                                     <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
                                         <span>
@@ -73,7 +74,8 @@
                                             Sign in
                                         </span>
                                     </button>
-                                </p>
+                                    <span class="fa fa-spinner fa-spin fa-2x"></span>
+                                </div>
                             </div>
                         </form>
                     </div>
