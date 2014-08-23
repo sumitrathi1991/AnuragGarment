@@ -18,8 +18,8 @@
 		<link rel="stylesheet" href="/css/bootstrap.css">
         <link rel="stylesheet" href="/css/responsive.css" type="text/css" media="all">
         
-        <link rel="stylesheet" href="/css/glyphicons.css" type="text/css" media="all">
-        <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/css/fonts/glyphicons/css/glyphicons.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/css/fonts/font-awesome/css/font-awesome.min.css" type="text/css" media="all">
         
         
         <link rel="stylesheet" href="/css/jquery-ui-1.9.2.custom.min.css" type="text/css" media="all">

@@ -29,11 +29,11 @@
 	
 	<!-- Uniform Pretty Checkboxes -->
 	<link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
-	<link href="plugins/forms/pixelmatrix-uniform/css/uniform.default.css" rel="stylesheet" />
+	
 	
 	<!-- PrettyPhoto -->
 	<link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
-    <link href="plugins/gallery/prettyphoto/css/prettyPhoto.css" rel="stylesheet" />
+   
     
     <!-- JQuery -->
 	<script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
@@ -53,7 +53,7 @@
 	<!-- <script src="https://getfirebug.com/firebug-lite-debug.js"></script> -->
 
 	<!-- LESS.js Library -->
-	<script src="plugins/system/less.min.js"></script>
+	
 	
 </head>
 <body class="document-body login">
