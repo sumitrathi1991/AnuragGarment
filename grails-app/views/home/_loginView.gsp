@@ -47,7 +47,9 @@
                                                 Create an account
                                             </span>
                                         </button>
-                                        <span class="fa fa-spinner fa-spin fa-2x"></span>
+                                        <span id="signupSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
+										<div id="updatesignupmessage" style="display: none;">
+                                    </div>                                   
                                     </div>
                                 </div>
 						</form>
@@ -74,7 +76,10 @@
                                             Sign in
                                         </span>
                                     </button>
-                                    <span class="fa fa-spinner fa-spin fa-2x"></span>
+                                    <span id="loginSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
+                                   <div id="updateloginmessage" style="display: none;">
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </form>

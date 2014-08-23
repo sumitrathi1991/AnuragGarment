@@ -56,6 +56,7 @@
 			   }
 			},
 			submitHandler : function() {
+				$('#signupSpinner').show();
 				var registerFormdata = $('#registerForm').serialize();
 				jQuery
 				.ajax({
@@ -63,14 +64,20 @@
 					url :  registerUrl,
 					data : registerFormdata,
 					success : function(data,textStatus) {
+						$('#signupSpinner').hide();
+						$('#updatesignupmessage').show();
 						if(data.status == "success"){
-							
 							document.getElementById("registerForm").reset();
+							
+							$('#updatesignupmessage').html("Thanks for creating new account.Mail has been sent to you email address to verify your email address or you can login with your email and password.");
 						}
 						
 					},
 					error : function(XMLHttpRequest,textStatus,errorThrown) {
-						alert("error")
+						$('#signupSpinner').hide();
+						$('#updatesignupmessage').show();
+						$('#updatesignupmessage').html("There is some error to create a new user please try again!");
+						
 					}
 				});
 			}
@@ -96,31 +103,8 @@
 			submitHandler : function() {
 				var logingFormdata = $('#loginForm').serialize();
 				var registerFormUrl = $('#loginForm').attr('action');
-				console.log("url "+registerFormUrl);
-				console.log('${request.contextPath}/j_spring_security_check');
-				jQuery
-				.ajax({
-					type : 'POST',
-					url :  '/j_spring_security_check',
-					data : logingFormdata,
-					dataType : 'JSON',
-					success : function(data, status, headers, config) {
-						console.log("success json ");
-						console.log(data.success);
-						if(data.success){
-							console.log(data);
-							location.reload();
-							
-						}else{
-							console.log(data.error);
-						}
-					},
-					error : function (data, status, headers, config) {
-						
-						console.log("error json ");
-						console.log(data);
-					}
-				});
+				$('#loginSpinner').show();
+				loginUser(logingFormdata,"USER");
 			}
 		});
 	
@@ -132,6 +116,46 @@
         $("#loginForm").submit();
         return false;
     });
+ }
+ function loginUser(logingFormdata,loginUser){
+	 console.log("success json "+loginUser);
+	 jQuery
+		.ajax({
+			type : 'POST',
+			url :  '/j_spring_security_check',
+			data : logingFormdata,
+			dataType : 'JSON',
+			success : function(data, status, headers, config) {
+				console.log("success json ");
+				console.log(data.success);
+				if(data.success){
+					if(loginUser == "ADMIN"){
+						location.reload();
+						$('#updateadminmessage').hide();
+						
+					}else{
+						location.reload();
+						$('#loginSpinner').hide();
+					}
+					
+				}else{
+					
+					if(loginUser == "ADMIN"){
+						$('#updateadminmessage').html(data.error);
+					}else{
+						
+						$('#loginSpinner').hide();
+						$('#updateloginmessage').show();
+						$('#updateloginmessage').html(data.error);
+					}
+				}
+			},
+			error : function (data, status, headers, config) {
+				
+				console.log("error json ");
+				console.log(data);
+			}
+		});
  }
  function loginOut(){
 	jQuery

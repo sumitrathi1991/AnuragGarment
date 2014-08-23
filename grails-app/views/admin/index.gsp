@@ -17,8 +17,13 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="all">
 	<link rel="stylesheet" href="/css/responsive.css" type="text/css" media="all">
-	
-	
+	  <!-- JQuery -->
+	<script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidation.js')}"></script>
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidationAdmin.js')}"></script>
+		
 	<!-- Glyphicons Font Icons -->
 	<link rel="stylesheet" href="/css/fonts/glyphicons/css/glyphicons.css" type="text/css" media="all">
 	
@@ -35,25 +40,16 @@
 	<link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
    
     
-    <!-- JQuery -->
-	<script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+  
     
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-      <script src="plugins/system/html5shiv.js"></script>
-    <![endif]-->
-	
-	<!-- Main Theme Stylesheet :: CSS -->
+  
 	<link rel="stylesheet" href="css/style-default-menus-dark.css" type="text/css" media="all">
+	<script type="text/javascript">
+	$(document).ready(function() {
+		registerValidationAdmin();
+		});
 	
-	
-	
-	<!-- FireBug Lite -->
-	<!-- <script src="https://getfirebug.com/firebug-lite-debug.js"></script> -->
-
-	<!-- LESS.js Library -->
-	
+	</script>
 	
 </head>
 <body class="document-body login">
@@ -73,26 +69,26 @@
 				<div class="widget-body">
 				
 					<!-- Form -->
-					<form method="post" action="">
+					<form id="loginAdminForm" method='POST'>
 						<label>Email</label>
-						<input type="text" class="input-block-level" placeholder="Your Username or Email address"/> 
+						<input type="text" class="input-block-level" id="j_username" name="j_username" placeholder="Your Username or Email address"/> 
 						<label>Password <a class="password" href="">forgot it?</a></label>
-						<input type="password" class="input-block-level margin-none" placeholder="Your Password" />
+						<input type="password" class="input-block-level margin-none" id="j_password" name="j_password" placeholder="Your Password" />
 						<div class="separator bottom"></div> 
 						<div class="row-fluid">
 							<div class="span8">
 								<div class="uniformjs"><label class="checkbox"><input type="checkbox" value="remember-me">Remember me</label></div>
 							</div>
 							<div class="span4 center">
-								<button class="btn btn-block btn-inverse" type="submit">Sign in</button>
+								<button class="btn btn-block btn-inverse" type="submit" id="SubmitAdminLogin" name="SubmitAdminLogin">Sign in</button>
 							</div>
 						</div>
 					</form>
 					<!-- // Form END -->
 							
 				</div>
-				<div class="widget-footer">
-					<p class="glyphicons restart"><i></i>Please enter your username and password ...</p>
+				<div class="widget-footer" id="updateadminmessage" style="display: none;">
+					<p class="glyphicons restart"><i></i></p>
 				</div>
 			</div>
 		<!-- // Box END --></div>
@@ -100,58 +96,5 @@
 	</div>
 	
 </div>
-<!-- // Wrapper END -->	
-<!-- Themer -->
-
-<!-- // Themer END -->
-
-	
-	<%--<!-- jQuery Event Move -->
-	<script src="plugins/system/jquery.event.move/js/jquery.event.move.js"></script>
-	
-	<!-- jQuery Event Swipe -->
-	<script src="plugins/system/jquery.event.swipe/js/jquery.event.swipe.js"></script>
-	
-	<!-- jQuery ScrollTo Plugin -->
-	<!--[if gt IE 8]><!--><script src="http://balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"></script><!--<![endif]-->
-	
-	<!-- History.js -->
-	<!--[if gt IE 8]><!--><script src="http://browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script><!--<![endif]-->
-	
-	<!-- jQuery Ajaxify -->
-	<!--[if gt IE 8]><!--><script src="plugins/system/jquery-ajaxify/ajaxify-html5.js"></script><!--<![endif]-->
-	
-	
-	<!-- Code Beautify -->
-	<script src="plugins/other/js-beautify/beautify.js"></script>
-	<script src="plugins/other/js-beautify/beautify-html.js"></script>
-	
-	<!-- PrettyPhoto -->
-	<script src="plugins/gallery/prettyphoto/js/jquery.prettyPhoto.js"></script>
-	
-	
-	<!-- Modernizr -->
-	<script src="plugins/system/modernizr.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	
-	<!-- SlimScroll Plugin -->
-	<script src="plugins/other/jquery-slimScroll/old/jquery.slimscroll.js"></script>
-	
-	<%--<!-- Holder Plugin -->
-	<script src="plugins/other/holder/holder.js?1380634454"></script>
-	
-	<!-- Uniform Forms Plugin -->
-	<script src="plugins/forms/pixelmatrix-uniform/jquery.uniform.min.js"></script>
-	
-	<!-- MegaMenu -->
-	<script src="demo/megamenu.js?1380634454"></script>
-
-	
-	
-	<!-- Common Demo Script -->
-	<script src="demo/common.js?1380634454"></script>
-	
---%></body>
+</body>
 </html>
