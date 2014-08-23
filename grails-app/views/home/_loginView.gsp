@@ -30,26 +30,7 @@
                                         <label for="email_create">Email address</label>
                                         <input type="text" class="is_required validate account_input form-control"  id="emailAddress" name="emailAddress" >
                                     </div>
-                                   <div class="form-group">
-                                        <label for="email_create">Address</label>
-                                        <input type="text" class="is_required validate account_input form-control" id="address" name="address" >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email_create">City</label>
-                                        <input type="text" class="is_required validate account_input form-control" id="city" name="city" >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email_create">State</label>
-                                        <input type="text" class="is_required validate account_input form-control" id="state" name="state">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email_create">Zip code</label>
-                                        <input type="text" class="is_required validate account_input form-control" id="zipCode" name="zipCode" >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email_create">Contact</label>
-                                        <input type="text" class="is_required validate account_input form-control" id="contact" name="contact">
-                                    </div>
+                                  
                                     <div class="form-group">
                                         <label for="email_create">Password</label>
                                         <input type="password" class="is_required validate account_input form-control" id="password" name="password">
