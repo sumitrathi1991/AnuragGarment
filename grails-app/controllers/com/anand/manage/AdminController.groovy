@@ -3,7 +3,7 @@ package com.anand.manage
 import com.anand.auth.User;
 
 class AdminController {
-	static allowedMethods = [registerUser : "POST"]
+	static allowedMethods = [registerUser : "POST",uploadItem : "GET"]
 	def registerService,emailSenderService
     def index() { 
 		log.debug"hello admin"
@@ -11,8 +11,8 @@ class AdminController {
 	def login(){
 		
 	}
-	def uploadItem(){
-		render template:"/upload_item.gsp"
+	def _upload_item(){
+		
 	}
 	def registerUser = {registerCommand command ->
 		log.debug"params "+params

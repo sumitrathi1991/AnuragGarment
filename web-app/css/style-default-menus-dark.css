@@ -783,7 +783,7 @@
   #content>p {
 	  padding: 0 15px 5px
   }
-  #content>h1, #content>h2, #content>h3, #content>h4, #content>h5, #content>h6 {
+  .ui-tabs>h1, .ui-tabs>h2, .ui-tabs>h3, .ui-tabs>h4, .ui-tabs>h5, .ui-tabs>h6 {
 	  margin: 18px 15px 15px
   }
   #content>.filter-bar {
@@ -887,7 +887,7 @@
   
   @media(min-width:768px) {
   html.no-touch.sticky-top:not(.animations-gpu) #content {
-	  padding-top: 43px
+	  padding-top: 50px
   }
   html.no-touch.sticky-top:not(.animations-gpu) .navbar.main {
 	  position: fixed;
@@ -961,7 +961,7 @@
 	  right: 150px
   }
   html.no-touch.sticky-top:not(.animations-gpu).sidebar .menu-hidden.menu-left .navbar.main {
-	  left: 60px!important;
+	  left: 0px!important;
 	  right: 0!important
   }
   html.no-touch.sticky-top:not(.animations-gpu).sidebar .menu-hidden.menu-right .navbar.main {
@@ -1567,8 +1567,8 @@
 	  color: #999;
 	  text-decoration: none;
 	  padding: 0 15px;
-	  height: 43px;
-	  line-height: 43px;
+	  height: 44px;
+	  line-height: 44px;
 	  font-weight: 600
   }
   html.top-full .navbar.main .topnav>li>a>img {
@@ -9010,7 +9010,7 @@
 	  margin: 0 150px 0 0!important
   }
   html.csstransitions.csstransforms3d.animations.sidebar .menu-left.menu-hidden #content {
-	  margin: 0 60px 0 0!important
+	  margin: 0 0 0 0!important
   }
   html.csstransitions.csstransforms3d.animations.sidebar .menu-right #content {
 	  margin: 0 0 0 150px!important
@@ -9074,7 +9074,7 @@
 	  left: 150px
   }
   html.csstransitions.csstransforms3d.animations.sidebar.no-touch:not(.animations-gpu) .menu-left.menu-hidden #content {
-	  left: 60px
+	  left: 0px
   }
   html.csstransitions.csstransforms3d.animations.sidebar.no-touch:not(.animations-gpu) .menu-right #content {
 	  right: 150px
@@ -9538,3 +9538,24 @@
   -ms-transform:translateX(0%) rotate(0deg) scale(1) translateZ(1px)
   }
   }
+  
+  /*  Custom Styles */
+  .table td  [class^="icon-"], .table td  [class*=" icon-"]{
+	cursor:pointer;
+	font-size: 16px;
+	line-height: 24px;
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+  }
+   .table td  [class^="icon-"]:hover, .table td  [class*=" icon-"]:hover{
+	color:#E5412D;
+  }
+  .btnT10{margin-top:10px}
+  .navbar > .ui-widget-header{ border:none; }
+  .navbar > ul .ui-state-default, .navbar > ul .ui-widget-content .ui-state-default, .navbar > ul .ui-widget-header .ui-state-default{
+		background-color:#393939;
+		border-radius:0;
+	}
+	.ui-tabs .ui-tabs-nav li{ margin:0; border:0}
+	.navbar > ul > li.ui-state-active > a { background:#fff; color: #4D4D4D;}
+	
