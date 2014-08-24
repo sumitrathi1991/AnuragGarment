@@ -557,7 +557,7 @@ $(document).ready(function(){
 	var brand = '${brand}'
 	$('.brands li').each(function(){
 		if($(this).find('.checkbox').val() == brand)
-			$(this).find('span').addClass('checked');
+			$(this).find('.checkbox').attr('checked', true);
 		})
 });
 </script>

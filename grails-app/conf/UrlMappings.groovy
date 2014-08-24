@@ -4,15 +4,15 @@ class UrlMappings {
         "/$controller/$action?/$id?(.$format)?"{
         }
 		
-		name filterByBrand: "/productView/$itemBrand" {
+		/*name "filterByBrand" : "/productView/$itemBrand" {
 			controller = 'home'
 			action = 'showProducts'
 		}
 		
-		name filterByItemType: "/productView/$itemType" {
+		name "filterByItemType": "/productView/$itemType" {
 			controller = 'home'
 			action = 'showProducts'
-		}
+		}*/
 		
 		name productDetail: "/productDetail/$productId" {
 		controller = 'home'

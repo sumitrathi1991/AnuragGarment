@@ -9,6 +9,7 @@ class Item {
 	String itemBrand
 	String itemType
 	String itemSize
+	String itemFor
 	String itemColor
 	float itemPrice
 	float discountRate

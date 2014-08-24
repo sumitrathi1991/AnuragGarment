@@ -1,20 +1,3 @@
-  <!--<div class="container">
-        <div class="banner-static-botom-containr">
-            <div class="banner-static-botom row">
-                <div class="banner-box banner-box1 col-md-4 col-sm-4 col-sms-12">
-                    <a href="#"><img src="/images/banner-static2.jpg" alt=""></a>
-                </div>
-            	<div class="banner-box banner-box2 col-md-4 col-sm-4 col-sms-12">
-                	<a href="#"><img src="/images/footer-static5.jpg" alt=""></a>
-                </div>
-                <div class="banner-box banner-box3 col-md-4 col-sm-4 col-sms-12">
-                    <a href="#"><img src="/images/footer-static4.jpg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>-->
-			
-			
 <div class="footer-container">
 	<div id="footer">
 	 	<div class="pos-footer-top">

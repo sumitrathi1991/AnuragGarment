@@ -1,47 +1,16 @@
 <!DOCTYPE html>
 <!-- saved from url=(0040)http://demo.posthemes.com/pos_alexis/en/ -->
-<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" class="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>Anand Trading</title>
+		<meta name='layout' content='main' />
 		<meta name="description" content="Shop powered by PrestaShop">
 		<meta name="generator" content="PrestaShop">
 		<meta name="robots" content="index,follow">
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
-       <head>
-            <meta charset="utf-8">
-            <title>Women - Pos Alexis</title>
-            <meta name="generator" content="PrestaShop">
-            <meta name="robots" content="index,follow">
-            <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
-            <meta name="apple-mobile-web-app-capable" content="yes"> 
-			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-            <link rel="stylesheet" href="../css/font-awesome.min.css">
-			<link rel="stylesheet" href="../css/highdpi.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/jquery.fancybox.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/product.css" type="text/css" media="all">
-            <link rel="stylesheet" href="../css/print.css" type="text/css" media="all">
-            <link rel="stylesheet" href="../css/jquery.jqzoom.css" type="text/css" media="all">
-            <link rel="stylesheet" href="../css/socialsharing.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blockcart.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blockcurrencies.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blocklanguages.css" type="text/css" media="all">
-            <link rel="stylesheet" href="../css/product_list.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/jquery.autocomplete.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blocksearch.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blockuserinfo.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blockwishlist.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/productcomments.css" type="text/css" media="all">
-            <link rel="stylesheet" href="../css/sendtoafriend.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blockpermanentlinks.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/ph_simpleblog.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/productscategory.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/custommenu.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" media="all">
-			<link rel="stylesheet" href="../css/blockcategories.css" type="text/css" media="all">
-            <link rel="stylesheet" href="../css/etalage.css">
-			<link rel="stylesheet" type="text/css" href="../css/global_red.css">                
-        	<style type="text/css">.fancybox-margin{margin-right:17px;}</style>
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
 		<!--[if IE 8]>
@@ -50,119 +19,6 @@
 		<![endif]-->
 	
 <div id="page">
-	<div class="header-container">
-		<header id="header">
-			<div class="nav">
-				<div class="container">
-					 <div class="row">
-                     <div id="header_logo">
-                            <a href="index.htm" title="ANAND TRADING">
-                                <img class="logo img-responsive" src="../images/logo.png" alt="ANAND TRADING" width="304" height="41">
-                            </a>
-						</div>
-                            <!-- Block permanent links module HEADER -->
-                            <ul id="header_links">
-                                <!--<li><a class="link-myaccount" href="#" title="My account">My account</a></li>
-                                <li><a class="link-wishlist wishlist_block" href="#" title="My wishlist">Wishlist</a></li>
-                                <li><a class="link-mycart" href="#" title="My cart">My cart</a></li>
-                                <li><a class="link-checkout" href="#" title="checkout">Checkout</a></li>-->
-                                <li class="last"><a class="link-login" href="login-createaccount.htm" title="Login" rel="nofollow">Login</a></li>  
-                            </ul>
-                            <!-- /Block permanent links module HEADER -->
-					</div>
-				</div>
-			</div>
-	 	</header>
-	</div>
-			
-    <!-- Block categories module -->
-	<div class="ma-nav-mobile-container visible-xs visible-sm">
-		<div class="container">
-            <div class="navbar">
-                <div id="navbar-inner" class="navbar-inner navbar-inactive">
-                    <div class="menu-mobile">
-                        <a class="btn btn-navbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <span class="brand">Category</span>
-                    </div>
-                    <ul id="ma-mobilemenu" class="tree  mobilemenu nav-collapse collapse dynamized" style="display: block;">
-                    	<li><span class="grower CLOSE"> </span><a href="index.htm" title="">Home</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Women</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Men</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Kid</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Wholesaler</a></li>
-                       
-                    </ul>               
-                </div>
-            </div>
-		</div>
-	</div>
-	<!-- /Block categories module -->
-
-    <div class="nav-container visible-lg visible-md">
-       <div class="container">
-            <div id="pt_custommenu" class="pt_custommenu clearfix">
-                <div id="pt_menu_home" class="pt_menu">
-                	<div class="parentMenu">
-                    	<a href="index.htm"><span>Home</span></a>
-                    </div>
-                </div>
-                
-                
-                <div id="pt_menu3" class="pt_menu nav-1">
-<div class="parentMenu">
-<a href="http://demo.posthemes.com/pos_alexis/en/3-women">
-<span>Women</span>
-</a>
-</div>
-<div id="popup3" class="popup" style="display:none">
-<div class="block1" id="block13">
-<div class="column first col1"><div class="itemMenu level1"><a class="itemMenuName level3" href="http://demo.posthemes.com/pos_alexis/en/4-dresses"><span>Dresses</span></a><div class="itemSubMenu level3"><div class="itemMenu level4"><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/5-cocktail"><span>Cocktail</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/6-day"><span>Day</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/7-evening"><span>Evening</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/18-sundresses"><span>Sundresses</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/19-sweater"><span>Sweater</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/20-belts"><span>Belts</span></a></div></div></div></div><div class="column col2"><div class="itemMenu level1"><a class="itemMenuName level3" href="http://demo.posthemes.com/pos_alexis/en/8-accessories"><span>Accessories</span></a><div class="itemSubMenu level3"><div class="itemMenu level4"><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/9-hair-accessories"><span>Hair&nbsp;Accessories</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/10-hats-and-gloves"><span>Hats&nbsp;and&nbsp;Gloves</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/11-lifestyle"><span>Lifestyle</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/21-bras"><span>Bras</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/22-scarves"><span>Scarves</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/23-small-leathers"><span>Small&nbsp;Leathers</span></a></div></div></div></div><div class="column col3"><div class="itemMenu level1"><a class="itemMenuName level3" href="http://demo.posthemes.com/pos_alexis/en/16-tops"><span>Tops</span></a><div class="itemSubMenu level3"><div class="itemMenu level4"><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/24-evening"><span>Evening</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/25-long-sleeved"><span>Long&nbsp;Sleeved</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/26-shrot-sleeved"><span>Shrot&nbsp;Sleeved</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/27-sleeveless"><span>Sleeveless</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/28-tanks-and-camis"><span>Tanks&nbsp;and&nbsp;Camis</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/29-t-shirts"><span>T-shirts</span></a></div></div></div></div><div class="column last col4"><div class="itemMenu level1"><a class="itemMenuName level3" href="http://demo.posthemes.com/pos_alexis/en/17-handbags"><span>Handbags</span></a><div class="itemSubMenu level3"><div class="itemMenu level4"><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/30-toter"><span>Toter</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/31-clutches"><span>Clutches</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/32-cross-body"><span>Cross&nbsp;Body</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/33-satchels"><span>Satchels</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/34-shoulder"><span>Shoulder</span></a><a class="itemMenuName level4" href="http://demo.posthemes.com/pos_alexis/en/35-blouses-and-shirts"><span>Blouses&nbsp;And&nbsp;Shirts</span></a></div></div></div></div>
-<div class="clearBoth"></div>
-</div>
-</div>
-</div>
-
-
-                <div id="pt_menu12" class="pt_menu nav-2">
-                    <div class="parentMenu">
-                        <a href="#"><span>Men</span></a>
-                    </div>
-                </div>
-                <div id="pt_menu13" class="pt_menu nav-3">
-                    <div class="parentMenu">
-                    	<a href="#"><span>Kid</span></a>
-                    </div>
-                </div>
-                 <div id="pt_menu14" class="pt_menu nav-4">
-                    <div class="parentMenu" id="BrandsType">
-                    	<a href="#"><span>Clothing</span></a>
-                    </div>
-                </div>
-                 <div id="pt_menu15" class="pt_menu nav-4">
-                    <div class="parentMenu" id="BrandsType">
-                    	<a href="#"><span>Cosmetic</span></a>
-                    </div>
-                </div>
-                <div id="pt_menu16" class="pt_menu nav-4">
-                    <div class="parentMenu" id="BrandsType">
-                    	<a href="#wholesaler"><span>Wholesale</span></a>
-                    </div>
-                </div>
-                
-              
-            </div>
-        </div>
-    </div>
-
-
-	
-
- 
-
 	<div class="columns-container">
 		<div id="columns" class="container">					
                     <!-- Breadcrumb -->
@@ -185,7 +41,7 @@
                                         	<li class="ajax_block_product last_item alternate_item clearfix bx-clone">
 												<div class="item-inner">
                                             		<a href="#" class="product_img_link" title="Puma Sport Shoes">
-                                                    	<img src="../images/t1.jpg" width="250" height="250" alt="Puma Sport Shoes">
+                                                    	<img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" width="250" height="250" alt="Puma Sport Shoes">
                                            			 </a>
 					      
                                             		<h3>
@@ -210,36 +66,12 @@
 						<div class="pb-left-column col-sm-5 col-md-5">
 							<!-- start product_slider -->
 				     		<ul id="etalage">
-                                <li>
-                                    <a href="optionallink.html">
-                                        <img class="etalage_thumb_image" src="../images/t1.jpg" />
-                                        <img class="etalage_source_image" src="../images/t2.jpg" />
-                                    </a>
+				     		<g:each var="itemImage" in="${item.images}">
+				     			<li>
+                                    <img class="etalage_thumb_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
+                                    <img class="etalage_source_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
                                 </li>
-                                <li>
-                                    <img class="etalage_thumb_image" src="../images/t2.jpg" />
-                                    <img class="etalage_source_image" src="../images/t2.jpg" />
-                                </li>
-                                <li>
-                                    <img class="etalage_thumb_image" src="../images/t3.jpg" />
-                                    <img class="etalage_source_image" src="../images/t3.jpg" />
-                                </li>
-                                <li>
-                                    <img class="etalage_thumb_image" src="../images/t4.jpg" />
-                                    <img class="etalage_source_image" src="../images/t4.jpg" />
-                                </li>
-                                <li>
-                                    <img class="etalage_thumb_image" src="../images/t5.jpg" />
-                                    <img class="etalage_source_image" src="../images/t5.jpg" />
-                                </li>
-                                <li>
-                                    <img class="etalage_thumb_image" src="../images/t6.jpg" />
-                                    <img class="etalage_source_image" src="../images/t6.jpg" />
-                                </li>
-                                <li>
-                                    <img class="etalage_thumb_image" src="../images/t1.jpg" />
-                                    <img class="etalage_source_image" src="../images/t1.jpg" />
-                                </li>
+				     		</g:each>
 							</ul>
 						<!-- end product_slider -->
 						<!-- usefull links-->
@@ -253,7 +85,7 @@
         				<div id="send_friend_form">
                 		<h2 class="title">Send to a friend</h2>
                         <div class="product clearfix">
-                            <img src="../images/t1.jpg" height="270" width="270" alt="Shoes">
+                            <img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" height="270" width="270" alt="Shoes">
                             <div class="product_desc">
                                 <p class="product_name"><strong>Shoes</strong></p>
                                 <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
@@ -444,7 +276,7 @@
                         </h2>
                         <div class="row">
 							<div class="product clearfix  col-xs-12 col-sm-6">
-                                    <img src="../image/t1.jpg" height="125" width="125" alt="Blouse">
+                                    <img src="../images/t1.jpg" height="125" width="125" alt="Blouse">
                                     <div class="product_desc">
                                         <p class="product_name">
                                             <strong>Blouse</strong>
@@ -634,136 +466,6 @@
     </div>-->
 			
 			
-<div class="footer-container">
-	<div id="footer">
-	 	<div class="pos-footer-top">
-			 <div class="container">
-				<div class="container-inner">
-					<div class="footer-top">
-						<div class="footer-static row-fluid">
-							<div class="f-col f-col3 col-md-3 col-sms-12 col-smb-12 col-sm-3 footer-block">
-								<h3>ABOUT US</h3>
-                                  <div class="footer-static-content toggle-footer" style="">
-                                    <p>In vitae massa iaculis, fringilla felis at, posuere nulla. Integer blandit ligula dolor, nec laoreet risus eleifend vel. Nunc consectetur imperdiet magna quis consequat. Integer rutrum ligula non purus tristique, sit amet gravida neque vulputate. Vivamus pretium massa in lacus malesuada blandit sed ut massa.</p>
-                                  </div>
-							</div>
-                            <div class="f-col f-col3 col-md-3 col-sms-12 col-smb-12 col-sm-3 footer-block">
-                            	<h3>CONTACT US</h3>
-                                <div class="footer-static-content row-fluid toggle-footer" style="">
-                                    <div class="phone">0123.456.789</div>
-                                    <div class="mail">plazathemes@gmail.com</div>
-                                    <div class="skype">prestashop</div>
-                                </div>
-                            </div>
-                            <div class="f-col f-col3 col-md-3 col-sms-12 col-smb-12 col-sm-3 footer-block">
-                            	<h3>THEME FEATURES</h3>
-                                <div class="footer-static-content row-fluid toggle-footer" style="">
-                                    <ul>
-                                        <li class="first"><a href="#">Theme Features</a></li>
-                                        <li><a href="#">Typography</a></li>
-                                        <li><a href="#">Sample Link</a></li>
-                                        <li><a href="#">Meat Our Best Partners</a></li>
-                                        <li><a href="#">Our Other Projects</a></li>
-                                        <li><a href="#">One Click To Join Us</a></li>
-                                        <li><a href="#">Follow Us On Twitter</a></li>
-                                        <li class="last"><a href="#">Pos Themes</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="f-col f-col3 col-md-3 col-sms-12 col-smb-12 col-sm-3 footer-block">
-                            	<h3>KEY FEATURES</h3>
-                                <div class="footer-static-content row-fluid toggle-footer">
-                                    <div class="color">Unlimited colors, dozens of customizable elements</div>
-                                    <div class="responsive">Customizable responsive layout based on fluid grid</div>
-                                    <div class="display">50+ placeholders to display custom content</div>
-                                </div>
-                            </div>
-						</div>
-					</div>	
-				</div>
-			</div>
-		</div>
-    
-    <div class="pos-footer-center">
-        <div class="container">
-        	<div class="container-inner">
-            	<div class="footer-center">
-            		<div class="footer-static row-fluid">
-                          <!-- MODULE Block footer -->
-                            <section class="footer-block col-sm-3" id="block_various_links_footer">
-                                <h4>Information</h4>
-                                    <ul class="toggle-footer">
-                                        <li class="first_item"><a href="#" title="Specials">Specials</a></li>
-                                        <li class="item"><a href="#" title="New products">New products</a></li>
-                                        <li class="item"><a href="#" title="Best sellers">Best sellers</a></li>
-                                        <li class="item"><a href="#" title="Our stores">Our stores</a></li>
-                                    </ul>
-                            </section>
-                          <!-- /MODULE Block footer -->
-                          <div class="f-col f-col2 col-sm-3 col-md-3 col-sms-6 col-smb-12 footer-block">
-                              <h4>CUSTOMER SERVICE</h4>
-                              <div class="footer-static-content row-fluid toggle-footer" style="">
-                                  <ul>
-                                      <li class="first"><a href="#">Contact Us</a></li>
-                                      <li><a href="#">orders and Returns</a></li>
-                                      <li class="last"><a href="#">Site Map</a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="f-col f-col3 col-md-3 col-sms-12 col-smb-12 col-sm-3 footer-block">
-                              <h4>EXTRAS</h4>
-                              <div class="footer-static-content row-fluid toggle-footer">
-                                  <ul>
-                                      <li class="first"><a href="#">Brands</a></li>
-                                      <li><a href="#">Gift Vouchers</a></li>
-                                      <li><a href="#">Affiliates</a></li>
-                                      <li class="last"><a href="#">Specials</a></li>
-                                  </ul>
-                              </div>
-                          </div>   
-                            <!-- Block myaccount module -->
-                            <section class="footer-block col-sm-3">
-                                <h4>My account</h4>
-                                <div class="block_content toggle-footer" style="">
-                                    <ul class="bullet">
-                                        <li><a href="#" title="My orders" rel="nofollow">My orders</a></li>
-                                        <li><a href="#" title="My credit slips" rel="nofollow">My credit slips</a></li>
-                                        <li><a href="#" title="My addresses" rel="nofollow">My addresses</a></li>
-                                        <li><a href="#" title="Manage my personal information" rel="nofollow">My personal info</a></li>
-                                    </ul>
-                                </div>
-                            </section>
-                            <!-- /Block myaccount module -->
-		 			</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    <div class="pos-footer-bottom">
-        <div class="container">
-            <div class="container-inner">
-                <div class="footer-bottom">
-                    <div class="footer-static row-fluid">
-                        <div class="footer-address col-sm-6">
-                            <p>Copyright © 2014 <a href="http://posthemes.com/">Posthemes.com</a>. All rights reserved.</p>
-                        </div>
-                        <div class="payment col-sm-6">
-                            <ul>
-                                <li><a class="facebook" href="#">facebook</a></li>
-                                <li><a class="twitter" href="#">twitter</a></li>
-                                <li><a class="v" href="#">v</a></li>
-                                <li><a class="in" href="#">in</a></li>
-                                <li><a class="wireless" href="#">wireless</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-				
-  </div>
-</div><!-- #footer -->
 <!-- #page -->
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>

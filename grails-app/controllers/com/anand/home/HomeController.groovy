@@ -25,8 +25,8 @@ class HomeController {
 		List items = []
 		if(params.containsKey("itemBrand"))
 		items = Item.findAllByItemBrand(params.itemBrand)
-		if(params.containsKey('itemType'))
-		items = Item.findAllByItemType(params.itemType)
+		if(params.containsKey('itemFor'))
+		items = Item.findAllByItemFor(params.itemFor)
 		List sizeList = Item.findAll()?.itemSize?.unique()
 		List colorList = Item.findAll()?.itemColor?.unique()
 		List brandList =  Item.findAll()?.itemBrand?.unique()

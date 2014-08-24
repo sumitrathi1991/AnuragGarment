@@ -47,13 +47,6 @@
                         </a>
                         <span class="brand">Category</span>
                     </div>
-                    <%--<ul id="ma-mobilemenu" class="tree  mobilemenu nav-collapse collapse dynamized" style="display: block;">
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Women</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Men</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Clothing</a></li>
-                        <li><span class="grower CLOSE"> </span><a href="#" title="">Interiors</a></li>
-                        <li class="last"><span class="grower CLOSE"> </span><a href="#" title="">Accessories</a></li>
-                    </ul>--%>               
                 </div>
             </div>
 		</div>
@@ -70,7 +63,7 @@
                 </div>
                 <div id="pt_menu3" class="pt_menu nav-1">
                     <div class="parentMenu">
-                    <g:link action="showProducts" controller="home" params="[itemType:'women']"><span>Womens</span></g:link>
+                    <g:link action="showProducts" controller="home" params="[itemFor:'womens']"><span>Womens</span></g:link>
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">
@@ -126,7 +119,7 @@
    				 </div>
                 <div id="pt_menu12" class="pt_menu nav-2">
                     <div class="parentMenu">
-                    <g:link action="showProducts" controller="home" params="[itemType:'mens']"><span>Mens</span></g:link>
+                    <g:link action="showProducts" controller="home" params="[itemFor:'mens']"><span>Mens</span></g:link>
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">
@@ -182,7 +175,7 @@
                 </div>
                 <div id="pt_menu13" class="pt_menu nav-3">
                     <div class="parentMenu">
-						<g:link action="showProducts" controller="home" params="[itemType:'kids']"><span>Kids</span></g:link>       
+						<g:link action="showProducts" controller="home" params="[itemFor:'kids']"><span>Kids</span></g:link>       
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">
@@ -238,7 +231,7 @@
                 	</div>
                 <div id="pt_menu14" class="pt_menu nav-4">
 <div class="parentMenu" id="BrandsType">
-                    	<a href="#wholesaler"><span>Wholesale</span></a>
+                    	<a href="#wholesaler"><span>Wholesaler</span></a>
                     </div>
                 </div>
                 
