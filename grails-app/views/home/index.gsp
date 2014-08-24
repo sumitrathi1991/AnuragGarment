@@ -511,7 +511,7 @@
 		<div class="pb-left-column col-sm-5 col-md-5">
 			<ul id="etalage">
                   <li>
-                      <a href="#">
+                      <a href="">
                           <img class="etalage_thumb_image" src="images/t1.jpg" />
                           <img class="etalage_source_image" src="images/t2.jpg" />
                       </a>
@@ -545,26 +545,25 @@
             <!-- end left infos--> 
             <!-- center infos -->
 		<div class="pb-center-column col-sm-7 col-md-7">
-			<h1 itemprop="name">Sed posuere</h1>
+			<h1>Sed posuere</h1>
                 <div class="price">
-					<p class="our_price_display" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-					<link itemprop="availability" href="http://schema.org/InStock">
-					<span id="our_price_display" itemprop="price">$350.00</span>
+					<p class="our_price_display" >
+					<span id="our_price_display">$350.00</span>
 					</p><p id="old_price"><span id="old_price_display"></span></p>
                 </div>
 			 
 				<!--  /Module ProductComments -->			
                 <p id="product_reference">
                     <label>Model </label>
-                    <span class="editable" itemprop="sku">demo_13</span>
+                    <span class="editable" >demo_13</span>
 				</p>
 				<p id="product_condition">
 				<label>Condition </label>
-				<span class="editable" itemprop="condition">New</span></p>
+				<span class="editable">New</span></p>
 							<div id="short_description_block">
 											<div id="short_description_content" class="rte align_justify" itemprop="description"><p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p></div>
                                 <p class="buttons_bottom_block">
-                                    <a href="javascript:{}" class="button">
+                                    <a href="" class="button">
                                         More details
                                     </a>
                                 </p>
@@ -572,10 +571,8 @@
 							<!-- number of item in stock -->
                             <p id="pQuantityAvailable">
                                 <span id="quantityAvailable">45</span>
-                                <span style="display: none;" id="quantityAvailableTxt">Item</span>
-                                <span id="quantityAvailableTxtMultiple">Items</span>
                             </p>
-										<!-- availability -->
+							<!-- availability -->
                             <p id="availability_statut">
                                 
                                 <span id="availability_value">In stock</span>				
@@ -592,14 +589,8 @@
 			
 
 							<!-- add to cart form-->
-                        	<form id="buy_block" action="http://demo.posthemes.com/pos_alexis/en/cart" method="post">
-                            <!-- hidden datas -->
-                            <p class="hidden">
-                                <input type="hidden" name="token" value="142f1cead3039516e336513a91374c30">
-                                <input type="hidden" name="id_product" value="13" id="product_page_product_id">
-                                <input type="hidden" name="add" value="1">
-                                <input type="hidden" name="id_product_attribute" id="idCombination" value="">
-                            </p>
+                        	<form id="buy_block">
+                           
                             <div class="box-info-product">
                                 <div class="content_prices clearfix">
                                       <!-- prices -->
@@ -657,7 +648,6 @@
  <div id="layer_cart" style="display: none;">
 		<div class="clearfix">
 			<div class="layer_cart_product col-xs-12 col-md-6">
-				<span class="cross" title="Close window"></span>
 				<h2>
 					<i class="icon-ok"></i>Product successfully added to your shopping cart
 				</h2>
@@ -716,7 +706,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="crossseling"></div>
 	</div>
    <!-- / Layer Cart Popup /-->  
    
@@ -734,15 +723,13 @@ $(document).ready(function() {
 		openEffect	: 'none',
 		closeEffect	: 'none'
 	});
-	$('#etalage').etalage({
-				thumb_image_width: 300,
-				thumb_image_height: 400,
-				
-				show_hint: true,
-				click_callback: function(image_anchor, instance_id){
-					alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-				}
-		});
+<%--	$('#etalage').etalage({--%>
+<%--				thumb_image_width: 300,--%>
+<%--				thumb_image_height: 400,--%>
+<%--				--%>
+<%--				show_hint: true,--%>
+<%----%>
+<%--		});--%>
 	});
 	$('.control').click(function(){
 		if($(this).hasClass('inactive')) {

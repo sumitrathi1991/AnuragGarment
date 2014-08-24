@@ -9,23 +9,40 @@
                                 <img class="logo img-responsive" src="/images/logo.png" alt="ANAND TRADING" width="304" height="41">
                             </a>
 						</div>
+						
+						 <!-- User Nav Dropdown Menu -->
+							<div class="dropdown">
+							  <a href=""  class="dropdown-toggle" type="button" data-toggle="dropdown">
+							    Hi Himanshu!
+							    <span class="caret"></span>
+							  </a>
+								<ul class="dropdown-menu">
+								    <li><a href="">Account</a></li>
+								    <li><a href="">Order</a></li>
+								    <li><a href="">Wallet</a></li>
+								    <li><a href="">Wishlist</a></li>
+								    <li><a href="">Logout</a></li>
+								</ul>
+							</div>
+							 <!-- User Nav Dropdown Menu Ends -->
+							 
                             <!-- Block permanent links module HEADER -->
                             <ul id="header_links">
-<sec:ifLoggedIn>
-<li><span class="welcome-user">Welcome!  ${userFullName }</span></li>
-<li><a class="link-myaccount cursor" title="My account">My account</a></li>
-<li><a class="link-wishlist wishlist_block cursor"  title="My wishlist">Wishlist</a></li>
-<li><a class="link-mycart cursor" title="My cart">My cart</a></li>
-<li><a class="link-checkout cursor" title="checkout">Checkout</a></li>
-<li class="last">
-<a  class="link-login cursor" onClick="loginOut()" title="Logout" rel="nofollow">Logout</a>
-</li> 
-</sec:ifLoggedIn>	
-<sec:ifNotLoggedIn>
-<li class="last">
-<a class="link-login cursor" onClick="loginView()" title="Login" rel="nofollow">Login</a>
-</li>
-</sec:ifNotLoggedIn>
+								<sec:ifLoggedIn>
+									<li><span class="welcome-user">Welcome!  ${userFullName }</span></li>
+									<li><a class="link-myaccount cursor" title="My account">My account</a></li>
+									<li><a class="link-wishlist wishlist_block cursor"  title="My wishlist">Wishlist</a></li>
+									<li><a class="link-mycart cursor" title="My cart">My cart</a></li>
+									<li><a class="link-checkout cursor" title="checkout">Checkout</a></li>
+									<li class="last">
+									<a  class="link-login cursor" onClick="loginOut()" title="Logout" rel="nofollow">Logout</a>
+									</li> 
+								</sec:ifLoggedIn>	
+								<sec:ifNotLoggedIn>
+									<li class="last">
+										<a class="link-login cursor" onClick="loginView()" title="Login" rel="nofollow">Login</a>
+									</li>
+								</sec:ifNotLoggedIn>
                             </ul>
                             <!-- /Block permanent links module HEADER -->
 					</div>
@@ -230,8 +247,8 @@
 	                </div>
                 	</div>
                 <div id="pt_menu14" class="pt_menu nav-4">
-<div class="parentMenu" id="BrandsType">
-                    	<a href="#wholesaler"><span>Wholesaler</span></a>
+					<div class="parentMenu" id="BrandsType">
+                    	<a href="#wholesaler"><span>Wholesale</span></a>
                     </div>
                 </div>
                 

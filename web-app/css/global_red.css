@@ -5254,7 +5254,7 @@ header {
     header .banner .row {
       margin: 0px; }
   header .nav {border-bottom: 1px solid #DDD ; padding: 15px 0; }
-#header .nav #header_links{float: right; margin: 0 !important; padding: 10px 0 5px;}
+#header .nav #header_links, #header .nav .dropdown{float: right; margin: 0 !important; padding: 10px 0 5px;}
 #header .nav #header_links li{float: left; padding: 0 15px;}
 #header .nav #header_links li a{padding-left: 20px; display: inline-block;}
 #header .nav #header_links li .welcome-user{padding-right: 20px; color:#B9B9B9;}
