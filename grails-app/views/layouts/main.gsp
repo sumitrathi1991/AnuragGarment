@@ -56,6 +56,7 @@
 		<script type="text/javascript" src="/js/mobile_menu.js"></script>
 		<script type="text/javascript" src="/js/jquery.nivo.slider.pack.js"></script>
 		<script type="text/javascript" src="/js/jquery.etalage.min.js"></script>
+		<script type="text/javascript" src="/js/home.js"></script>
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidation.js')}"></script>
 		

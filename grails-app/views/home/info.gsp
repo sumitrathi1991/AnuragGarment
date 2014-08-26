@@ -10,12 +10,6 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
        <head>
-            <meta charset="utf-8">
-            <title>Anand Trading</title>
-            <meta name="generator" content="PrestaShop">
-            <meta name="robots" content="index,follow">
-            <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
-            <meta name="apple-mobile-web-app-capable" content="yes"> 
 			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         	<%--<link rel="stylesheet" type="text/css" href="null"><style type="text/css">.fancybox-margin{margin-right:17px;}</style>--%>
         </head>
@@ -24,8 +18,10 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
-	
-<div id="page">
+	<div id="loginViewID" style="display: none;">
+			<g:render template="/home/loginView" />
+		</div>
+<div id="homeViewId">
 	<div class="columns-container">
 		<div id="columns" class="container">
 											
