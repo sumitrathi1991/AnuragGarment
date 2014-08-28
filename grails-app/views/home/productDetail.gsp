@@ -13,12 +13,10 @@
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
-		<!--[if IE 8]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		<![endif]-->
-	
-<div id="page">
+<div id="loginViewID" style="display: none;">
+			<g:render template="/home/loginView" />
+		</div>	
+<div id="homeViewId">
 	<div class="columns-container">
 		<div id="columns" class="container">					
                     <!-- Breadcrumb -->

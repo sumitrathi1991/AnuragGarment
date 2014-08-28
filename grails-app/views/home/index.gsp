@@ -817,15 +817,6 @@ jQuery(function( $ ){
 				
 			});
 });
-function loginView(){
-	$("#loginViewID").show();
-	$("#homeViewId").hide();
-}
-function homeView(){
-	$("#loginViewID").hide();
-	//$("#homeViewId").show();
-}
-
 </script>
 </body>
 </html>
