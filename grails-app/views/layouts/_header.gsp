@@ -13,7 +13,7 @@
 						 <!-- User Nav Dropdown Menu -->
 							<div class="dropdown">
 							  <a href=""  class="dropdown-toggle" type="button" data-toggle="dropdown">
-							    Hi Himanshu!
+							    Hi Sumit!
 							    <span class="caret"></span>
 							  </a>
 								<ul class="dropdown-menu">
@@ -80,7 +80,7 @@
                 </div>
                 <div id="pt_menu3" class="pt_menu nav-1">
                     <div class="parentMenu">
-                    <g:link action="showProducts" controller="home" params="[itemFor:'womens']"><span>Womens</span></g:link>
+                    <g:link action="showProducts" controller="home" params="[itemFor:'womens']"><span>Women hello</span></g:link>
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">
@@ -136,7 +136,7 @@
    				 </div>
                 <div id="pt_menu12" class="pt_menu nav-2">
                     <div class="parentMenu">
-                    <g:link action="showProducts" controller="home" params="[itemFor:'mens']"><span>Mens</span></g:link>
+                    <g:link action="showProducts" controller="home" params="[itemFor:'mens']"><span>Men</span></g:link>
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">
