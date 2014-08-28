@@ -9147,7 +9147,7 @@ ul#more_info_tabs{margin: 0;}
 	
 }
 .feature-productslider-item .product-container .button-container {
-	margin: 10px 0;
+	margin-top: 10px;
 }
 .feature-productslider-item .product-container .comments_note { 
 	display: block;
