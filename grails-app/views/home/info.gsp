@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0040)http://demo.posthemes.com/pos_alexis/en/ -->
 <html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>Anand Trading</title>
@@ -11,13 +10,8 @@
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
        <head>
 			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-        	<%--<link rel="stylesheet" type="text/css" href="null"><style type="text/css">.fancybox-margin{margin-right:17px;}</style>--%>
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
-		<!--[if IE 8]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		<![endif]-->
 	<div id="loginViewID" style="display: none;">
 			<g:render template="/home/loginView" />
 		</div>
@@ -64,8 +58,8 @@
                                         <ul id="ul_layered_category_0" class="col-lg-12 layered_filter_ul brands">																																						 											<li class="nomargin hiddable col-lg-6">
                                           <g:each in="${brandList}" var="brand">
                                            <li>
-                                                <input type="checkbox" class="checkbox" name="layered_category_8" id="" value="${brand}">
-                                                <label for="layered_category_8"><a href="#" rel="nofollow">${brand}</a></label>
+                                                <input type="checkbox" class="checkbox" name="brand" id="" value="${brand}">
+                                                <label for="brand"><a href="#" rel="nofollow">${brand}</a></label>
                                            </li>
                                           </g:each>
                                         </ul>
@@ -74,26 +68,26 @@
 									 <div class="layered_subtitle_heading">
                            				 <span class="layered_subtitle">Price</span>
 									</div>
-										<ul id="ul_layered_id_feature_5" class="col-lg-12 layered_filter_ul">																																 											
+										<ul id="ul_layered_id_feature_5" class="col-lg-12 layered_filter_ul itemPrice">																																 											
 												<li class="nomargin hiddable col-lg-6">
-													<input type="checkbox" class="checkbox" name="layered_id_feature_5" id="layered_id_feature_5" value="">
-	                                                <label for="layered_id_feature_5"><a href="#">&#8377;500.00 and Under<span></span></a></label>
+													<input type="checkbox" class="checkbox" name="price" id="layered_id_feature_5" value="500">
+	                                                <label for="price"><a href="#">&#8377;500.00 and Under<span></span></a></label>
 												</li>
 												<li class="nomargin hiddable col-lg-6">
-                                                    <input type="checkbox" class="checkbox" name="layered_id_feature_1" id="layered_id_feature_1" value="1_5">
-													<label for="layered_id_feature_1"><a href="#">&#8377;800.00 and Under</a></label>
+                                                    <input type="checkbox" class="checkbox" name="price" id="layered_id_feature_1" value="800">
+													<label for="price"><a href="#">&#8377;800.00 and Under</a></label>
 												</li>
 												<li class="nomargin hiddable col-lg-6">
-													<input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5">                                                   
-													<label for="layered_id_feature_3"><a href="#">&#8377;1000.00 and Under</a></label>
+													<input type="checkbox" class="checkbox" name="price" id="layered_id_feature_3" value="1000">                                                   
+													<label for="price"><a href="#">&#8377;1000.00 and Under</a></label>
 												</li>
                                             	<li class="nomargin hiddable col-lg-6">
-													<input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5">
-													<label for="layered_id_feature_3"><a href="#">&#8377;1500.00 and Under</a></label>
+													<input type="checkbox" class="checkbox" name="price" id="layered_id_feature_3" value="1500">
+													<label for="price"><a href="#">&#8377;1500.00 and Under</a></label>
 												</li>
 	                                            <li class="nomargin hiddable col-lg-6">
-													<input type="checkbox" class="checkbox" name="layered_id_feature_3" id="layered_id_feature_3" value="3_5">
-													<label for="layered_id_feature_3"><a href="#">&#8377;2000.00 and Under</a></label>
+													<input type="checkbox" class="checkbox" name="price" id="layered_id_feature_3" value="2000">
+													<label for="price"><a href="#">&#8377;2000.00 and Under</a></label>
 												</li>
 																																															  										</ul>
 							</div>
@@ -101,13 +95,11 @@
                                     <div class="layered_subtitle_heading">
                                         <span class="layered_subtitle">Color</span>
                                     </div>
-										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul">
+										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productColor">
 										<g:each in="${colorList}" var="color">
 										<li>
-											<div class="checker" id="uniform-layered_id_feature_18">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_18" id="layered_id_feature_18" value="${color}"></span>
-                                            </div> 
-												<label for="layered_id_feature_18"><a href="#">${color}</a></label>
+												<input type="checkbox" class="checkbox" name="color" id="" value="${color}">
+                                                <label for="color"><a href="#">${color}</a></label>
 										</li>
 										</g:each>
 										</ul>
@@ -117,13 +109,11 @@
                                     <div class="layered_subtitle_heading">
                                         <span class="layered_subtitle">Size</span>
                                     </div>
-										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul">
+										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productSize">
 										 <g:each in="${sizeList}" var="size">
-										 <li>																																															 										<li class="nomargin hiddable col-lg-6">
-											<div class="checker" id="uniform-layered_id_feature_18">
-                                            	<span><input type="checkbox" class="checkbox" name="layered_id_feature_18" id="layered_id_feature_18" value="18_7"></span>
-                                            </div> 
-												<label for="layered_id_feature_18"><a href="#">${size}</a></label>
+										 <li>																	
+										 		<input type="checkbox" class="checkbox" name="itemSize" id="" value="${size}">
+                                                <label for="itemSize"><a href="#">${size}</a></label>																														 										<li class="nomargin hiddable col-lg-6">
 										</li>
 										</g:each>
 										</ul>
@@ -186,58 +176,10 @@
 
 			    					
 								</div>
-							</div>	
-	
-							<!-- Products list -->
-       						 <ul class="product_list grid row" style="opacity: 1;">
-       						 <g:each var="item" in="${items}">
-                                    <li class="ajax_block_product col-sm-6 col-md-4">
-                						<div class="product-container clearfix">
-                                            <div class="left-block">
-                                                <div class="product-image-container">
-                                                    <a class="product_img_link" href="#" title="White Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
-                                                    </a>
-                                                    <g:link class="quick-view" action="productDetail" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
-													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
-                                            </div>
-                    						<div class="right-block">           
-                                                <div class="comments_note" itemprop="aggregateRating">	
-                                                    <div class="star_content clearfix">
-														<div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star star_on"></div>
-                                                          <div class="star"></div>
-                                                    </div>
-                                                </div>
-                                                	<h5 itemprop="name"><a class="product-name" href="" title="${item.itemName}" itemprop="url">${item.itemName}</a></h5>
-                                                        <p class="product-desc" itemprop="description">
-                                                        ${item.itemDescription}    
-                                                        </p>
-                                            			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price">&#8377;${item.itemPrice}</span>
-                                                             <meta itemprop="priceCurrency" content="1">
-														</div>
-                                            			<div class="button-container">
-                                                            <div class="actions">
-                                                                                                                
-                                                            <div class="wishlist">
-                                                                <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>
-                                                            </div>
-                                                                <g:link action="productDetail" controller="home" params="[productId : "${item.id}"]" title="Product Detail" class="button lnk_view btn btn-default"><span>More</span></g:link>
-                                                            </div>
-                        								</div>
-                                                			<div class="color-list-container"> </div>
-                                            					<div class="product-flags"> </div>
-                                                                 <span itemprop="offers" class="availability"></span>
-                                                 </div>
-                                				</div><!-- .product-container> -->
-           								 </li>
-           								 </g:each>
-            						</ul>
-                                    
-
+							</div>
+							<div id="itemList">
+								<g:render template="itemGrid"></g:render>
+							</div>
                                     <div class="content_sortPagiBar">
                                         <div class="bottom-pagination-content clearfix">
                                     		<!-- Pagination -->
@@ -362,27 +304,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-				  	  
-			 
-    <!--<div class="container">
-        <div class="banner-static-botom-containr">
-            <div class="banner-static-botom row">
-                <div class="banner-box banner-box1 col-md-4 col-sm-4 col-sms-12">
-                    <a href="#"><img src="images/banner-static2.jpg" alt=""></a>
-                </div>
-            	<div class="banner-box banner-box2 col-md-4 col-sm-4 col-sms-12">
-                	<a href="#"><img src="images/footer-static5.jpg" alt=""></a>
-                </div>
-                <div class="banner-box banner-box3 col-md-4 col-sm-4 col-sms-12">
-                    <a href="#"><img src="images/footer-static4.jpg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>-->
-			
-			
-
 <!-- #page -->
 <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
@@ -420,12 +341,49 @@
 <script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
 <script type="text/javascript" src="/js/treeManagement.js"></script>
 <script type="text/javascript">
+var filterUrl = "${createLink(controller:'home',action:'filterData')}";
 $(document).ready(function(){
+	$('.brands li .checkbox').on('click', function(){
+		$('.brands li .checkbox').removeAttr('checked')
+		})
+	$('.itemPrice li .checkbox').on('click', function(){
+		$('.itemPrice li .checkbox').removeAttr('checked')
+		})
+	$('.productColor li .checkbox').on('click', function(){
+		$('.productColor li .checkbox').removeAttr('checked')
+		})
+	$('.productSize li .checkbox').on('click', function(){
+		$('.productSize li .checkbox').removeAttr('checked')
+		})
+	
 	var brand = '${brand}'
 	$('.brands li').each(function(){
 		if($(this).find('.checkbox').val() == brand)
 			$(this).find('.checkbox').attr('checked', true);
 		})
+$('.checkbox').on('click', function(){
+	var list = {}
+		$(this).attr('checked','checked')
+		$('.checkbox').each(function(){
+			if($(this).attr('checked') == 'checked'){
+				var name = $(this).attr('name')
+				var value =  $(this).attr('value')
+				list[name] =  value
+				}
+				});
+		jQuery.ajax({
+				type : 'POST',
+				url : filterUrl,
+				async : false,
+				data : list,
+				success : function(data, textStatus) {
+					$('#itemList').html(data)
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown) {
+				}
+			});
+			});
+		
 });
 </script>
 <script type="text/javascript">
