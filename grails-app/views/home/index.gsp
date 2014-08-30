@@ -22,9 +22,6 @@
 		<div id="loginViewID" style="display: none;">
 			<g:render template="/home/loginView" />
 		</div>
-		<div id="addToCart" style="display: none;">
-			<g:render template="/home/addToCartPopUp" />
-		</div>
 	<div id="homeViewId">
 	<div class="pos-slideshow-container" >
         <div class="flexslider ma-nivoslider">
@@ -49,14 +46,14 @@
 					<ul id="blocknewproducts" class="product_list grid row blocknewproducts tab-pane active">
 						<g:each var="item" in="${itemList}">
 						<li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container" itemscope="" itemtype="">
+							<div class="product-container">
                                 <div class="left-block">
                                     <div class="product-image-container">
-                                        <a class="product_img_link"  title="Sed posuere" itemprop="url">
+                                        <a class="product_img_link"  title="Sed posuere">
                                             <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                         </a>
 
-                                       <g:link class="quick-view" action="productDetail" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
+                                       <a class="quick-view various" alt="${item.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>"><span>Quick view</span></a>
 										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
                                 </div>
 								
@@ -503,7 +500,9 @@
 			 
   
 <!-- #page -->
-
+<div id="addToCart" class="various" style="display: none;">
+			<g:render template="/home/addToCartPopUp" />
+		</div>
  <!-- Layer Cart Popup -->
  <div id="layer_cart" style="display: none;">
 		<div class="clearfix">

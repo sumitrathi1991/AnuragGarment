@@ -18,6 +18,7 @@ class UrlMappings {
 		controller = 'home'
 		action = 'productDetail'
 	}
+		
 	
 		"/"(controller:'home')
         "500"(view:'/error')

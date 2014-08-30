@@ -43,7 +43,7 @@
                                            			 </a>
 					      
                                             		<h3>
-                                                    <a class="product-name" href="#" title="Printed Chiffon Dress">Puma Sport Shoes</a>		 													</h3>
+                                                    <a class="product-name" href="#" title="Printed Chiffon Dress">${item.itemName}</a>		 													</h3>
 													<div class="content_price">
                                                     	<span class="special-price">&#8377;${item.itemPrice}</span> 						    													 														<span class="old-price">$200.50</span>
                                            			 </div>
@@ -65,18 +65,22 @@
 							<!-- start product_slider -->
 				     		<ul id="etalage">
 				     		<g:each var="itemImage" in="${item.images}">
-				     			<li>
-                                    <img class="etalage_thumb_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
+                                <li>
+                                    <a href="#">
+                                        <img class="etalage_thumb_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
+                                    </a>
+                                </li>
+                                <li>
                                     <img class="etalage_source_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
                                 </li>
-				     		</g:each>
-							</ul>
+                                </g:each>
+				     		</ul>
 						<!-- end product_slider -->
 						<!-- usefull links-->
 				<ul id="usefull_link_block" class="clearfix no-print">
 					
                     <li class="sendtofriend">
-                        <a id="send_friend_button" href="#send_friend_form">Send to a friend</a>
+                        <a id="send_friend_button" href="#send_friend_form" style="display: none;">Send to a friend</a>
                     </li>
     
                     <div style="display: none;">
@@ -113,23 +117,23 @@
        		 		  </div>
     				</div>
                     <li class="print">
-                        <a href="javascript:print();">Print</a>
+                        <a href="javascript:print();" style="display: none;">Print</a>
                     </li>
 				</ul>
 			</div> <!-- end pb-left-column -->
 		<!-- end left infos--> 
 		<!-- center infos -->
 		<div class="pb-center-column col-sm-7 col-md-7">
-			<h1 itemprop="name">Puma Sport Shoes</h1>
+			<h1>${item.itemName}</h1>
                 <div class="price">
                     <p class="our_price_display" >
-						 <span id="our_price_display" itemprop="price">&#8377;${item.itemPrice}</span>
+						 <span id="our_price_display">&#8377;${item.itemPrice}</span>
                      </p>             
 					<p id="old_price">
 						<span id="old_price_display"></span>
 					 </p>
                 </div>
-				<div id="product_comments_block_extra" class="no-print" >
+				<div id="product_comments_block_extra" class="no-print" style="display: none;">
                     <div class="comments_note clearfix">
                         <span>Rating&nbsp;</span>
                         <div class="star_content clearfix">
@@ -197,7 +201,7 @@
 			</div> <!-- end pb-right-column-->
 		</div> <!-- end primary_block -->
                 
-        <ul id="more_info_tabs" class="idTabs idTabsShort clearfix">
+        <ul id="more_info_tabs" class="idTabs idTabsShort clearfix" style="display: none;">
             <li><a id="more_info_tab_more_info" href="#idTab1" class="selected"><span>More info</span></a></li>		
             <li><a id="more_info_tab_data_sheet" href="#idTab2">Data sheet</a></li>								
             <li><a href="#idTab5" class="idTabHrefShort">Reviews</a></li>
@@ -223,7 +227,7 @@
 			</section>
 			<!--end Data sheet -->
 				<!-- More info -->
-                <section id="idTab1" class="page-product-box">
+                <section id="idTab1" class="page-product-box" style="display: none;">
                     <!-- full description -->
                     <div class="rte">
                         <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis.</p>

@@ -80,7 +80,7 @@
                 </div>
                 <div id="pt_menu3" class="pt_menu nav-1">
                     <div class="parentMenu">
-                    <g:link action="showProducts" controller="home" params="[itemFor:'womens']"><span>Women hello</span></g:link>
+                    <g:link action="showProducts" controller="home" params="[itemFor:'womens']"><span>Women</span></g:link>
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">

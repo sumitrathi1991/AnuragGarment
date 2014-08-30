@@ -1,5 +1,5 @@
 <!-- Product PopUp -->
-<div id="product_preview">
+<div id="product_preview" class="various">
 	<div class="primary_block row">
 		<!-- left infos-->  
 		<div class="pb-left-column col-sm-5 col-md-5">
