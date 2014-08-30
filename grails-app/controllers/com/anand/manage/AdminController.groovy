@@ -5,6 +5,7 @@ import com.anand.auth.User;
 class AdminController {
 	static allowedMethods = [registerUser : "POST",uploadItem : "GET"]
 	def registerService,emailSenderService
+	def emailService
     def index() { 
 		log.debug"hello admin"
 	}
@@ -12,7 +13,8 @@ class AdminController {
 		
 	}
 	def _upload_item(){
-		
+		log.debug"hello uploadd item"
+		render view: '_upload_item'
 	}
 	def registerUser = {registerCommand command ->
 		log.debug"params "+params
@@ -46,7 +48,19 @@ class AdminController {
 		
 	}
 	def testMail(){
-		emailSenderService.sendMail("sumitrathi44@yahoo.com","sumit","hello");
+		//emailSenderService.sendMail("rathisumit1991@gmail.com","sumit","hello");
+		log.debug"send mail "
+		try{
+			sendMail {
+				to "rathisumit1991@gmail.com"
+				subject "test"
+				text '<b>Hello</b> World'
+			}
+		}
+		catch(Exception ex){
+			log.debug"mail exception "+ex
+			return "network-issue"
+		}
 	}
 	
 }

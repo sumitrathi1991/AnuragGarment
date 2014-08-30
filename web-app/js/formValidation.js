@@ -119,6 +119,8 @@
  }
  function loginUser(logingFormdata,loginUser){
 	 console.log("success json "+loginUser);
+	
+	 
 	 jQuery
 		.ajax({
 			type : 'POST',
@@ -130,7 +132,7 @@
 				console.log(data.success);
 				if(data.success){
 					if(loginUser == "ADMIN"){
-						location.reload();
+						loginAdmin();
 						$('#updateadminmessage').hide();
 						
 					}else{

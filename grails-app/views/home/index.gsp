@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<title>Anand Trading</title>
 		<meta name='layout' content='main' />
-		<meta name="description" content="Shop powered by PrestaShop">
+		
 		<meta name="generator" content="PrestaShop">
 		<meta name="robots" content="index,follow">
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 

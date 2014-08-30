@@ -32,14 +32,14 @@ class EmailSenderService {
 		model.name = "rathi"
 		model.token = "sumit rahti"
 		def emailBody = renderTemplate('userRegisterVerification', model)
-		String responseMessage = sendMail(to, subject, emailBody)
+		String responseMessage = sendMailToUser(to, subject, emailBody)
 		log.debug"response "+responseMessage
 		return responseMessage
 	}
-	String sendMail(String toUser, String mailSubject, def emailBody){
+	String sendMailToUser(String toUser, String mailSubject, def emailBody){
 		log.debug"sending mail"
 		try{
-			emailService.sendMail {
+			sendMail {
 				to toUser
 				subject mailSubject
 				text emailBody

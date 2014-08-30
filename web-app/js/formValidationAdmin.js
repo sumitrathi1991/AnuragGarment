@@ -1,4 +1,5 @@
 function registerValidationAdmin(){
+	
 	$("#loginAdminForm").validate({
 		rules: {
 			j_username: {
@@ -30,3 +31,4 @@ $("#SubmitAdminLogin").click(function(){
    // $("#loginAdminForm").submit();
     return false;
 });
+var ab = 10;
