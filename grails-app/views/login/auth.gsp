@@ -36,38 +36,7 @@
 	<link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
    
     <link rel="stylesheet" href="/css/style-default-menus-dark.css" type="text/css" media="all">
-	<script type="text/javascript">
-	$(document).ready(function() {
 		
-		
-		var a = 5;
-		console.log(a)
-		
-		registerValidationAdmin();
-		});
-	
-	var adminLoignUrl = "${createLink(controller:'Admin',action:'upload_item')}";
-	console.log(adminLoignUrl)
-	function loginAdmin(){
-	 jQuery
-		.ajax({
-			type : 'POST',
-			url :  adminLoignUrl,
-			dataType : 'JSON',
-			success : function(data, status, headers, config) {
-				console.log("success json ");
-				console.log(data)
-			},
-			error : function (data, status, headers, config) {
-				console.log("error json ");
-				console.log(data);
-			}
-		});
-
-}
-	
-	</script>
-	
 </head>
 <body class="document-body login">
 	

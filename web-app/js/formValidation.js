@@ -119,9 +119,7 @@
  }
  function loginUser(logingFormdata,loginUser){
 	 console.log("success json "+loginUser);
-	
-	 
-	 jQuery
+	jQuery
 		.ajax({
 			type : 'POST',
 			url :  '/j_spring_security_check',
@@ -131,25 +129,14 @@
 				console.log("success json ");
 				console.log(data.success);
 				if(data.success){
-					if(loginUser == "ADMIN"){
-						loginAdmin();
-						$('#updateadminmessage').hide();
-						
-					}else{
-						location.reload();
-						$('#loginSpinner').hide();
-					}
+					location.reload();
+					$('#loginSpinner').hide();
+					
 					
 				}else{
-					
-					if(loginUser == "ADMIN"){
-						$('#updateadminmessage').html(data.error);
-					}else{
-						
 						$('#loginSpinner').hide();
 						$('#updateloginmessage').show();
 						$('#updateloginmessage').html(data.error);
-					}
 				}
 			},
 			error : function (data, status, headers, config) {
@@ -169,7 +156,7 @@
 				location.reload();
 			},
 			error : function(XMLHttpRequest,textStatus,errorThrown) {
-				alert("error")
+				location.reload();
 			}
 		});
  }

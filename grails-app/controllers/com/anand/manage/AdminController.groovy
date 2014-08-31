@@ -10,7 +10,7 @@ class AdminController {
 	def emailService
 	@Secured(['IS_AUTHENTICATED_REMEMBERED','ROLE_SUPER_ADMIN'])
     def index() { 
-		log.debug"hello admin"
+		
 	}
 	def login(){
 		

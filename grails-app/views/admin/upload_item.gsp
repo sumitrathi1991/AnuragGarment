@@ -62,7 +62,7 @@
 			<ul class="topnav pull-right hidden-phone">
 				<!-- Profile / Logout menu -->
 				<li class="account dropdown dd-1">
-					<a href="#" class="glyphicons logout lock"><span class="hidden-tablet hidden-phone hidden-desktop-1">Admin</span><i></i></a>
+					<a onClick="loginOut()" class="glyphicons logout lock"><span class="hidden-tablet hidden-phone hidden-desktop-1">Logout</span><i></i></a>
 				</li>
 				<!-- // Profile / Logout menu END -->
 				
