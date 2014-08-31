@@ -472,7 +472,7 @@
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.easing.js"></script>
-<script type="text/javascript" src="../js/tools.js"></script>
+
 <script type="text/javascript" src="../js/10-bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/15-jquery.uniform-modified.js"></script>
 <script type="text/javascript" src="../js/jquery.fancybox.js"></script>

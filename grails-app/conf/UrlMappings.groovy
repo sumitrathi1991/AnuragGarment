@@ -17,7 +17,7 @@ class UrlMappings {
 		name productDetail: "/productDetail/$productId" {
 		controller = 'home'
 		action = 'productDetail'
-	}
+		}
 		
 	
 		"/"(controller:'home')

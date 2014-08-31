@@ -86,7 +86,7 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-		grails.serverURL = "http://localhost:8080/"
+		grails.serverURL = "http://localhost:8080"
 		//grails.anand.imageUrl = "/home/oodles/anand/images/"
 		grails.anand.imageUrl = "E:\\Doc\\books\\anand\\images\\"
     }
@@ -142,7 +142,7 @@ grails {
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.anand.auth.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.anand.auth.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.anand.auth.Role'
-grails.plugin.springsecurity.logout.afterLogoutUrl = '/home'
+grails.plugin.springsecurity.logout.afterLogoutUrl = '/admin'
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/home'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/**/**': ['permitAll']
