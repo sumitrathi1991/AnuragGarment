@@ -11,9 +11,10 @@
 						</div>
 						
 						 <!-- User Nav Dropdown Menu -->
+							<sec:ifLoggedIn>
 							<div class="dropdown">
 							  <a href=""  class="dropdown-toggle" type="button" data-toggle="dropdown">
-							    Hi Sumit!
+							    Hi ${userFullName }!
 							    <span class="caret"></span>
 							  </a>
 								<ul class="dropdown-menu">
@@ -21,14 +22,15 @@
 								    <li><a href="">Order</a></li>
 								    <li><a href="">Wallet</a></li>
 								    <li><a href="">Wishlist</a></li>
-								    <li><a href="">Logout</a></li>
+								    <li><a onClick="loginOut()">Logout</a></li>
 								</ul>
 							</div>
+							</sec:ifLoggedIn>
 							 <!-- User Nav Dropdown Menu Ends -->
 							 
                             <!-- Block permanent links module HEADER -->
                             <ul id="header_links">
-								<sec:ifLoggedIn>
+								<%--<sec:ifLoggedIn>
 									<li><span class="welcome-user">Welcome!  ${userFullName }</span></li>
 									<li><a class="link-myaccount cursor" title="My account">My account</a></li>
 									<li><a class="link-wishlist wishlist_block cursor"  title="My wishlist">Wishlist</a></li>
@@ -38,7 +40,7 @@
 									<a  class="link-login cursor" onClick="loginOut()" title="Logout" rel="nofollow">Logout</a>
 									</li> 
 								</sec:ifLoggedIn>	
-								<sec:ifNotLoggedIn>
+								--%><sec:ifNotLoggedIn>
 									<li class="last">
 										<a class="link-login cursor" onClick="loginView()" title="Login" rel="nofollow">Login</a>
 									</li>

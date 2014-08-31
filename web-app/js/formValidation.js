@@ -131,16 +131,13 @@
 				if(data.success){
 					location.reload();
 					$('#loginSpinner').hide();
-					
-					
 				}else{
-						$('#loginSpinner').hide();
-						$('#updateloginmessage').show();
-						$('#updateloginmessage').html(data.error);
+					$('#loginSpinner').hide();
+					$('#updateloginmessage').show();
+					$('#updateloginmessage').html(data.error);
 				}
 			},
 			error : function (data, status, headers, config) {
-				
 				console.log("error json ");
 				console.log(data);
 			}

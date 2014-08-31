@@ -3,20 +3,21 @@ package com.anand.home
 
 import com.anand.auth.User;
 import com.anand.item.Item
-
+import grails.plugin.springsecurity.SpringSecurityUtils;
 class HomeController {
 	def springSecurityService
     def index() {
 		List itemList = Item.list()
- //User user = SpringSecurityService.currentUser
-/* if(user){
- log.debug"user name "+user.fullName
- [itemList : itemList,userFullName:user.fullName]
- }else{
- [itemList : itemList]
+		 User user = springSecurityService.currentUser
+		 log.debug"login user "+user
+		 if(user){
+		 log.debug"user name "+user.fullName
+		 [itemList : itemList,userFullName:user.fullName]
+		 }else{
+		 [itemList : itemList]
 
-	}*/
-		[itemList : itemList,userFullName:"Anu"]
+	}
+		
     }	
 	def _loginView(){
 		render template:"/home/loginView.gsp"

@@ -55,8 +55,7 @@
 						</form>
 					</div>
                     <div class="col-xs-12 col-sm-6">
-                        <form action='${request.contextPath}/j_spring_security_check' method='POST'
-			 						 id="loginForm" class="box" >
+                        <form id="loginForm" class="box" >
                             <h3 class="page-subheading">Already registered?</h3>
                             <div class="form_content clearfix">
                                 <div class="form-group">
