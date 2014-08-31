@@ -175,7 +175,7 @@
 											 </div>           
                                             <div class="button-container">
                                                 <div class="actions">
-                                                  <a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart"><span>Add to cart</span>
+                                                  <a class="button ajax_add_to_cart_button btn btn-default various" href="#product_preview" rel="nofollow" title="Add to cart"><span>Add to cart</span>
                                                  </a>                                        
                                                     <div class="wishlist">
                                                         <a class="addToWishlist wishlistProd_7" href="#" rel="7" >
@@ -227,7 +227,7 @@
                                                     <div class="wishlist">
                                                         <a class="addToWishlist wishlistProd_7" href="#" rel="7" >
                                                             Add to Wishlist
-                                                        </a>
+                                                        </a>	
                                                     </div>
                                                     <a class="button lnk_view btn btn-default" href="#" title="View">
                                                         <span>More</span>
@@ -499,81 +499,14 @@
 	</div>			  	  
 			 
   
-<!-- #page -->
-<div id="addToCart" class="various" style="display: none;">
-			<g:render template="/home/addToCartPopUp" />
-		</div>
- <!-- Layer Cart Popup -->
- <div id="layer_cart" style="display: none;">
-		<div class="clearfix">
-			<div class="layer_cart_product col-xs-12 col-md-6">
-				<h2>
-					<i class="icon-ok"></i>Product successfully added to your shopping cart
-				</h2>
-				<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="images/t1.jpg" alt="Sed posuere" title="Sed posuere"></div>
-				<div class="layer_cart_product_info">
-					<span id="layer_cart_product_title" class="product-name">Sed posuere</span>
-					<span id="layer_cart_product_attributes"></span>
-					<div>
-						<strong class="dark">Quantity</strong>
-						<span id="layer_cart_product_quantity">7</span>
-					</div>
-					<div>
-						<strong class="dark">Total</strong>
-						<span id="layer_cart_product_price">$2,450.00</span>
-					</div>
-				</div>
-			</div>
-			<div class="layer_cart_cart col-xs-12 col-md-6">
-				<h2>
-					<!-- Plural Case [both cases are needed because page may be updated in Javascript] -->
-					<span class="ajax_cart_product_txt_s ">
-						There are <span class="ajax_cart_quantity">10</span> items in your cart.
-					</span>
-					<!-- Singular Case [both cases are needed because page may be updated in Javascript] -->
-					<span class="ajax_cart_product_txt  unvisible" style="display: none;">
-						There is 1 item in your cart.
-					</span>
-				</h2>
-	
-				<div class="layer_cart_row">
-					<strong class="dark">Total products(tax excl.)</strong>
-					<span class="ajax_block_products_total">$2,935.48</span>
-				</div>
-	
-				<div class="layer_cart_row">
-					<strong class="dark">
-						Total shipping&nbsp;(tax excl.)
-					</strong>
-					<span class="ajax_cart_shipping_cost">$2.00</span>
-				</div>
-				<div class="layer_cart_row">	
-					<strong class="dark">Total(tax excl.)</strong>
-					<span class="ajax_block_cart_total">$2,937.48</span>
-				</div>
-				<div class="button-container">	
-					<span class="continue btn btn-default button exclusive-medium" title="Continue shopping">
-						<span>
-							<i class="icon-chevron-left left"></i>Continue shopping
-						</span>
-					</span>
-					<a class="btn btn-default button button-medium" href="#" title="Proceed to checkout" rel="nofollow">
-						<span>
-							Proceed to checkout<i class="fa fa-chevron-right right"></i>
-						</span>
-					</a>	
-				</div>
-			</div>
-		</div>
+<!-- Add To Cart Popup Template -->
+	<div id="addToCart">
+		<g:render template="/home/addToCartPopUp" />
 	</div>
-   <!-- / Layer Cart Popup /-->  
+<!-- /- Add To Cart Popup Template -/ --> 
    
 <script type="text/javascript">
-$(document).ready(function() {
-$('.ajax_add_to_cart_button').on('click', function(){
-	$('#addToCart').show()
-})
-	
+$(document).ready(function() {	
 	$(".various").fancybox({
 		maxWidth	: 900,
 		maxHeight	: 800,
@@ -590,13 +523,12 @@ $('.ajax_add_to_cart_button').on('click', function(){
 			}
 		}
 	});
-<%--	$('#etalage').etalage({--%>
-<%--				thumb_image_width: 300,--%>
-<%--				thumb_image_height: 400,--%>
-<%--				--%>
-<%--				show_hint: true,--%>
-<%----%>
-<%--		});--%>
+	$('#etalage').etalage({
+				thumb_image_width: 300,
+				thumb_image_height: 400,
+				show_hint: true,
+
+		});
 	});
 	$('.control').click(function(){
 		if($(this).hasClass('inactive')) {

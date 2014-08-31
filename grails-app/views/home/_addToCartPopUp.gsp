@@ -1,5 +1,5 @@
 <!-- Product PopUp -->
-<div id="product_preview" class="various">
+<div id="product_preview" style="display: none;">
 	<div class="primary_block row">
 		<!-- left infos-->  
 		<div class="pb-left-column col-sm-5 col-md-5">
@@ -137,3 +137,69 @@
 	</div>
  </div>
  <!-- / Product PopUp /-->
+ 
+ <!-- Layer Cart Popup -->
+ <div id="layer_cart" style="display: none;">
+		<div class="clearfix">
+			<div class="layer_cart_product col-xs-12 col-md-6">
+				<h2>
+					<i class="icon-ok"></i>Product successfully added to your shopping cart
+				</h2>
+				<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="images/t1.jpg" alt="Sed posuere" title="Sed posuere"></div>
+				<div class="layer_cart_product_info">
+					<span id="layer_cart_product_title" class="product-name">Sed posuere</span>
+					<span id="layer_cart_product_attributes"></span>
+					<div>
+						<strong class="dark">Quantity</strong>
+						<span id="layer_cart_product_quantity">7</span>
+					</div>
+					<div>
+						<strong class="dark">Total</strong>
+						<span id="layer_cart_product_price">$2,450.00</span>
+					</div>
+				</div>
+			</div>
+			<div class="layer_cart_cart col-xs-12 col-md-6">
+				<h2>
+					<!-- Plural Case [both cases are needed because page may be updated in Javascript] -->
+					<span class="ajax_cart_product_txt_s ">
+						There are <span class="ajax_cart_quantity">10</span> items in your cart.
+					</span>
+					<!-- Singular Case [both cases are needed because page may be updated in Javascript] -->
+					<span class="ajax_cart_product_txt  unvisible" style="display: none;">
+						There is 1 item in your cart.
+					</span>
+				</h2>
+	
+				<div class="layer_cart_row">
+					<strong class="dark">Total products(tax excl.)</strong>
+					<span class="ajax_block_products_total">$2,935.48</span>
+				</div>
+	
+				<div class="layer_cart_row">
+					<strong class="dark">
+						Total shipping&nbsp;(tax excl.)
+					</strong>
+					<span class="ajax_cart_shipping_cost">$2.00</span>
+				</div>
+				<div class="layer_cart_row">	
+					<strong class="dark">Total(tax excl.)</strong>
+					<span class="ajax_block_cart_total">$2,937.48</span>
+				</div>
+				<div class="button-container">	
+					<span class="continue btn btn-default button exclusive-medium" title="Continue shopping">
+						<span>
+							<i class="icon-chevron-left left"></i>Continue shopping
+						</span>
+					</span>
+					<a class="btn btn-default button button-medium" href="#" title="Proceed to checkout" rel="nofollow">
+						<span>
+							Proceed to checkout<i class="fa fa-chevron-right right"></i>
+						</span>
+					</a>	
+				</div>
+			</div>
+		</div>
+	</div>
+   <!-- / Layer Cart Popup /--> 
+ 
