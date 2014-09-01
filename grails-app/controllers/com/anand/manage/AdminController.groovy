@@ -7,7 +7,7 @@ import grails.plugin.springsecurity.SpringSecurityUtils;
 
 class AdminController {
 	static allowedMethods = [registerUser : "POST",uploadItem : "GET"]
-	def registerService,emailSenderService,springSecurityService
+	def registerService,mailService,springSecurityService
 	
 	def emailService
 	@Secured(['IS_AUTHENTICATED_REMEMBERED','ROLE_SUPER_ADMIN'])
@@ -61,18 +61,18 @@ class AdminController {
 		//emailSenderService.sendMail("rathisumit1991@gmail.com","sumit","hello");
 		log.debug"send mail "
 		try{
-			sendMail {
-				to "rathisumit1991@gmail.com"
-				subject "test"
-				text '<b>Hello</b> World'
+			mailService.sendMail {
+				to "shiv.kumar@oodlestechnologies.com"
+				from "abc@gmail.com"
+				subject "Hello John"
+				body 'this is some text'
 			}
+		}catch(Exception ex){
+			log.debug"exis "+ex
 		}
-		catch(Exception ex){
-			log.debug"mail exception "+ex
-			return "network-issue"
-		}
+
 	}
-	
+
 	
 	def forgotPassword(){
 		User user = User.findByUsername(params.email)

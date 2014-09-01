@@ -59,7 +59,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.2"
         compile ':cache:1.1.1'
-
+		compile ":mail:1.0.7"
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.8" // or ":hibernate4:4.3.1.1"
         runtime ":database-migration:1.3.8"
@@ -67,7 +67,6 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.1"
 		compile ":asset-pipeline:1.7.2"
 		compile ":spring-security-core:2.0-RC2"
-		compile ":mail:1.0.4"
 		compile ":quartz:1.0.1"
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
