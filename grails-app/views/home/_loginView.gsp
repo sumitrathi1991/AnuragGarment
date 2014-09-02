@@ -17,7 +17,7 @@
 							<form id="registerForm" name="registerForm" onsubmit="return false" class="box">
 								<h3 class="page-subheading">Create an account</h3>
                                 <div class="form_content clearfix">
-                                    <p>Please enter your your information to create an account.</p>
+                                    <p class="page-submessage">Please enter your your information to create an account.</p>
                                     <div class="form-group">
                                         <label for="email_create">First Name</label>
                                         <input type="text" class="is_required validate account_input form-control" id="firstName" name="firstName" >
