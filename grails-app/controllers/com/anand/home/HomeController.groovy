@@ -5,18 +5,13 @@ import com.anand.auth.User;
 import com.anand.item.Item
 import grails.plugin.springsecurity.SpringSecurityUtils;
 class HomeController {
-	def springSecurityService
+	def springSecurityService,UserService
     def index() {
 		List itemList = Item.list()
-		 User user = springSecurityService.currentUser
-		 log.debug"login user "+user
-		 if(user){
-		 log.debug"user name "+user.fullName
-		 [itemList : itemList,userFullName:user.fullName]
-		 }else{
-		 [itemList : itemList]
+		 String userFullName = UserService.loginUserName()
+		 [itemList : itemList,userFullName:userFullName]
 
-	}
+	
 		
     }	
 	def loginView(){
@@ -24,13 +19,16 @@ class HomeController {
 	}
 	
 	def productDetail(){
+		String userFullName = UserService.loginUserName()
 		log.debug"in productDetail = "+params.productId
 		Item item =Item.get(params.productId)
 		log.debug"item :"+item
-		[productId:params.productId,item : item]
+		log.debug"name "+userFullName
+		[productId:params.productId,item : item,userFullName:userFullName]
 	}
 	
 	def showProducts(){
+		String userFullName = UserService.loginUserName()
 		log.debug"in showProducts == "+params
 		List items = []
 		if(params.containsKey("itemBrand"))
@@ -40,7 +38,8 @@ class HomeController {
 		List sizeList = Item.findAll()?.itemSize?.unique()
 		List colorList = Item.findAll()?.itemColor?.unique()
 		List brandList =  Item.findAll()?.itemBrand?.unique()
-		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand]
+		log.debug"name "+userFullName
+		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName]
 	}
 	
 	def filterData(){
