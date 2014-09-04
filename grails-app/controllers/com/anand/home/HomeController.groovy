@@ -19,8 +19,8 @@ class HomeController {
 	}
 		
     }	
-	def _loginView(){
-		render template:"/home/loginView.gsp"
+	def loginView(){
+		
 	}
 	
 	def productDetail(){

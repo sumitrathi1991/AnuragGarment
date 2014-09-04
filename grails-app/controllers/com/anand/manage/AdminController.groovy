@@ -62,7 +62,7 @@ class AdminController {
 		log.debug"send mail "
 		try{
 			mailService.sendMail {
-				to "shiv.kumar@oodlestechnologies.com"
+				to "rathisumit1991@gmail.com"
 				from "abc@gmail.com"
 				subject "Hello John"
 				body 'this is some text'

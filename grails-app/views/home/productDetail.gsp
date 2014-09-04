@@ -13,9 +13,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
-<div id="loginViewID" style="display: none;">
-			<g:render template="/home/loginView" />
-		</div>	
+
 <div id="homeViewId">
 	<div class="columns-container">
 		<div id="columns" class="container">					

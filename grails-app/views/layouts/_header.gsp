@@ -42,7 +42,7 @@
 								</sec:ifLoggedIn>	
 								--%><sec:ifNotLoggedIn>
 									<li class="last">
-										<a class="link-login cursor" onClick="loginView()" title="Login" rel="nofollow">Login</a>
+										<g:link action="loginView" controller="home"><span class="link-login cursor"  title="Login" rel="nofollow">Login</span></g:link>
 									</li>
 								</sec:ifNotLoggedIn>
                             </ul>

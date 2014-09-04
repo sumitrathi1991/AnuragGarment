@@ -19,9 +19,10 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 	
-		<div id="loginViewID" style="display: none;">
+		<%--<div id="loginViewID" style="display: none;">
 			<g:render template="/home/loginView" />
 		</div>
+	--%>
 	<div id="homeViewId">
 	<div class="pos-slideshow-container" >
         <div class="flexslider ma-nivoslider">
@@ -540,7 +541,7 @@ $(document).ready(function() {
 			$('.pos-demo-wrap').animate({left:'-210px'}, 500);
 		}
 	});
-registerValidation();
+	registerValidation();
 var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
 
 var CUSTOMMENU_POPUP_EFFECT = 0;

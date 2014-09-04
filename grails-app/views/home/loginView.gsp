@@ -1,4 +1,21 @@
-	<div class="columns-container">
+
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://demo.posthemes.com/pos_alexis/en/ -->
+<html lang="en" class="">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Anand Trading</title>
+		<meta name='layout' content='main' />
+		
+		<meta name="generator" content="PrestaShop">
+		<meta name="robots" content="index,follow">
+		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
+		<meta name="apple-mobile-web-app-capable" content="yes"> 
+        
+        </head>
+	 <body id="index" class="index hide-left-column hide-right-column lang_en">
+	 <div class="columns-container">
 		<div id="columns" class="container">
 											
             <!-- Breadcrumb -->
@@ -92,3 +109,9 @@
 			</div><!-- .row -->
 		</div><!-- #columns -->
 	</div>
+	<script type="text/javascript">
+	registerValidation();
+	var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
+	</script>
+</body>
+</html>
