@@ -79,7 +79,7 @@
                                             </div>
                                             <div class="button-container">
                                                 <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
+                                                    <button class="button ajax_add_to_cart_button btn btn-default various"  title="Add to cart" data-id-product="13" onclick="showAddToCartPopup()"><span>Add to cart</span></button>                                            
                                                     <div class="wishlist">
                                                         <g:link class="addToWishlist wishlistProd_13" action="productDetail" controller="home" params="[productId : "${item.id}"]" title="Product Detail">
                                                             View Details
@@ -507,6 +507,10 @@
 <!-- /- Add To Cart Popup Template -/ --> 
    
 <script type="text/javascript">
+function showAddToCartPopup(){
+$('#product_preview').show();	
+}
+
 $(document).ready(function() {	
 	$(".various").fancybox({
 		maxWidth	: 900,
