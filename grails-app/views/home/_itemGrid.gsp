@@ -7,7 +7,7 @@
                                             <div class="left-block">
                                                 <div class="product-image-container">
                                                     <a class="product_img_link" href="#" title="White Sport Shoes" itemprop="url">
-                                                        <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
+                                                        <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                                     </a>
                                                     <g:link class="quick-view" action="productDetail" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
 													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
@@ -27,7 +27,7 @@
                                                         ${item.itemDescription}    
                                                         </p>
                                             			<div itemprop="offers" class="content_price">
-                                                            <span itemprop="price" class="price product-price">&#8377;${item.itemPrice}</span>
+                                                            <span itemprop="price" class="price product-price">&#8377;${item.itemSize.itemPrice}</span>
                                                              <meta itemprop="priceCurrency" content="1">
 														</div>
                                             			<div class="button-container">

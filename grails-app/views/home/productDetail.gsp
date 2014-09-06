@@ -37,13 +37,13 @@
                                         	<li class="ajax_block_product last_item alternate_item clearfix bx-clone">
 												<div class="item-inner">
                                             		<a href="#" class="product_img_link" title="Puma Sport Shoes">
-                                                    	<img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" width="250" height="250" alt="Puma Sport Shoes">
+                                                    	<img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" width="250" height="250" alt="Puma Sport Shoes">
                                            			 </a>
 					      
                                             		<h3>
                                                     <a class="product-name" href="#" title="Printed Chiffon Dress">${item.itemName}</a>		 													</h3>
 													<div class="content_price">
-                                                    	<span class="special-price">&#8377;${item.itemPrice}</span> 						    													 														<span class="old-price">$200.50</span>
+                                                    	<span class="special-price">&#8377;${item.itemSize[0].itemPrice}</span> 						    													 														<span class="old-price">$200.50</span>
                                            			 </div>
                                                	</div>
                             				</li>
@@ -62,12 +62,7 @@
 						<div class="pb-left-column col-sm-5 col-md-5">
 							<!-- start product_slider -->
 				     		<ul id="etalage">
-				     		<g:each var="itemImage" in="${item.images}">
-                                <li>
-                                    <a href="#">
-                                        <img class="etalage_thumb_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
-                                    </a>
-                                </li>
+				     		<g:each var="itemImage" in="${item.itemColor[0].imageList}">
                                 <li>
                                     <img class="etalage_source_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
                                 </li>
@@ -85,7 +80,7 @@
         				<div id="send_friend_form">
                 		<h2 class="title">Send to a friend</h2>
                         <div class="product clearfix">
-                            <img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" height="270" width="270" alt="Shoes">
+                            <img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" height="270" width="270" alt="Shoes">
                             <div class="product_desc">
                                 <p class="product_name"><strong>Shoes</strong></p>
                                 <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
@@ -125,7 +120,7 @@
 			<h1>${item.itemName}</h1>
                 <div class="price">
                     <p class="our_price_display" >
-						 <span id="our_price_display">&#8377;${item.itemPrice}</span>
+						 <span id="our_price_display">&#8377;${item.itemSize[0].itemPrice}</span>
                      </p>             
 					<p id="old_price">
 						<span id="old_price_display"></span>
@@ -446,26 +441,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-				  	  
-			 
-    <!--<div class="container">
-        <div class="banner-static-botom-containr">
-            <div class="banner-static-botom row">
-                <div class="banner-box banner-box1 col-md-4 col-sm-4 col-sms-12">
-                    <a href="#"><img src="images/banner-static2.jpg" alt=""></a>
-                </div>
-            	<div class="banner-box banner-box2 col-md-4 col-sm-4 col-sms-12">
-                	<a href="#"><img src="images/footer-static5.jpg" alt=""></a>
-                </div>
-                <div class="banner-box banner-box3 col-md-4 col-sm-4 col-sms-12">
-                    <a href="#"><img src="images/footer-static4.jpg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>-->
-			
-			
 <!-- #page -->
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>

@@ -1,5 +1,5 @@
 
-registerValidation();
+//registerValidation();
 
 function loginView(){
 $("#homeViewId").hide();

@@ -8,39 +8,18 @@ class Item {
 	String itemDescription
 	String itemBrand
 	String itemType
-	String itemSize
 	String itemFor
-	String itemColor
-	float itemPrice
-	float discountRate
-	int quantity
-	int qtyOrdered
-	int rating
-	boolean isItemDiscountable
-	boolean isNew
+	boolean isPublished
 	
-	static hasMany = [images : Image]
+	static hasMany = [itemSize: ItemSize, itemColor : ItemColor]
 	
 	static constraints = {
 		itemDescription nullable:true
 	}
 	
 	static mapping = {
+		itemSize cascade : 'all'
+		itemColor cascade : 'all'
 		version false
 	}
-	
-	float getSalePrice(){
-		float salePrice = 0.00
-		if(isItemDiscountable)
-		salePrice = this.itemPrice - (this.itemPrice * (this.discountRate / 100))
-		else
-		salePrice = this.itemPrice
-		return salePrice
-	}
-	
-	int getAvailableQuantity(){
-		return (this.quantity - this.qtyOrdered)
-	}
-
-   
 }

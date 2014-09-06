@@ -96,8 +96,8 @@
 										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productColor">
 										<g:each in="${colorList}" var="color">
 										<li>
-												<input type="checkbox" class="checkbox" name="color" id="" value="${color}">
-                                                <label for="color"><a href="#">${color}</a></label>
+												<input type="checkbox" class="checkbox" name="color" id="" value="${color[0]}">
+                                                <label for="color"><a href="#">${color[0]}</a></label>
 										</li>
 										</g:each>
 										</ul>
@@ -110,8 +110,8 @@
 										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productSize">
 										 <g:each in="${sizeList}" var="size">
 										 <li>																	
-										 		<input type="checkbox" class="checkbox" name="itemSize" id="" value="${size}">
-                                                <label for="itemSize"><a href="#">${size}</a></label>																														 										<li class="nomargin hiddable col-lg-6">
+										 		<input type="checkbox" class="checkbox" name="itemSize" id="" value="${size[0]}">
+                                                <label for="itemSize"><a href="#">${size[0]}</a></label>																														 										<li class="nomargin hiddable col-lg-6">
 										</li>
 										</g:each>
 										</ul>

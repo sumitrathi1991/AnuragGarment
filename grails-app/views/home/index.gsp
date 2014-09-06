@@ -51,10 +51,10 @@
                                 <div class="left-block">
                                     <div class="product-image-container">
                                         <a class="product_img_link"  title="Sed posuere">
-                                            <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
+                                            <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                         </a>
 
-                                       <a class="quick-view various" alt="${item.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.images[0].name}"]"/>"><span>Quick view</span></a>
+                                       <a class="quick-view various" alt="${item.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>"><span>Quick view</span></a>
 										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
                                 </div>
 								
@@ -75,7 +75,7 @@
                                           ${item.itemDescription}
                                           </p>
                                             <div class="content_price">
-                                                <span class="price product-price">&#8377;${item.itemPrice}</span>
+                                                <span class="price product-price">&#8377;${item.itemSize[0].itemPrice}</span>
                                             </div>
                                             <div class="button-container">
                                                 <div class="actions">                                  				 											

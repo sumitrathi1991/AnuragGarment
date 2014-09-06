@@ -82,7 +82,7 @@
                 </div>
                 <div id="pt_menu3" class="pt_menu nav-1">
                     <div class="parentMenu">
-                    <g:link action="showProducts" controller="home" params="[itemFor:'womens']"><span>Women</span></g:link>
+                    <g:link action="showProducts" controller="home" params="[itemFor:'women']"><span>Women</span></g:link>
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">
@@ -138,7 +138,7 @@
    				 </div>
                 <div id="pt_menu12" class="pt_menu nav-2">
                     <div class="parentMenu">
-                    <g:link action="showProducts" controller="home" params="[itemFor:'mens']"><span>Men</span></g:link>
+                    <g:link action="showProducts" controller="home" params="[itemFor:'men']"><span>Men</span></g:link>
 </div>
 <div id="popup3" class="popup" style="display:none">
 <div class="block1" id="block13">
