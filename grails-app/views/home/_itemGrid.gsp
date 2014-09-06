@@ -9,7 +9,7 @@
                                                     <a class="product_img_link" href="#" title="White Sport Shoes" itemprop="url">
                                                         <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
                                                     </a>
-                                                    <g:link class="quick-view" action="productDetail" controller="home" params="[productId : "${item.id}"]"><span>Quick view</span></g:link>
+                                                    <a class="quick-view various" alt="${item.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>"><span>Quick view</span></a>
 													<span class="new-box"><span class="new-label">New</span></span>																										 												</div>
                                             </div>
                     						<div class="right-block">           
