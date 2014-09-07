@@ -117,8 +117,7 @@
     });
  }
  function loginUser(logingFormdata,loginUser){
-	 console.log("success json "+loginUser);
-	jQuery
+	   	jQuery
 		.ajax({
 			type : 'POST',
 			url :  '/j_spring_security_check',
@@ -128,7 +127,8 @@
 				console.log("success json ");
 				console.log(data.success);
 				if(data.success){
-					location.reload();
+					window.location.href = data.redirectURL;
+					
 					$('#loginSpinner').hide();
 				}else{
 					$('#loginSpinner').hide();

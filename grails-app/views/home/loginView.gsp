@@ -83,7 +83,7 @@
                                     <label for="passwd">Password</label>
                                     <span><input class="is_required validate account_input form-control" type="password"  id="j_password" name="j_password" ></span>
                                 </div>
-                                <p class="lost_password form-group"><a href="#" title="Recover your forgotten password" rel="nofollow">Forgot your password?</a></p>
+                                <p class="lost_password form-group"><g:link controller="register" action="forgotPassword" class="linkColor"><span title="Recover your forgotten password" rel="nofollow">Forgot your password?</span></g:link></p>
                                 <div class="submit">
                                     <input type="hidden" class="hidden" name="back" value="my-account">	
                                     <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
@@ -92,6 +92,7 @@
                                             Sign in
                                         </span>
                                     </button>
+                                  
                                     <span id="loginSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
                                    <div id="updateloginmessage" style="display: none;">
                                     </div>

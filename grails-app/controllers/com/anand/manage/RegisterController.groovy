@@ -65,22 +65,22 @@ class RegisterController {
 			return;
 		}
 	}
-def forgotPassword(){
-		User user = User.findByUsername(params.email)
-		log.debug"user : "+user
-		HashMap res = new HashMap()
-		
-		if(user){
-			generateForgotPasswordToken(user)
-			//res.forgotPasswordToken = forgotPasswordToken
-			res.result = "success"
+	def forgotPassword(){
+	
+		if(params.email){
+			User user = User.findByUsername(params.email)
+			log.debug"user : "+user
+			HashMap res = new HashMap()
+			if(user){
+				generateForgotPasswordToken(user)
+				//res.forgotPasswordToken = forgotPasswordToken
+				res.result = "success"
+			}
+			else{
+				res.result = "invalid"
+			}
+			render res.result;
 		}
-		else{
-			res.result = "invalid"
-		}
-		render res.result;
-		
-		
 	}
 	def generateForgotPasswordToken(User user){
 		String forgotPasswordToken = RandomStringUtils.randomAlphanumeric(32)

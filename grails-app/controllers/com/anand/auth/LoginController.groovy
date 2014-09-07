@@ -37,7 +37,7 @@ class LoginController {
 	/**
 	 * Dependency injection for the springSecurityService.
 	 */
-	def springSecurityService
+	def springSecurityService,grailsApplication
 
 	/**
 	 * Default action; redirects to 'defaultTargetUrl' if logged in, /login/auth otherwise.
@@ -136,7 +136,17 @@ class LoginController {
 	 * The Ajax success redirect url.
 	 */
 	def ajaxSuccess() {
-		render([success: true, username: springSecurityService.authentication.name] as JSON)
+		String redirectURL = grailsApplication.config.grails.serverURL
+		log.debug"redirectURL"
+		UserRole userRole = UserRole.findByUser(springSecurityService.currentUser);
+		
+		if(userRole.role.authority == "ROLE_BUYER"){
+			redirectURL = redirectURL
+		}else{
+			redirectURL = redirectURL + "/admin"
+		}
+		
+		render([success: true, username: springSecurityService.authentication.name,redirectURL:redirectURL] as JSON)
 	}
 
 	/**
