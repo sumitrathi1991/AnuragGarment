@@ -79,7 +79,7 @@
                                             </div>
                                             <div class="button-container">
                                                 <div class="actions">                                  				 											
-                                                    <button class="button ajax_add_to_cart_button btn btn-default various"  title="Add to cart" data-id-product="13" onclick="showAddToCartPopup()"><span>Add to cart</span></button>                                            
+                                                    <button class="button ajax_add_to_cart_button btn btn-default"  title="Add to cart" data-id-product="13" onclick="showAddToCartPopup()"><span>Add to cart</span></button>                                            
                                                     <div class="wishlist">
                                                         <g:link class="addToWishlist wishlistProd_13" action="productDetail" controller="home" params="[productId : "${item.id}"]" title="Product Detail">
                                                             View Details
@@ -176,8 +176,8 @@
 											 </div>           
                                             <div class="button-container">
                                                 <div class="actions">
-                                                  <a class="button ajax_add_to_cart_button btn btn-default various" href="#product_preview" rel="nofollow" title="Add to cart"><span>Add to cart</span>
-                                                 </a>                                        
+                                                  <button class="button ajax_add_to_cart_button btn btn-default"  onclick="showAddToCartPopup()"" title="Add to cart"><span>Add to cart</span>
+                                                 </button>                                        
                                                     <div class="wishlist">
                                                         <a class="addToWishlist wishlistProd_7" href="#" rel="7" >
                                                             Add to Wishlist
@@ -508,7 +508,22 @@
    
 <script type="text/javascript">
 function showAddToCartPopup(){
-$('#product_preview').show();	
+	$.fancybox({
+        href: '#product_preview', 
+        maxWidth	: 900,
+		fitToView	: false,
+		width		: '100%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'fade',
+		closeEffect	: 'fade',
+		helpers	: {
+			title	: {
+				type: 'float'
+			}
+		}
+    });
+    return false;
 }
 	$('.control').click(function(){
 		if($(this).hasClass('inactive')) {

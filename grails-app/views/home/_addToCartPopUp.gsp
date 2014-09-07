@@ -1,5 +1,6 @@
 <!-- Product PopUp -->
-<div id="product_preview" style="display: none;">
+<div style="display: none;">
+<div id="product_preview">
 	<div class="primary_block row">
 		<!-- left infos-->  
 		<div class="pb-left-column col-sm-5 col-md-5">
@@ -135,6 +136,7 @@
 					
 		</div> <!-- end pb-right-column-->
 	</div>
+ </div>
  </div>
  <!-- / Product PopUp /-->
  

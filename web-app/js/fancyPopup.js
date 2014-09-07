@@ -7,8 +7,8 @@ $(".various").fancybox({
 		height		: '100%',
 		autoSize	: false,
 		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none',
+		openEffect	: 'fade',
+		closeEffect	: 'fade',
 		helpers	: {
 			title	: {
 				type: 'float'
