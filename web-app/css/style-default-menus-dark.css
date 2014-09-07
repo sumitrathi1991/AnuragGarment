@@ -9558,4 +9558,6 @@
 	}
 	.ui-tabs .ui-tabs-nav li{ margin:0; border:0}
 	.navbar > ul > li.ui-state-active > a { background:#fff; color: #4D4D4D;}
+	.dynamicTable .glyphicons i:before{ font-size:14px; color:#757575}
+	.dynamicTable .glyphicons:hover > i:before{color:#424242}
 	

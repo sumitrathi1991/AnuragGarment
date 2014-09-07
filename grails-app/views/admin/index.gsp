@@ -52,7 +52,7 @@
 						
 			<!-- Full Top Style -->
 			<ul class="topnav pull-left">
-				<li><a href="#Tab1" class="glyphicons upload"><i></i> Upload</a></li>
+				<li><a href="#Tab1" class="glyphicons upload"><i></i> Order</a></li>
 				<li><a href="#Tab2" class="glyphicons settings"><i></i>Manage</a></li>
 			</ul>
 			<!-- // Full Top Style END -->
@@ -81,92 +81,114 @@
                     <li>You are here</li>
                     <li><a href="#Tab1" class="glyphicons upload"><i></i> ANAND TRADING</a></li>
                     <li class="divider"><i class="icon-caret-right"></i></li>
-                    <li><a href="#Tab2">Upload Item</a></li>
+                    <li><a href="#Tab2">Orders</a></li>
                 </ul>
 
-                <h1>Upload Item</h1>
+                <h1>Orders</h1>
                 <div class="innerLR">
 
                 <!-- Widget -->
                 <div class="widget widget-heading-simple widget-body-gray">
                     <div class="widget-body">
-                        <p>Choose the Details of your Product & Upload Multiple images for this.</p>
+                        <p>See the list of the Orders which have been placed.</p>
                     </div>
                 </div>
                 <!-- // Widget END -->
 	
                 <!-- Widget -->
-                <div class="widget widget-heading-simple widget-body-white">
+                <div class="widget widget-heading-simple widget-body-gray">
                 
                     <!-- Widget heading -->
                     <div class="widget-head">
-                        <h4 class="heading">Item Details</h4>
+                        <h4 class="heading">Orders Details</h4>
                     </div>
                     <!-- // Widget heading END -->
                     
-                    <div class="widget-body">
-                        <div class="row-fluid">
-                            <div class="span6">
-                                <div class="row-fluid">
-                                    <label class="strong">Item Name:</label>
-                                    <input type="text" placeholder="Enter the name of item" class="span12">
-                                </div>
-                                <div class="row-fluid">
-                                    <label class="strong">Description:</label>
-                                    <textarea placeholder="Enter the description of item" rows="5" class="span12"></textarea>
-                                </div>
-                                <div class="row-fluid">
-                                    <label class="strong">Item Brand:</label>
-                                    <input type="text" placeholder="Enter the brand name of item" class="span12">
-                                </div>
-                                 <div class="row-fluid">
-                                    <label class="strong">Type:</label>
-                                    <select class="span12">
-                                        <option selected>Sports</option>
-                                        <option>Formal</option>
-                                        <option>Ethnic</option>
-                                    </select>
-                                </div>
-                                 <div class="row-fluid">
-                                    <label class="strong">Quantity:</label>
-                                    <input type="number" placeholder="Number of items" class="span12">
-                                </div>
-                                 <div class="row-fluid">
-                                    <label class="strong">Size:</label>
-                                    <select class="span12">
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option selected>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
-                                    </select>
-                                </div>
-                                <div class="row-fluid">
-                                    <label class="strong">Price:</label>
-                                    <input type="number" placeholder="Number of items" class="span12">
-                                </div>
-                                 <div class="row-fluid">
-                                    <label class="strong">Color:</label>
-                                    <select class="span12">
-                                        <option>Red</option>
-                                        <option>White</option>
-                                        <option>Black</option>
-                                        <option selected>Grey</option>
-                                        <option>Blue</option>
-                                    </select>
-                                </div>
-                                <div class="row-fluid">
-                                    <label class="strong">Image:</label>
-                                    <a href="#modal-upload" data-toggle="modal" class="btn btn-default btn-file" >Select Files</a>
-                                </div>
-                                 <div class="row-fluid">
-                                    <div class="span3 offset9">
-                                        <button type="button" class="btn btn-default " data-dismiss="modal">Cancel</button>
-                                        <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">Add</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+                    	<div class="widget-body">
+                        	<!-- Table -->
+							<table class="dynamicTable colVis table table-striped table-bordered table-condensed table-white">
+							
+								<!-- Table heading -->
+								<thead>
+									<tr>
+										<th>User Name</th>
+										<th>Item</th>
+										<th>Quantity(s)</th>
+										<th>Location</th>
+										<th>Order Date</th>
+										<th>Payment Type</th>
+										<th>Amount</th>
+										<th>Status</th>
+										<th>Details</th>
+									</tr>
+								</thead>
+								<!-- // Table heading END -->
+								
+								<!-- Table body -->
+								<tbody>
+								
+									<!-- Table row -->
+									<tr class="gradeX">
+										<td>Himanshu Chopra</td>
+										<td>Sports Shoes</td>
+										<td>2</td>
+										<td>Dwarka</td>
+										<td>2 Sep 2014</td>
+										<td>Net Banking</td>
+										<td>5000/-</td>
+										<td>Pending</td>
+										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
+									</tr>
+									<!-- // Table row END -->
+									
+									<!-- Table row -->
+									<tr class="gradeC">
+										<td>Sumit Rathi</td>
+										<td>Formal Shoes</td>
+										<td>3</td>
+										<td>Bhadurgarh</td>
+										<td>5 Sep 2014</td>
+										<td>Credit Card</td>
+										<td>4000/-</td>
+										<td>Pending</td>
+										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
+									</tr>
+									<!-- // Table row END -->
+									
+									<!-- Table row -->
+									<tr class="gradeC">
+										<td>Shiv Kumar</td>
+										<td>Casual Shoes</td>
+										<td>1</td>
+										<td>Najafgarh</td>
+										<td>3 Sep 2014</td>
+										<td>Debit Card</td>
+										<td>3000/-</td>
+										<td>Accepted</td>
+										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
+									</tr>
+									<!-- // Table row END -->
+									
+									<!-- Table row -->
+									<tr class="gradeC">
+										<td>Binod Singh</td>
+										<td>Sports Shoes</td>
+										<td>3</td>
+										<td>Mehrauli</td>
+										<td>8 Sep 2014</td>
+										<td>COD</td>
+										<td>9000/-</td>
+										<td>Pending</td>
+										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
+									</tr>
+									<!-- // Table row END -->
+									
+									
+								</tbody>
+								<!-- // Table body END -->
+								
+							</table>
+							<!-- // Table END -->
                         </div>
                     </div>
 				</div>
@@ -450,6 +472,14 @@
   $(function() {
     $( "#content" ).tabs();
   });
+  $('.dynamicTable').dataTable({
+		"sPaginationType": "bootstrap",
+		"sDom": "<'row-fluid'<'span5'T><'span3'l><'span4'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+		"oLanguage": {
+			"sLengthMenu": "_MENU_ per page"
+		}
+		
+	});
   </script>
 </body>
 </html>

@@ -26,6 +26,9 @@
         
         <link rel="stylesheet" href="/css/jquery.plupload.queue.css" type="text/css" media="all">
         
+        <!-- DataTables Plugin -->
+		<link href="/css/DT_bootstrap.css" rel="stylesheet" />
+        
         <link rel="stylesheet" href="/css/style-default-menus-dark.css" type="text/css" media="all">
         
         
@@ -48,6 +51,10 @@
 		
 		<!-- File Managers Demo Script -->
 		<script type="text/javascript" src="/js/file_managers.js"></script>
+		
+		<!-- DataTables Tables Plugin -->
+		<script src="/js/jquery.dataTables.min.js"></script>
+		<script src="/js/DT_bootstrap.js"></script>
 		
 		<!-- Common Demo Script -->
 		<script type="text/javascript" src="/js/common.js"></script>

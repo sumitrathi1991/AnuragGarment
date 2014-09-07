@@ -52,7 +52,7 @@
 						
 			<!-- Full Top Style -->
 			<ul class="topnav pull-left">
-				<li><a href="#Tab1" class="glyphicons upload"><i></i> Upload</a></li>
+				<li><a href="#Tab1" class="glyphicons upload"><i></i> Order</a></li>
 				<li><a href="#Tab2" class="glyphicons settings"><i></i>Manage</a></li>
 			</ul>
 			<!-- // Full Top Style END -->
@@ -81,7 +81,7 @@
                     <li><a href="#Tab2">Upload Item</a></li>
                 </ul>
 
-                <h1>Upload Item</h1>
+                <h1>Orders</h1>
                 <div class="innerLR">
 
                 <!-- Widget -->
@@ -176,7 +176,7 @@
                 <li>You are here</li>
                 <li><a href="#" class="glyphicons settings"><i></i> ANAND TRADING</a></li>
                 <li class="divider"><i class="icon-caret-right"></i></li>
-                <li>Upload Item</li>
+                <li>Orders</li>
                 </ul>
 
 				<h1>Manage Item</h1>
