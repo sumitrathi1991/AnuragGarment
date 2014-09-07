@@ -128,8 +128,9 @@
 								<tbody>
 								
 									<!-- Table row -->
+									 <g:each in="${userList}" var='user'>
 									<tr class="gradeX">
-										<td>Himanshu Chopra</td>
+										<td>${user.fullName }</td>
 										<td>Sports Shoes</td>
 										<td>2</td>
 										<td>Dwarka</td>
@@ -139,51 +140,9 @@
 										<td>Pending</td>
 										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
 									</tr>
+									</g:each>
 									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Sumit Rathi</td>
-										<td>Formal Shoes</td>
-										<td>3</td>
-										<td>Bhadurgarh</td>
-										<td>5 Sep 2014</td>
-										<td>Credit Card</td>
-										<td>4000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Shiv Kumar</td>
-										<td>Casual Shoes</td>
-										<td>1</td>
-										<td>Najafgarh</td>
-										<td>3 Sep 2014</td>
-										<td>Debit Card</td>
-										<td>3000/-</td>
-										<td>Accepted</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Binod Singh</td>
-										<td>Sports Shoes</td>
-										<td>3</td>
-										<td>Mehrauli</td>
-										<td>8 Sep 2014</td>
-										<td>COD</td>
-										<td>9000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									
+											
 								</tbody>
 								<!-- // Table body END -->
 								
@@ -212,7 +171,7 @@
                     <div class="widget-body">
                         <p>Manage/Edit/Delete the items.</p>
                     </div>
-                    <div classr="row-fluid">
+                    <div class ="row-fluid">
                             <a href="#modal-AddItem" data-toggle="modal"><span class="btn btn-primary btn-icon glyphicons circle_plus pull-right btnT10"><i></i> Add</span></a>
                     </div>
                 </div>
@@ -243,8 +202,9 @@
                     <tbody>
                     
                         <!-- Table row -->
+                        <g:each in="${userList}" var='user'>
                         <tr class="gradeX">
-                            <td>Nike Stuts</td>
+                            <td>${user.fullName }</td>
                             <td>Lorem Ipsume</td>
                             <td>Nike</td>
                             <td>Football</td>
@@ -254,52 +214,7 @@
                             <td>White</td>
                             <td><i class="icon-edit"></i><i class="icon-remove-sign"></i></td>
                         </tr>
-                        <tr class="gradeX">
-                            <td>Nike Stuts</td>
-                            <td>Lorem Ipsume</td>
-                            <td>Nike</td>
-                            <td>Football</td>
-                            <td>1</td>
-                            <td>8</td>
-                            <td>3000</td>
-                            <td>White</td>
-                            <td><i class="icon-edit"></i><i class="icon-remove-sign"></i></td>
-                        </tr>
-                        <tr class="gradeX">
-                            <td>Nike Stuts</td>
-                            <td>Lorem Ipsume</td>
-                            <td>Nike</td>
-                            <td>Football</td>
-                            <td>1</td>
-                            <td>8</td>
-                            <td>3000</td>
-                            <td>White</td>
-                            <td><i class="icon-edit"></i><i class="icon-remove-sign"></i></td>
-                        </tr>
-                        <tr class="gradeX">
-                            <td>Nike Stuts</td>
-                            <td>Lorem Ipsume</td>
-                            <td>Nike</td>
-                            <td>Football</td>
-                            <td>1</td>
-                            <td>8</td>
-                            <td>3000</td>
-                            <td>White</td>
-                            <td><i class="icon-edit"></i><i class="icon-remove-sign"></i></td>
-                        </tr>
-                        <tr class="gradeX">
-                            <td>Nike Stuts</td>
-                            <td>Lorem Ipsume</td>
-                            <td>Nike</td>
-                            <td>Football</td>
-                            <td>1</td>
-                            <td>8</td>
-                            <td>3000</td>
-                            <td>White</td>
-                            <td><i class="icon-edit"></i><i class="icon-remove-sign"></i></td>
-                        </tr>
-                        <!-- // Table row END -->
-                        
+                        </g:each>
                         
                         
                     </tbody>
@@ -334,7 +249,7 @@
 		</div>
 		<!-- // Footer END -->
 		
-	</div>
+	
 	<!-- // Main Container Fluid END -->
 
 

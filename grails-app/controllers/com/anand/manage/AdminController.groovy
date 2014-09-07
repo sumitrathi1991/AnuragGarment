@@ -1,8 +1,13 @@
 package com.anand.manage
 
+import com.anand.auth.Role;
 import com.anand.auth.User;
+import com.anand.auth.UserRole;
+
 import grails.plugin.springsecurity.annotation.Secured
+
 import org.apache.commons.lang.RandomStringUtils
+
 import grails.plugin.springsecurity.SpringSecurityUtils;
 
 class AdminController {
@@ -13,7 +18,11 @@ class AdminController {
 	@Secured(['IS_AUTHENTICATED_REMEMBERED','ROLE_SUPER_ADMIN'])
     def index() { 
 		User user = springSecurityService.currentUser
-		[userFullName:user.fullName]
+		Role role = Role.findByAuthority("ROLE_BUYER")
+		def userList = UserRole.findAllByRole(role,,[sort:'id',order:'dec']).user
+		
+		[userFullName:user.fullName,userList:userList]
+		
 	}
 	def login(){
 		
