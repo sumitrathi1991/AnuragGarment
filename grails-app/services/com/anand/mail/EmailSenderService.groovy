@@ -8,7 +8,7 @@ import grails.transaction.Transactional
 @Transactional
 class EmailSenderService {
 
-	def emailService
+	def mailService
 	def grailsApplication
 	PageRenderer groovyPageRenderer
 	def serviceMethod() {
@@ -21,28 +21,17 @@ class EmailSenderService {
 		model.user = user
 		model.name = user.fullName
 		def emailBody = renderTemplate('userRegisterVerification', model)
-		String responseMessage = sendMail(to, subject, emailBody)
-		return responseMessage
-	}
-	def testMail(){
-		String to = "rathisumit1991@gmail.com"
-		String subject = "New Account"
-		HashMap model = new HashMap()
-		model.user = "sumit"
-		model.name = "rathi"
-		model.token = "sumit rahti"
-		def emailBody = renderTemplate('userRegisterVerification', model)
 		String responseMessage = sendMailToUser(to, subject, emailBody)
-		log.debug"response "+responseMessage
 		return responseMessage
 	}
+	
 	String sendMailToUser(String toUser, String mailSubject, def emailBody){
 		log.debug"sending mail"
 		try{
-			sendMail {
+			mailService.sendMail {
 				to toUser
 				subject mailSubject
-				text emailBody
+				html emailBody
 			}
 		}
 		catch(Exception ex){

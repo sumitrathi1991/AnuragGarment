@@ -15,7 +15,7 @@ class RegisterService {
 		String token = RandomStringUtils.randomAlphanumeric(32)
 		
 		String fullName = params.firstName +" "+ params.lastName;
-		User user = new User(username:params.emailAddress,password:params.password,fullName:fullName,phoneNumber:params.contact,token:token);
+		User user = new User(username:params.emailAddress,password:params.password,fullName:fullName,phoneNumber:params.contact,token:token,isTokenExpired:false);
 		if(!user.save(flush:true)){
 			log.error user.errors
 		}

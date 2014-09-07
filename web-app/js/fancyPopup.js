@@ -1,3 +1,4 @@
+
 $(".various").fancybox({
 		maxWidth	: 900,
 		maxHeight	: 800,
@@ -14,9 +15,4 @@ $(".various").fancybox({
 			}
 		}
 	});
-	$('#etalage').etalage({
-				thumb_image_width: 300,
-				thumb_image_height: 400,
-				show_hint: true,
-
-		});
+	

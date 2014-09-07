@@ -35,7 +35,7 @@ class ItemController {
 				//itemColor.save(flush:true)
 				itemColor.imageList = uploadedImages
 				ItemSize itemSize = new ItemSize(label : sizes[i], itemPrice : prices[i], isDiscountable  :false, quantity: 20, isNew: true) 
-				Item item = new Item(itemName: "Women"+i,itemCode : "Item"+i,itemDescription: "footwear",itemBrand : brands[i],itemFor: "women",itemType:itemType[i])
+				Item item = new Item(itemName: "Kid"+i,itemCode : "Item"+i,itemDescription: "footwear",itemBrand : brands[i],itemFor: "kid",itemType:itemType[i])
 				item.addToItemSize(itemSize)
 				item.addToItemColor(itemColor)
 				if(!item.save(flush : true)){
@@ -47,7 +47,7 @@ class ItemController {
 	List uploadImage(){
 		List uploadedImages = []
 		for(int i=1; i<10; i++){
-			Image image = new Image(name: "product"+i+".jpeg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpeg", imageSize: "1234", width:"50", height :"50").save()
+			Image image = new Image(name: "product"+i+".jpg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpg", imageSize: "1234", width:"50", height :"50").save()
 			uploadedImages.add(image)
 		}
 		return uploadedImages

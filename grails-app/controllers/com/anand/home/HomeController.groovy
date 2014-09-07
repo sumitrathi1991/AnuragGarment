@@ -9,8 +9,7 @@ class HomeController {
 	String userFullName = "Anonymous"
 	def index() {
 		List itemList = Item.list().take(10)
-		if(springSecurityService.currentUser)
-			userFullName = springSecurityService.currentUser.userFullName
+		String userFullName = UserService.loginUserName()
 		log.debug"itemList--"+itemList
 		[itemList : itemList,userFullName:userFullName]
 	}
@@ -18,16 +17,14 @@ class HomeController {
 	}
 
 	def productDetail(){
-		if(springSecurityService.currentUser)
-			userFullName = springSecurityService.currentUser.userFullName
+		String userFullName = UserService.loginUserName()
 		log.debug"in productDetail = "+params.productId
 		Item item =Item.get(params.productId)
 		[productId:params.productId,item : item,userFullName:userFullName]
 	}
 
 	def showProducts(){
-		if(springSecurityService.currentUser)
-			userFullName = springSecurityService.currentUser.userFullName
+		String userFullName = UserService.loginUserName()
 		log.debug"in showProducts == "+params
 		List items = []
 		if(params.containsKey("itemBrand"))

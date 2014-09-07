@@ -87,8 +87,8 @@ environments {
     development {
         grails.logging.jul.usebridge = true
 		grails.serverURL = "http://localhost:8080"
-		grails.anand.imageUrl = "/home/oodles/anand/images/"
-		//grails.anand.imageUrl = "E:\\Doc\\books\\anand\\images\\"
+		//grails.anand.imageUrl = "/home/oodles/anand/images/"
+		grails.anand.imageUrl = "E:\\Doc\\books\\anand\\images\\"
     }
     production {
         grails.logging.jul.usebridge = false

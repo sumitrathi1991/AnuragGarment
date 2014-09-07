@@ -111,7 +111,84 @@
 	</div>
 	<script type="text/javascript">
 	registerValidation();
-	var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
+	var registerUrl = "${createLink(controller:'Register',action:'registerUser')}";
+	$('#etalage').etalage({
+		thumb_image_width: 300,
+		thumb_image_height: 400,
+		show_hint: true,
+
+	});
+	var CUSTOMMENU_POPUP_EFFECT = 0;
+	var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
+
+	$('#pos-slideshow-home').nivoSlider({
+		effect: 'random',
+		slices: 15,
+		boxCols: 8,
+		boxRows: 4,
+		animSpeed: '600',
+		pauseTime: '5000',
+		startSlide: 0,
+		directionNav: false,
+		controlNav: false,
+		controlNavThumbs: false,
+		pauseOnHover: true,
+		manualAdvance: false,
+		prevText: 'Prev',
+		nextText: 'Next',
+	                afterLoad: function(){
+	                 $('.pos-loading').css("display","none");
+	                },     
+	                beforeChange: function(){ 
+	                    $('.pos-slideshow-title, .pos-slideshow-des').css("left","-100%" );
+	                    $('.pos-slideshow-readmore').css("left","-100%"); 
+	                }, 
+	                afterChange: function(){ 
+	                    $('.pos-slideshow-title, .pos-slideshow-des, .pos-slideshow-readmore').css("left","100px") 
+	                }
+		});
+
+	$('.pos-feature-product .bxslider').bxSlider({
+		auto: 0,
+		infiniteLoop:false,
+		slideWidth:275,
+		slideMargin: 23,
+		minSlides: 1,
+		maxSlides: 4,
+		speed:  3000,
+		pause: 600,
+		controls: 1,
+		pager: false,
+	});
+	$('.pos-logo .bxslider').bxSlider({
+	    auto: true,
+	    slideWidth:200,
+		slideMargin: 5,
+		minSlides: 1,
+		maxSlides: 6,
+		speed:  4000,
+		pause: 4000,
+		controls: 1,
+		autoHover: true,
+	    pager: false,
+	});
+
+
+	$.easing.elasout = function(x, t, b, c, d) {
+		var s=1.70158;var p=0;var a=c;
+		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+		if (a < Math.abs(c)) { a=c; var s=p/4; }
+		else var s = p/(2*Math.PI) * Math.asin (c/a);
+		return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+	};
+
+
+
+	// TOC, shows how to scroll the whole window
+	$('#BrandsType a').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+	$.scrollTo( this.hash, 1500, { easing:'elasout' });
+
+	});
 	</script>
 </body>
 </html>

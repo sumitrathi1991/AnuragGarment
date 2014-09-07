@@ -69,9 +69,8 @@
 						if(data.status == "success"){
 							document.getElementById("registerForm").reset();
 							
-							$('#updatesignupmessage').html("Thanks for creating new account.Mail has been sent to you email address to verify your email address or you can login with your email and password.");
 						}
-						
+						$('#updatesignupmessage').html(data.message);
 					},
 					error : function(XMLHttpRequest,textStatus,errorThrown) {
 						$('#signupSpinner').hide();
