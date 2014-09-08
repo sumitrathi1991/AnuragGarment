@@ -3,6 +3,7 @@ package com.anand.manage
 import com.anand.auth.Role;
 import com.anand.auth.User;
 import com.anand.auth.UserRole;
+import com.anand.item.Item;
 
 import grails.plugin.springsecurity.annotation.Secured
 
@@ -20,16 +21,16 @@ class AdminController {
 		User user = springSecurityService.currentUser
 		Role role = Role.findByAuthority("ROLE_BUYER")
 		def userList = UserRole.findAllByRole(role,,[sort:'id',order:'dec']).user
-		
-		[userFullName:user.fullName,userList:userList]
+		def itemList = Item.findAll();
+		[userFullName:user.fullName,userList:userList,itemList:itemList]
 		
 	}
 	def login(){
 		
 	}
-	def upload_item(){
+	def _upload_item(){
 		log.debug"hello uploadd item 2"
-		render view:'upload_item'
+		render view:'_upload_item'
 	}
 	
 	
