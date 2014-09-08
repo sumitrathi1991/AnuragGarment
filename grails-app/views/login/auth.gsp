@@ -52,10 +52,11 @@
 			<!-- Box -->
 			<div class="widget widget-heading-simple widget-body-gray">
 				
-				<div class="widget-body">
+				<!--Login Box -->
+				<div class="widget-body" id="login-panel">
 				<g:if test="${flash.message }">
 				<div id="message" style="color: #e82a2a;">${flash.message}</div>
-			</g:if>
+				</g:if>
 					<!-- Form -->
 					<form  action='${postUrl}' method='POST' id='loginForm' class='login-form' autocomplete='off'>
 						<label>Email</label>
@@ -76,30 +77,51 @@
 						</div>
 					</form>
 					<!-- // Form END -->
-							
 				</div>
-				<div class="widget-footer" id="updateadminmessage" style="display: none;">
-					<p class="glyphicons restart"><i></i></p>
-				</div>
+				<!--Login Box Ends -->
+				
+				<!--Forgot Box -->
+				<div class="widget-body" id="forgot-panel" style="display:none">
 				<g:formRemote name="subForm" url="[controller:'admin', action:'forgotPassword']" class="forget-form">
-				<h3>Forget Password ?</h3>
-				<p>Enter your e-mail address below to reset your password.</p>
+				<p class="fs-12">Enter your e-mail address below to reset your password.</p>
+				
 				<div class="form-group">
 					<div class="input-icon">
 						<i class="fa fa-envelope"></i>
-						<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" />
+						<input class="input-block-level" type="text" autocomplete="off" placeholder="Email" name="email" />
 					</div>
 				</div>
-				<div class="form-actions">
-					<button type="button" id="back-btn" class="btn"><i class="m-icon-swapleft"></i> Back</button>
-					<button type="submit" class="btn blue pull-right">Submit <i class="m-icon-swapright m-icon-white"></i></button>
+				<div class="separator bottom"></div>
+				<div class="row-fluid">
+					<div class="span8">
+						<button type="button" id="back-btn" class="btn btn-inverse"><i class="m-icon-swapleft"></i> Back</button>
+					</div>
+					<div class="span4 center">
+						<button type="submit" class="btn btn-block btn-inverse">Submit <i class="m-icon-swapright m-icon-white"></i></button>
+					</div>
 				</div>
 			</g:formRemote>
 			</div>
+			<!--Forgot Box Ends-->
+			
+			
+			</div>
+			
 		<!-- // Box END --></div>
 		
 	</div>
 	
 </div>
+
+<script>
+	$("#forget-password").click(function(){
+		$("#login-panel").fadeOut(200);
+		$("#forgot-panel").delay(300).fadeIn();
+	});
+	$("#back-btn").click(function(){
+		$("#login-panel").delay(300).fadeIn();
+		$("#forgot-panel").fadeOut(200);
+	});
+</script>
 </body>
 </html>
