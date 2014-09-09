@@ -21,14 +21,44 @@
 				                      </div>
 	                                <div class="row-fluid">
 	                                    <label class="strong">Item Brand:</label>
-	                                    <input type="text" placeholder="Enter the brand name of item" class="span12">
+	                                    <select class="span12">
+	                                        <option selected>Action</option>
+	                                        <option>Adidas</option>
+	                                        <option>Jogger</option>
+	                                       	<option>Lakhani</option>
+	                                       	<option>Nike</option>
+	                                        <option>Puma</option>
+	                                        <option>Red Cheif</option>
+	                                        <option>Reebok</option>
+	                                        <option>Relaxo</option>
+	                                    </select>
+	                                </div>
+	                                <div class="row-fluid">
+	                                    <label class="strong">Item For:</label>
+	                                    <select class="span12">
+	                                        <option selected>Men</option>
+	                                        <option>Women</option>
+	                                        <option>Kid</option>
+	                                    </select>
 	                                </div>
 	                                 <div class="row-fluid">
 	                                    <label class="strong">Type:</label>
 	                                    <select class="span12">
-	                                        <option selected>Sports</option>
-	                                        <option>Formal</option>
+	                                        <option selected>Boots</option>
+	                                        <option>Casual Shoes</option>
+	                                        <option>Converse</option>
+	                                        <option>Combo Offers</option>
 	                                        <option>Ethnic</option>
+	                                        <option>Fabrication</option>
+	                                        <option>Formal Shoes</option>
+	                                        <option>Floaters</option>
+	                                        <option>High Heel</option>
+	                                        <option>Loafers</option>
+	                                        <option>Sports Shoes</option>
+	                                        <option>Sneakers</option>
+	                                        <option>Sandals</option>
+	                                        <option>Slipper & Flip Flops</option>
+	                                        <option>Floater Sandals</option>
 	                                    </select>
 	                                </div>
 	                                 <div class="row-fluid">
