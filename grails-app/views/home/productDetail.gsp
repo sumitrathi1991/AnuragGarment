@@ -568,17 +568,6 @@
 var CUSTOMMENU_POPUP_EFFECT = 0;
 var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
 //]]>
-$('.pos-special-product .bxslider').bxSlider({
-            auto: 0,
-            slideWidth:260,
-			slideMargin: 0,
-			minSlides: 1,
-			maxSlides: 1,
-			speed:  3000,
-			pause: 3000,
-			controls: 1,
-            pager: false,
-		});
 $('document').ready(function(){
 	$('#send_friend_button').fancybox({
 		'hideOnContentClick': false
@@ -621,18 +610,6 @@ $('#posproductcategory_list .bxslider').bxSlider({
 		controls: 1,
 		pager: false,
 	});
-$('.pos-logo .bxslider').bxSlider({
-    auto: true,
-    slideWidth:200,
-	slideMargin: 5,
-	minSlides: 1,
-	maxSlides: 6,
-	speed:  4000,
-	pause: 4000,
-	controls: 1,
-	autoHover: true,
-    pager: false,
-});
 
 $('#addToCart').on('click', function(){
 var itemId = $(this).attr('itemId');
