@@ -72,7 +72,8 @@
 						</form>
 					</div>
                     <div class="col-xs-12 col-sm-6">
-                        <form id="loginForm" class="box" >
+                    	<!--Login Box -->
+                        <form id="login_form" class="box" >
                             <h3 class="page-subheading">Already registered?</h3>
                             <div class="form_content clearfix">
                                 <div class="form-group">
@@ -83,7 +84,7 @@
                                     <label for="passwd">Password</label>
                                     <span><input class="is_required validate account_input form-control" type="password"  id="j_password" name="j_password" ></span>
                                 </div>
-                                <p class="lost_password form-group"><g:link controller="register" action="forgotPassword" class="linkColor"><span title="Recover your forgotten password" rel="nofollow">Forgot your password?</span></g:link></p>
+                                <p class="lost_password form-group"><span>Forgot your password?</span></p>
                                 <div class="submit">
                                     <input type="hidden" class="hidden" name="back" value="my-account">	
                                     <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
@@ -100,6 +101,43 @@
                                 </div>
                             </div>
                         </form>
+                        <!--Login Box Ends -->
+                        
+                        <!--Forgot Box -->
+                         <form id="form_forgotpassword" class="box" style="display:none">
+                            <h3 class="page-subheading">Forgot your password?</h3>
+                            <p class="page-submessage">Please enter the email address you used to register. We'll then send you a new password. </p>
+                            <div class="form_content clearfix">
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input class="is_required validate account_input form-control" data-validate="isEmail" type="text" id="j_username" name="j_username" >
+                                </div>
+                                
+                                <div class="submit">
+                                    <input type="hidden" class="hidden" name="back" value="my-account">	
+                                    <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
+                                        <span>
+                                            <i class="fa fa-lock fa-lg"></i>
+                                            Retrieve Password
+                                        </span>
+                                    </button>
+                                    
+                                     <button type="button" id="Back-btn" name="SubmitLogin" class="button btn btn-default button-medium pull-right">
+                                        <span>
+                                            <i class="fa fa-chevron-left fa-lg"></i>
+                                            Back
+                                        </span>
+                                    </button>
+                                  
+                                    <span id="loginSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
+                                   <div id="updateloginmessage" style="display: none;">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                        <!--Forgot Box Ends-->
+                        
                     </div>
 					</div>
 				</div><!-- #center_column -->
@@ -111,6 +149,14 @@
 		</div><!-- #columns -->
 	</div>
 	<script type="text/javascript">
+	$(".lost_password").click(function(){
+		$("#login_form").fadeOut(200);
+		$("#form_forgotpassword").delay(300).fadeIn();
+	});
+	$("#Back-btn").click(function(){
+		$("#login_form").delay(300).fadeIn();
+		$("#form_forgotpassword").fadeOut(200);
+	});
 	registerValidation();
 	var registerUrl = "${createLink(controller:'Register',action:'registerUser')}";
 	$('#etalage').etalage({
@@ -161,18 +207,7 @@
 		controls: 1,
 		pager: false,
 	});
-	$('.pos-logo .bxslider').bxSlider({
-	    auto: true,
-	    slideWidth:200,
-		slideMargin: 5,
-		minSlides: 1,
-		maxSlides: 6,
-		speed:  4000,
-		pause: 4000,
-		controls: 1,
-		autoHover: true,
-	    pager: false,
-	});
+	
 
 
 	$.easing.elasout = function(x, t, b, c, d) {

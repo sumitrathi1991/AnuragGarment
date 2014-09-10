@@ -461,7 +461,6 @@
 <script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
 <script type="text/javascript" src="../js/jquery.cookie.js"></script>
 <script type="text/javascript" src="../js/category.js"></script>
-<script type="text/javascript" src="../js/blocklayered.js"></script>
 <script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
 <script type="text/javascript" src="../js/custommenu.js"></script>
 <script type="text/javascript" src="../js/mobile_menu.js"></script>
@@ -623,17 +622,18 @@ $('#posproductcategory_list .bxslider').bxSlider({
 		pager: false,
 	});
 $('.pos-logo .bxslider').bxSlider({
-            auto: 0,
-            slideWidth:200,
-			slideMargin: 5,
-			minSlides: 1,
-			maxSlides: 6,
-			speed:  3000,
-			pause: 600,
-			controls: 1,
-            pager: false,
-		});
-		
+    auto: true,
+    slideWidth:200,
+	slideMargin: 5,
+	minSlides: 1,
+	maxSlides: 6,
+	speed:  4000,
+	pause: 4000,
+	controls: 1,
+	autoHover: true,
+    pager: false,
+});
+
 $('#addToCart').on('click', function(){
 var itemId = $(this).attr('itemId');
 var quantity = $('#quantity').val()

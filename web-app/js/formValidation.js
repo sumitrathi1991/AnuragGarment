@@ -82,7 +82,7 @@
 			}
 		});
 	
-	$("#loginForm").validate({
+	$("#login_form").validate({
 		rules: {
 			j_username: {
 				required:true,
@@ -100,8 +100,8 @@
 				}
 			},
 			submitHandler : function() {
-				var logingFormdata = $('#loginForm').serialize();
-				var registerFormUrl = $('#loginForm').attr('action');
+				var logingFormdata = $('#login_form').serialize();
+				var registerFormUrl = $('#login_form').attr('action');
 				$('#loginSpinner').show();
 				loginUser(logingFormdata,"USER");
 			}
@@ -112,7 +112,7 @@
         return false;
     });
 	$("#SubmitLogin").click(function(){
-        $("#loginForm").submit();
+        $("#login_form").submit();
         return false;
     });
  }

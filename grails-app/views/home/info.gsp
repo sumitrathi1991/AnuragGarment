@@ -55,7 +55,7 @@
 									</div>
                                         <ul id="ul_layered_category_0" class="col-lg-12 layered_filter_ul brands">																																						 											<li class="nomargin hiddable col-lg-6">
                                           <g:each in="${brandList}" var="brand">
-                                           <li>
+                                           <li class="nomargin hiddable col-lg-6">
                                                 <input type="checkbox" class="checkbox" name="brand" id="" value="${brand}">
                                                 <label for="brand"><a href="#" rel="nofollow">${brand}</a></label>
                                            </li>
@@ -87,7 +87,7 @@
 													<input type="checkbox" class="checkbox" name="price" id="layered_id_feature_3" value="2000">
 													<label for="price"><a href="#">&#8377;2000.00 and Under</a></label>
 												</li>
-																																															  										</ul>
+											</ul>
 							</div>
                                 <div class="layered_filter clearfix">
                                     <div class="layered_subtitle_heading">
@@ -95,7 +95,7 @@
                                     </div>
 										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productColor">
 										<g:each in="${colorList}" var="color">
-										<li>
+										<li class="nomargin hiddable col-lg-6">
 												<input type="checkbox" class="checkbox" name="color" id="" value="${color[0]}">
                                                 <label for="color"><a href="#">${color[0]}</a></label>
 										</li>
@@ -109,7 +109,7 @@
                                     </div>
 										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productSize">
 										 <g:each in="${sizeList}" var="size">
-										 <li>																	
+										 <li class="nomargin hiddable col-lg-6">																	
 										 		<input type="checkbox" class="checkbox" name="itemSize" id="" value="${size[0]}">
                                                 <label for="itemSize"><a href="#">${size[0]}</a></label>																														 										<li class="nomargin hiddable col-lg-6">
 										</li>
@@ -426,16 +426,17 @@ $('.pos-feature-product .bxslider').bxSlider({
 			pager: false,
 		});
 $('.pos-logo .bxslider').bxSlider({
-            auto: 0,
-            slideWidth:200,
-			slideMargin: 5,
-			minSlides: 1,
-			maxSlides: 6,
-			speed:  3000,
-			pause: 600,
-			controls: 1,
-            pager: false,
-		});
+    auto: true,
+    slideWidth:200,
+	slideMargin: 5,
+	minSlides: 1,
+	maxSlides: 6,
+	speed:  4000,
+	pause: 4000,
+	controls: 1,
+	autoHover: true,
+    pager: false,
+});
 		
 		
 		jQuery(function( $ ){

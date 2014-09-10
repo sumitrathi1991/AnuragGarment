@@ -5536,7 +5536,9 @@ span.exclusive {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
-.submit #SubmitBtn, .submit #SubmitLogin{float:left; margin: 15px 0 0 0;}
+ .submit #SubmitBtn, .submit #SubmitLogin, .submit #Back-btn{margin: 15px 0 0 0;}
+.submit #SubmitBtn, .submit #SubmitLogin{float:left;}
+.submit #Back-btn{float:right;}
 .submit > .fa-spinner{ float:left; margin:17px 0 0 10px }
 .button.button-medium .total-compare-val{color: #fff;}
   .button.button-medium span {
@@ -5571,7 +5573,7 @@ span.exclusive {
 .btn.btn-default.button.button-medium span{padding: 14px;}
 .btn.btn-default.button.button-medium.bt_compare.bt_compare > span{padding: 5px 14px;}
 #SubmitBtn > span,
-#SubmitLogin > span{padding: 5px 14px;}
+#SubmitLogin > span, #Back-btn > span{padding: 5px 14px;}
 .button.btn.btn-default.standard-checkout.button-medium > span{padding: 11px 15px 10px; font-size: 16px;}
 #submitAccount > span{padding: 5px 14px;}
     .button.button-medium.exclusive span:hover {
@@ -6031,7 +6033,7 @@ table.table_block td {
   border-bottom: 1px solid #d6d4d4; }
  
  .page-submessage {
- 	font-size:14px;
+ 	font-size:11px;
  	padding-bottom: 12px;
  }
 
@@ -9395,4 +9397,11 @@ header .row #header_logo{width: 100%; text-align: center;}
 
 .cursor {
 	cursor: pointer;
+}
+#login_form .form-group.lost_password span{
+	text-decoration: underline;
+	cursor:pointer;
+}
+#login_form .form-group.lost_password span:hover{
+	text-decoration: none;
 }
