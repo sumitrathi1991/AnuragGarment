@@ -66,21 +66,21 @@ class RegisterController {
 		}
 	}
 	def forgotPassword(){
-	
-		if(params.email){
+	log.debug"params in forgot password "+params
+		
 			User user = User.findByUsername(params.email)
 			log.debug"user : "+user
 			HashMap res = new HashMap()
 			if(user){
 				generateForgotPasswordToken(user)
 				//res.forgotPasswordToken = forgotPasswordToken
-				res.result = "success"
+				res.result = "Please check your email."
 			}
 			else{
-				res.result = "invalid"
+				res.result = "Please enter valid email id. This email id does not exit."
 			}
 			render res.result;
-		}
+		
 	}
 	def generateForgotPasswordToken(User user){
 		String forgotPasswordToken = RandomStringUtils.randomAlphanumeric(32)

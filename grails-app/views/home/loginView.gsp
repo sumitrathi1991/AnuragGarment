@@ -104,13 +104,14 @@
                         <!--Login Box Ends -->
                         
                         <!--Forgot Box -->
-                         <form id="form_forgotpassword" class="box" style="display:none">
-                            <h3 class="page-subheading">Forgot your password?</h3>
+                        <g:formRemote url="[controller: 'register', action:'forgotPassword']" class="box" name="forgotPasswordForm" autocomplete='off' method="POST" update="updateForgotPasswordMessage" style="display:none">
+                         <h3 class="page-subheading">Forgot your password?</h3>
                             <p class="page-submessage">Please enter the email address you used to register. We'll then send you a new password. </p>
                             <div class="form_content clearfix">
+                            <div id="updateForgotPasswordMessage"></div>
                                 <div class="form-group">
                                     <label for="email">Email address</label>
-                                    <input class="is_required validate account_input form-control" data-validate="isEmail" type="text" id="j_username" name="j_username" >
+                                    <input class="is_required validate account_input form-control" data-validate="isEmail" type="text" id="email" name="email" required >
                                 </div>
                                 
                                 <div class="submit">
@@ -128,14 +129,10 @@
                                             Back
                                         </span>
                                     </button>
-                                  
-                                    <span id="loginSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
-                                   <div id="updateloginmessage" style="display: none;">
-                                    </div>
-                                    
+                                   
                                 </div>
                             </div>
-                        </form>
+                        </g:formRemote>
                         <!--Forgot Box Ends-->
                         
                     </div>
@@ -151,14 +148,67 @@
 	<script type="text/javascript">
 	$(".lost_password").click(function(){
 		$("#login_form").fadeOut(200);
-		$("#form_forgotpassword").delay(300).fadeIn();
+		$("#forgotPasswordForm").delay(300).fadeIn();
 	});
 	$("#Back-btn").click(function(){
 		$("#login_form").delay(300).fadeIn();
-		$("#form_forgotpassword").fadeOut(200);
+		$("#forgotPasswordForm").fadeOut(200);
 	});
 	registerValidation();
 	var registerUrl = "${createLink(controller:'Register',action:'registerUser')}";
+	$('#etalage').etalage({
+		 thumb_image_width: 300,
+		 thumb_image_height: 400,
+		 show_hint: true,
+		
+		 });
+		 var CUSTOMMENU_POPUP_EFFECT = 0;
+		 var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
+		
+		 $('#pos-slideshow-home').nivoSlider({
+		 effect: 'random',
+		 slices: 15,
+		 boxCols: 8,
+		 boxRows: 4,
+		 animSpeed: '600',
+		 pauseTime: '5000',
+		 startSlide: 0,
+		 directionNav: false,
+		 controlNav: false,
+		 controlNavThumbs: false,
+		 pauseOnHover: true,
+		 manualAdvance: false,
+		 prevText: 'Prev',
+		 nextText: 'Next',
+		 afterLoad: function(){
+		 $('.pos-loading').css("display","none");
+		 },
+		 beforeChange: function(){
+		 $('.pos-slideshow-title, .pos-slideshow-des').css("left","-100%" );
+		 $('.pos-slideshow-readmore').css("left","-100%");
+		 },
+		 afterChange: function(){
+		 $('.pos-slideshow-title, .pos-slideshow-des, .pos-slideshow-readmore').css("left","100px")
+		 }
+		 });
+		
+				
+		 $.easing.elasout = function(x, t, b, c, d) {
+		 var s=1.70158;var p=0;var a=c;
+		 if (t==0) return b; if ((t/=d)==1) return b+c; if (!p) p=d*.3;
+		 if (a < Math.abs(c)) { a=c; var s=p/4; }
+		 else var s = p/(2*Math.PI) * Math.asin (c/a);
+		 return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+		 };
+		
+		
+		
+		 // TOC, shows how to scroll the whole window
+		 $('#BrandsType a').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+			 $.scrollTo( this.hash, 1500, { easing:'elasout' });
+		
+		 });
+		 
 	</script>
 </body>
 </html>
