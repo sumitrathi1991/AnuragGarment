@@ -56,7 +56,7 @@
                                         <label for="email_create">Re password</label>
                                         <input type="password" class="is_required validate account_input form-control" id="repassword" name="repassword">
                                     </div>
-                                   
+                                   <div id="updatesignupmessage" class="element error" style="display: none;"></div>
                                     <div class="submit">	
                                     	<button class="btn btn-default button button-medium exclusive" type="button" id="SubmitBtn" name="SubmitCreate">
                                             <span>
@@ -65,8 +65,6 @@
                                             </span>
                                         </button>
                                         <span id="signupSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
-										<div id="updatesignupmessage" style="display: none;">
-                                    </div>                                   
                                     </div>
                                 </div>
 						</form>
@@ -85,6 +83,7 @@
                                     <span><input class="is_required validate account_input form-control" type="password"  id="j_password" name="j_password" ></span>
                                 </div>
                                 <p class="lost_password form-group"><span>Forgot your password?</span></p>
+                                <div id="updateloginmessage" class="element error" style="display: none;"></div>
                                 <div class="submit">
                                     <input type="hidden" class="hidden" name="back" value="my-account">	
                                     <button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
@@ -95,8 +94,6 @@
                                     </button>
                                   
                                     <span id="loginSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
-                                   <div id="updateloginmessage" style="display: none;">
-                                    </div>
                                     
                                 </div>
                             </div>
