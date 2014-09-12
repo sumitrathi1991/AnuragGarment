@@ -5,11 +5,11 @@ class User {
 
 	transient springSecurityService
 
-	String username, fullName, phoneNumber,token
-	String password
+	String username, fullName, phoneNumber,token,mobilePhone
+	String password,forgotPasswordToken
 	
 	boolean enabled = true
-	boolean accountExpired,isTokenExpired,accountLocked,passwordExpired
+	boolean accountExpired,isTokenExpired,accountLocked,passwordExpired,isForgotPasswordTokenExpired
 	Date lastLogin
 	
 
@@ -22,6 +22,8 @@ class User {
 		fullName nullable:true
 		token nullable:true
 		lastLogin nullable:true
+		forgotPasswordToken nullable:true
+		mobilePhone nullable:true
 	}
 	static hasMany = [address : Address]
 	static mapping = {

@@ -101,7 +101,7 @@
                         <!--Login Box Ends -->
                         
                         <!--Forgot Box -->
-                        <g:formRemote url="[controller: 'register', action:'forgotPassword']" class="box" name="forgotPasswordForm" autocomplete='off' method="POST" update="updateForgotPasswordMessage" style="display:none">
+                        <g:formRemote url="[controller: 'register', action:'forgotPassword']" onLoading="showSpinner()" onComplete="hideSpinner()" class="box" name="forgotPasswordForm" autocomplete='off' method="POST" update="updateForgotPasswordMessage" style="display:none">
                          <h3 class="page-subheading">Forgot your password?</h3>
                             <p class="page-submessage">Please enter the email address you used to register. We'll then send you a new password. </p>
                             <div class="form_content clearfix">
@@ -126,7 +126,7 @@
                                             Back
                                         </span>
                                     </button>
-                                   
+                                   <span id="forgotPasswordSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
                                 </div>
                             </div>
                         </g:formRemote>
@@ -205,7 +205,9 @@
 			 $.scrollTo( this.hash, 1500, { easing:'elasout' });
 		
 		 });
-		 
+		 function showSpinner(){
+
+			 }
 	</script>
 </body>
 </html>

@@ -98,9 +98,9 @@ class RegisterController {
 		log.debug "resetPasswordMail inside"
 		String to = user.username
 		String subject = "Reset your password on Volcare"
-		String server = grailsApplication.config.grails.serverURL+"/admin/resetAdminPassword/"
+		String server = grailsApplication.config.grails.serverURL+"/password/reset/"
 		log.debug "server inside"+server;
-		def emailBody = "Hi User . Here is your password reset link."+server+user.forgotPasswordToken;
+		def emailBody = "Hi "+user.fullName+" Here is your password reset link."+server+user.forgotPasswordToken;
 		sendMail(to, subject, emailBody)
 	}
 	void sendMail(String toUser, String mailSubject, def emailBody){
@@ -112,7 +112,8 @@ class RegisterController {
 		}
 	}
 	
-	/*def validateForgotToken(){
+	def validateForgotToken(){
+		log.debug"parmas forgot token"+params
 		User user = User.findByForgotPasswordToken(params.token);
 		if(user){
 			if(user.isForgotPasswordTokenExpired){
@@ -123,27 +124,26 @@ class RegisterController {
 			}
 		}
 		render(view: "tokenExpired");
-	}*/
-	def resetAdminPassword()
+	}
+	def resetPassword()
 	{
 		
 		User user=User.findByForgotPasswordToken(params.id);
-		
-		if(user.isForgotPasswordTokenExpired)
-		{
-			
-			return [token :null]
-			
-		}
-		else
-		{
-			
-			
-			user.isForgotPasswordTokenExpired=true;
-			if(!user.save(flush:true)){
-			user.hasErrors.each { log.debug"error in saving user == "+it}
+		if(user){
+			if(user.isForgotPasswordTokenExpired)
+			{
+				return [token :null]
 			}
-			return [token :params.id]
+			else
+			{
+				user.isForgotPasswordTokenExpired=true;
+				if(!user.save(flush:true)){
+				user.hasErrors.each { log.debug"error in saving user == "+it}
+				}
+				return [token :params.id]
+			}
+		}else{
+			return [token:null]
 		}
 		
 		
@@ -157,9 +157,10 @@ class RegisterController {
 		{
 			if(params.password.equals(params.repassword))
 			{
-				render "Password has changed"
+				
 				user.password=params.password;
 				user.save();
+				render "Password has changed"
 			}
 			else
 				 render "Passwords does not match"
