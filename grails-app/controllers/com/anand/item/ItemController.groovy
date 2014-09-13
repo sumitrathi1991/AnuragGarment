@@ -5,7 +5,7 @@ import com.sun.xml.internal.ws.org.objectweb.asm.Label;
 
 class ItemController {
 	static scaffold = true
-	def grailsApplication
+	def grailsApplication,itemService
 	def index(){}
 	
 	def saveItem(){
@@ -59,5 +59,22 @@ class ItemController {
 	
 	def deleteItem(){
 		
+	}
+	def uploadItemImage(){
+		log.debug"uploadImage: "+params
+		String fileName = params.name
+		def file = request.getFile("file")
+		log.debug"file "+file
+		String extension = fileName.substring(fileName.lastIndexOf(".")+ 1);
+		String filePath= itemService.uploadFile(file,extension);
+		log.debug"filePath: "+filePath;
+		int index=filePath.lastIndexOf("/");
+		fileName=filePath.substring(index+1);
+		log.debug"fileName: "+fileName;
+		
+		HashMap res = new HashMap();
+		res.result = "success";
+		res.uploadedFileName=fileName;
+		respond res, [formats:['json', 'xml']];
 	}
 }

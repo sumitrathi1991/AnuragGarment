@@ -165,7 +165,7 @@
                     <div class="widget-body">
                         <p>Manage/Edit/Delete the items.</p>
                     </div>
-                    <div class ="row-fluid">
+                    <div class ="row-fluid" onClick="addItemOverlay()">
                             <a href="#modal-AddItem" data-toggle="modal"><span class="btn btn-primary btn-icon glyphicons circle_plus pull-right btnT10"><i></i> Add</span></a>
                     </div>
                 </div>

@@ -108,20 +108,17 @@ class RegisterController {
 	
 	def resetPassword()
 	{
-		
 		User user=User.findByForgotPasswordToken(params.id);
 		if(user){
-			if(user.isForgotPasswordTokenExpired)
-			{
+			if(user.isForgotPasswordTokenExpired){
 				return [token :null]
 			}
-			else
-			{
+			else{
 				user.isForgotPasswordTokenExpired=true;
 				if(!user.save(flush:true)){
-				user.hasErrors.each { log.debug"error in saving user == "+it}
+					user.hasErrors.each { log.debug"error in saving user == "+it}
 				}
-				return [token :params.id]
+			return [token :params.id]
 			}
 		}else{
 			return [token:null]

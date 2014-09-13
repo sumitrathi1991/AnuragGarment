@@ -7,7 +7,10 @@
  *
  * Built exclusively for sale @Envato Marketplaces
  * ========================================================== */ 
-
+var itemImagesArray = []
+function addItemOverlay(){
+	itemImagesArray = new Array();
+}
 $(function() 
 {
 	/* Dropzone */
@@ -18,7 +21,7 @@ $(function()
 	$("#pluploadUploader").pluploadQueue({
 		// General settings
 		runtimes : 'gears,browserplus,html5',
-		url : '../upload.php',
+		url : "http://localhost:8080/item/uploadItemImage",
 		max_file_size : '1000mb',
 		max_file_count: 20, // user can add no more then 20 files at a time
 		chunk_size : '1mb',
@@ -34,7 +37,7 @@ $(function()
 		// Specify what files to browse for
 		filters : [
 			{title : "Image files", extensions : "jpg,gif,png"},
-			{title : "Zip files", extensions : "zip"}
+			
 		],
 		
 		// Views to activate
@@ -48,27 +51,86 @@ $(function()
 		flash_swf_url : commonPath + 'theme/scripts/plugins/forms/plupload/js/plupload.flash.swf',
 
 		// Silverlight settings
-		silverlight_xap_url : commonPath + 'theme/scripts/plugins/forms/plupload/js/plupload.silverlight.xap'
+		silverlight_xap_url : commonPath + 'theme/scripts/plugins/forms/plupload/js/plupload.silverlight.xap',
+		
+		init : {
+			 PostInit: function() {
+	                // Called after initialization is finished and internal event handlers bound
+				 console.log('[PostInit]');
+	                 
+	                document.getElementById('uploadfiles').onclick = function() {
+	                    uploader.start();
+	                    return false;
+	                };
+	            },
+	            StateChanged: function(up) {
+	                // Called when the state of the queue is changed
+	                //log('[StateChanged]', up.state == plupload.STARTED ? "STARTED" : "STOPPED");
+	            },
+	            BeforeUpload: function(up, file) {
+	                // Called right before the upload for a given file starts, can be used to cancel it if required
+	            	console.log('[BeforeUpload]File: '+ file);
+	            },
+	  
+	            UploadProgress: function(up, file) {
+	                // Called while file is being uploaded
+	            	console.log('[UploadProgress] File:'+ file+ "Total:"+ up.total);
+	            },
+	            FileFiltered: function(up, file) {
+	                // Called when file successfully files all the filters
+	            	console.log('[FileFiltered] File:'+ file);
+	            },
+	  
+	            FilesAdded: function(up, files) {
+	                // Called when files are added to queue
+	            	console.log('[FilesAdded]');
+	  
+	                plupload.each(files, function(file) {
+	                	console.log('  File:'+ file);
+	                });
+	            },
+	  
+	            FilesRemoved: function(up, files) {
+	                // Called when files are removed from queue
+	            	console.log('[FilesRemoved]');
+	  
+	                plupload.each(files, function(file) {
+	                	console.log('  File:'+ file);
+	                });
+	            },
+	  
+	            FileUploaded: function(up, file, info) {
+	                // Called when file has finished uploading
+	            	console.log('[FileUploaded] File:'+file+"Info:"+ info);
+	            	console.log(file)
+	            	console.log(info)
+	            	console.log(info.response)
+	            	var obj = jQuery.parseJSON(info.response)
+	            	itemImagesArray.push(obj.uploadedFileName)
+	            	console.log(obj.uploadedFileName)
+	            	console.log("image url")
+	            	console.log(itemImagesArray)
+	            },
+	  
+	            ChunkUploaded: function(up, file, info) {
+	                // Called when file chunk has finished uploading
+	            	console.log('[ChunkUploaded] File:'+ file+ "Info:"+ info);
+	            },
+	 
+	            UploadComplete: function(up, files) {
+	                // Called when all files are either uploaded or failed
+	            	console.log('[UploadComplete]');
+	            },
+	 
+	            Destroy: function(up) {
+	                // Called when uploader is destroyed
+	            	console.log('[Destroy] ');
+	            },
+	  
+	            Error: function(up, args) {
+	                // Called when error occurs
+	                console.log('[Error] '+ args);
+	            }
+		 }
 	});
-
-	// Client side form validation
-	$('#pluploadForm').submit(function(e) {
-        var uploader = $('#pluploadUploader').pluploadQueue();
-
-        // Files in queue upload them first
-        if (uploader.files.length > 0) {
-            // When all files are uploaded submit form
-            uploader.bind('StateChanged', function() {
-                if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
-                    $('#pluploadForm').submit();
-                }
-            });
-                
-            uploader.start();
-        } else {
-            alert('You must queue at least one file.');
-        }
-
-        return false;
-    });
 });
