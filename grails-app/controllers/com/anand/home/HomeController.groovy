@@ -42,8 +42,9 @@ class HomeController {
 		List sizeList = Item.findAll()?.itemSize?.label.unique()
 		List colorList = Item.findAll()?.itemColor?.label.unique()
 		List brandList =  Item.findAll()?.itemBrand?.unique()
-		log.debug"name "+userFullName
-		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName]
+		List typeList = Item.findAll()?.itemType?.unique()
+		List itemForList = Item.findAll()?.itemFor?.unique()
+		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName,typeList:typeList,itemForList : itemForList,itemType: '', itemType : '']
 	}
 
 	def filterData(){
@@ -53,7 +54,7 @@ class HomeController {
 		if(params.containsKey('brand'))
 			items = Item.findAllByItemBrand(params.brand)
 		if(params.containsKey('price')){
-			items = items.each {item ->
+			items.each {item ->
 				item.itemSize.each{ itemSize ->
 					if(itemSize.itemPrice <= (params.price as float))
 						filterItem.add(item)
@@ -63,10 +64,8 @@ class HomeController {
 			filterItem = []
 		}
 		if(params.containsKey('color')){
-			items = items.each{ item ->
-				log.debug"ello"
+			items.each{ item ->
 				item.itemColor.each {
-					log.debug"it=="+it.label+"==="+params.color
 					if(it.label == params.color)
 						filterItem.add(item)
 				}
@@ -75,11 +74,27 @@ class HomeController {
 			filterItem = []
 		}
 		if(params.containsKey('itemSize')){
-			items = items.each{ item ->
+			items.each{ item ->
 				item.itemSize.each {
 					if(it.label == params.itemSize)
 						filterItem.add(item)
 				}
+			}
+			items = filterItem
+			filterItem = []
+		}
+		if(params.containsKey('itemType')){
+			items.each{ item ->
+					if(item.itemType == params.itemType)
+						filterItem.add(item)
+			}
+			items = filterItem
+			filterItem = []
+		}
+		if(params.containsKey('itemFor')){
+			items.each{ item ->
+					if(item.itemFor == params.itemFor)
+						filterItem.add(item)
 			}
 			items = filterItem
 			filterItem = []
@@ -90,17 +105,17 @@ class HomeController {
 	def showAddToCartPopup(){
 		log.debug"in showAddToCartPopup"+params
 		Item item = Item.get(params.itemId)
-		log.debug"item is =="+item
 		render template :"addToCartPopUp", model: [item : item, primaryColor : item.itemColor[0]]
 	}
 	
 	def renderHeaderData(){
 		log.debug"in renderHeaderData=="+params
 		List items = Item.findAllByItemForAndItemType(params.itemFor,params.itemType)
-		log.debug"items =="+items
 		List sizeList = Item.findAll()?.itemSize?.label.unique()
 		List colorList = Item.findAll()?.itemColor?.label.unique()
 		List brandList =  Item.findAll()?.itemBrand?.unique()
-		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList]
+		List typeList = Item.findAll()?.itemType?.unique()
+		List itemForList = Item.findAll()?.itemFor?.unique()
+		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList,itemType:params.itemType, itemFor : params.itemFor,typeList:typeList,itemForList:itemForList]
 	}
 }

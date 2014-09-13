@@ -116,6 +116,34 @@
 										</g:each>
 										</ul>
 								</div>
+								
+								<div class="layered_filter clearfix">
+                                    <div class="layered_subtitle_heading">
+                                        <span class="layered_subtitle">Item Type</span>
+                                    </div>
+										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul itemType">
+										 <g:each in="${typeList}" var="itemType">
+										 <li class="nomargin hiddable col-lg-6">																	
+										 		<input type="checkbox" class="checkbox" name="itemType" id="" value="${itemType}">
+                                                <label for="itemSize"><a href="#">${itemType}</a></label>																														 										<li class="nomargin hiddable col-lg-6">
+										</li>
+										</g:each>
+										</ul>
+								</div>
+								
+								<div class="layered_filter clearfix">
+                                    <div class="layered_subtitle_heading">
+                                        <span class="layered_subtitle">Item For</span>
+                                    </div>
+										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul itemFor">
+										 <g:each in="${itemForList}" var="itemFor">
+										 <li class="nomargin hiddable col-lg-6">																	
+										 		<input type="checkbox" class="checkbox" name="itemFor" id="" value="${itemFor}">
+                                                <label for="itemSize"><a href="#">${itemFor}</a></label>																														 										<li class="nomargin hiddable col-lg-6">
+										</li>
+										</g:each>
+										</ul>
+								</div>
 							</div>
 								<input type="hidden" name="id_category_layered" value="3">																																																			 						</form>
 						</div>
@@ -338,12 +366,33 @@ $(document).ready(function(){
 	$('.productSize li .checkbox').on('click', function(){
 		$('.productSize li .checkbox').removeAttr('checked')
 		})
-	
+	$('.itemType li .checkbox').on('click', function(){
+		$('.itemType li .checkbox').removeAttr('checked')
+		})
+	$('.itemFor li .checkbox').on('click', function(){
+		$('.itemFor li .checkbox').removeAttr('checked')
+		})
+	var itemType = '${itemType}'
+	var itemFor = '${itemFor}'
 	var brand = '${brand}'
-	$('.brands li').each(function(){
+		$('.brands li').each(function(){
 		if($(this).find('.checkbox').val() == brand)
 			$(this).find('.checkbox').attr('checked', true);
 		})
+		if(itemType !=''){
+		$('.itemType li').each(function(){
+		if($(this).find('.checkbox').val() == itemType)
+			$(this).find('.checkbox').attr('checked', true);
+		})
+		}
+
+		if(itemFor != ''){
+		$('.itemFor li').each(function(){
+		if($(this).find('.checkbox').val() == itemFor)
+			$(this).find('.checkbox').attr('checked', true);
+		})
+		}
+		
 $('.checkbox').on('click', function(){
 	var list = {}
 		$(this).attr('checked','checked')
