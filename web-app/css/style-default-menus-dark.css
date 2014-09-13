@@ -4735,7 +4735,7 @@
   }
   .btn-icon-stacked {
 	  text-align: left;
-	  padding: 5px 5px 5px 45px
+	  padding: 10px 5px 12px 45px
   }
   .btn-icon-stacked i {
 	  display: block;
@@ -4748,6 +4748,7 @@
   .btn-icon-stacked i:before {
 	  left: auto;
 	  top: auto;
+	   font-size:21px;
 	  position: relative;
 	  text-align: center
   }
@@ -6936,9 +6937,9 @@
   body.login #login p:first-child {
 	  margin: 0 0 10px
   }
-  body.login #login p:last-child {
-	  margin: 10px 0 0
-  }
+/*   body.login #login p:last-child { */
+/* 	  margin: 10px 0 0 */
+/*   } */
   body.login #login .form-signin {
 	  position: relative;
 	  max-width: 600px;
