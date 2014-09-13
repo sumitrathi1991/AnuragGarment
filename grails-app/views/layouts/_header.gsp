@@ -30,17 +30,6 @@
 
 						<!-- Block permanent links module HEADER -->
 						<ul id="header_links">
-							<%--<sec:ifLoggedIn>
-									<li><span class="welcome-user">Welcome!  ${userFullName }</span></li>
-									<li><a class="link-myaccount cursor" title="My account">My account</a></li>
-									<li><a class="link-wishlist wishlist_block cursor"  title="My wishlist">Wishlist</a></li>
-									<li><a class="link-mycart cursor" title="My cart">My cart</a></li>
-									<li><a class="link-checkout cursor" title="checkout">Checkout</a></li>
-									<li class="last">
-									<a  class="link-login cursor" onClick="loginOut()" title="Logout" rel="nofollow">Logout</a>
-									</li> 
-								</sec:ifLoggedIn>	
-								--%>
 							<sec:ifNotLoggedIn>
 								<li class="last"><g:link action="loginView"
 										controller="home">
@@ -94,10 +83,10 @@
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'football']"><span>Sports Shoes</span></g:link>
-<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'running']"><span>Running Shoes</span></g:link>
-<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'football']"><span>Heels</span></g:link>
-<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'football']"><span>Wedges</span></g:link>
+												<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'football']"><span>Sports Shoes</span></g:link>
+												<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'running']"><span>Running Shoes</span></g:link>
+												<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'heels']"><span>Heels</span></g:link>
+												<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'wedges']"><span>Wedges</span></g:link>
 										</div>
 									</div>
 								</div>
@@ -107,10 +96,10 @@
 									<a class="itemMenuName level3" href="#"><span></span></a>
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Formal Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Casual Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Sneakers</span></a>
-											<a class="itemMenuName level4" href="#"><span>Loafers</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'formal']"><span>Formal Shoes</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'casual']"><span>Casual Shoes</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'sneaker']"><span>Sneakers</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'loafer']"><span>Loafers</span></g:link>
 										</div>
 									</div>
 								</div>
@@ -119,24 +108,22 @@
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Sandals</span></a>
-											<a class="itemMenuName level4" href="#"><span>Fabrication</span></a>
-											<a class="itemMenuName level4" href="#"><span>Ethnic</span></a>
-											<a class="itemMenuName level4" href="#"><span>Boots</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'sandal']"><span>Sandals</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'boots']"><span>Boots</span></g:link>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="column last col4">
+							<%--<div class="column last col4">
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Combo Offers</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'wedges']"><span>Combo Offers</span></g:link>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="clearBoth"></div>
+							--%><div class="clearBoth"></div>
 						</div>
 					</div>
 				</div>
@@ -153,10 +140,10 @@
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Sports Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Hawaii Chappal</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Fabrication</span></a>
-											<a class="itemMenuName level4" href="#"><span>Ethnic</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'football']"><span>Sports Shoes</span></g:link> 
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'running']"><span>Running Shoes</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'heels']"><span>Heels</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'wedges']"><span>Wedges</span></g:link>
 										</div>
 									</div>
 								</div>
@@ -166,10 +153,10 @@
 									<a class="itemMenuName level3" href="#"><span></span></a>
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Formal Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Casual Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Sneakers</span></a>
-											<a class="itemMenuName level4" href="#"><span>Loafers</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'formal']"><span>Formal Shoes</span></g:link> 
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'casual']"><span>Casual Shoes</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'sneaker']"><span>Sneakers</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'loafer']"><span>Loafers</span></g:link>
 										</div>
 									</div>
 								</div>
@@ -178,24 +165,23 @@
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Sandals</span></a>
-											<a class="itemMenuName level4" href="#"><span>Floater Sandals</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Slipper & Flip Flops</span></a> <a class="itemMenuName level4" href="#"><span>Boots</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'sandal']"><span>Sandals</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'boots']"><span>Boots</span></g:link>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="column last col4">
+							<%--<div class="column last col4">
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Converse</span></a>
-											<a class="itemMenuName level4" href="#"><span>Combo	Offers</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'wedges']"><span>Converse</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'men', itemType:'wedges']"><span>Combo	Offers</span></g:link>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="clearBoth"></div>
+							--%><div class="clearBoth"></div>
 						</div>
 					</div>
 				</div>
@@ -212,10 +198,10 @@
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Sports Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Floaters</span></a>
-											<a class="itemMenuName level4" href="#"><span>High Heel</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Casual Belly</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'football']"><span>Sports Shoes</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'running']"><span>Running Shoes</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'heels']"><span>Heels</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'wedges']"><span>Wedges</span></g:link>
 										</div>
 									</div>
 								</div>
@@ -225,10 +211,10 @@
 									<a class="itemMenuName level3" href="#"><span></span></a>
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Formal Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Casual Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Sneakers</span></a>
-											<a class="itemMenuName level4" href="#"><span>Loafers</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'formal']"><span>Formal Shoes</span></g:link> 
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'casual']"><span>Casual Shoes</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'sneaker']"><span>Sneakers</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'loafer']"><span>Loafers</span></g:link>
 										</div>
 									</div>
 								</div>
@@ -237,24 +223,22 @@
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Sandals</span></a>
-											<a class="itemMenuName level4" href="#"><span>Fabrication</span></a>
-											<a class="itemMenuName level4" href="#"><span>Ethnic</span></a>
-											<a class="itemMenuName level4" href="#"><span>Boots</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'sandals']"><span>Sandals</span></g:link>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'boots']"><span>Boots</span></g:link>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="column last col4">
+							<%--<div class="column last col4">
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Combo Offers</span></a>
+											<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'kids', itemType:'wedges']"><span>Combo Offers</span></g:link>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="clearBoth"></div>
+							--%><div class="clearBoth"></div>
 						</div>
 					</div>
 				</div>
