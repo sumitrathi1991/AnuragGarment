@@ -11,18 +11,11 @@
 		<meta name="robots" content="index,follow">
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
-        
+        <script>
+        var showAddToCartpopupUrl = "${createLink(controller:'home',action:'showAddToCartPopup')}";
+        </script>
         </head>
 	 <body id="index" class="index hide-left-column hide-right-column lang_en">
-		<!--[if IE 8]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		<![endif]-->
-	
-		<%--<div id="loginViewID" style="display: none;">
-			<g:render template="/home/loginView" />
-		</div>
-	--%>
 	<div id="homeViewId">
 	<div class="pos-slideshow-container" >
         <div class="flexslider ma-nivoslider">
@@ -39,122 +32,26 @@
 				<div class="row">
 					<div id="center_column" class="center_column  col-sm-12">
 		           		<ul id="home-page-tabs" class="nav nav-tabs clearfix">
-							<li class="active"><a data-toggle="tab" href="#" class="blocknewproducts">New products</a></li>
-							<li><a data-toggle="tab" href="" class="blockbestsellers">Best Sellers</a></li>
+							<li class="active"><g:remoteLink data-toggle="tab" class="blocknewproducts" action="getCategoryProduct" controller="home" params="[itemCategory:'new']" update="category">New products</g:remoteLink></li>
+							<li><g:remoteLink data-toggle="tab"  class="blockbestsellers" action="getCategoryProduct" controller="home" params="[itemCategory:'bestSeller']" update="category">Best Sellers</g:remoteLink></li>
 						</ul>
-				<div class="tab-content">
-					<!-- Products list -->
-					<ul id="blocknewproducts" class="product_list grid row blocknewproducts tab-pane active">
-						<g:each var="item" in="${itemList}">
-						<li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                        <a class="product_img_link"  title="Sed posuere">
-                                            <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" alt="${item.itemName}" title="${item.itemName}" width="270" height="270" itemprop="image">
-                                        </a>
-
-                                       <a class="quick-view various" alt="${item.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>"><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5>
-                                            <a class="product-name" href="" title="${item.itemName}" >${item.itemName}</a>
-                                        </h5>
-                                          <p class="product-desc">
-                                          ${item.itemDescription}
-                                          </p>
-                                            <div class="content_price">
-                                                <span class="price product-price">&#8377;${item.itemSize[0].itemPrice}</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <button class="button ajax_add_to_cart_button btn btn-default"  title="Add to cart" data-id-product="13" onclick="showAddToCartPopup()"><span>Add to cart</span></button>                                            
-                                                    <div class="wishlist">
-                                                        <g:link class="addToWishlist wishlistProd_13" action="productDetail" controller="home" params="[productId : "${item.id}"]" title="Product Detail">
-                                                            View Details
-                                                        </g:link>
-                                                    </div>
-                                                     <g:link action="showProducts" controller="home" params="[itemBrand:"${item.itemBrand}"]" itemprop="url" class="button lnk_view btn btn-default" href="#" title="More Products"><span>More Items</span></g:link>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>
-							</g:each>
-                    </ul>
-	
-                <!-- Products list -->
-                <ul id="blockbestsellers" class="product_list grid row blockbestsellers tab-pane">
-                       <li class="ajax_block_product  col-sm-4 col-md-3">
-							<div class="product-container">
-                                <div class="left-block">
-                                    <div class="product-image-container">
-                                      	<a class="quick-view" href="" rel=""><span>Quick view</span></a>
-										<span class="new-box"><span class="new-label">New</span></span>																										 									</div>
-                                </div>
-								
-                                <div class="right-block">
-									<div class="comments_note">	
-                                        <div class="star_content clearfix">
-											<div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star star_on"></div>
-                                              <div class="star"></div>
-                                              <div class="star"></div>
-                                        </div>
-									</div>
-                                        <h5>
-                                            <a class="product-name" href="#" title="Sed posuere" >Sed posuere</a>
-                                        </h5>
-                                          <p class="product-desc">
-                                              Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti...
-                                          </p>
-                                            <div class="content_price">
-                                                <span class="price product-price">$350.00</span>
-                                            </div>
-                                            <div class="button-container">
-                                                <div class="actions">                                  				 											
-                                                    <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart" data-id-product="13"><span>Add to cart</span></a>                                            
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_13" href="#" rel="13">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                     <a class="button lnk_view btn btn-default" href="#" title="View"><span>More</span></a>
-                                                </div>
-                                            </div>
-									</div>                    
-								</div>
-                           	 	<!-- .product-container> -->
-							</li>                
-                	</ul>
-			</div>
-	
+			<div id="category">
+				<g:render template="items"></g:render>
+			</div>					
     		<div class="clearfix">
             	<div class="pos-feature-product">
 					<div class="pos-feature-product-title"><h2>Featured Products</h2> </div>
                             <ul class="bxslider">
+                            <g:each in="${featuredItems}" var="featuredItem">
                                 <li class=" feature-productslider-item ajax_block_product first_item">
                         			<div class="product-container">
                            				<div class="left-block">
                                             <div class="product-image-container">
                                                 <a class="product_img_link" href="#" title="Printed Chiffon Dress">
-                                                    <img class="replace-2x img-responsive" src="/images/t1-01.jpg" alt="Sports Shoes" title="Sports Shoes" width="220" height="220" >
+                                                    <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>" alt="${featuredItem.itemName}" title="${featuredItem.itemName}" width="220" height="220" >
                                                     <span class="sale-box"><span class="sale-label">Sale</span></span>														 										<span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
                                                 </a>
-                                              <a class="quick-view various" href="/images/t1-01.jpg" rel="gallery1" title="Sports Shoes"><span>Quick view</span></a>                                                                                    
+                                              <a class="quick-view various" alt="${featuredItem.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>"><span>Quick view</span></a>                                                                                    
                                          </div>
                            			 	</div>
                             			<div class="right-block">
@@ -168,217 +65,28 @@
                                                 </div>
                                             </div>
                                 			<h5>
-                                              <a class="product-name" href="#" title="Printed Chiffon Dress">Sports Shoes</a>
+                                              <a class="product-name" href="#" title="${featuredItem.itemName}">${featuredItem.itemName}</a>
                                 			</h5>                              
                                          	<div class="content_price">
-                                                <span class="price product-price">$160.40</span>
-                                                 <span class="old-price product-price">$200.50</span>
+                                                <span class="price product-price">&#8377;${featuredItem.itemSize[0].itemPrice}</span>
+                                                 <span class="old-price product-price">&#8377;${featuredItem.itemSize[0].itemPrice}</span>
 											 </div>           
                                             <div class="button-container">
                                                 <div class="actions">
-                                                  <button class="button ajax_add_to_cart_button btn btn-default"  onclick="showAddToCartPopup()"" title="Add to cart"><span>Add to cart</span>
+                                                  <button class="button ajax_add_to_cart_button btn btn-default"  onclick="showAddToCartPopup()" title="Add to cart"><span>Add to cart</span>
                                                  </button>                                        
                                                     <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_7" href="#" rel="7" >
-                                                            Add to Wishlist
-                                                        </a>
+                                                        <g:link class="addToWishlist wishlistProd_13" action="productDetail" controller="home" params="[productId : "${featuredItem.id}"]" title="Product Detail">
+                                                            View Details
+                                                        </g:link>
                                                     </div>
-                                                    <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                        <span>More</span>
-                                                    </a>
+                                                    <g:link action="showProducts" controller="home" params="[itemBrand:"${featuredItem.itemBrand}"]" itemprop="url" class="button lnk_view btn btn-default" href="#" title="More Products"><span>More Items</span></g:link>
                                                 </div>
                                             </div>
                            				 </div>
                        				 </div>
                    				</li>
-                                <li class=" feature-productslider-item ajax_block_product first_item">
-                        			<div class="product-container">
-                           				<div class="left-block">
-                                            <div class="product-image-container">
-                                                <a class="product_img_link" href="#" title="Printed Chiffon Dress">
-                                                    <img class="replace-2x img-responsive" src="/images/product/product2.jpg" alt="Red Belly" title="Red Belly" width="220" height="220">
-                                                    <span class="sale-box"><span class="sale-label">Sale</span></span>														 										<span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
-                                                </a>
-                                              <a class="quick-view various" href="/images/product/product2.jpg" rel="gallery1" title="Red Belly">
-                                                <span>Quick view</span>
-                                            </a>                                                                                    
-                                         </div>
-                           			 	</div>
-                            			<div class="right-block">
-                                            <div class="comments_note">	
-                                                <div class="star_content clearfix">
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                			<h5>
-                                              <a class="product-name" href="#" title="Printed Chiffon Dress">Red Belly</a>
-                                			</h5>                              
-                                         	<div class="content_price">
-                                                <span class="price product-price">$160.40</span>
-                                                 <span class="old-price product-price">$200.50</span>
-											 </div>           
-                                            <div class="button-container">
-                                                <div class="actions">
-                                                  <a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart"><span>Add to cart</span>
-                                                 </a>                                        
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_7" href="#" rel="7" >
-                                                            Add to Wishlist
-                                                        </a>	
-                                                    </div>
-                                                    <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                        <span>More</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                           				 </div>
-                       				 </div>
-                   				</li>
-                                <li class=" feature-productslider-item ajax_block_product first_item">
-                        			<div class="product-container">
-                           				<div class="left-block">
-                                            <div class="product-image-container">
-                                                <a class="product_img_link" href="#" title="Printed Chiffon Dress">
-                                                    <img class="replace-2x img-responsive" src="/images/product/product8.jpg" alt="Dark Brown Shoes" title="Dark Brown Shoes" width="220" height="220">
-                                                    <span class="sale-box"><span class="sale-label">Sale</span></span><span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
-                                                </a>
-                                              <a class="quick-view various" href="/images/product/product8.jpg" rel="gallery1" title="Dark Brown Shoes">
-                                                <span>Quick view</span>
-                                            </a>                                                                                    
-                                         </div>
-                           			 	</div>
-                            			<div class="right-block">
-                                            <div class="comments_note">	
-                                                <div class="star_content clearfix">
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                			<h5>
-                                              <a class="product-name" href="#" title="Printed Chiffon Dress">Dark Brown Shoes</a>
-                                			</h5>                              
-                                         	<div class="content_price">
-                                                <span class="price product-price">$160.40</span>
-                                                 <span class="old-price product-price">$200.50</span>
-											 </div>           
-                                            <div class="button-container">
-                                                <div class="actions">
-                                                  <a class="button ajax_add_to_cart_button btn btn-default" href="#" rel="nofollow" title="Add to cart"><span>Add to cart</span>
-                                                 </a>                                        
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_7" href="#" rel="7" >
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                    <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                        <span>More</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                           				 </div>
-                       				 </div>
-                   				</li>
-                                <li class=" feature-productslider-item ajax_block_product first_item">
-                        			<div class="product-container">
-                           				<div class="left-block">
-                                            <div class="product-image-container">
-                                                <a class="product_img_link" href="#" title="Printed Chiffon Dress">
-                                                    <img class="replace-2x img-responsive" src="/images/product/product9.jpg" alt="Light Grey Sport Shoes" title="Light Grey Sport Shoes" width="220" height="220">
-                                                    <span class="sale-box"><span class="sale-label">Sale</span></span><span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
-                                                </a>
-                                              <a class="quick-view various" href="/images/product/product9.jpg" rel="gallery1" title="Light Grey Sport Shoes">
-                                                <span>Quick view</span>
-                                            </a>                                                                                    
-                                         </div>
-                           			 	</div>
-                            			<div class="right-block">
-                                            <div class="comments_note">	
-                                                <div class="star_content clearfix">
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                			<h5>
-                                              <a class="product-name" href="#" title="Printed Chiffon Dress">Light Grey Sport Shoes</a>
-                                			</h5>                              
-                                         	<div class="content_price">
-                                                <span class="price product-price">$160.40</span>
-                                                 <span class="old-price product-price">$200.50</span>
-											 </div>           
-                                            <div class="button-container">
-                                                <div class="actions">
-                                                  <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart"><span>Add to cart</span>
-                                                 </a>                                        
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_7" href="#">
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                    <a  class="button lnk_view btn btn-default" href="#" title="View">
-                                                        <span>More</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                           				 </div>
-                       				 </div>
-                   				</li>
-                                <li class="feature-productslider-item ajax_block_product first_item">
-                        			<div class="product-container">
-                           				<div class="left-block">
-                                            <div class="product-image-container">
-                                                <a class="product_img_link" href="#" title="Printed Chiffon Dress">
-                                                    <img class="replace-2x img-responsive" src="/images/product/product5.jpg" alt="Brown Belly" title="Brown Belly" width="220" height="220">
-                                                    <span class="sale-box"><span class="sale-label">Sale</span></span><span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
-                                                </a>
-                                              <a class="quick-view various" href="/images/product/product5.jpg" rel="gallery1" title="Brown Belly">
-                                                <span>Quick view</span>
-                                            </a>                                                                                    
-                                         </div>
-                           			 	</div>
-                            			<div class="right-block">
-                                            <div class="comments_note">	
-                                                <div class="star_content clearfix">
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star star_on"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                </div>
-                                            </div>
-                                			<h5>
-                                              <a class="product-name" href="#" title="Printed Chiffon Dress">Brown Belly</a>
-                                			</h5>                              
-                                         	<div class="content_price">
-                                                <span class="price product-price">$160.40</span>
-                                                 <span class="old-price product-price">$200.50</span>
-											 </div>           
-                                            <div class="button-container">
-                                                <div class="actions">
-                                                  <a class="button ajax_add_to_cart_button btn btn-default" href="#"  title="Add to cart"><span>Add to cart</span>
-                                                 </a>                                        
-                                                    <div class="wishlist">
-                                                        <a class="addToWishlist wishlistProd_7" href="#" >
-                                                            Add to Wishlist
-                                                        </a>
-                                                    </div>
-                                                    <a class="button lnk_view btn btn-default" href="#" title="View">
-                                                        <span>More</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                           				 </div>
-                       				 </div>
-                   				</li>
+                   				</g:each>
                             </ul>
                         	<div class="bx-controls bx-has-controls-direction">
                              	<div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div>
@@ -507,23 +215,34 @@
 <!-- /- Add To Cart Popup Template -/ --> 
    
 <script type="text/javascript">
-function showAddToCartPopup(){
-	$.fancybox({
-        href: '#product_preview', 
-        maxWidth	: 900,
-		fitToView	: false,
-		width		: '100%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'fade',
-		closeEffect	: 'fade',
-		helpers	: {
-			title	: {
-				type: 'float'
+function showAddToCartPopup(obj){
+	var itemId = $(obj).attr('productId')
+		jQuery.ajax({
+			type : 'POST',
+			url :  showAddToCartpopupUrl,
+			data : 'itemId='+itemId,
+			success : function(data) {
+				//$('#cartPopUp').show()
+				$.fancybox({
+			        href: '#product_preview', 
+			        maxWidth	: 900,
+					fitToView	: false,
+					width		: '100%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'fade',
+					closeEffect	: 'fade',
+					helpers	: {
+						title	: {
+							type: 'float'
+						}
+					}
+			    });
+			    return false;
+			},
+			error : function (data, status, headers, config) {
 			}
-		}
-    });
-    return false;
+		});
 }
 	$('.control').click(function(){
 		if($(this).hasClass('inactive')) {
@@ -585,6 +304,18 @@ $('.pos-feature-product .bxslider').bxSlider({
 	pause: 600,
 	controls: 1,
 	pager: false,
+});
+$('.pos-logo .bxslider').bxSlider({
+    auto: true,
+    slideWidth:200,
+	slideMargin: 5,
+	minSlides: 1,
+	maxSlides: 6,
+	speed:  4000,
+	pause: 4000,
+	controls: 1,
+	autoHover: true,
+    pager: false,
 });
 
 

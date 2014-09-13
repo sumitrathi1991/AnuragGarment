@@ -9,6 +9,7 @@ class Item {
 	String itemBrand
 	String itemType
 	String itemFor
+	String itemCategory
 	boolean isPublished
 	
 	static hasMany = [itemSize: ItemSize, itemColor : ItemColor]

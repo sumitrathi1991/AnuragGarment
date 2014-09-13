@@ -8,11 +8,19 @@ class HomeController {
 	def springSecurityService,UserService
 	String userFullName = "Anonymous"
 	def index() {
-		List itemList = Item.list().take(10)
+		List newItemList = Item.findAllByItemCategory('new')
+		List featuredItemList = Item.findAllByItemCategory('featured')
 		String userFullName = UserService.loginUserName()
-		log.debug"itemList--"+itemList
-		[itemList : itemList,userFullName:userFullName]
+		
+		[itemList : newItemList,featuredItems:featuredItemList,userFullName:userFullName]
 	}
+	
+	def getCategoryProduct(){
+	log.debug"in getCategoryProduct == "+params
+	List itemList = Item.findAllByItemCategory(params.itemCategory)
+	render template:"items", model:[itemList :itemList]
+	}
+	
 	def loginView(){
 	}
 
@@ -77,5 +85,22 @@ class HomeController {
 			filterItem = []
 		}
 		render template:"itemGrid", model : [items : items]
+	}
+	
+	def showAddToCartPopup(){
+		log.debug"in showAddToCartPopup"+params
+		Item item = Item.get(params.itemId)
+		log.debug"item is =="+item
+		render template :"addToCartPopUp", model: [item : item, primaryColor : item.itemColor[0]]
+	}
+	
+	def renderHeaderData(){
+		log.debug"in renderHeaderData=="+params
+		List items = Item.findAllByItemForAndItemType(params.itemFor,params.itemType)
+		log.debug"items =="+items
+		List sizeList = Item.findAll()?.itemSize?.label.unique()
+		List colorList = Item.findAll()?.itemColor?.label.unique()
+		List brandList =  Item.findAll()?.itemBrand?.unique()
+		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList]
 	}
 }

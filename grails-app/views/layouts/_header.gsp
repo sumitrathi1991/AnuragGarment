@@ -3,27 +3,26 @@
 		<header id="header">
 			<div class="nav">
 				<div class="container">
-					<div class="row">
-						<div id="header_logo">
-							<a href="index.html" title="ANAND TRADING"> <img
-								class="logo img-responsive" src="/images/logo.png"
-								alt="ANAND TRADING" width="304" height="41">
-							</a>
+					 <div class="row">
+                     <div id="header_logo">
+                            <a href="index.html" title="ANAND TRADING">
+                                <img class="logo img-responsive" src="/images/logo.png" alt="ANAND TRADING" width="304" height="41">
+                            </a>
 						</div>
-
-						<!-- User Nav Dropdown Menu -->
-						<sec:ifLoggedIn>
+						
+						 <!-- User Nav Dropdown Menu -->
+							<sec:ifLoggedIn>
 							<div class="dropdown">
-								<a href="" class="dropdown-toggle" type="button"
-									data-toggle="dropdown"> Hi ${userFullName }! <span
-									class="caret"></span>
-								</a>
+							  <a href=""  class="dropdown-toggle" type="button" data-toggle="dropdown">
+							    Hi ${userFullName }!
+							    <span class="caret"></span>
+							  </a>
 								<ul class="dropdown-menu">
-									<li><a href="">Account</a></li>
-									<li><a href="">Order</a></li>
-									<li><a href="">Wallet</a></li>
-									<li><a href="">Wishlist</a></li>
-									<li><a onClick="loginOut()">Logout</a></li>
+								    <li><a href="">Account</a></li>
+								    <li><a href="">Order</a></li>
+								    <li><a href="">Wallet</a></li>
+								    <li><a href="">Wishlist</a></li>
+								    <li><a onClick="loginOut()">Logout</a></li>
 								</ul>
 							</div>
 						</sec:ifLoggedIn>
@@ -95,10 +94,10 @@
 								<div class="itemMenu level1">
 									<div class="itemSubMenu level3">
 										<div class="itemMenu level4">
-											<a class="itemMenuName level4" href="#"><span>Sports Shoes</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Floaters</span></a>
-											<a class="itemMenuName level4" href="#"><span>High Heel</span></a> 
-											<a class="itemMenuName level4" href="#"><span>Casual Belly</span></a>
+<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'football']"><span>Sports Shoes</span></g:link>
+<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'running']"><span>Running Shoes</span></g:link>
+<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'football']"><span>Heels</span></g:link>
+<g:link class="itemMenuName level4" action="renderHeaderData" controller="home" params="[itemFor:'women', itemType:'football']"><span>Wedges</span></g:link>
 										</div>
 									</div>
 								</div>
