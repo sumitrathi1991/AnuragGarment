@@ -10,8 +10,8 @@
 
 /* Utility functions */
 
-if ($('html.sidebar').length && !$('.container-fluid:first.menu-hidden').length)
-		menuSlimScroll();
+//if ($('html.sidebar').length && !$('.container-fluid:first.menu-hidden').length)
+//		menuSlimScroll();
 // generate a random number
 function randNum()
 {
@@ -173,8 +173,8 @@ function toggleMenuHidden()
 	if (typeof masonryGallery != 'undefined') 
 		masonryGallery();
 	
-	if ($('html.sidebar').length && !$('.container-fluid:first.menu-hidden').length)
-		menuSlimScroll();
+//	if ($('html.sidebar').length && !$('.container-fluid:first.menu-hidden').length)
+//		menuSlimScroll();
 }
 
 // handle generate sparkline charts
@@ -264,28 +264,28 @@ function JQSliderCreate()
 		.removeClass('ui-corner-all ui-state-default');
 }
 
-function menuSlimScroll()
-{
-	var menu_max_height = parseInt($('#menu .slim-scroll').attr('data-scroll-height'));
-	var menu_real_max_height = parseInt($('#wrapper').height());
-	var height = menu_real_max_height;
-		height -= $('#menu .slim-scroll').offset().top;
-	
-	if ($('html').is('.sidebar.sticky-sidebar'))
-		height -= $('#footer').height();
-	else
-		height = menu_max_height < menu_real_max_height ? menu_real_max_height : menu_max_height;
-	
-	//alert(height);
-	$('#menu .slim-scroll').slimScroll({
-		height: (height) + "px",
-		allowPageScroll : true
-    });
-	
-	setTimeout(function(){
-		$('#menu .slim-scroll').trigger('mouseenter');
-	}, 200);
-}
+//function menuSlimScroll()
+//{
+//	var menu_max_height = parseInt($('#menu .slim-scroll').attr('data-scroll-height'));
+//	var menu_real_max_height = parseInt($('#wrapper').height());
+//	var height = menu_real_max_height;
+//		height -= $('#menu .slim-scroll').offset().top;
+//	
+//	if ($('html').is('.sidebar.sticky-sidebar'))
+//		height -= $('#footer').height();
+//	else
+//		height = menu_max_height < menu_real_max_height ? menu_real_max_height : menu_max_height;
+//	
+//	//alert(height);
+//	$('#menu .slim-scroll').slimScroll({
+//		height: (height) + "px",
+//		allowPageScroll : true
+//    });
+//	
+//	setTimeout(function(){
+//		$('#menu .slim-scroll').trigger('mouseenter');
+//	}, 200);
+//}
 
 $(function()
 {

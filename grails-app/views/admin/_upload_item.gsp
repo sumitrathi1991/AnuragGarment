@@ -95,6 +95,16 @@
 					<label class="strong">Discount:</label> 
 					<input type="number" id="itemDiscountPercentage" name="itemDiscountPercentage" placeholder="Enter Discount in %" class="span12">
 				</div>
+				<div class="row-fluid">
+					<label class="strong">Upload Images:</label>
+						<!-- Plupload -->
+							<form id="pluploadForm">
+								<div id="pluploadUploader">
+									<p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
+								</div>
+							</form>
+						<!-- // Plupload END -->
+	            </div>
 			</div>
 		</div>
 	</div>

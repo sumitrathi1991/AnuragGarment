@@ -262,43 +262,6 @@
 		</div>
 	</div>
 	
-	<!-- Modal Upload Product Images (Multiple) -->
-        <div class="modal modal-lg hide fade" id="modal-upload">
-        
-        <!-- Modal heading -->
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>Upload Images</h3>
-        </div>
-        <!-- // Modal heading END -->
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-            <div class="widget-body">
-            
-                <!-- Plupload -->
-                <form id="pluploadForm">
-                    <div id="pluploadUploader">
-                        <p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
-                    </div>
-                </form>
-                <!-- // Plupload END -->
-                
-            </div>
-        </div>
-        <!-- // Modal body END -->
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-            <span class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</span> 
-            <span class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Save changes</span>
-        </div>
-        <!-- // Modal footer END -->
-        
-    </div>
-	<!-- Modal Upload Product Images (Multiple) Ends -->
-	
-	
 	<!--Modal Add Item -->
         <div class="modal modal-lg hide fade" id="modal-AddItem">
         <g:render template="/admin/upload_item" />
