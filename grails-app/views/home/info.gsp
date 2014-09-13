@@ -53,7 +53,7 @@
 						            <div class="layered_subtitle_heading">
                            				 <span class="layered_subtitle">Brand</span>
 									</div>
-                                        <ul id="ul_layered_category_0" class="col-lg-12 layered_filter_ul brands">																																						 											<li class="nomargin hiddable col-lg-6">
+                                        <ul class="col-lg-12 layered_filter_ul brands">																																						 											<li class="nomargin hiddable col-lg-6">
                                           <g:each in="${brandList}" var="brand">
                                            <li class="nomargin hiddable col-lg-6">
                                                 <input type="checkbox" class="checkbox" name="brand" id="" value="${brand}">
@@ -66,7 +66,7 @@
 									 <div class="layered_subtitle_heading">
                            				 <span class="layered_subtitle">Price</span>
 									</div>
-										<ul id="ul_layered_id_feature_5" class="col-lg-12 layered_filter_ul itemPrice">																																 											
+										<ul class="col-lg-12 layered_filter_ul itemPrice">																																 											
 												<li class="nomargin hiddable col-lg-6">
 													<input type="checkbox" class="checkbox" name="price" id="layered_id_feature_5" value="500">
 	                                                <label for="price"><a href="#">&#8377;500.00 and Under<span></span></a></label>
@@ -93,7 +93,7 @@
                                     <div class="layered_subtitle_heading">
                                         <span class="layered_subtitle">Color</span>
                                     </div>
-										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productColor">
+										<ul class="col-lg-12 layered_filter_ul productColor">
 										<g:each in="${colorList}" var="color">
 										<li class="nomargin hiddable col-lg-6">
 												<input type="checkbox" class="checkbox" name="color" id="" value="${color[0]}">
@@ -107,7 +107,7 @@
                                     <div class="layered_subtitle_heading">
                                         <span class="layered_subtitle">Size</span>
                                     </div>
-										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul productSize">
+										<ul class="col-lg-12 layered_filter_ul productSize">
 										 <g:each in="${sizeList}" var="size">
 										 <li class="nomargin hiddable col-lg-6">																	
 										 		<input type="checkbox" class="checkbox" name="itemSize" id="" value="${size[0]}">
@@ -121,7 +121,7 @@
                                     <div class="layered_subtitle_heading">
                                         <span class="layered_subtitle">Item Type</span>
                                     </div>
-										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul itemType">
+										<ul class="col-lg-12 layered_filter_ul itemType">
 										 <g:each in="${typeList}" var="itemType">
 										 <li class="nomargin hiddable col-lg-6">																	
 										 		<input type="checkbox" class="checkbox" name="itemType" id="" value="${itemType}">
@@ -135,7 +135,7 @@
                                     <div class="layered_subtitle_heading">
                                         <span class="layered_subtitle">Item For</span>
                                     </div>
-										<ul id="ul_layered_id_feature_7" class="col-lg-12 layered_filter_ul itemFor">
+										<ul class="col-lg-12 layered_filter_ul itemFor">
 										 <g:each in="${itemForList}" var="itemFor">
 										 <li class="nomargin hiddable col-lg-6">																	
 										 		<input type="checkbox" class="checkbox" name="itemFor" id="" value="${itemFor}">
@@ -147,12 +147,6 @@
 							</div>
 								<input type="hidden" name="id_category_layered" value="3">																																																			 						</form>
 						</div>
-                        <div id="layered_ajax_loader" style="display: none;">
-                            <p>
-                                <img src="http://demo.posthemes.com/pos_alexis/img/loader.gif" alt="">
-                                <br>Loading...
-                            </p>
-                        </div>
 				</div>
 				<!-- /Block layered navigation module -->
 
@@ -173,14 +167,14 @@
                                         <div class="select selector1">
                                             <label for="selectProductSort">Sort by</label>
                                                 <select id="selectProductSort" class="selectProductSort form-control">
-                                                	<option value="position:asc" selected="selected">--</option>
-                                                    <option value="price:asc">Price: Lowest first</option>
-                                                     <option value="price:desc">Price: Highest first</option>
-													<option value="name:asc">Product Name: A to Z</option>
-                                                    <option value="name:desc">Product Name: Z to A</option>
-													<option value="quantity:desc">In stock</option>
-													<option value="reference:asc">Reference: Lowest first</option>
-                                                    <option value="reference:desc">Reference: Highest first</option>
+                                                	<option value="" selected="selected">--</option>
+                                                    <option value="">Price: Lowest first</option>
+                                                     <option value="">Price: Highest first</option>
+													<option value="">Product Name: A to Z</option>
+                                                    <option value="">Product Name: Z to A</option>
+													<option value="">In stock</option>
+													<option value="">Reference: Lowest first</option>
+                                                    <option value="">Reference: Highest first</option>
                                            		 </select>
                                         </div>
                                     </form>

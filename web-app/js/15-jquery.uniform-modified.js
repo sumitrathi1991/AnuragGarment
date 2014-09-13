@@ -9,7 +9,7 @@ Requires jQuery 1.3 or newer
 Much thanks to Thomas Reynolds and Buck Wilson for their help and advice on
 this.
 
-Disabling text selection is made possible by Mathias Bynens
+Disabling text selection is made possible by Mathias Bynenss
 <http://mathiasbynens.be/> and his noSelect plugin.
 <https://github.com/mathiasbynens/jquery-noselect>, which is embedded.
 
