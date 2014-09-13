@@ -65,66 +65,47 @@ class RegisterController {
 			return;
 		}
 	}
+	/**
+	 * Check user with email address and send email  
+	 * @return
+	 */
 	def forgotPassword(){
-	log.debug"params in forgot password "+params
-		
-			User user = User.findByUsername(params.email)
-			log.debug"user : "+user
-			HashMap res = new HashMap()
-			if(user){
-				generateForgotPasswordToken(user)
-				//res.forgotPasswordToken = forgotPasswordToken
-				res.result = "Please check your email."
-			}
-			else{
-				res.result = "Please enter valid email id. This email id does not exit."
-			}
-			render res.result;
+		log.debug"params in forgot password "+params
+		User user = User.findByUsername(params.forgotEmail)
+		HashMap res = new HashMap()
+		if(user){
+			if(generateForgotPasswordToken(user)=="success")
+				res.result = "Mail has been sent to your email address.Please check your email address."
+			else
+				res.result = "There is some error in sending mail.Please try again."
+		}
+		else{
+			res.result = "Please enter valid email id. This email id does not exit."
+		}
+		render res.result;
 		
 	}
-	def generateForgotPasswordToken(User user){
+	String generateForgotPasswordToken(User user){
 		String forgotPasswordToken = RandomStringUtils.randomAlphanumeric(32)
 		user.forgotPasswordToken = forgotPasswordToken
 		user.isForgotPasswordTokenExpired = false
-		log.debug "isForgotPasswordTokenExpired ddd"+user.isForgotPasswordTokenExpired
 		user.save()
 		if(!user.save(flush:true)){
 			user.hasErrors.each { log.debug"error in saving user == "+it}
 			return null
 		}
-		resetPasswordMail(user)
+		return resetPasswordMail(user)
 	}
-	void resetPasswordMail(User user){
-		log.debug "resetPasswordMail inside"
+	String resetPasswordMail(User user){
 		String to = user.username
-		String subject = "Reset your password on Volcare"
+		String subject = "Reset your password on Anand Tranding"
 		String server = grailsApplication.config.grails.serverURL+"/password/reset/"
 		log.debug "server inside"+server;
-		def emailBody = "Hi "+user.fullName+" Here is your password reset link."+server+user.forgotPasswordToken;
-		sendMail(to, subject, emailBody)
-	}
-	void sendMail(String toUser, String mailSubject, def emailBody){
-		log.debug "sendMail inside"
-		mailService.sendMail {
-			to toUser
-			subject mailSubject
-			html emailBody
-		}
+		def emailBody = "<p>Hi "+user.fullName+"</p><p><p>You (or someone pretending to be you) requested that your password be reset.</p><p>If you didn't make this request then ignore the email; no changes have been made.</p><p>If you did make the request, then click <a href="+server+user.forgotPasswordToken+">here</a> to reset your password.</p><p>Thanks <br/>Anurag Garment</p>"
+		return emailSenderService.sendMailToUser(to, subject, emailBody)
 	}
 	
-	def validateForgotToken(){
-		log.debug"parmas forgot token"+params
-		User user = User.findByForgotPasswordToken(params.token);
-		if(user){
-			if(user.isForgotPasswordTokenExpired){
-				render(view: "tokenExpired");
-			}else{
-				redirect(controller:"home", fragment: "reset_password/"+params.token);
-				return;
-			}
-		}
-		render(view: "tokenExpired");
-	}
+	
 	def resetPassword()
 	{
 		

@@ -8,6 +8,15 @@ $("#loginViewID").show();
 function homeView(){
 $("#loginViewID").hide();
 }
+function showSpinner(){
+	 $('#forgotPasswordSpinner').show();
+	 $('#updateForgotPasswordMessage').hide();
+	 }
+function hideSpinner(){
+	 $('#forgotPasswordSpinner').hide();
+	 $('#updateForgotPasswordMessage').show();
+	 $('#forgotEmail').val('');
+	 }
 
 
 // Brand Logos Slider 

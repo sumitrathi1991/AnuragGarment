@@ -101,14 +101,14 @@
                         <!--Login Box Ends -->
                         
                         <!--Forgot Box -->
-                        <g:formRemote url="[controller: 'register', action:'forgotPassword']" onLoading="showSpinner()" onComplete="hideSpinner()" class="box" name="forgotPasswordForm" autocomplete='off' method="POST" update="updateForgotPasswordMessage" style="display:none">
+                        <g:formRemote url="[controller: 'register', action:'forgotPassword']" onLoading="showSpinner()" onComplete="hideSpinner()" class="box" name="forgotPasswordForm" id="forgotPasswordForm" autocomplete='off' method="POST" update="updateForgotPasswordMessage" style="display:none">
                          <h3 class="page-subheading">Forgot your password?</h3>
                             <p class="page-submessage">Please enter the email address you used to register. We'll then send you a new password. </p>
                             <div class="form_content clearfix">
-                            <div id="updateForgotPasswordMessage"></div>
+                            <div id="updateForgotPasswordMessage" class="element error"></div>
                                 <div class="form-group">
                                     <label for="email">Email address</label>
-                                    <input class="is_required validate account_input form-control" data-validate="isEmail" type="text" id="email" name="email" required >
+                                    <input class="is_required validate account_input form-control" data-validate="isEmail" type="text" id="forgotEmail" name="forgotEmail" required >
                                 </div>
                                 
                                 <div class="submit">
@@ -205,9 +205,7 @@
 			 $.scrollTo( this.hash, 1500, { easing:'elasout' });
 		
 		 });
-		 function showSpinner(){
-
-			 }
+		
 	</script>
 </body>
 </html>
