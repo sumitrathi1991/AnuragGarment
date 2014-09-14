@@ -1,5 +1,7 @@
 package com.anand.item
 
+import org.codehaus.groovy.grails.web.json.JSONObject;
+
 import com.anand.image.Image
 import com.sun.xml.internal.ws.org.objectweb.asm.Label;
 
@@ -60,6 +62,32 @@ class ItemController {
 	def deleteItem(){
 		
 	}
+	
+	def addItem(){
+		List uploadedImages = []
+		log.debug"addItem params: "+params
+		log.debug"addItem images: "+params.images
+		JSONObject jObject  = new JSONObject(params.images); // json
+		//JSONObject data = jObject.getJSONObject("itemImages"); // get data object
+		log.debug"data "+jObject.itemImages.size()
+		for(int i=0;i<jObject.itemImages.size();i++){
+			Image image = new Image(name: "product"+i+".jpeg",imageUrl : jObject.itemImages[i], imageSize: "1234", width:"50", height :"50").save()
+			uploadedImages.add(image)
+		}
+		ItemColor itemColor = new ItemColor(label : params.itemColor)
+		itemColor.imageList = uploadedImages
+		ItemSize itemSize = new ItemSize(label : params.itemSize, itemPrice : params.itemPrice, isDiscountable  :false, quantity: params.itemQuantity, isNew: true)
+		Item item = new Item(itemName: params.itemName,itemCode : "Item2",itemDescription: params.itemDescription,itemBrand : params.itemBrand,itemFor: params.itemFor,itemType:params.itemType,itemCategory:params.itemType)
+		item.addToItemSize(itemSize)
+		item.addToItemColor(itemColor)
+		if(!item.save(flush : true)){
+			item.errors.each {log.debug"error in saving item == "+it}
+		}
+		//String projectname = data.getString("name");
+		log.debug"addItem size: "+params.images.size()
+		
+	}
+	
 	def uploadItemImage(){
 		log.debug"uploadImage: "+params
 		String fileName = params.name

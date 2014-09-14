@@ -270,6 +270,8 @@
 	
 	
 <script>
+var uploadItemUrl = "${createLink(controller:'item',action:'addItem')}";
+registerValidation();
   $(function() {
     $( "#content" ).tabs();
   });

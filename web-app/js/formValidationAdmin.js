@@ -43,12 +43,13 @@ function registerValidation(){
 			},
 			submitHandler : function() {
 				//$('#signupSpinner').show();
-				var registerFormdata = $('#uploadItemForm').serialize();
+				var itemFormdata = $('#uploadItemForm').serialize();
+				console.log(itemImagesArray)
 				jQuery
 				.ajax({
 					type : 'POST',
-					url :  registerUrl,
-					data : registerFormdata,
+					url :  uploadItemUrl,
+					data : itemFormdata  + '&images=' +JSON.stringify({itemImages:itemImagesArray }) ,
 					success : function(data,textStatus) {
 						
 					},

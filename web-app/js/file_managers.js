@@ -9,7 +9,7 @@
  * ========================================================== */ 
 var itemImagesArray = []
 function addItemOverlay(){
-	itemImagesArray = new Array();
+	itemImagesArray = new JSON();
 }
 $(function() 
 {
@@ -106,6 +106,7 @@ $(function()
 	            	console.log(info)
 	            	console.log(info.response)
 	            	var obj = jQuery.parseJSON(info.response)
+	            	
 	            	itemImagesArray.push(obj.uploadedFileName)
 	            	console.log(obj.uploadedFileName)
 	            	console.log("image url")

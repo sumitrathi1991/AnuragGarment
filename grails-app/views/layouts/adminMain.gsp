@@ -60,7 +60,7 @@
 		<script type="text/javascript" src="/js/common.js"></script>
 		
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
-		<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidation.js')}"></script>
+		<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidationAdmin.js')}"></script>
 		
 		<g:layoutHead/>
 		<g:javascript library="application"/>		

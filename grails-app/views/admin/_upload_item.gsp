@@ -37,7 +37,7 @@
 				</div>
 				<div class="row-fluid">
 					<label class="strong">Item For:</label> 
-					<select class="span12">
+					<select class="span12" id="itemFor" name="itemFor">
 						<option selected value="Men" >Men</option>
 						<option value="Women" >Women</option>
 						<option value="Kid" >Kid</option>
@@ -45,7 +45,7 @@
 				</div>
 				<div class="row-fluid">
 					<label class="strong">Type:</label> 
-					<select class="span12">
+					<select class="span12" id="itemType" name="itemType">
 						<option selected value="Boots" >Boots</option>
 						<option value="Casual Shoes" >Casual Shoes</option>
 						<option value="Converse" >Converse</option>
@@ -98,11 +98,11 @@
 				<div class="row-fluid">
 					<label class="strong">Upload Images:</label>
 						<!-- Plupload -->
-							<form id="pluploadForm">
+							
 								<div id="pluploadUploader">
 									<p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
 								</div>
-							</form>
+							
 						<!-- // Plupload END -->
 	            </div>
 			</div>
@@ -114,7 +114,9 @@
 <!-- Modal footer -->
 <div class="modal-footer">
 	<span class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</span>
-	<span class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Add</span>
+	<button type="submit" id="submitItem" name="submitItem">
+		<span class="btn btn-primary"  aria-hidden="true">Add</span>
+	</button>
 </div>
 </form>
 <!-- // Modal footer END -->
