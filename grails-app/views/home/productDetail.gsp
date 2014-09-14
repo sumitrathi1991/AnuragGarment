@@ -442,31 +442,6 @@
 			</div>
 		</div>
 <!-- #page -->
-<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="../js/jquery.easing.js"></script>
-
-<script type="text/javascript" src="../js/10-bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/15-jquery.uniform-modified.js"></script>
-<script type="text/javascript" src="../js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="../js/jquery.idTabs.js"></script>
-<script type="text/javascript" src="../js/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
-<script type="text/javascript" src="../js/product.js"></script>
-<script type="text/javascript" src="../js/jquery.jqzoom.js"></script>
-<script type="text/javascript" src="../js/blocksearch.js"></script>
-<script type="text/javascript" src="../js/jquery.rating.pack.js"></script>
-<script type="text/javascript" src="../js/ph_simpleblog.js"></script>
-<script type="text/javascript" src="../js/productscategory.js"></script>
-<script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../js/category.js"></script>
-<script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="../js/custommenu.js"></script>
-<script type="text/javascript" src="../js/mobile_menu.js"></script>
-<script type="text/javascript" src="../js/jquery.textareaCounter.plugin.js"></script>
-<script type="text/javascript" src="../js/productcomments.js"></script>
-<script type="text/javascript" src="../js/jquery.etalage.min.js"></script>	
 <script type="text/javascript">
 				$("#more_info_tabs").idTabs(); 
 				$('.control').click(function(){

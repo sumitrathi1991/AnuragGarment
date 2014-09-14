@@ -325,26 +325,6 @@
 			</div>
 		</div>
 <!-- #page -->
-<script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery.easing.js"></script>
-<script type="text/javascript" src="/js/10-bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="/js/category.js"></script>
-<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
-<script type="text/javascript" src="/js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="/js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="/js/jquery.ui.mouse.min.js"></script>
-<script type="text/javascript" src="/js/jquery.ui.slider.min.js"></script>
-<script type="text/javascript" src="/js/ph_simpleblog.js"></script>
-<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="/js/custommenu.js"></script>
-<script type="text/javascript" src="/js/mobile_menu.js"></script>
-<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="/js/pos.bxslider.min.js"></script>
 <script type="text/javascript">
 var filterUrl = "${createLink(controller:'home',action:'filterData')}";
 $(document).ready(function(){

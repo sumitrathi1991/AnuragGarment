@@ -39,7 +39,6 @@
 		<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
 		<script type="text/javascript" src="/js/jquery.easing.js"></script>
 		<script type="text/javascript" src="/js/10-bootstrap.min.js"></script>
-		<script type="text/javascript" src="/js/15-jquery.uniform-modified.js"></script>
 		<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
 		<script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
 		<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
