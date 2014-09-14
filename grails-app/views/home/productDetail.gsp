@@ -442,34 +442,67 @@
 			</div>
 		</div>
 <!-- #page -->
-<script type="text/javascript">
-				$("#more_info_tabs").idTabs(); 
-				$('.control').click(function(){
-					if($(this).hasClass('inactive')) {
-						$(this).removeClass('inactive');
-						$(this).addClass('active');
-						$('.pos-demo-wrap').animate({left:'0'}, 500);
-					} else {
-						$(this).addClass('inactive');
-						$('.pos-demo-wrap').animate({left:'-210px'}, 500);
-					}
-				});
-				
-			
-							$('#etalage').etalage({
-								thumb_image_width: 300,
-								thumb_image_height: 400,
-								
-								show_hint: true,
-								click_callback: function(image_anchor, instance_id){
-									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-								}
-							});
-							// This is for the dropdown list example:
-							$('.dropdownlist').change(function(){
-								etalage_show( $(this).find('option:selected').attr('class') );
-							});
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
 
+<script type="text/javascript" src="../js/10-bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/15-jquery.uniform-modified.js"></script>
+<script type="text/javascript" src="../js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="../js/jquery.idTabs.js"></script>
+<script type="text/javascript" src="../js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../js/product.js"></script>
+<script type="text/javascript" src="../js/jquery.jqzoom.js"></script>
+<script type="text/javascript" src="../js/blocksearch.js"></script>
+<script type="text/javascript" src="../js/jquery.rating.pack.js"></script>
+<script type="text/javascript" src="../js/ph_simpleblog.js"></script>
+<script type="text/javascript" src="../js/productscategory.js"></script>
+<script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/category.js"></script>
+<script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
+<script type="text/javascript" src="../js/custommenu.js"></script>
+<script type="text/javascript" src="../js/mobile_menu.js"></script>
+<script type="text/javascript" src="../js/jquery.textareaCounter.plugin.js"></script>
+<script type="text/javascript" src="../js/productcomments.js"></script>
+<script type="text/javascript" src="../js/jquery.etalage.min.js"></script>	
+<script type="text/javascript">
+$("#more_info_tabs").idTabs(); 				
+	$('#etalage').etalage({
+		thumb_image_width: 300,
+		thumb_image_height: 400,
+								
+		show_hint: true,
+		click_callback: function(image_anchor, instance_id){
+			alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+		}
+});
+							
+$('#addToCart').on('click', function(){
+var itemId = $(this).attr('itemId');
+var quantity = $('#quantity').val()
+var price = $('#our_price_display').text().slice(1)
+var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
+			jQuery.ajax({
+				type : 'POST',
+				url : addToCartUrl,
+				async : false,
+				data : 'quantity='+quantity+'&item='+itemId+'&price='+price,
+				success : function(data, textStatus) {
+					if(data.result == false){
+						$('#errorMessage').html(data.message);
+						$('#errorMessage').show().delay(2000).fadeOut();
+						}
+					else{
+						$('#usercart').show();
+				}
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown) {
+				}
+			});
+
+})		
 </script>
 </body>
 </html>

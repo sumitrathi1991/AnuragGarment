@@ -104,13 +104,11 @@
 			</div>
 			<!--Forgot Box Ends-->
 			
-			
 			</div>
 			
 		<!-- // Box END --></div>
 		
 	</div>
-	
 </div>
 
 <script>

@@ -3,7 +3,6 @@
 	padding: 0;
 }
 .pos-demo-wrap {
-    background: url("../images/bg-color.png") repeat scroll 0 0 ;
     box-shadow: -4px -2px 11px -1px #DDDDDD;
     color: #000000;
     font-family: tahoma;
@@ -24,12 +23,7 @@
     padding: 0 0 14px;
     text-transform: uppercase;
 }
-.pos-demo-wrap .control {
-    /*background: url(../images/theme-option2.png) no-repeat 0 0 scroll;*/
-    float:right;
-}
 .pos-demo-wrap .control.active {
-	background: url("../images/close-icon.png") no-repeat scroll 50% 50% #845C46;
 	border-left: 0 none;
 	border-radius: 0 3px 3px 0;
 	height: 35px;
@@ -38,12 +32,10 @@
 	width: 35px;
 }
 .pos-demo-wrap .control.inactive {
-	background: url(../images/switcher.png) no-repeat 0 0 scroll;
     width: 40px;
     height: 41px;
     margin-right: -60px;
 	border: 0;
-	/*background: url("../images/open.png") no-repeat scroll 0 0 transparent;*/
 }
 .pos-demo-wrap .control a {
 	float: right;
@@ -79,7 +71,6 @@
     width: 100%;
     clear: both;
 	padding: 0 0 8px;
-	/*background: url("../images/line-hor.png") repeat-x scroll 0 100% transparent;*/
 }
 .cl-row-body {}
 .cl-row-header {}
@@ -101,7 +92,6 @@
 }
 .cl-td-r {
     float: right;
-	/*background: url("../images/line-vert.png") repeat-y scroll 0 0 transparent;*/
     width: 38px;
 	padding-bottom: 3px;
 }
@@ -135,14 +125,12 @@
     float: left;
     height: 22px;
     width: 22px;
-    background: url("../images/color_select.png") no-repeat scroll 0 0 transparent;
 }
 .colorSelector {
 	cursor: pointer;
 	position: relative;
 }
 .colorSelector div {
-	background: url("../images/color_select.png") no-repeat scroll 0 0 transparent;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -165,166 +153,6 @@
 .cl-pattern .cl-image:hover {
 	border-color: #000;
 }
-.cl-pattern .pattern1 {
-	background-image: url("../images/pattern/pattern1.png");
-}
-.cl-pattern .pattern2 {
-	background-image: url("../images/pattern/pattern2.png");
-}
-.cl-pattern .pattern3 {
-	background-image: url("../images/pattern/pattern4.png");
-}
-.cl-pattern .pattern4 {
-	background-image: url("../images/pattern/pattern4.png");
-}
-.cl-pattern .pattern5 {
-	background-image: url("../images/pattern/pattern5.png");
-}
-.cl-pattern .pattern6 {
-	background-image: url("../images/pattern/pattern6.png");
-}
-
-.cl-pattern .pattern7 {
-
-	background-image: url("../images/pattern/pattern7.png");
-
-}
-
-.cl-pattern .pattern8 {
-
-	background-image: url("../images/pattern/pattern8.png");
-
-}
-.cl-pattern .pattern9 {
-
-	background-image: url("../images/pattern/pattern9.png");
-
-}
-
-.cl-pattern .pattern10 {
-
-	background-image: url("../images/pattern/pattern10.png");
-
-}
-
-.cl-pattern .pattern11 {
-
-	background-image: url("../images/pattern/pattern11.png");
-
-}
-
-.cl-pattern .pattern12 {
-
-	background-image: url("../images/pattern/pattern12.png");
-
-}
-
-.cl-pattern .pattern13 {
-
-	background-image: url("../images/pattern/pattern13.png");
-
-}
-
-.cl-pattern .pattern14 {
-
-	background-image: url("../images/pattern/pattern14.png");
-
-}
-.cl-pattern .pattern15 {
-
-	background-image: url("../images/pattern/pattern15.png");
-
-}
-.cl-pattern .pattern16 {
-
-	background-image: url("../images/pattern/pattern16.png");
-
-}
-
-.cl-pattern .pattern17 {
-
-	background-image: url("../images/pattern/pattern17.png");
-
-}
-
-.cl-pattern .pattern18 {
-
-	background-image: url("../images/pattern/pattern18.png");
-
-}
-
-.cl-pattern .pattern19 {
-
-	background-image: url("../images/pattern/pattern19.png");
-
-}
-
-.cl-pattern .pattern20 {
-
-	background-image: url("../images/pattern/pattern20.png");
-
-}
-
-.cl-pattern .pattern21 {
-
-	background-image: url("../images/pattern/pattern21.png");
-
-}
-
-.cl-pattern .pattern22 {
-
-	background-image: url("../images/pattern/pattern22.png");
-
-}
-
-.cl-pattern .pattern23 {
-
-	background-image: url("../images/pattern/pattern23.png");
-
-}
-
-.cl-pattern .pattern24 {
-
-	background-image: url("../images/pattern/pattern24.png");
-
-}
-
-.cl-pattern .pattern25 {
-
-	background-image: url("../images/pattern/pattern25.png");
-
-}
-
-.cl-pattern .pattern26 {
-
-	background-image: url("../images/pattern/pattern26.png");
-
-}
-
-.cl-pattern .pattern27 {
-
-	background-image: url("../images/pattern/pattern27.png");
-
-}
-
-.cl-pattern .pattern28 {
-
-	background-image: url("../images/pattern/pattern28.png");
-
-}
-
-.cl-pattern .pattern29 {
-
-	background-image: url("../images/pattern/pattern29.png");
-
-}
-
-.cl-pattern .pattern30 {
-
-	background-image: url("../images/pattern/pattern30.png");
-
-}
-
 .cl-row-reset {
 	text-align: center;
 	height: 28px;
@@ -335,7 +163,6 @@
 	height: 28px;
 	display: block;
 	margin-left: 45px;
-	background: url("../images/reset.png") no-repeat;
 }
 .cl-row-reset .cl-reset:hover {
 	cursor: pointer;
@@ -437,7 +264,6 @@
 	width: 100%;
 }
 .pos-demo-wrap .cl-tr-style .cl-td-l, .pos-demo-wrap .cl-tr-style .cl-td-r {
-    background: url("../images/bg-bottom-color.png") repeat-x scroll 0 100% ;
     float: left;
     height: 40px;
 }
@@ -462,7 +288,6 @@
   height: 178px;
   overflow: hidden;
   position: fixed;
-  background: url(../images/colorpicker_background.png);
   font-family: Arial, Helvetica, sans-serif;
   -moz-border-radius: 5px;
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
@@ -485,7 +310,6 @@
   left: 0;
   width: 150px;
   height: 150px;
-  background: url(../images/colorpicker_overlay.png);
   z-index: 9999;
 }
 .colorpicker_color div div {
@@ -495,7 +319,6 @@
   width: 11px;
   height: 11px;
   overflow: hidden;
-  /*background: url(../images/colorpicker_select.gif);*/
   margin: -5px 0 0 -5px;
 }
 .colorpicker_hue {
@@ -511,7 +334,6 @@
   width: 35px;
   height: 9px;
   overflow: hidden;
-  background: url(../images/colorpicker_indic.gif) left top;
   margin: -4px 0 0 0;
   left: 0px;
 }
@@ -614,7 +436,6 @@
   position: absolute;
   width: 22px;
   height: 22px;
-  /*background: url(../images/colorpicker_submit.png) top;*/
   left: 322px;
   top: 142px;
   overflow: hidden;
@@ -637,13 +458,11 @@
   position: relative;
   width: 22px;
   height: 22px;
-  background: url("../images/color_select.png") no-repeat scroll 0 0 transparent;
 }
 .colorSelector div {
   position: absolute;
   width: 22px;
   height: 22px;
-  background: url("../images/color_select.png") no-repeat scroll 0 0 transparent;
 }
 .colorSelector div:hover {
   background-position:  100% 0;

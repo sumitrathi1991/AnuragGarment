@@ -244,17 +244,8 @@ function showAddToCartPopup(obj){
 			}
 		});
 }
-	$('.control').click(function(){
-		if($(this).hasClass('inactive')) {
-			$(this).removeClass('inactive');
-			$(this).addClass('active');
-			$('.pos-demo-wrap').animate({left:'0'}, 500);
-		} else {
-			$(this).addClass('inactive');
-			$('.pos-demo-wrap').animate({left:'-210px'}, 500);
-		}
-	});
-	registerValidation();
+
+registerValidation();
 var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
 
 $('#etalage').etalage({
@@ -263,8 +254,6 @@ $('#etalage').etalage({
 	show_hint: true,
 
 });
-var CUSTOMMENU_POPUP_EFFECT = 0;
-var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
 
 $('#pos-slideshow-home').nivoSlider({
 	effect: 'random',
@@ -318,24 +307,6 @@ $('.pos-logo .bxslider').bxSlider({
     pager: false,
 });
 
-
-$.easing.elasout = function(x, t, b, c, d) {
-	var s=1.70158;var p=0;var a=c;
-	if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-	if (a < Math.abs(c)) { a=c; var s=p/4; }
-	else var s = p/(2*Math.PI) * Math.asin (c/a);
-	return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-};
-
-
-
-// TOC, shows how to scroll the whole window
-$('#BrandsType a').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
-$.scrollTo( this.hash, 1500, { easing:'elasout' });
-
-});
-
-//]]>
 $(window).load(function() {
 	$("#loginViewID").hide();
         

@@ -249,9 +249,7 @@ div.pt_menu .parentMenu p{
 .mobilemenu li.level0.last {
     margin-bottom: 20px;
 }
-.mobilemenu li.active>a {
- /*background: url('../images/close.gif') no-repeat center right;*/
-}
+
 .mobilemenu li div {
  padding: 20px;
  background: #aef;
@@ -272,12 +270,6 @@ div.pt_menu .parentMenu p{
  display: block;
  text-transform: capitalize;
  cursor: pointer;
-}
-
-
-
-.mobilemenu li.parent>a {
-	/*background: url('../images/open.gif') no-repeat center right;*/
 }
 
 .mobilemenu li ul li {
@@ -315,13 +307,4 @@ div.pt_menu .parentMenu p{
 	padding:0;
 	width:15px;
 	border: 0;
-}
-.mobilemenu span.CLOSE a { background: url(../images/icons/menu_down.png) no-repeat 50% 50%; }
-.mobilemenu span.OPEN a {  background: url(../images/icons/menu_up.png) no-repeat 50% 50%;}
-/*.mobilemenu span.head a:hover*/
-.mobilemenu li.active>span.head a {
-	background: url(../images/icons/menu_up.png) no-repeat 50% 50%;
-}
-.mobilemenu li.selected span.head a {
-	background: url(../images/icons/menu_up.png) no-repeat 50% 50%;
 }

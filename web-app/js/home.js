@@ -35,3 +35,25 @@ $(document).ready(function(){
 	});
 
 });
+
+// Dropdown list of the page:
+$('.dropdownlist').change(function(){
+	etalage_show( $(this).find('option:selected').attr('class') );
+});
+$('.control').click(function(){
+	if($(this).hasClass('inactive')) {
+		$(this).removeClass('inactive');
+		$(this).addClass('active');
+		$('.pos-demo-wrap').animate({left:'0'}, 500);
+	} else {
+		$(this).addClass('inactive');
+		$('.pos-demo-wrap').animate({left:'-210px'}, 500);
+	}
+});
+var CUSTOMMENU_POPUP_EFFECT = 0;
+var CUSTOMMENU_POPUP_TOP_OFFSET = 40;
+	
+// TOC, shows how to scroll the whole window
+$('#BrandsType a').click(function(){//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+$.scrollTo( this.hash, 1500, { easing:'elasout' });
+});
