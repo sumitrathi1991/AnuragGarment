@@ -99,112 +99,6 @@
     </div><!-- .columns-container -->
 			
             <!-- Footer -->
-			<div class="pos-logo-container">	
-                <div class="container">
-                    <div class="pos-logo" id="wholesaler">
-						<div class="pos-logo-title"><h2>Our Brands</h2></div>
-                    		<ul class="bxslider">
-                            	<li >
-                                    <a href="#">
-                                        <img src="/images/2(1).jpg" alt="Logo">
-                                    </a>
-								</li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/3(1).jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/4.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/5.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/6.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/7.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/1(1).jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/2(1).jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/3(1).jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/4.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/5.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/6.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/7.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/1(1).jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/2(1).jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/3(1).jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/4.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/5.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="/images/6.jpg" alt="Logo">
-                                    </a>
-                                </li>
-                           </ul>
-                     </div>
-				</div>
-			</div>
-		</div>
-	</div>
 	</div>			  	  
 			 
   
@@ -238,6 +132,22 @@ function showAddToCartPopup(obj){
 						}
 					}
 			    });
+			   var i = 0;
+			    for(var j = 0; j < data.images.length;j++){
+				if(i == 0)
+					$('#etalage').html('<li><a href=""><img class="etalage_source_image" src='+data.images[j]+'/></a></li>')
+				else
+					$('#etalage').append('<li><img class="etalage_thumb_image" src='+data.images[j]+'/></li>')
+					i++;
+				 }
+				 $('#etalage').show()
+				 $('.etalage_thumb_image').show()
+				
+				$('.itemName').html(data.name)
+				$('#our_price_display').html('&#8377;'+data.price.toFixed(2))
+				$('#short_description_content').html(data.description)
+				$('.brand').html(data.brand)
+				$('#quantityAvailable').html(data.quantity)
 			    return false;
 			},
 			error : function (data, status, headers, config) {

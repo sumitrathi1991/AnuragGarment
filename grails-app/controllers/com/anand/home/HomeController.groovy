@@ -1,11 +1,13 @@
 package com.anand.home
 
 
-import com.anand.auth.User;
+import grails.converters.JSON
+
+import org.codehaus.groovy.grails.web.json.JSONObject
+
 import com.anand.item.Item
-import grails.plugin.springsecurity.SpringSecurityUtils;
 class HomeController {
-	def springSecurityService,UserService
+	def springSecurityService,UserService,grailsApplication
 	String userFullName = "Anonymous"
 	def index() {
 		List newItemList = Item.findAllByItemCategory('new')
@@ -105,7 +107,27 @@ class HomeController {
 	def showAddToCartPopup(){
 		log.debug"in showAddToCartPopup"+params
 		Item item = Item.get(params.itemId)
-		render template :"addToCartPopUp", model: [item : item, primaryColor : item.itemColor[0]]
+		List imageList = decodeImageUrl(item.itemColor[0].imageList)
+		log.debug"imageList == "+item.itemSize[0].itemPrice
+		JSONObject cartData = new JSONObject()
+		cartData.put("name", item.itemName)
+		cartData.put("brand", item.itemBrand)
+		cartData.put("images",imageList)
+		cartData.put("quantity",item.itemSize[0].quantity)
+		cartData.put("price", item.itemSize[0].itemPrice)
+		cartData.put("description", item.itemDescription)
+		render cartData as JSON
+		//render template :"addToCartPopUp", model: [item : item, primaryColor : item.itemColor[0]]
+	}
+	
+	
+	def decodeImageUrl(def imageList){
+		List images = []
+		imageList.take(5).each { image ->
+			def imageUrl = grailsApplication.config.imagePublicUrl+image.name
+			images.add(imageUrl)
+		}
+		return images
 	}
 	
 	def renderHeaderData(){

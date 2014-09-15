@@ -13,6 +13,11 @@ class UrlMappings {
 			controller = 'home'
 			action = 'showProducts'
 		}*/
+		name "renderim": "/images/$imageName" {
+			controller = 'image'
+			action = 'renderImage'
+		}
+		
 		"/password/reset/$token"(controller:"register", parseRequest:true, action:"resetPassword")
 		"/authenticate/user/$token"(controller:"register", action:"authenticateUser", parseRequest:true)
 		name productDetail: "/productDetail/$productId" {

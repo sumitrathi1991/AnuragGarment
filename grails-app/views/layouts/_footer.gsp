@@ -1,3 +1,107 @@
+<div class="pos-logo-container" id="wholesaler">	
+                <div class="container">
+                    <div class="pos-logo" >
+						<div class="pos-logo-title"><h2>Our Brands</h2></div>
+                    		<ul class="bxslider">
+                            	<li >
+                                    <a href="#">
+                                        <img src="../images/2(1).jpg" alt="Logo">
+                                    </a>
+								</li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/3(1).jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/4.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/5.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/6.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/7.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/1(1).jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/2(1).jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/3(1).jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/4.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/5.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/6.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/7.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/1(1).jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/2(1).jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/3(1).jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/4.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/5.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../images/6.jpg" alt="Logo">
+                                    </a>
+                                </li>
+                           </ul>
+                     </div>
+				</div>
+			</div>
 <div class="footer-container">
 	<div id="footer">
 	 	<div class="pos-footer-top">

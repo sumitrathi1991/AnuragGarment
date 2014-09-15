@@ -5,7 +5,7 @@
 		<!-- left infos-->  
 		<div class="pb-left-column col-sm-5 col-md-5">
 			<ul id="etalage">
-                  <li>
+					<%--<li><a href="">
                       <a href="">
                           <img class="etalage_thumb_image" src="../images/t1.jpg" />
                           <img class="etalage_source_image" src="../images/t2.jpg" />
@@ -35,28 +35,29 @@
                       <img class="etalage_thumb_image" src="../images/t1.jpg" />
                       <img class="etalage_source_image" src="../images/t1.jpg" />
                   </li>
-				</ul>
+				--%></ul>
 			</div> <!-- end pb-left-column -->
             <!-- end left infos--> 
             <!-- center infos -->
 		<div class="pb-center-column col-sm-7 col-md-7">
-			<h1>Sed posuere</h1>
+				<h1 class="itemName"></h1>
                 <div class="price">
 					<p class="our_price_display" >
-					<span id="our_price_display">$350.00</span>
+						<span id="our_price_display"></span>
 					</p><p id="old_price"><span id="old_price_display"></span></p>
                 </div>
 			 
 				<!--  /Module ProductComments -->			
                 <p id="product_reference">
-                    <label>Model </label>
-                    <span class="editable" >demo_13</span>
+					<label>Designed By</label> <span class="editable brand"></span>
 				</p>
 				<p id="product_condition">
 				<label>Condition </label>
 				<span class="editable">New</span></p>
 							<div id="short_description_block">
-											<div id="short_description_content" class="rte align_justify" itemprop="description"><p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p></div>
+					<div id="short_description_content" class="rte align_justify">
+						
+					</div>
                                 <p class="buttons_bottom_block">
                                     <a href="" class="button">
                                         More details

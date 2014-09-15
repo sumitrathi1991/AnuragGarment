@@ -63,7 +63,7 @@ grails {
     }
 }
 
- 
+imagePublicUrl = "http://www.localhost:8080/images/"
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
@@ -89,8 +89,8 @@ environments {
 		//file.upload.path = "/home/oodles/anand/images"
 		file.upload.path = "E:\\Doc\\books\\anand\\images\\"
 		grails.serverURL = "http://localhost:8080"
-		//grails.anand.imageUrl = "/home/oodles/anand/images/"
-		grails.anand.imageUrl = "E:\\Doc\\books\\anand\\images\\"
+		grails.anand.imageUrl = "/home/oodles/anand/images/"
+		//grails.anand.imageUrl = "E:\\Doc\\books\\anand\\images\\"
     }
     production {
         grails.logging.jul.usebridge = false
