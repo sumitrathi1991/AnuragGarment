@@ -31,10 +31,11 @@
 						<!-- Block permanent links module HEADER -->
 						<ul id="header_links">
 							<sec:ifNotLoggedIn>
-								<li class="last"><g:link action="loginView"
-										controller="home">
+								<li class="last">
+									<g:link action="loginView" controller="home">
 										<span class="link-login cursor" title="Login" rel="nofollow">Login</span>
-									</g:link></li>
+									</g:link>
+								</li>
 							</sec:ifNotLoggedIn>
 						</ul>
 						<!-- /Block permanent links module HEADER -->

@@ -2,6 +2,7 @@
 <html class="animations fluid top-full menuh-top sticky-top sidebar sidebar-full sidebar-collapsible sidebar-width-mini sidebar-hat"><!-- <![endif]-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <title>Change Password</title>
 
 <!-- Bootstrap -->
@@ -26,6 +27,9 @@
 	<link rel="stylesheet" href="/css/highdpi.css" type="text/css" media="all">
    
     <link rel="stylesheet" href="/css/style-default-menus-dark.css" type="text/css" media="all">
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
+	<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidation.js')}"></script>
+		
     
 </head>
 <body class="document-body login">
@@ -53,10 +57,14 @@
 						<div class="center">
 							<div class="row-fluid">
 								<div class="span6">
-									<a href="#" class="btn btn-icon-stacked btn-block btn-success glyphicons user_add"><i></i><span>Login now</span></a>
+								<g:link action="loginView" controller="home">
+									<span class="btn btn-icon-stacked btn-block btn-success glyphicons user_add"><i></i><span>Login now</span></span>
+								</g:link>
 								</div>
 								<div class="span6">
-									<a href="#" class="btn btn-icon-stacked btn-block btn-danger glyphicons home"><i></i><span>Browse through our website</span></a>
+								<g:link action="index" controller="home">
+									<span class="btn btn-icon-stacked btn-block btn-danger glyphicons home"><i></i><span>Browse through our website</span></span>
+								</g:link>
 								</div>
 							</div>
 						</div>
@@ -74,27 +82,30 @@
 		    		<!-- Box -->
 		    		<div class="widget widget-heading-simple widget-body-gray">
 						<div class="widget-body">
-		    			<g:if test='${error}'>
-								<div class='errorMessage cornerRadiusAll message posRelative'>${error}</div>
-							</g:if>
-							<g:form action='resetPassword' controller="register" name='resetPasswordForm' autocomplete='off'>
-								<g:hiddenField name='t' value='${token}'/>
-		             				<label>Password :</label>
-		        					<input type="password" name='password'  class="input-block-level" placeholder="password" bean="${command}"  value="${command?.password}"/>
-		             				<label>Password (again) :</label>
-		             				<input type="password" name='password2'  class="input-block-level margin-none" placeholder="Password(again)" bean="${command}" value="${command?.password2}" />
-		             				<div class="separator bottom"></div> 
-									<div class="row-fluid">
-										<div class="span6 center offset6">
-											<%--<button type="submit" value="Reset Password" class="btn btn-block btn-inverse" id='reset' form='resetPasswordForm'>Reset Password</button>--%>
-											<button type="button" class="btn btn-block btn-inverse" id='reset'>Reset Password</button>
-										</div>
+		    			<g:if test='${token}'>
+		    				<div id="resetMessageUpdate" class="element error"></div>
+							<g:form action='changePassword' controller="register" name='resetPasswordForm' id="resetPasswordForm" autocomplete='off'>
+								<g:hiddenField name='token' value='${token}'/>
+	             				<label>Password :</label>
+	        					<input type="password" name='resetPassword' id="resetPassword"  class="input-block-level" placeholder="password" />
+	             				<label>Password (again) :</label>
+	             				<input type="password" name='resetPassword2' id="resetPassword2"  class="input-block-level margin-none" placeholder="Password(again)" />
+	             				<div class="separator bottom"></div> 
+								<span id="resetPasswordSpinner" class="fa fa-spinner fa-spin fa-2x" style="display: none;"></span>
+								<div class="row-fluid">
+								
+									<div class="span6 center offset6">
+										<%--<button type="submit" value="Reset Password" class="btn btn-block btn-inverse" id='reset' form='resetPasswordForm'>Reset Password</button>--%>
+										<button type="submit" class="btn btn-block btn-inverse" id='reset'>Reset Password</button>
 									</div>
+								</div>
 							</g:form>
+							</g:if>
+							<g:else>
+								<div class='element error errorMessage cornerRadiusAll message posRelative'>${error}</div>
+							</g:else>
 						</div>
-						<div class="widget-footer">
-							<p class="glyphicons restart"><i></i>Please enter your new password ...</p>
-						</div>
+						
 		    		</div>
 		    		<!-- // Box END -->
 			</div>
@@ -105,9 +116,10 @@
  <!-- Wrapper Ends -->
 
  <script>
+ registerValidation();
 	$("#reset").click(function(){
-		$(this).parents("#ResetPassword").fadeOut(200);
-		$("#CongratulationMsg").delay(300).fadeIn();
+		//$(this).parents("#ResetPassword").fadeOut(200);
+		//$("#CongratulationMsg").delay(300).fadeIn();
 	});
 </script>
 </body>
