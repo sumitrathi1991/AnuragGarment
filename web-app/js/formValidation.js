@@ -115,6 +115,60 @@
         $("#login_form").submit();
         return false;
     });
+	
+	$("#resetPasswordForm").validate({
+		rules: {
+			resetPassword: {
+				required: true,
+				minlength: 5
+			},
+			resetPassword2: {
+				required:true,
+				minlength:5,
+				equalTo:"#resetPassword"
+			}
+		 },
+			messages: {
+				
+				resetPassword: {
+					required: "Please provide a password.",
+					minlength: "At least 5 characters long."
+				},
+				resetPassword2: {
+					required: "Please provide confirm password.",
+					minlength: "At least 5 characters long.",
+					equalTo: "Please enter the same password as above."
+				}
+			},
+			submitHandler : function() {
+				var resetPasswordFormdata = $('#resetPasswordForm').serialize();
+				var resetPasswordFormUrl = $('#resetPasswordForm').attr('action');
+				$('#resetPasswordSpinner').show();
+				jQuery
+				.ajax({
+					type : 'POST',
+					url : resetPasswordFormUrl,
+					data : resetPasswordFormdata,
+					dataType : 'JSON',
+					success : function(data,status,headers,config){
+						//$('#resetPasswordForm').reset();
+						//$('#resetPasswordSpinner').hide();
+						if(data.status == "error"){
+							$('#resetMessageUpdate').html(data.message)
+						}else{
+							$("#ResetPassword").fadeOut(200);
+							$("#CongratulationMsg").delay(300).fadeIn();
+						}
+					},
+					error : function(data,status,headers,config){
+						//$('#resetPasswordSpinner').hide();
+						document.getElementById("resetPasswordForm").reset();
+					}
+				
+				})
+				
+			}
+		});
  }
  function loginUser(logingFormdata,loginUser){
 	   	jQuery
@@ -128,7 +182,6 @@
 				console.log(data.success);
 				if(data.success){
 					window.location.href = data.redirectURL;
-					
 					$('#loginSpinner').hide();
 				}else{
 					$('#loginSpinner').hide();

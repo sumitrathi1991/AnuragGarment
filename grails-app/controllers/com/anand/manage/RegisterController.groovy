@@ -108,26 +108,30 @@ class RegisterController {
 	
 	def resetPassword()
 	{
-		User user=User.findByForgotPasswordToken(params.id);
+		log.debug"user "+params
+		User user=User.findByForgotPasswordToken(params.token);
 		if(user){
 			if(user.isForgotPasswordTokenExpired){
-				return [token :null]
+				
+				return [token :"lkgl",error:"Your token has been expired.Please try again."]
 			}
 			else{
 				user.isForgotPasswordTokenExpired=true;
 				if(!user.save(flush:true)){
 					user.hasErrors.each { log.debug"error in saving user == "+it}
 				}
-			return [token :params.id]
+			return [token :params.token]
 			}
 		}else{
-			return [token:null]
+			return [token:null,error:"Your token has been expired.Please try again."]
 		}
 		
 		
 	}
 	def changePassword()
 	{
+		
+		HashMap resultMap = new HashMap();
 		log.debug "  "+params;
 		User user=User.findByForgotPasswordToken(params.token);
 		log.debug "  "+user;
@@ -135,19 +139,23 @@ class RegisterController {
 		{
 			if(params.password.equals(params.repassword))
 			{
-				
 				user.password=params.password;
 				user.save();
-				render "Password has changed"
+				resultMap.status = "success";
+				resultMap.message = "Hi there, Password successfully changed. Your new password has been set.";
 			}
-			else
-				 render "Passwords does not match"
+			else{
+				resultMap.status = "error";
+				resultMap.message = "Passwords does not match.";
+			}
 		}
 		else
 		{
-			render "Invalid User"
+			resultMap.status = "error";
+			resultMap.message = "Sorry! You are not a valid user.";
 		}
-		
+		respond resultMap, [formats:['json', 'xml']];
+		return
 	}
 	
 	def tokenExpired(){
