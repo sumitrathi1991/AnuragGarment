@@ -49,9 +49,12 @@
                                             <div class="product-image-container">
                                                 <a class="product_img_link" href="#" title="Printed Chiffon Dress">
                                                     <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>" alt="${featuredItem.itemName}" title="${featuredItem.itemName}" width="220" height="220" >
-                                                    <span class="sale-box"><span class="sale-label">Sale</span></span>														 										<span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
+                                                    <span class="sale-box"><span class="sale-label">Sale</span></span>														 										
+                                                    <span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
                                                 </a>
-                                              <a class="quick-view various" alt="${featuredItem.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>"><span>Quick view</span></a>                                                                                    
+                                              <a class="quick-view various" alt="${featuredItem.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>">
+                                              	<span>Quick view</span>
+                                              </a>                                                                                    
                                          </div>
                            			 	</div>
                             			<div class="right-block">

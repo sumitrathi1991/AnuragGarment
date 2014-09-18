@@ -51,6 +51,10 @@ function registerValidation(){
 					url :  uploadItemUrl,
 					data : itemFormdata  + '&images=' +JSON.stringify({itemImages:itemImagesArray }) ,
 					success : function(data,textStatus) {
+						if(data.status == "success"){
+							console.log("success added item")
+							$('#modal-AddItem').modal('hide');
+						}
 						
 					},
 					error : function(XMLHttpRequest,textStatus,errorThrown) {

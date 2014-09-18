@@ -37,7 +37,7 @@ class ItemController {
 				ItemColor itemColor = new ItemColor(label : colors[i])
 				itemColor.imageList = uploadedImages
 				ItemSize itemSize = new ItemSize(label : sizes[i], itemPrice : prices[i], isDiscountable  :false, quantity: 20, isNew: true) 
-				Item item = new Item(itemName: "Women"+i,itemCode : "Item"+i,itemDescription: "footwear",itemBrand : brands[i],itemFor: "women",itemType:itemType[i],itemCategory:category[i])
+				Item item = new Item(itemName: "men"+i,itemCode : "Item"+i,itemDescription: "footwear",itemBrand : brands[i],itemFor: "men",itemType:itemType[i],itemCategory:category[i])
 				item.addToItemSize(itemSize)
 				item.addToItemColor(itemColor)
 				if(!item.save(flush : true)){
@@ -49,7 +49,7 @@ class ItemController {
 	List uploadImage(){
 		List uploadedImages = []
 		for(int i=1; i<10; i++){
-			Image image = new Image(name: "product"+i+".jpeg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpeg", imageSize: "1234", width:"50", height :"50").save()
+			Image image = new Image(name: "product"+i+".jpg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpg", imageSize: "1234", width:"50", height :"50").save()
 			uploadedImages.add(image)
 		}
 		return uploadedImages
@@ -64,42 +64,28 @@ class ItemController {
 	}
 	
 	def addItem(){
-		List uploadedImages = []
 		log.debug"addItem params: "+params
 		log.debug"addItem images: "+params.images
-		JSONObject jObject  = new JSONObject(params.images); // json
-		//JSONObject data = jObject.getJSONObject("itemImages"); // get data object
-		log.debug"data "+jObject.itemImages.size()
-		for(int i=0;i<jObject.itemImages.size();i++){
-			Image image = new Image(name: "product"+i+".jpeg",imageUrl : jObject.itemImages[i], imageSize: "1234", width:"50", height :"50").save()
-			uploadedImages.add(image)
+		Item item = itemService.addItem(params)
+		HashMap result = new HashMap();
+		if(item){
+			result.status = "success";
+			result.message = "Item has been added successfully."
+		}else{
+			result.status = "error";
+			result.message = "There is some issue for adding an item.Please try again."
 		}
-		ItemColor itemColor = new ItemColor(label : params.itemColor)
-		itemColor.imageList = uploadedImages
-		ItemSize itemSize = new ItemSize(label : params.itemSize, itemPrice : params.itemPrice, isDiscountable  :false, quantity: params.itemQuantity, isNew: true)
-		Item item = new Item(itemName: params.itemName,itemCode : "Item2",itemDescription: params.itemDescription,itemBrand : params.itemBrand,itemFor: params.itemFor,itemType:params.itemType,itemCategory:params.itemType)
-		item.addToItemSize(itemSize)
-		item.addToItemColor(itemColor)
-		if(!item.save(flush : true)){
-			item.errors.each {log.debug"error in saving item == "+it}
-		}
-		//String projectname = data.getString("name");
-		log.debug"addItem size: "+params.images.size()
+		respond result, [formats:['json', 'xml']];
 		
 	}
 	
 	def uploadItemImage(){
-		log.debug"uploadImage: "+params
 		String fileName = params.name
 		def file = request.getFile("file")
-		log.debug"file "+file
 		String extension = fileName.substring(fileName.lastIndexOf(".")+ 1);
 		String filePath= itemService.uploadFile(file,extension);
-		log.debug"filePath: "+filePath;
 		int index=filePath.lastIndexOf("/");
 		fileName=filePath.substring(index+1);
-		log.debug"fileName: "+fileName;
-		
 		HashMap res = new HashMap();
 		res.result = "success";
 		res.uploadedFileName=fileName;
