@@ -61,13 +61,13 @@
 		
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.validate.js')}"></script>
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'formValidationAdmin.js')}"></script>
-		
+		<script type="text/javascript" src="${resource(dir: 'js', file: 'adminGlobal.js')}"></script>
 		<g:layoutHead/>
 		<g:javascript library="application"/>		
 		<r:layoutResources />
 	</head>
 	<body>
-	
+	<g:render template="/layouts/adminheader" />
 		<g:layoutBody/>
 		
 		

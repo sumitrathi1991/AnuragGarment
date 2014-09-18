@@ -12,7 +12,7 @@ import org.apache.commons.lang.RandomStringUtils
 import grails.plugin.springsecurity.SpringSecurityUtils;
 
 class AdminController {
-	static allowedMethods = [registerUser : "POST",uploadItem : "GET"]
+	static allowedMethods = [registerUser : "POST",uploadItem : "GET",getItemList : "POST"]
 	def registerService,mailService,springSecurityService,emailSenderService
 	
 	def emailService
@@ -25,8 +25,19 @@ class AdminController {
 		[userFullName:user.fullName,userList:userList,itemList:itemList]
 		
 	}
-	def login(){
-		
+	def login(){}
+	def getOrderedItemList(){
+		log.debug"get ordered item list "+params
+		User user = springSecurityService.currentUser
+		Role role = Role.findByAuthority("ROLE_BUYER")
+		def userList = UserRole.findAllByRole(role,,[sort:'id',order:'dec']).user
+		render template:"/admin/orderedItem", model : [userList:userList]
+	}
+	
+	def getItemList(){
+		log.debug"get item list "+params
+		def itemList = Item.findAll();
+		render template:"/admin/item", model : [itemList:itemList]
 	}
 	def _upload_item(){
 		log.debug"hello uploadd item 2"

@@ -32,196 +32,16 @@
 </head>
 <body class="document-body ">
 	
-		<!-- Main Container Fluid -->
-	<div class="container-fluid menu-hidden sidebar-hidden-phone fluid menu-left">
-		
-				<!-- Sidebar menu & content wrapper -->
-		<div id="wrapper">
-				
-		<!-- Content -->
-		<div id="content">
-		
-				<!-- Top navbar -->
-		<div class="navbar main hidden-print">
-		
-			<!-- Menu Toggle Button -->
-			<button type="button" class="btn btn-navbar pull-left visible-phone">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-			</button>
-			<!-- // Menu Toggle Button END -->
-						
-			<!-- Full Top Style -->
-			<ul class="topnav pull-left">
-				<li><a href="#Tab1" class="glyphicons upload"><i></i> Order</a></li>
-				<li><a href="#Tab2" class="glyphicons settings"><i></i>Manage</a></li>
-			</ul>
-			<!-- // Full Top Style END -->
-						
-						
-			<!-- Top Menu Right -->
-			<ul class="topnav pull-right hidden-phone">
-				<!-- Profile / Logout menu -->
-				<li class="account dropdown dd-1">
-					<a  class="glyphicons "><span class="hidden-tablet hidden-phone hidden-desktop-1">${userFullName }</span><i></i></a>
-				</li>
-				<li class="account dropdown dd-1">
-					<a onClick="loginOut()" class="glyphicons logout lock"><span class="hidden-tablet hidden-phone hidden-desktop-1">Logout</span><i></i></a>
-				</li>
-				<!-- // Profile / Logout menu END -->
-				
-			</ul>
-			<div class="clearfix"></div>
-			
-		</div>
-		<!-- Top navbar END -->
-        
-        <!-- UI Tab1 -->
-			<div class="ui-tabs" id="Tab1">				
-                <ul class="breadcrumb">
-                    <li>You are here</li>
-                    <li><a href="#Tab1" class="glyphicons upload"><i></i> ANAND TRADING</a></li>
-                    <li class="divider"><i class="icon-caret-right"></i></li>
-                    <li><a href="#Tab2">Orders</a></li>
-                </ul>
-
-                <h1>Orders</h1>
-                <div class="innerLR">
-
-                <!-- Widget -->
-                <div class="widget widget-heading-simple widget-body-gray">
-                    <div class="widget-body">
-                        <p>See the list of the Orders which have been placed.</p>
-                    </div>
-                </div>
-                <!-- // Widget END -->
 	
-                <!-- Widget -->
-                <div class="widget widget-heading-simple widget-body-gray">
-                    	<div class="widget-body">
-                        	<!-- Table -->
-							<table class="dynamicTable table table-striped table-bordered table-condensed table-white">
-							
-								<!-- Table heading -->
-								<thead>
-									<tr>
-										<th>User Name</th>
-										<th>Item</th>
-										<th>Quantity(s)</th>
-										<th>Location</th>
-										<th>Order Date</th>
-										<th>Payment Type</th>
-										<th>Amount</th>
-										<th>Status</th>
-										<th>Details</th>
-									</tr>
-								</thead>
-								<!-- // Table heading END -->
-								
-								<!-- Table body -->
-								<tbody>
-								
-									<!-- Table row -->
-									 <g:each in="${userList}" var='user'>
-									<tr class="gradeX">
-										<td>${user.fullName }</td>
-										<td>Sports Shoes</td>
-										<td>2</td>
-										<td>Dwarka</td>
-										<td>2 Sep 2014</td>
-										<td>Net Banking</td>
-										<td>5000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									</g:each>
-									<!-- // Table row END -->
-											
-								</tbody>
-								<!-- // Table body END -->
-								
-							</table>
-							<!-- // Table END -->
-                        </div>
-                    </div>
-                    <!-- // Widget END -->
-				</div>
+        <!-- UI Tab1 -->
+			<div class="ui-tabs" id="orderedTabDiv">				
+                <g:render template="/admin/orderedItem" />
    			 </div>
     	<!-- UI Tab1 Ends -->
         
         <!-- UI Tab2 -->
-   			<div class="ui-tabs" id="Tab2">				
-                <ul class="breadcrumb">
-	                <li>You are here</li>
-	                <li><a href="#" class="glyphicons settings"><i></i> ANAND TRADING</a></li>
-	                <li class="divider"><i class="icon-caret-right"></i></li>
-	                <li>Upload Item</li>
-                </ul>
-
-				<h1>Manage Item</h1>
-				<div class="innerLR">
-
-                <!-- Widget -->
-                <div class="widget widget-heading-simple widget-body-gray clearfix">
-                    <div class="widget-body">
-                        <p>Manage/Edit/Delete the items.</p>
-                    </div>
-                    <div class ="row-fluid" onClick="addItemOverlay()">
-                            <a href="#modal-AddItem" data-toggle="modal"><span class="btn btn-primary btn-icon glyphicons circle_plus pull-right btnT10"><i></i> Add</span></a>
-                    </div>
-                </div>
-                <!-- // Widget END -->
-	
-                <!-- Widget -->
-                <div class="widget widget-heading-simple widget-body-gray">
-                	<div class="widget-body">
-		                <!-- Table -->
-		                <table class="dynamicTable table table-striped table-bordered table-condensed table-white">
-		                
-		                    <!-- Table heading -->
-		                    <thead>
-		                        <tr>
-		                            <th data-class="expand">Name</th>
-		                            <th data-hide="phone,tablet">Description</th>
-		                            <th data-hide="phone,tablet">Brand</th>
-		                            <th data-hide="phone">Type</th>
-		                            <th>Quantity</th>
-		                            <th>Size</th>
-		                            <th>Price</th>
-		                            <th>Color</th>
-		                            <th>Action</th>
-		                        </tr>
-		                    </thead>
-		                    <!-- // Table heading END -->
-		                    
-		                    <!-- Table body -->
-		                    <tbody>
-		                    
-		                        <!-- Table row -->
-		                        <g:each in="${itemList}" var='item'>
-		                        <tr class="gradeX">
-		                            <td>${item.itemName }</td>
-		                            <td>${item.itemDescription }</td>
-		                            <td>${item.itemBrand }</td>
-		                            <td>${item.itemType }</td>
-		                            <td>${item.itemSize.quantity }</td>
-		                            <td>${item.itemSize.label }</td>
-		                            <td>${item.itemSize.itemPrice }</td>
-		                            <td>${item.itemColor.label }</td>
-		                            <td><i class="icon-edit"></i><i class="icon-remove-sign"></i></td>
-		                        </tr>
-		                        </g:each>
-		                        
-		                        
-		                    </tbody>
-		                    <!-- // Table body END -->
-		                    
-		                </table>
-		                <!-- // Table END -->
-                   	 </div>
-                    </div>
-                   <!-- // Widget END -->
-				</div>
-    		</div>
+   			<div class="ui-tabs" id="manageTabDiv">				
+                   		</div>
          <!-- UI Tab2 Ends -->   
          
 		<!-- // Widget END -->
@@ -245,7 +65,12 @@
 		</div>
 		<!-- // Footer END -->
 		
-	
+	<!--overlay End Here-->
+    	<div id="loading">
+        	<div class = "spinnerPos">
+            	<p>Loading ...</p>
+           	</div>
+      	</div>
 	<!-- // Main Container Fluid END -->
 
 
@@ -271,18 +96,29 @@
 	
 <script>
 var uploadItemUrl = "${createLink(controller:'item',action:'addItem')}";
+var itemDataUrl = "${createLink(controller:'admin',action:'getItemList')}";
+var oderItemDataUrl = "${createLink(controller:'admin',action:'getOrderedItemList')}";
 registerValidation();
+
+$(document).ready(function() {
+	
+    $("#loading").bind("ajaxSend", function() {
+        $(this).fadeIn();
+    }).bind("ajaxComplete", function() {
+        $(this).fadeOut();
+    });
+    $("#orderTab").click(function(){
+    	getOrderedUserList();
+	  });
+    $("#manageTab").click(function(){
+    	getItemList();
+	  });   
+});
   $(function() {
     $( "#content" ).tabs();
   });
-  $('.dynamicTable').dataTable({
-		"sPaginationType": "bootstrap",
-		//"sDom": "<'row-fluid'<'span5'T><'span3'l><'span4'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-		"oLanguage": {
-			"sLengthMenu": "_MENU_ per page"
-		}
-		
-	});
+ 
+	
   </script>
 </body>
 </html>
