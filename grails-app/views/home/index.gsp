@@ -135,13 +135,17 @@ function showAddToCartPopup(obj){
 			   var i = 0;
 			    for(var j = 0; j < data.images.length;j++){
 				if(i == 0)
-					$('#etalage').html('<li><a href=""><img class="etalage_source_image" src='+data.images[j]+'/></a></li>')
+					$('#etalage').html('<li><a href=""><img class="etalage_thumb_image" src="../images/t2.jpg"/><img class="etalage_source_image" src="../images/t2.jpg"/></a></li>')
 				else
-					$('#etalage').append('<li><img class="etalage_thumb_image" src='+data.images[j]+'/></li>')
+					$('#etalage').append('<li><img class="etalage_thumb_image" src="../images/t2.jpg"/><img class="etalage_source_image" src="../images/t2.jpg"/></li>')
 					i++;
 				 }
-				 $('#etalage').show()
-				 $('.etalage_thumb_image').show()
+			    $('#etalage').etalage({
+			    	thumb_image_width: 300,
+			    	thumb_image_height: 400,
+			    	show_hint: true,
+
+			    });
 				
 				$('.itemName').html(data.name)
 				$('#our_price_display').html('&#8377;'+data.price.toFixed(2))
@@ -157,13 +161,6 @@ function showAddToCartPopup(obj){
 
 registerValidation();
 var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
-
-$('#etalage').etalage({
-	thumb_image_width: 300,
-	thumb_image_height: 400,
-	show_hint: true,
-
-});
 
 $('#pos-slideshow-home').nivoSlider({
 	effect: 'random',
