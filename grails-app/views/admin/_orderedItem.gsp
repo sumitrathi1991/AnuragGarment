@@ -56,7 +56,7 @@
 							<td>Net Banking</td>
 							<td>5000/-</td>
 							<td>Pending</td>
-							<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
+							<td class="center"><a href="" class="icon-info-sign"><i></i></a></td>
 						</tr>
 					</g:each>
 					<!-- // Table row END -->

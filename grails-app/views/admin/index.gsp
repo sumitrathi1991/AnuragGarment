@@ -45,14 +45,12 @@
          <!-- UI Tab2 Ends -->   
          
 		<!-- // Widget END -->
-	
-</div>	
-	
 		
 		</div>
 		<!-- // Content END -->
+	</div>	
 		
-				</div>
+	</div>
 		<div class="clearfix"></div>
 		<!-- // Sidebar menu & content wrapper END -->
 				
@@ -64,13 +62,6 @@
 	
 		</div>
 		<!-- // Footer END -->
-		
-	<!--overlay End Here-->
-    	<div id="loading">
-        	<div class = "spinnerPos">
-            	<p>Loading ...</p>
-           	</div>
-      	</div>
 	<!-- // Main Container Fluid END -->
 
 
@@ -92,8 +83,13 @@
         <g:render template="/admin/upload_item" />
     </div>
 	<!-- Modal Add Item Ends -->
-	
-	
+
+	<!--Loading overlay Starts Here-->
+    	<div id="loading">
+        	<span class="icon-spinner icon-spin"></span>
+      	</div>
+		<!--Loading overlay Ends Here-->
+			
 <script>
 var uploadItemUrl = "${createLink(controller:'item',action:'addItem')}";
 var itemDataUrl = "${createLink(controller:'admin',action:'getItemList')}";
@@ -101,7 +97,6 @@ var oderItemDataUrl = "${createLink(controller:'admin',action:'getOrderedItemLis
 registerValidation();
 
 $(document).ready(function() {
-	
     $("#loading").bind("ajaxSend", function() {
         $(this).fadeIn();
     }).bind("ajaxComplete", function() {

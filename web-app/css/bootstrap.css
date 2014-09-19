@@ -5262,25 +5262,3 @@ a.badge:focus {
   position: fixed;
 }
 
-/* spinner css */
-#loading {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
-
-.spinnerPos {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -50px 0 0 -20px;
-	z-index: 99999999;
-	background: transparent url(../images/spinner.gif) center center
-		no-repeat;
-}
-
-.spinnerPos p {
-	padding: 40px 0 0 0;
-	color: #000;
-	font-weight: bold;
-}
