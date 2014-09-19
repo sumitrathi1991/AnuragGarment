@@ -113,6 +113,8 @@ class HomeController {
 		cartData.put("name", item.itemName)
 		cartData.put("brand", item.itemBrand)
 		cartData.put("images",imageList)
+		cartData.put("itemSize",item.itemSize[0].label)
+		cartData.put("itemColor",item.itemColor[0].label)
 		cartData.put("quantity",item.itemSize[0].quantity)
 		cartData.put("price", item.itemSize[0].itemPrice)
 		cartData.put("description", item.itemDescription)

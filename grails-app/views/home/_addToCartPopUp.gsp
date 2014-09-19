@@ -5,37 +5,7 @@
 		<!-- left infos-->  
 		<div class="pb-left-column col-sm-5 col-md-5">
 			<ul id="etalage">
-					<%--<li>
-                      <a href="">
-                          <img class="etalage_thumb_image" src="../images/t1.jpg" />
-                          <img class="etalage_source_image" src="../images/t2.jpg" />
-                      </a>
-                  </li>
-                  <li>
-                      <img class="etalage_thumb_image" src="../images/t2.jpg" />
-                      <img class="etalage_source_image" src="../images/t2.jpg" />
-                  </li>
-                  <li>
-                      <img class="etalage_thumb_image" src="../images/t3.jpg" />
-                      <img class="etalage_source_image" src="../images/t3.jpg" />
-                  </li>
-                  <li>
-                      <img class="etalage_thumb_image" src="../images/t4.jpg" />
-                      <img class="etalage_source_image" src="../images/t4.jpg" />
-                  </li>
-                  <li>
-                      <img class="etalage_thumb_image" src="../images/t5.jpg" />
-                      <img class="etalage_source_image" src="../images/t5.jpg" />
-                  </li>
-                  <li>
-                      <img class="etalage_thumb_image" src="../images/t6.jpg" />
-                      <img class="etalage_source_image" src="../images/t6.jpg" />
-                  </li>
-                  <li>
-                      <img class="etalage_thumb_image" src="../images/t1.jpg" />
-                      <img class="etalage_source_image" src="../images/t1.jpg" />
-                  </li>
-				--%></ul>
+				</ul>
 			</div> <!-- end pb-left-column -->
             <!-- end left infos--> 
             <!-- center infos -->
@@ -51,6 +21,7 @@
                 <p id="product_reference">
 					<label>Designed By</label> <span class="editable brand"></span>
 				</p>
+				<p>Size : <span class="itemSize"></span> | Color :   <span class="itemColor"></span></p>
 				<p id="product_condition">
 				<label>Condition </label>
 				<span class="editable">New</span></p>

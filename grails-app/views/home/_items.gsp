@@ -27,6 +27,7 @@
                                         <h5>
                                             <a class="product-name" href="" title="${item.itemName}" >${item.itemName}</a>
                                         </h5>
+                                        <p>Size : ${item.itemSize[0].label}   | Color : ${item.itemColor[0].label }  </p>
                                           <p class="product-desc">
                                           ${item.itemDescription}
                                           </p>

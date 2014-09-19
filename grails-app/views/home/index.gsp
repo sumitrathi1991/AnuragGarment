@@ -54,7 +54,7 @@
                                                 </a>
                                               <a class="quick-view various" alt="${featuredItem.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>">
                                               	<span>Quick view</span>
-                                              </a>                                                                                    
+                                              </a> 
                                          </div>
                            			 	</div>
                             			<div class="right-block">
@@ -69,7 +69,8 @@
                                             </div>
                                 			<h5>
                                               <a class="product-name" href="#" title="${featuredItem.itemName}">${featuredItem.itemName}</a>
-                                			</h5>                              
+                                			</h5>
+                                			<p>Size : ${featuredItem.itemSize[0].label}   | Color : ${featuredItem.itemColor[0].label }  </p>                              
                                          	<div class="content_price">
                                                 <span class="price product-price">&#8377;${featuredItem.itemSize[0].itemPrice}</span>
                                                  <span class="old-price product-price">&#8377;${featuredItem.itemSize[0].itemPrice}</span>
@@ -138,9 +139,9 @@ function showAddToCartPopup(obj){
 			   var i = 0;
 			    for(var j = 0; j < data.images.length;j++){
 				if(i == 0)
-					$('#etalage').html('<li><a href=""><img class="etalage_thumb_image" src="../images/t2.jpg"/><img class="etalage_source_image" src="../images/t2.jpg"/></a></li>')
+					$('#etalage').html('<li><a href=""><img class="etalage_thumb_image" src='+data.images[j]+'/><img class="etalage_source_image" src='+data.images[j]+'/></a></li>')
 				else
-					$('#etalage').append('<li><img class="etalage_thumb_image" src="../images/t2.jpg"/><img class="etalage_source_image" src="../images/t2.jpg"/></li>')
+					$('#etalage').append('<li><img class="etalage_thumb_image" src='+data.images[j]+'/><img class="etalage_source_image" src='+data.images[j]+'/></li>')
 					i++;
 				 }
 			    $('#etalage').etalage({
@@ -159,6 +160,8 @@ function showAddToCartPopup(obj){
 				$('#short_description_content').html(data.description)
 				$('.brand').html(data.brand)
 				$('#quantityAvailable').html(data.quantity)
+				$('.itemSize').html(data.itemSize)
+				$('.itemColor').html(data.itemColor)
 			    return false;
 			},
 			error : function (data, status, headers, config) {
