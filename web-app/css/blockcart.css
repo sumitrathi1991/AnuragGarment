@@ -293,6 +293,7 @@
       	font-weight:bold;
         display: block;
         padding-bottom: 8px; }
+        .layer_cart_product_info #layer_cart_product_title [class^="icon-"] { font-size:20px; padding-left:5px}
       #layer_cart .layer_cart_product .layer_cart_product_info > ul {
         padding-bottom: 7px; }
         #layer_cart .layer_cart_product .layer_cart_product_info > ul  li{

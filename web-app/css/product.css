@@ -861,7 +861,8 @@ Quick View Styles
       box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; }
     #product_preview div.primary_block div.pb-right-column .product_attributes {
       padding-top: 0; }
-
+	.product_attributes [name="quantity"] { width:50px; }
+	.product_attributes .qtyminus{ margin-left:10px }
 .addsharethisinner .stButton .stArrow {
   display: none !important; }
 

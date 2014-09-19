@@ -99,22 +99,13 @@
                                     <div class="clear"></div>
                                 </div> <!-- end content_prices -->
                                 <div class="product_attributes clearfix">
-                                    <!-- quantity wanted -->
-										<p id=""/home/oodles/shiv/ubuntu/Untitled Folder/MySpace/Servers"_p">
+                                    	<!-- quantity wanted -->
                                         <label>Quantity:</label>
-                                        <input type="text" name="qty" id="quantity_wanted" class="text" value="1" style="border: 1px solid rgb(189, 194, 201);">
-                                        <a href="#" data-field-qty="qty" class="btn btn-default button-minus product_quantity_down">
-                                            <span><i class="icon-minus"></i></span>
-                                        </a>
-                                        <a href="#" data-field-qty="qty" class="btn btn-default button-plus product_quantity_up ">
-                                            <span><i class="icon-plus"></i></span>
-                                        </a>
+                                        <input type='button' class='btn btn-default qtyminus' value='-' field='quantity' />
+    									<input type='text' name='quantity' value='0' class='btn btn-default qty' />
+    									<input type='button' class='btn btn-default qtyplus' value='+'  field='quantity' />
                                         <span class="clearfix"></span>
-                                    </p>
-                                                            <!-- minimal quantity wanted -->
-                                    <p id="minimal_quantity_wanted_p" style="display: none; color: rgb(55, 72, 83);">
-                                        This product is not sold individually. You must select at least <b id="minimal_quantity_label">1</b> quantity for this product.
-                                    </p>
+                                        <!-- minimal quantity wanted -->
                                 </div> <!-- end product_attributes -->
                                 <div class="box-cart-bottom">
                                     <div>
@@ -161,7 +152,7 @@
 							<div class="col-xs-6 col-md-6">
 								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
 								<div class="layer_cart_product_info">
-									<span id="layer_cart_product_title" class="product-name">Sed posuere</span>
+									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="#" class="icon-remove-sign remove_cart_product"></a></span>
 									<ul>
 										<li>
 											<strong class="dark">Quantity:</strong>
@@ -193,7 +184,7 @@
 							<div class="col-xs-6 col-md-6">
 								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
 								<div class="layer_cart_product_info">
-									<span id="layer_cart_product_title" class="product-name">Sed posuere</span>
+									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="#" class="icon-remove-sign remove_cart_product"></a></span>
 									<ul>
 										<li>
 											<strong class="dark">Quantity:</strong>

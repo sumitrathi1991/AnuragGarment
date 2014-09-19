@@ -149,6 +149,10 @@ function showAddToCartPopup(obj){
 			    	show_hint: true,
 
 			    });
+			    $('.remove_cart_product').on('click', function(){
+					$(this).parents('.product_row').fadeOut();
+					
+				});
 				
 				$('.itemName').html(data.name)
 				$('#our_price_display').html('&#8377;'+data.price.toFixed(2))
