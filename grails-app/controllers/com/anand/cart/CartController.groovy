@@ -2,12 +2,11 @@ package com.anand.cart
 
 import grails.converters.JSON
 
-import org.codehaus.groovy.grails.web.json.JSONArray;
+import org.codehaus.groovy.grails.web.json.JSONArray
 import org.codehaus.groovy.grails.web.json.JSONObject
 
 import com.anand.item.Item
 import com.anand.item.ItemSize
-import com.google.gson.JsonArray;
 
 class CartController {
 	def grailsApplication
@@ -17,12 +16,12 @@ class CartController {
 		JSONObject addTocartResponse  = new JSONObject()
 		Item item = Item.get(params.item)
 		ItemSize itemSize = item.itemSize.find{it.label == params.itemSize}
-		log.debug"itemSize is =="+itemSize 
 		Cart cart
 		if(itemSize.getAvailableQuantity() >= (params.quantity as int)){
 		def cartId = session.getAttribute("cartId")
-		if(!cartId)
+		if(!cartId){
 		cart = new Cart()
+		}
 		else
 		cart = Cart.get(cartId)
 		CartLine cartLine = new CartLine(itemId:item.id,name:item.itemName,quantity:params.quantity,price:params.price, size:params.itemSize, color :  params.itemColor)
@@ -30,10 +29,11 @@ class CartController {
 		if(!cart.save()){
 		cart.errors.each {log.debug"error in adding item to cart == "+it}
 			}
-		else{ 
-			def cartData =  getCartData(cart)
-			log.debug"cartData == "+cartData
+		else{
+			session.setAttribute("cartId", cart.id)
+			JSONArray cartData  =  getCartData(cart)
 			render cartData as JSON
+			return false
 		}
 		}
 		else{
@@ -44,10 +44,12 @@ class CartController {
 	}
 	
 	
-	def getCartData(Cart cart){
+	JSONArray getCartData(Cart cart){
 		JSONArray jsonArray = new JSONArray()
 			cart?.cartLines.each{ cartLine  ->
 			JSONObject cartJson = new JSONObject()
+			cartJson.put("cartId", cart.id)
+			cartJson.put("cartLineId", cartLine.id)
 			cartJson.put("image", getCartLineImage(cartLine.itemId))
 			cartJson.put("name", cartLine.name)
 			cartJson.put("size", cartLine.size)
@@ -57,14 +59,24 @@ class CartController {
 			cartJson.put("salePrice", cartLine.salePrice)
 			jsonArray.add(cartJson)
 		}
-		JSONObject cartResponse = new JSONObject()
-		cartResponse.put("data", jsonArray)
-		log.debug"cartResponse is == "+jsonArray
-		return cartResponse as JSON
+		return jsonArray
+	}
+	
+	String updateCart(){
+		log.debug"in updateCart == "+params
+		Cart cart = Cart.get(params.cart)
+		CartLine cartLine = CartLine.get(params.cartLine)
+		cart.removeFromCartLines(cartLine)
+		cartLine.delete()
+		if(!cart.save(flush:true)){
+			cart.errors.each{log.debug"error in updating cart == "+it}
+			render 'error'
+		}
+		else
+		render 'success'
 	}
 	
 	String getCartLineImage(String itemId){
-		log.debug"in getCartLineImage"
 		Item item = Item.get(itemId)
 		String imageUrl = grailsApplication.config.imagePublicUrl+item.itemColor[0].imageList[0].name
 		return imageUrl

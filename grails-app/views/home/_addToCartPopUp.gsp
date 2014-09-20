@@ -119,71 +119,9 @@
 								<strong class="">Total:</strong>
 							</div>
 						</div>
-						<div class="col-xs-12 col-md-12 product_row clearfix">
-							<div class="col-xs-6 col-md-6">
-								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="../images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
-								<div class="layer_cart_product_info">
-									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="javascript:void(0)" class="icon-remove-sign remove_cart_product"></a></span>
-									<ul>
-										<li>
-											<strong class="dark">Quantity:</strong>
-											<span id="layer_cart_product_quantity">1</span>
-											<span class="divider">|</span>
-										</li>
-										<li>
-											<strong class="dark">Color:</strong>
-											<span id="layer_cart_product_price">White</span>
-											<span class="divider">|</span>
-										</li>
-										<li>
-											<strong class="dark">Size:</strong>
-											<span id="layer_cart_product_price">8</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							
-							<div class="col-xs-3 col-md-3 text-center">
-								<span class="layer_cart_product_price">$68.00</span>
-							</div>
-							
-							<div class="col-xs-3 col-md-3 text-center">
-								<span class="layer_cart_product_price">$68.00</span>
-							</div>
+						<div id="cartData">
+						
 						</div>
-						<div class="col-xs-12 col-md-12 product_row clearfix">
-							<div class="col-xs-6 col-md-6">
-								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="../images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
-								<div class="layer_cart_product_info">
-									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="javascript:void(0)" class="icon-remove-sign remove_cart_product"></a></span>
-									<ul>
-										<li>
-											<strong class="dark">Quantity:</strong>
-											<span id="layer_cart_product_quantity">1</span>
-											<span class="divider">|</span>
-										</li>
-										<li>
-											<strong class="dark">Color:</strong>
-											<span id="layer_cart_product_price">White</span>
-											<span class="divider">|</span>
-										</li>
-										<li>
-											<strong class="dark">Size:</strong>
-											<span id="layer_cart_product_price">8</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							
-							<div class="col-xs-3 col-md-3 text-center">
-								<span class="layer_cart_product_price">$68.00</span>
-							</div>
-							
-							<div class="col-xs-3 col-md-3 text-center">
-								<span class="layer_cart_product_price">$68.00</span>
-							</div>
-						</div>
-				</div>
 			</div>
 		</div>
 	</div>
