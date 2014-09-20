@@ -30,7 +30,7 @@
 						
 					</div>
                                 <p class="buttons_bottom_block">
-                                    <a href="" class="button">
+                                    <a href="javascript:void(0)" class="button">
                                         More details
                                     </a>
                                 </p>
@@ -87,12 +87,12 @@
                                         </p>
                                     </div>
                                     
-                                    <p class="buttons_bottom_block no-print">
-                                        <a id="wishlist_button" href="#" o title="Add to my wishlist">
+                                    <%--<p class="buttons_bottom_block no-print">
+                                        <a id="wishlist_button" href="javascript:void(0)"  title="Add to my wishlist">
                                             Add to my wishlist
                                         </a>
                                     </p>
-            						<strong></strong>
+            						--%><strong></strong>
                                 </div> <!-- end box-cart-bottom -->
                             </div> <!-- end box-info-product -->
                         </form>
@@ -121,9 +121,9 @@
 						</div>
 						<div class="col-xs-12 col-md-12 product_row clearfix">
 							<div class="col-xs-6 col-md-6">
-								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
+								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="../images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
 								<div class="layer_cart_product_info">
-									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="#" class="icon-remove-sign remove_cart_product"></a></span>
+									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="javascript:void(0)" class="icon-remove-sign remove_cart_product"></a></span>
 									<ul>
 										<li>
 											<strong class="dark">Quantity:</strong>
@@ -153,9 +153,9 @@
 						</div>
 						<div class="col-xs-12 col-md-12 product_row clearfix">
 							<div class="col-xs-6 col-md-6">
-								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
+								<div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src="../images/product_thumb.jpg" width="70px" alt="Sed posuere" title="Sed posuere"></div>
 								<div class="layer_cart_product_info">
-									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="#" class="icon-remove-sign remove_cart_product"></a></span>
+									<span id="layer_cart_product_title" class="product-name">Sed posuere<a href="javascript:void(0)" class="icon-remove-sign remove_cart_product"></a></span>
 									<ul>
 										<li>
 											<strong class="dark">Quantity:</strong>

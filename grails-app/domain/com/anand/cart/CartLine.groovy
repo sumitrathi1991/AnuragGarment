@@ -4,13 +4,18 @@ import com.anand.item.Item
 
 class CartLine {
 
-	Item item
+	String itemId
+	String name
 	Integer quantity
 	BigDecimal price
 	BigDecimal salePrice
+	String color
+	String size
 	
     static constraints = {
-		item nullable : true
+		itemId nullable : true
+		color nullable : true
+		size nullable : true
 		salePrice nullable : true
 		price nullable : true
     }

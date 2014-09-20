@@ -19,9 +19,9 @@
 		<div id="columns" class="container">					
                     <!-- Breadcrumb -->
                     <div class="breadcrumb clearfix">
-                        <a class="home" href="#" title="Return to Home">Home</a>
+                        <a class="home" href="javascript:void(0)" title="Return to Home">Home</a>
                         <span class="navigation-pipe">&gt;</span>
-                       	<a href="#" title="Women">Men</a>
+                       	<a href="javascript:void(0)" title="Women">Men</a>
                         <span class="navigation-pipe">&gt;</span>Shoes
                      </div>
                     <!-- /Breadcrumb -->
@@ -36,14 +36,15 @@
                                     	<ul class="bxslider">
                                         	<li class="ajax_block_product last_item alternate_item clearfix bx-clone">
 												<div class="item-inner">
-                                            		<a href="#" class="product_img_link" title="Puma Sport Shoes">
+                                            		<a href="javascript:void(0)" class="product_img_link" title="Puma Sport Shoes">
                                                     	<img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" width="250" height="250" alt="Puma Sport Shoes">
                                            			 </a>
 					      
                                             		<h3>
-                                                    <a class="product-name" href="#" title="Printed Chiffon Dress">${item.itemName}</a>		 													</h3>
+                                                    <a class="product-name" href="javascript:void(0)" title="Printed Chiffon Dress">${item.itemName}</a>		 													</h3>
 													<div class="content_price">
-                                                    	<span class="special-price">&#8377;${item.itemSize[0].itemPrice}</span> 						    													 														<span class="old-price">$200.50</span>
+                                                    	<span class="special-price">&#8377;${item.itemSize[0].itemPrice}</span>
+                                                    	<%--<span class="old-price">$200.50</span>--%>
                                            			 </div>
                                                	</div>
                             				</li>
@@ -103,7 +104,7 @@
                                     <p class="txt_required"><sup class="required">*</sup> Required fields</p>
                                 </div>
                                 <p class="submit">
-                                    <a href="#" onclick="$.fancybox.close();">Cancel</a>&nbsp;or&nbsp;
+                                    <a href="javascript:void(0)" onclick="$.fancybox.close();">Cancel</a>&nbsp;or&nbsp;
                                     <input id="sendEmail" class="button" name="sendEmail" type="submit" value="Send">
                                 </p>
                         </div>
@@ -126,6 +127,7 @@
 						<span id="old_price_display"></span>
 					 </p>
                 </div>
+                <p> Size : <span class="itemSize">${item.itemSize[0].label}</span> | Color : <span class="itemColor">${item.itemColor[0].label}</span></p>
 				<div id="product_comments_block_extra" class="no-print" style="display: none;">
                     <div class="comments_note clearfix">
                         <span>Rating&nbsp;</span>
@@ -155,15 +157,16 @@
 
 				<!--  /Module ProductComments -->			
                 <p id="product_reference">
-                    <label>Model </label>
-                    <span class="editable" itemprop="sku">demo_2</span>
+                    <label>Brand </label>
+                    <span class="editable brand">${item.itemBrand}</span>
 				</p>
 				<p id="product_condition">
                     <label>Quantity </label>
                     <input type="text" id="quantity"/>
 				</p>
+				<div id="noQuantity" style="display:none;">Please enter valid quantity first.</div>
                   <div id="short_description_block">
-                      <div id="short_description_content" class="rte align_justify" itemprop="description"><p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p></div>
+                      <div id="short_description_content" class="rte align_justify description"><p>${item.itemDescription}</p></div>
           			<p class="buttons_bottom_block">
                   		<a href="javascript:{}" class="button"> More details</a>
              		</p>
@@ -171,7 +174,7 @@
              	 </div> <!-- end short_description_block -->
 				<!-- number of item in stock -->
 				<p id="pQuantityAvailable">
-					<span id="quantityAvailable">197</span>
+					<span id="quantityAvailable">${item.itemSize[0].quantity}</span>
 					<span style="display: none;" id="quantityAvailableTxt">Item</span>
 					<span id="quantityAvailableTxtMultiple">Items</span>
 				</p>
@@ -314,7 +317,7 @@
                                             <span>Send</span>
                                         </button>&nbsp;
                                         or&nbsp;
-                                        <a class="closefb" href="#">
+                                        <a class="closefb" href="javascript:void(0)">
                                             Cancel
                                         </a>
                                     </p>
@@ -328,7 +331,11 @@
             <!-- End fancybox -->
 		</div>
 		<!--end HOOK_PRODUCT_TAB -->
-				
+		
+		<div id="addToCart1">
+			<g:render template="/home/addToCartPopUp" />
+		</div>
+					
 		<!-- description & features -->
 					</div><!-- #center_column -->
 				</div><!-- .row -->
@@ -377,27 +384,60 @@ $("#more_info_tabs").idTabs();
 							
 $('#addToCart').on('click', function(){
 var itemId = $(this).attr('itemId');
-var quantity = $('#quantity').val()
+var quantity = $('#quantity').val();
+var	quantityValid = isNaN(quantity);
+if(quantity == ''  || quantityValid || quantity < 1){
+	$('#noQuantity').show().delay(1000).fadeOut()
+}
+else{
+var itemSize = $('.itemSize').html();
+var itemColor = $('.itemColor').html()
 var price = $('#our_price_display').text().slice(1)
 var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
 			jQuery.ajax({
 				type : 'POST',
 				url : addToCartUrl,
 				async : false,
-				data : 'quantity='+quantity+'&item='+itemId+'&price='+price,
-				success : function(data, textStatus) {
+				data : 'quantity='+quantity+'&item='+itemId+'&price='+price+'&itemSize='+itemSize+'&itemColor='+itemColor,
+				success : function(data) {
+				alert(JSON.stringify(data))
+				$.fancybox({
+			        href: '#layer_cart', 
+			        maxWidth	: 900,
+					fitToView	: false,
+					width		: '100%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'fade',
+					closeEffect	: 'fade',
+					helpers	: {
+						title	: {
+							type: 'float'
+						}
+					}
+			    });
+			    $('#etalage').etalage({
+			    	thumb_image_width: 300,
+			    	thumb_image_height: 400,
+			    	show_hint: true,
+
+			    });
+			    $('.remove_cart_product').on('click', function(){
+					$(this).parents('.product_row').fadeOut();
+					
+				});
 					if(data.result == false){
 						$('#errorMessage').html(data.message);
 						$('#errorMessage').show().delay(2000).fadeOut();
 						}
 					else{
-						$('#usercart').show();
+						$('#layer_cart').show();
 				}
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
 				}
 			});
-
+}
 })		
 </script>
 </body>

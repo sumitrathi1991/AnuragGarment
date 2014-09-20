@@ -15,7 +15,7 @@
                                 </div>
 								
                                 <div class="right-block">
-									<div class="comments_note">	
+									<%--<div class="comments_note">	
                                         <div class="star_content clearfix">
 											<div class="star star_on"></div>
                                               <div class="star star_on"></div>
@@ -23,10 +23,11 @@
                                               <div class="star"></div>
                                               <div class="star"></div>
                                         </div>
-									</div>
+									</div>--%>
                                         <h5>
                                             <a class="product-name" href="" title="${item.itemName}" >${item.itemName}</a>
                                         </h5>
+                                        <p>Brand : ${item.itemBrand}</p>
                                         <p>Size : ${item.itemSize[0].label}   | Color : ${item.itemColor[0].label }  </p>
                                           <p class="product-desc">
                                           ${item.itemDescription}

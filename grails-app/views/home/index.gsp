@@ -58,7 +58,7 @@
                                          </div>
                            			 	</div>
                             			<div class="right-block">
-                                            <div class="comments_note">	
+                                            <%--<div class="comments_note">	
                                                 <div class="star_content clearfix">
                                                     <div class="star star_on"></div>
                                                     <div class="star star_on"></div>
@@ -67,9 +67,10 @@
                                                     <div class="star"></div>
                                                 </div>
                                             </div>
-                                			<h5>
+                                			--%><h5>
                                               <a class="product-name" href="#" title="${featuredItem.itemName}">${featuredItem.itemName}</a>
                                 			</h5>
+                                			<p> Brand : ${featuredItem.itemBrand}</p>
                                 			<p>Size : ${featuredItem.itemSize[0].label}   | Color : ${featuredItem.itemColor[0].label }  </p>                              
                                          	<div class="content_price">
                                                 <span class="price product-price">&#8377;${featuredItem.itemSize[0].itemPrice}</span>
@@ -120,7 +121,6 @@ function showAddToCartPopup(obj){
 			url :  showAddToCartpopupUrl,
 			data : 'itemId='+itemId,
 			success : function(data) {
-				//$('#cartPopUp').show()
 				$.fancybox({
 			        href: '#product_preview', 
 			        maxWidth	: 900,
