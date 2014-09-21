@@ -394,6 +394,7 @@ function removeCartLine(){
 				data : 'cartLine='+cartLineId+'&cart='+cartId,
 				success : function(data) {
 					$(obj).fadeOut();
+					$('.total').html(data.total)
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown) {
 				}
@@ -448,6 +449,7 @@ var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
 						'<span class="divider">|</span></li><li><strong class="dark">Color:</strong><span id="layer_cart_product_price">'+data[i].color+'</span><span class="divider">|</span></li><li><strong class="dark">Size:</strong><span id="layer_cart_product_price">'+data[i].size+'</span></li></ul></div></div>'+
 						'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div></div></div>')				
 				 }
+				 $('.total').html(data[0].grandTotal)
 			    removeCartLine();
 					if(data.result == false){
 						$('#errorMessage').html(data.message);

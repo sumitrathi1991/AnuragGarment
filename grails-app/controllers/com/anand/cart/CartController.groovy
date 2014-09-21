@@ -57,6 +57,7 @@ class CartController {
 			cartJson.put("quantity", cartLine.quantity)
 			cartJson.put("price", cartLine.price)
 			cartJson.put("salePrice", cartLine.salePrice)
+			cartJson.put("grandTotal", cart.getProductTotal())
 			jsonArray.add(cartJson)
 		}
 		return jsonArray
@@ -65,15 +66,19 @@ class CartController {
 	String updateCart(){
 		log.debug"in updateCart == "+params
 		Cart cart = Cart.get(params.cart)
+		JSONObject updateResponse = new JSONObject()
 		CartLine cartLine = CartLine.get(params.cartLine)
 		cart.removeFromCartLines(cartLine)
 		cartLine.delete()
 		if(!cart.save(flush:true)){
 			cart.errors.each{log.debug"error in updating cart == "+it}
-			render 'error'
+			updateResponse.put("result", 'error')
 		}
-		else
-		render 'success'
+		else{
+			updateResponse.put("result", 'success')
+			updateResponse.put("total", cart.getProductTotal())
+		}
+		render updateResponse as JSON
 	}
 	
 	String getCartLineImage(String itemId){

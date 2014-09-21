@@ -122,6 +122,9 @@
 						<div id="cartData">
 						
 						</div>
+						<div>
+							Total Product : <span class="total"></span>
+						</div>
 			</div>
 		</div>
 	</div>

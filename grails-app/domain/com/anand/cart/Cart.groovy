@@ -22,9 +22,9 @@ class Cart {
 	
 	BigDecimal getProductTotal(){
 		BigDecimal total =0.00
-		for(cart in this.cartLines)
+		for(cartLine in this.cartLines)
 		{
-			total = total+(cart.price*cart.quantity) as BigDecimal
+			total = total+(cartLine.price*cartLine.quantity) as BigDecimal
 		}
 		return total.setScale(2)
 	}
