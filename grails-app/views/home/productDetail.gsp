@@ -386,13 +386,14 @@ function removeCartLine(){
 	$('.remove_cart_product').on('click', function(){
 	    var cartLineId = $(this).attr('cartLineId')
 	    var cartId = $(this).attr('cartId')
+	    var obj = $(this).parents('.product_row')
 	    jQuery.ajax({
 				type : 'POST',
 				url : '/cart/updateCart',
 				async : false,
 				data : 'cartLine='+cartLineId+'&cart='+cartId,
 				success : function(data) {
-					$(this).parents('.product_row').fadeOut();
+					$(obj).fadeOut();
 			},
 			error : function(XMLHttpRequest, textStatus, errorThrown) {
 				}
