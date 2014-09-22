@@ -107,16 +107,15 @@ class HomeController {
 	def showAddToCartPopup(){
 		log.debug"in showAddToCartPopup"+params
 		Item item = Item.get(params.itemId)
-		List imageList = decodeImageUrl(item.itemColor[0].imageList)
-		log.debug"imageList == "+item.itemSize[0].itemPrice
+		List imageList = decodeImageUrl(item.itemSize[0].itemColor[0].imageList)
 		JSONObject cartData = new JSONObject()
 		cartData.put("name", item.itemName)
 		cartData.put("brand", item.itemBrand)
 		cartData.put("images",imageList)
-		cartData.put("itemSize",item.itemSize[0].label)
-		cartData.put("itemColor",item.itemColor[0].label)
+		cartData.put("itemSize",item.itemSize[0].itemSizeValue)
+		cartData.put("itemColor",item.itemSize[0].itemColor[0].itemColorValue)
 		cartData.put("quantity",item.itemSize[0].quantity)
-		cartData.put("price", item.itemSize[0].itemPrice)
+		cartData.put("price", item.itemPrice)
 		cartData.put("description", item.itemDescription)
 		render cartData as JSON
 		//render template :"addToCartPopUp", model: [item : item, primaryColor : item.itemColor[0]]

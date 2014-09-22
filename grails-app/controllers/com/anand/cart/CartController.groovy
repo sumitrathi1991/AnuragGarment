@@ -15,7 +15,7 @@ class CartController {
 		log.debug"in cart == "+params
 		JSONObject addTocartResponse  = new JSONObject()
 		Item item = Item.get(params.item)
-		ItemSize itemSize = item.itemSize.find{it.label == params.itemSize}
+		ItemSize itemSize = item.itemSize.find{it.itemSizeValue == params.itemSize}
 		Cart cart
 		if(itemSize.getAvailableQuantity() >= (params.quantity as int)){
 		def cartId = session.getAttribute("cartId")
@@ -26,7 +26,7 @@ class CartController {
 		cart = Cart.get(cartId)
 		CartLine cartLine = new CartLine(itemId:item.id,name:item.itemName,quantity:params.quantity,price:params.price, size:params.itemSize, color :  params.itemColor)
 		cart.addToCartLines(cartLine)
-		if(!cart.save()){
+		if(!cart.save(flush:true)){
 		cart.errors.each {log.debug"error in adding item to cart == "+it}
 			}
 		else{
@@ -57,7 +57,8 @@ class CartController {
 			cartJson.put("quantity", cartLine.quantity)
 			cartJson.put("price", cartLine.price)
 			cartJson.put("salePrice", cartLine.salePrice)
-			cartJson.put("grandTotal", cart.getProductTotal())
+			cartJson.put("total", cartLine.price * cartLine.quantity as float)
+			cartJson.put("grandTotal", cart.getGrandTotal())
 			jsonArray.add(cartJson)
 		}
 		return jsonArray
@@ -83,7 +84,7 @@ class CartController {
 	
 	String getCartLineImage(String itemId){
 		Item item = Item.get(itemId)
-		String imageUrl = grailsApplication.config.imagePublicUrl+item.itemColor[0].imageList[0].name
+		String imageUrl = grailsApplication.config.imagePublicUrl+item.itemSize[0].itemColor[0].imageList[0].name
 		return imageUrl
 	}
 }

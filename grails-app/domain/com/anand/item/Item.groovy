@@ -19,7 +19,6 @@ class Item {
 	
 	static mapping = {
 		itemSize cascade : 'all'
-		itemColor cascade : 'all'
 		version false
 	}
 	float getSalePrice(){
@@ -31,7 +30,4 @@ class Item {
 		return salePrice
 	}
 	
-	int getAvailableQuantity(){
-		return (this.quantity - this.qtyOrdered)
-	}
 }

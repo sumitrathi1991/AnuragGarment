@@ -37,13 +37,13 @@
                                         	<li class="ajax_block_product last_item alternate_item clearfix bx-clone">
 												<div class="item-inner">
                                             		<a href="javascript:void(0)" class="product_img_link" title="Puma Sport Shoes">
-                                                    	<img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" width="250" height="250" alt="Puma Sport Shoes">
+                                                    	<img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemSize[0].itemColor[0].imageList[0].name}"]"/>" width="250" height="250" alt="Puma Sport Shoes">
                                            			 </a>
 					      
                                             		<h3>
                                                     <a class="product-name" href="javascript:void(0)" title="Printed Chiffon Dress">${item.itemName}</a>		 													</h3>
 													<div class="content_price">
-                                                    	<span class="special-price">&#8377;${item.itemSize[0].itemPrice}</span>
+                                                    	<span class="special-price">&#8377;${item.itemPrice}</span>
                                                     	<%--<span class="old-price">$200.50</span>--%>
                                            			 </div>
                                                	</div>
@@ -63,7 +63,7 @@
 						<div class="pb-left-column col-sm-5 col-md-5">
 							<!-- start product_slider -->
 				     		<ul id="etalage">
-				     		<g:each var="itemImage" in="${item.itemColor[0].imageList}">
+				     		<g:each var="itemImage" in="${item.itemSize[0].itemColor[0].imageList}">
                                 <li>
                                     <img class="etalage_source_image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${itemImage.name}"]"/>" />
                                 </li>
@@ -81,7 +81,7 @@
         				<div id="send_friend_form">
                 		<h2 class="title">Send to a friend</h2>
                         <div class="product clearfix">
-                            <img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemColor[0].imageList[0].name}"]"/>" height="270" width="270" alt="Shoes">
+                            <img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemSize[0].itemColor[0].imageList[0].name}}"]"/>" height="270" width="270" alt="Shoes">
                             <div class="product_desc">
                                 <p class="product_name"><strong>Shoes</strong></p>
                                 <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
@@ -121,13 +121,13 @@
 			<h1>${item.itemName}</h1>
                 <div class="price">
                     <p class="our_price_display" >
-						 <span id="our_price_display">&#8377;${item.itemSize[0].itemPrice}</span>
+						 <span id="our_price_display">&#8377;${item.itemPrice}</span>
                      </p>             
 					<p id="old_price">
 						<span id="old_price_display"></span>
 					 </p>
                 </div>
-                <p> Size : <span class="itemSize">${item.itemSize[0].label}</span> | Color : <span class="itemColor">${item.itemColor[0].label}</span></p>
+                <p> Size : <span class="itemSize">${item.itemSize[0].itemSizeValue}</span> | Color : <span class="itemColor">${item.itemSize[0].itemColor[0].itemColorValue}</span></p>
 				<div id="product_comments_block_extra" class="no-print" style="display: none;">
                     <div class="comments_note clearfix">
                         <span>Rating&nbsp;</span>
@@ -447,7 +447,7 @@ var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
 						$('#cartData').append('<div class="col-xs-12 col-md-12 product_row clearfix"><div class="col-xs-6 col-md-6"><div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src='+data[i].image+' width="70px" alt="Sed posuere" title="Sed posuere"></div>'+
 						'<div class="layer_cart_product_info"><span id="layer_cart_product_title" class="product-name">'+data[i].name+'<a href="javascript:void(0)" cartLineId='+data[i].cartLineId+' cartId='+data[i].cartId+' class="icon-remove-sign remove_cart_product"></a></span><ul><li><strong class="dark">Quantity:</strong><span id="layer_cart_product_quantity">'+data[i].quantity+'</span>'+
 						'<span class="divider">|</span></li><li><strong class="dark">Color:</strong><span id="layer_cart_product_price">'+data[i].color+'</span><span class="divider">|</span></li><li><strong class="dark">Size:</strong><span id="layer_cart_product_price">'+data[i].size+'</span></li></ul></div></div>'+
-						'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div></div></div>')				
+						'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].total+'</span></div></div></div>')				
 				 }
 				 $('.total').html(data[0].grandTotal)
 			    removeCartLine();

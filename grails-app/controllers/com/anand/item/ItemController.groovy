@@ -40,7 +40,7 @@ class ItemController {
 			if(!itemSize.save(flush : true)){
 				itemSize.errors.each {log.debug"error in saving itemSize == "+it}
 				}
-			Item item = new Item(itemName: "wemen"+i,itemCode : "Item"+i,itemDescription: "footwear",itemBrand : brands[i],itemFor: "women",itemType:itemType[i],itemCategory:category[i],itemPrice : prices[i], isDiscountable  :false)
+			Item item = new Item(itemName: "men"+i,itemCode : "Item"+i,itemDescription: "footwear",itemBrand : brands[i],itemFor: "men",itemType:itemType[i],itemCategory:category[i],itemPrice : prices[i], isDiscountable  :false)
 			itemSize.addToItemColor(itemColor)
 			item.addToItemSize(itemSize)
 			
@@ -54,7 +54,7 @@ class ItemController {
 	List uploadImage(){
 		List uploadedImages = []
 		for(int i=1; i<10; i++){
-			Image image = new Image(name: "product"+i+".jpg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpg", imageSize: "1234", width:"50", height :"50").save()
+			Image image = new Image(name: "product"+i+".jpeg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpeg", imageSize: "1234", width:"50", height :"50").save()
 			uploadedImages.add(image)
 		}
 		return uploadedImages

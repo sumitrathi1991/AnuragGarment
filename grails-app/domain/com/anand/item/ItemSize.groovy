@@ -12,5 +12,8 @@ class ItemSize {
 	
 	static hasMany = [itemColor : ItemColor]
 
+	int getAvailableQuantity(){
+		return (this.quantity - this.qtyOrdered)
+	}
 	
 }
