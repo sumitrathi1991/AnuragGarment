@@ -65,9 +65,30 @@ class ItemController {
 	}
 	
 	def deleteItem(){
-		
+		Item item = Item.findById(params.id);
+		item.isDeleted = true;
+		if(!item.save(flush:true)){
+			item.errors.each {log.debu"error in deleting the item "+it}
+		}
+		def itemList = Item.findAllByIsDeleted(false);
+		render template:"/admin/item", model : [itemList:itemList]
 	}
-	
+	def publishItem(){
+		log.debug"publish item params: "+params
+		Item item = Item.findByIdAndIsDeleted(params.id,false);
+		log.debug"item "+item.isPublished
+		if(item.isPublished == true){
+			item.isPublished = false;
+		}else{
+			item.isPublished = true;
+		}
+		if(!item.save(flush:true)){
+			item.errors.each {log.debu"error in publishing the item "+it}
+			
+		}
+		def itemList = Item.findAllByIsDeleted(false);
+		render template:"/admin/item", model : [itemList:itemList]
+	}
 	def addItem(){
 		log.debug"addItem params: "+params
 		Item item = itemService.addItem(params)
@@ -79,29 +100,36 @@ class ItemController {
 			result.status = "error";
 			result.message = "There is some issue for adding an item.Please try again."
 		}
-		respond result, [formats:['json', 'xml']];
-		
+		//respond result, [formats:['json', 'xml']];
+		def itemList = Item.findAllByIsDeleted(false);
+		render template:"/admin/item", model : [itemList:itemList]
 	}
 	def addItemSize(){
 		log.debug"addItem params: "+params
 		//Item item = itemService.addItem(params)
-		HashMap result = new HashMap();
-		/*if(item){
-			result.status = "success";
-			result.message = "Item has been added successfully."
-		}else{
-			result.status = "error";
-			result.message = "There is some issue for adding an item.Please try again."
-		}*/
-		result.status = "success";
-		result.message = "Item has been added successfully."
-		respond result, [formats:['json', 'xml']];
+		List uploadedImages = uploadImage();
+		Item item = Item.findByIdAndIsDeleted(params.itemId,false);
+		ItemSize itemSize = itemService.addItemSize(params)
+		if(itemSize){
+			ItemColor itemColor = new ItemColor(itemColorValue : params.itemColor)
+			itemColor.imageList = uploadedImages
+			if(itemColor){
+				itemSize.addToItemColor(itemColor)
+			}
+			item.addToItemSize(itemSize);
+		}
+		
+		if(!item.save(flush : true)){
+			item.errors.each {log.debug"error in saving item == "+it}
+			return
+		}
+		render template:"/admin/itemDetails", model : [item:item]
+		
+		
 	}
 	def getItemDetails(){
 		log.debug"getItemDetails params: "+params
 		Item item = Item.findById(params.id);
-		log.debug"item : "+item.itemSize.itemSizeValue
-		log.debug"item : "+item.itemSize.itemColor.itemColorValue
 		render template:"/admin/itemDetails", model : [item:item]
 	}
 	

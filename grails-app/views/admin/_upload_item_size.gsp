@@ -14,7 +14,7 @@
 			<div class="span12">
 				<input type="hidden" name="itemId" value="${item.id}">
 				<div class="row-fluid">
-					<label class="strong">Quantity:${item.id}</label> 
+					<label class="strong">Quantity:</label> 
 					<input type="number" id="itemQuantity" name="itemQuantity" placeholder="Number of items" min="1" value="1" class="span12">
 				</div>
 				<div class="row-fluid">

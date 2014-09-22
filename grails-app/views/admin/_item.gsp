@@ -77,11 +77,29 @@
 							<td>
 								${item.discountRate }
 							</td>
-							<td>
-								${item.isPublished }
+							<td style="text-align: center;">
+								<g:if test="${item.isPublished == false}">
+									<g:remoteLink controller="item" action="publishItem" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
+									<span class="btn btn-primary circle_plus  ">
+										Un-published</span>
+									</g:remoteLink>
+								</g:if>
+								<g:else>
+									<g:remoteLink controller="item" action="publishItem" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
+									<span class="btn btn-primary circle_plus" >
+										published</span>
+									</g:remoteLink>
+								</g:else>
 							</td>
-							<td><i class="icon-edit"></i><i class="icon-remove-sign"></i>
-							<g:remoteLink class="linkColor" controller="item" style="font-size: medium" action="getItemDetails" params="${[id: item.id,sortType:'id']}" update="manageTabDiv"><i class="icon-edit"></i></g:remoteLink></td>
+							<td>
+								<i class="icon-edit"></i>
+								<g:remoteLink controller="item" action="deleteItem" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
+									<i class="icon-remove-sign"></i>
+								</g:remoteLink>
+								<g:remoteLink class="linkColor" controller="item" style="font-size: medium" action="getItemDetails" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
+									<i class="icon-edit"></i>
+								</g:remoteLink>
+							</td>
 						</tr>
 					</g:each>
 

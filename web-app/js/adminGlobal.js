@@ -27,12 +27,11 @@ function uploadItemSize(){
 		type : 'POST',
 		url : uploadItemSizeUrl ,
 		data : itemSizeFormData  + '&images=' +JSON.stringify({itemImages:itemImagesArray }) ,
-		success : function(data,textStatus){
-			if(data.status == "success"){
-				console.log("success added item")
-				$('#modal-AddItem-Size').modal('hide');
-			}
+		success : function(response,textStatus){
+			$('#modal-AddItem-Size').modal('hide');
+			$("#manageTabDiv").html(response);
 		},
 		error : function(response,textStatus){}
 	});
 }
+
