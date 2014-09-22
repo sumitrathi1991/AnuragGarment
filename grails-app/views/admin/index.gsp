@@ -41,7 +41,7 @@
         
         <!-- UI Tab2 -->
    			<div class="ui-tabs" id="manageTabDiv">				
-                   		</div>
+            </div>
          <!-- UI Tab2 Ends -->   
          
 		<!-- // Widget END -->
@@ -80,10 +80,10 @@
 	
 	<!--Modal Add Item -->
         <div class="modal modal-lg hide fade" id="modal-AddItem">
-        <g:render template="/admin/upload_item" />
-    </div>
+        	<g:render template="/admin/upload_item" />
+    	</div>
 	<!-- Modal Add Item Ends -->
-
+	
 	<!--Loading overlay Starts Here-->
     	<div id="loading">
         	<span class="icon-spinner icon-spin"></span>
@@ -94,6 +94,7 @@
 var uploadItemUrl = "${createLink(controller:'item',action:'addItem')}";
 var itemDataUrl = "${createLink(controller:'admin',action:'getItemList')}";
 var oderItemDataUrl = "${createLink(controller:'admin',action:'getOrderedItemList')}";
+
 registerValidation();
 
 $(document).ready(function() {
@@ -108,6 +109,7 @@ $(document).ready(function() {
     $("#manageTab").click(function(){
     	getItemList();
 	  });   
+   
 });
   $(function() {
     $( "#content" ).tabs();

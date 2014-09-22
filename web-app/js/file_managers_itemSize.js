@@ -7,10 +7,7 @@
  *
  * Built exclusively for sale @Envato Marketplaces
  * ========================================================== */ 
-var itemImagesArray = []
-function addItemOverlay(){
-	itemImagesArray = []
-}
+
 $(function() 
 {
 	/* Dropzone */
@@ -18,7 +15,7 @@ $(function()
 		$('form.dropzone').dropzone();
 	
 	/* Plupload */
-	$('#pluploadUploader').pluploadQueue({
+	$('#pluploadUploaderItemSize').pluploadQueue({
 		// General settings
 		runtimes : 'gears,browserplus,html5',
 		url : "http://localhost:8080/item/uploadItemImage",

@@ -10,8 +10,8 @@ class HomeController {
 	def springSecurityService,UserService,grailsApplication
 	String userFullName = "Anonymous"
 	def index() {
-		List newItemList = Item.findAllByItemCategory('new')
-		List featuredItemList = Item.findAllByItemCategory('featured')
+		List newItemList = Item.findAllByItemType('new')
+		List featuredItemList = Item.findAllByItemType('featured')
 		String userFullName = UserService.loginUserName()
 		
 		[itemList : newItemList,featuredItems:featuredItemList,userFullName:userFullName]
@@ -41,8 +41,8 @@ class HomeController {
 			items = Item.findAllByItemBrand(params.itemBrand)
 		if(params.containsKey('itemFor'))
 			items = Item.findAllByItemFor(params.itemFor)
-		List sizeList = Item.findAll()?.itemSize?.label.unique()
-		List colorList = Item.findAll()?.itemColor?.label.unique()
+		List sizeList = Item.findAll()?.itemSize?.itemSizeValue.unique()
+		List colorList = Item.findAll()?.itemSize?.itemColor?.itemColorValue.unique()
 		List brandList =  Item.findAll()?.itemBrand?.unique()
 		List typeList = Item.findAll()?.itemType?.unique()
 		List itemForList = Item.findAll()?.itemFor?.unique()

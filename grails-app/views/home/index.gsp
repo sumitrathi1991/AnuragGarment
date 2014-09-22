@@ -48,11 +48,11 @@
                            				<div class="left-block">
                                             <div class="product-image-container">
                                                 <a class="product_img_link" href="#" title="Printed Chiffon Dress">
-                                                    <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>" alt="${featuredItem.itemName}" title="${featuredItem.itemName}" width="220" height="220" >
+                                                    <img class="replace-2x img-responsive" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemSize[0].itemColor[0].imageList[0].name}"]"/>" alt="${featuredItem.itemName}" title="${featuredItem.itemName}" width="220" height="220" >
                                                     <span class="sale-box"><span class="sale-label">Sale</span></span>														 										
                                                     <span class="new-box"><span class="new-label">New</span></span>												 										<span class="sale-box"><span class="sale-label">Sale</span></span>										
                                                 </a>
-                                              <a class="quick-view various" alt="${featuredItem.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemColor[0].imageList[0].name}"]"/>">
+                                              <a class="quick-view various" alt="${featuredItem.itemName}" width="270" height="270" href="<g:createLink action="renderImage" controller="image" params="[imageName : "${featuredItem.itemSize[0].itemColor[0].imageList[0].name}"]"/>">
                                               	<span>Quick view</span>
                                               </a> 
                                          </div>
@@ -71,10 +71,10 @@
                                               <a class="product-name" href="#" title="${featuredItem.itemName}">${featuredItem.itemName}</a>
                                 			</h5>
                                 			<p> Brand : ${featuredItem.itemBrand}</p>
-                                			<p>Size : ${featuredItem.itemSize[0].label}   | Color : ${featuredItem.itemColor[0].label }  </p>                              
+                                			<p>Size : ${featuredItem.itemSize[0].itemSizeValue}   | Color : ${featuredItem.itemSize[0].itemColor[0].itemColorValue }  </p>                              
                                          	<div class="content_price">
-                                                <span class="price product-price">&#8377;${featuredItem.itemSize[0].itemPrice}</span>
-                                                 <span class="old-price product-price">&#8377;${featuredItem.itemSize[0].itemPrice}</span>
+                                                <span class="price product-price">&#8377;${featuredItem.itemPrice}</span>
+                                                 <span class="old-price product-price">&#8377;${featuredItem.itemPrice}</span>
 											 </div>           
                                             <div class="button-container">
                                                 <div class="actions">

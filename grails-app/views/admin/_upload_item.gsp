@@ -49,7 +49,6 @@
 						<option selected value="Boots" >Boots</option>
 						<option value="Casual Shoes" >Casual Shoes</option>
 						<option value="Converse" >Converse</option>
-						<option value="Combo Offers" >Combo Offers</option>
 						<option value="Ethnic" >Ethnic</option>
 						<option value="Fabrication" >Fabrication</option>
 						<option value="Formal Shoes" >Formal Shoes</option>
@@ -65,7 +64,7 @@
 				</div>
 				<div class="row-fluid">
 					<label class="strong">Quantity:</label> 
-					<input type="number" id="itemQuantity" name="itemQuantity" placeholder="Number of items" class="span12">
+					<input type="number" id="itemQuantity" name="itemQuantity" min="1" value="1" placeholder="Number of items" class="span12">
 				</div>
 				<div class="row-fluid">
 					<label class="strong">Size:</label> 
@@ -89,7 +88,7 @@
 				</div>
 				<div class="row-fluid">
 					<label class="strong">Price:</label> 
-					<input type="number" id="itemPrice" name="itemPrice" placeholder="Number of items" class="span12">
+					<input type="number" id="itemPrice" name="itemPrice" min="1" value="1" placeholder="Number of items" class="span12">
 				</div>
 				<div class="row-fluid">
 					<label class="strong">Discount:</label> 
@@ -99,7 +98,7 @@
 					<label class="strong">Upload Images:</label>
 						<!-- Plupload -->
 							
-								<div id="pluploadUploader">
+								<div id="pluploadUploader" class="pluploadUploaderClass">
 									<p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
 								</div>
 							

@@ -51,6 +51,7 @@
 		
 		<!-- File Managers Demo Script -->
 		<script type="text/javascript" src="/js/file_managers.js"></script>
+		<script type="text/javascript" src="/js/file_managers_itemSize.js"></script>
 		
 		<!-- DataTables Tables Plugin -->
 		<script src="/js/jquery.dataTables.min.js"></script>

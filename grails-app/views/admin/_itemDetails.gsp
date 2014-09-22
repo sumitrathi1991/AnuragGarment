@@ -1,22 +1,19 @@
 
-<ul class="breadcrumb">
-	<li>You are here</li>
-	<li><a href="#" class="glyphicons settings"><i></i> ANAND
-			TRADING</a></li>
-	<li class="divider"><i class="icon-caret-right"></i></li>
-	<li>Upload Item</li>
-</ul>
 
-<h1>Manage Item</h1>
 <div class="innerLR">
 
 	<!-- Widget -->
 	<div class="widget widget-heading-simple widget-body-gray clearfix">
 		<div class="widget-body">
-			<p>Manage/Edit/Delete the items.</p>
+		<h1>${item.itemName}</h1>
+			<p>${item.itemDescription}</p>
+		</div>
+		<div class="row-fluid" onClick="getItemList();">
+			<span class="btn btn-primary btn-icon glyphicons circle_plus pull-right btnT10"><i></i>
+					Back</span>
 		</div>
 		<div class="row-fluid" onClick="addItemOverlay()">
-			<a href="#modal-AddItem" data-toggle="modal"><span
+			<a href="#modal-AddItem-Size" data-toggle="modal"><span
 				class="btn btn-primary btn-icon glyphicons circle_plus pull-right btnT10"><i></i>
 					Add</span></a>
 		</div>
@@ -33,14 +30,10 @@
 				<!-- Table heading -->
 				<thead>
 					<tr>
-						<th data-class="expand">Name</th>
-						<th data-hide="phone,tablet">Description</th>
-						<th data-hide="phone,tablet">Brand</th>
-						<th data-hide="phone">Category</th>
-						<th>Type</th>
-						<th>For</th>
-						<th>Price</th>
-						<th>Discount</th>
+						<th data-class="expand">Size</th>
+						<th data-hide="phone,tablet">Quantity</th>
+						<th data-hide="phone,tablet">Color</th>
+						<th data-hide="phone">Images</th>
 						<th>Status</th>
 						<th>Action</th>
 					</tr>
@@ -51,38 +44,29 @@
 				<tbody>
 
 					<!-- Table row -->
-					<g:each in="${itemList}" var='item'>
+					<g:each in="${item.itemSize}" var='itemSize'>
 						<tr class="gradeX">
 							<td>
-								${item.itemName }
+								${itemSize.itemSizeValue}
 							</td>
-							<td title = "${item.itemDescription }">
-								${item.itemDescription }
-							</td>
-							<td>
-								${item.itemBrand }
+							<td >
+								${itemSize.quantity}
 							</td>
 							<td>
-								${item.itemCategory }
+								<g:each in="${itemSize.itemColor}" var='itemColor'>${itemColor.itemColorValue}
+								</g:each>
 							</td>
 							<td>
-								${item.itemType }
+								<g:each in="${itemSize.itemColor.imageList}" var='image'>
+									<img id="image" src="${image.imageUrl}" height="50" width="55" border="0"/>
+								</g:each>
 							</td>
+							
 							<td>
-								${item.itemFor }
-							</td>
-							<td>
-								${item.itemPrice }
-							</td>
-							<td>
-								${item.discountRate }
-							</td>
-							<td>
-								${item.isPublished }
+								${itemSize.isNew}
 							</td>
 							<td><i class="icon-edit"></i><i class="icon-remove-sign"></i>
-							<g:remoteLink class="linkColor" controller="item" style="font-size: medium" action="getItemDetails" params="${[id: item.id,sortType:'id']}" update="manageTabDiv"><i class="icon-edit"></i></g:remoteLink></td>
-						</tr>
+							</tr>
 					</g:each>
 
 
@@ -95,7 +79,11 @@
 	</div>
 	<!-- // Widget END -->
 </div>
-
+<!-- Modal Add Item size and colors -->
+	 <div class="modal modal-lg hide fade" id="modal-AddItem-Size">
+        	<g:render template="/admin/upload_item_size" />
+    	</div>
+	<!-- Modal Add Item size and colors end -->
 <script>
 $('#itemDataTable').dataTable({
 	"sPaginationType": "bootstrap",
