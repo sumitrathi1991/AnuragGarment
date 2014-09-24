@@ -113,9 +113,7 @@
 <!-- Modal footer -->
 <div class="modal-footer">
 	<span class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</span>
-	<button type="submit" id="submitItem" name="submitItem">
-		<span class="btn btn-primary"  aria-hidden="true">Add</span>
-	</button>
+	<button type="submit" id="submitItem" class="btn btn-primary" name="submitItem"  aria-hidden="true">Add</button>
 </div>
 </form>
 

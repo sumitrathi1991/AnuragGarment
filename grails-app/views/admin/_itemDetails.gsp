@@ -8,14 +8,11 @@
 		<h1>${item.itemName}</h1>
 			<p>${item.itemDescription}</p>
 		</div>
-		<div class="row-fluid" onClick="getItemList();">
-			<span class="btn btn-primary btn-icon glyphicons circle_plus pull-right btnT10"><i></i>
-					Back</span>
-		</div>
-		<div class="row-fluid" onClick="addItemOverlay()">
-			<a href="#modal-AddItem-Size" data-toggle="modal"><span
-				class="btn btn-primary btn-icon glyphicons circle_plus pull-right btnT10"><i></i>
-					Add</span></a>
+		<div class="row-fluid btnT10">
+			<span class="pull-right">
+				<button class="btn btn-default btn-icon glyphicons circle_arrow_left" onClick="getItemList();"><i></i>Back</button>
+				<a href="#modal-AddItem-Size" data-toggle="modal" onClick="addItemOverlay()" class="btn btn-primary btn-icon glyphicons circle_plus"><i></i>Add</a>
+			</span>
 		</div>
 	</div>
 	<!-- // Widget END -->

@@ -6443,6 +6443,9 @@
   .ui-widget-content {
 	  border: 0
   }
+  .ui-widget-content .btn-primary{
+  	color: #FFF;
+  }
   .ui-datepicker {
 	  padding: 10px;
 	  background: #fff;
