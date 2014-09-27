@@ -13,17 +13,17 @@
 	    <!-- Tabs Heading -->
 	    <div class="widget-head">
 	        <ul>
-	            <li class="active"><a href="#tab-ItemUpload" class="glyphicons upload" data-toggle="tab"><i></i>Item Upload</a>
+	            <li class="active"><a href="#tab-ItemUpload" id="itemTab" class="glyphicons upload" data-toggle="tab"><i></i>Item Upload</a>
 	            </li>
-	            <li><a href="#tab-BannerUpload" data-toggle="tab" class="glyphicons upload"><i></i> <span>Banner Upload</span></a>
+	            <li ><a href="#tab-BannerList" id="bannerTab" data-toggle="tab" class="glyphicons upload"><i></i> <span>Banner Upload</span></a>
 	            </li>
-	            <li><a href="#tab-BrandUpload" data-toggle="tab" class="glyphicons upload"><i></i> <span>Brand Upload</span></a>
+	            <li><a href="#tab-BrandList" id="brandTab" data-toggle="tab" class="glyphicons upload"><i></i> <span>Brand Upload</span></a>
 	            </li>
 	        </ul>
 	    </div>
 	    <!-- // Tabs Heading END -->
 	  <div class="widget-body">
-	    <div class="tab-content">
+	    <div class="tab-content" id="itemDetailsTab">
 	        <!-- Tab content ItemUpload-->
 	        <div class="tab-pane active" id="tab-ItemUpload">
 	        	<!-- Widget -->
@@ -114,181 +114,15 @@
 	        	</div>
 	       	 <!-- // Tab content END -->
 	
-	        <!-- Tab content BannerUpload-->
-	        <div class="tab-pane" id="tab-BannerUpload">
-	       		 <!-- Table -->
-	            	<table class="dynamicTable colVis table table-striped table-bordered table-condensed table-white">
-							
-								<!-- Table heading -->
-								<thead>
-									<tr>
-										<th>User Name</th>
-										<th>Item</th>
-										<th>Quantity(s)</th>
-										<th>Location</th>
-										<th>Order Date</th>
-										<th>Payment Type</th>
-										<th>Amount</th>
-										<th>Status</th>
-										<th>Details</th>
-									</tr>
-								</thead>
-								<!-- // Table heading END -->
-								
-								<!-- Table body -->
-								<tbody>
-								
-									<!-- Table row -->
-									<tr class="gradeX">
-										<td>Himanshu Chopra</td>
-										<td>Sports Shoes</td>
-										<td>2</td>
-										<td>Dwarka</td>
-										<td>2 Sep 2014</td>
-										<td>Net Banking</td>
-										<td>5000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Sumit Rathi</td>
-										<td>Formal Shoes</td>
-										<td>3</td>
-										<td>Bhadurgarh</td>
-										<td>5 Sep 2014</td>
-										<td>Credit Card</td>
-										<td>4000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Shiv Kumar</td>
-										<td>Casual Shoes</td>
-										<td>1</td>
-										<td>Najafgarh</td>
-										<td>3 Sep 2014</td>
-										<td>Debit Card</td>
-										<td>3000/-</td>
-										<td>Accepted</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Binod Singh</td>
-										<td>Sports Shoes</td>
-										<td>3</td>
-										<td>Mehrauli</td>
-										<td>8 Sep 2014</td>
-										<td>COD</td>
-										<td>9000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									
-								</tbody>
-								<!-- // Table body END -->
-								
-							</table>
-						<!-- // Table END -->
+	       	<!-- Tab content BannerUpload-->
+	        <div class="tab-pane" id="tab-BannerList">
 	        </div>
 	        <!-- // Tab content END -->
-	
+	        
 	        <!-- Tab content BrandUpload-->
-	        <div class="tab-pane" id="tab-BrandUpload">
-	            	 <!-- Table -->
-	            	<table class="dynamicTable colVis table table-striped table-bordered table-condensed table-white">
-								<!-- Table heading -->
-								<thead>
-									<tr>
-										<th>User Name</th>
-										<th>Item</th>
-										<th>Quantity(s)</th>
-										<th>Location</th>
-										<th>Order Date</th>
-										<th>Payment Type</th>
-										<th>Amount</th>
-										<th>Status</th>
-										<th>Details</th>
-									</tr>
-								</thead>
-								<!-- // Table heading END -->
-								
-								<!-- Table body -->
-								<tbody>
-								
-									<!-- Table row -->
-									<tr class="gradeX">
-										<td>Ranbir Kapoor</td>
-										<td>Sports Shoes</td>
-										<td>2</td>
-										<td>Dwarka</td>
-										<td>2 Sep 2014</td>
-										<td>Net Banking</td>
-										<td>5000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Arjun Kapoor</td>
-										<td>Formal Shoes</td>
-										<td>3</td>
-										<td>Bhadurgarh</td>
-										<td>5 Sep 2014</td>
-										<td>Credit Card</td>
-										<td>4000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Amir Khan</td>
-										<td>Casual Shoes</td>
-										<td>1</td>
-										<td>Najafgarh</td>
-										<td>3 Sep 2014</td>
-										<td>Debit Card</td>
-										<td>3000/-</td>
-										<td>Accepted</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									<!-- Table row -->
-									<tr class="gradeC">
-										<td>Imran Khan</td>
-										<td>Sports Shoes</td>
-										<td>3</td>
-										<td>Mehrauli</td>
-										<td>8 Sep 2014</td>
-										<td>COD</td>
-										<td>9000/-</td>
-										<td>Pending</td>
-										<td class="center"><a href="" class="glyphicons circle_info"><i></i></a></td>
-									</tr>
-									<!-- // Table row END -->
-									
-									
-								</tbody>
-								<!-- // Table body END -->
-								
-							</table>
-						<!-- // Table END -->
-	        	</div>
+	        <div class="tab-pane" id="tab-BrandList">
+	        </div>
+	       
 	        <!-- // Tab content END -->
 	    </div>
 	   </div>
@@ -296,21 +130,29 @@
 </div>
 
 <script>
-$('#itemDataTable').dataTable({
-	"sPaginationType": "bootstrap",
-	//"sDom": "<'row-fluid'<'span5'T><'span3'l><'span4'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-	"oLanguage": {
-		"sLengthMenu": "_MENU_ per page"
-	}
-	
-});
+$(document).ready(function() {
 
-$('.dynamicTable').dataTable({
-	"sPaginationType": "bootstrap",
-	//"sDom": "<'row-fluid'<'span5'T><'span3'l><'span4'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-	"oLanguage": {
-		"sLengthMenu": "_MENU_ per page"
-	}
+	$("#itemTab").click(function() {
+			getItemList();
+		});
 	
-});
+	$("#bannerTab").click(function() {
+		
+		getBannerList();
+		});
+
+	$("#brandTab").click(function() {
+		getBrandList();
+		});
+
+	});
+	
+	$('#itemDataTable').dataTable({
+		"sPaginationType" : "bootstrap",
+		"oLanguage" : {
+			"sLengthMenu" : "_MENU_ per page"
+		}
+
+	});
+
 </script>

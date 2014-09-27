@@ -20,6 +20,29 @@ function getItemList(){
        })
 }
 
+function getBannerList(){
+	jQuery.ajax({
+    	   type: 'POST',
+           url: bannerListUrl,
+           success: function(response,textStatus){
+        	  
+				$("#tab-BannerList").html(response);
+				},
+           error:function(XMLHttpRequest,textStatus,errorThrown){}
+       })
+}
+
+function getBrandList(){
+	jQuery.ajax({
+    	   type: 'POST',
+           url: brandListUrl,
+           success: function(response,textStatus){
+				$("#tab-BrandList").html(response);
+				},
+           error:function(XMLHttpRequest,textStatus,errorThrown){}
+       })
+}
+
 function uploadItemSize(){
 	console.log(uploadItemSizeUrl)
 	var itemSizeFormData = $('#uploadItemSizeForm').serialize();
