@@ -235,7 +235,7 @@ var ajaxCart = {
 		}
 	},
 	// Fix display when using back and previous browsers buttons
-	refresh : function(){
+	/*refresh : function(){
 		$.ajax({
 			type: 'POST',
 			headers: { "cache-control": "no-cache" },
@@ -249,7 +249,7 @@ var ajaxCart = {
 				ajaxCart.updateCart(jsonData);
 			}
 		});
-	},
+	},*/
 
 	// Update the cart information
 	updateCartInformation : function (jsonData, addedFromProductPage){

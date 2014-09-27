@@ -61,6 +61,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /** font**/
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Oswald:400,700|Open+Sans:400,600);
+/*@font-face {
+	font-family: 'Conv_Oxygen-Bold';
+	src: url('../font/Oxygen-Bold.eot');
+	src: local('☺'), url('../font/Oxygen-Bold.woff') format('woff'), url('../font/Oxygen-Bold.ttf') format('truetype'), url('../font/Oxygen-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_BenchNine-Bold';
+	src: url('../font/BenchNine-Bold.eot');
+	src: local('☺'), url('../font/BenchNine-Bold.woff') format('woff'), url('../font/BenchNine-Bold.ttf') format('truetype'), url('../font/BenchNine-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
 /**=============**/
 article,
 aside,
@@ -8823,6 +8838,7 @@ ul#more_info_tabs{margin: 0;}
 	height: 16px;
 	position: absolute;
 	z-index: 99;
+	background: url(../images/loader.gif) no-repeat ;
 	top: 50%;
 	left: 50%;
 	margin: -8px 0 0 -8px;
@@ -8833,7 +8849,7 @@ ul#more_info_tabs{margin: 0;}
 	height: 16px;
 	position: absolute;
 	z-index: 99;
-	background: url(images/loader.gif) no-repeat ;
+	background: url(../images/loader.gif) no-repeat ;
 	top: 50%;
 	left: 50%;
 	margin: -8px 0 0 -8px;

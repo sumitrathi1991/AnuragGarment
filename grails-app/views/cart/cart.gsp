@@ -26,7 +26,7 @@
 				<div class="row">
 					<div id="center_column" class="center_column  col-sm-12">
 						<h1 id="cart_title" class="page-heading">Shopping-cart summary
-							<span class="heading-counter">Your shopping cart contains: <span id="summary_products_quantity">1 product</span></span>
+							<span class="heading-counter">Your shopping cart contains: <span id="summary_products_quantity">${cart?.cartLines?.size() } product</span></span>
 						</h1>
 
 						<!-- Steps -->
@@ -48,7 +48,9 @@
 							</li>
 						</ul>
 						<!-- /Steps -->
-						<p style="display:none" id="emptyCartWarning" class="alert alert-warning">Your shopping cart is empty.</p>
+						<g:if test="${cart?.cartLines?.size() == 0}">
+						<p id="emptyCartWarning" class="alert alert-warning">Your shopping cart is empty.</p>
+						</g:if>
 						<div id="order-detail-content" class="table_block table-responsive">
 							<table id="cart_summary" class="table table-bordered">
 								<thead>
@@ -66,7 +68,7 @@
 										<tr class="cart_total_price">
 											<td rowspan="3" colspan="2" id="cart_voucher" class="cart_voucher"></td>
 											<td colspan="3" class="text-right">Total products</td>
-											<td colspan="2" class="price" id="total_product">$316.51</td>
+											<td colspan="2" class="price" id="total_product">${cart?.getProductTotal()}</td>
 										</tr>
 										<tr style="display: none;">
 											<td colspan="3" class="text-right">Total gift-wrapping cost:</td>
@@ -82,26 +84,27 @@
 										</tr>
 										<tr class="cart_total_price">
 											<td colspan="3" class="total_price_container text-right"><span>Total</span></td>
-											<td colspan="2" class="price" id="total_price_container"><span id="total_price">$318.51</span></td>
+											<td colspan="2" class="price" id="total_price_container"><span id="total_price">${cart?.getGrandTotal()}</span></td>
 										</tr>
 								</tfoot>
 								<tbody>
+								<g:each var="cartLine" in="${cart?.cartLines}">
 									<tr class="cart_item last_item first_item address_22 odd">
 										<td class="cart_product">
 											<a href="#"><img src="../images/product_thumb.jpg" alt="Faded Short" width="100" height="100"></a>
 										</td>
 										<td class="cart_description">
-											<p class="product-name"><a href="#">Faded Short</a></p>
-											<small class="cart_ref">SKU : demo_1</small>			
+											<p class="product-name"><a href="#">${cartLine?.name}</a></p>
+											<p>Size : ${cartLine?.size} | Color :	${cartLine?.color}</p>
 										</td>
 										<td class="cart_avail"><span class="label label-success">In Stock</span></td>
 										<td class="cart_unit" data-title="Unit price">
 											<span class="price" id="product_price_1_0_22">
-												<span class="price">$316.51</span>
+												<span class="price">${cartLine?.price}</span>
 											</span>
 										</td>
 										<td class="cart_quantity text-center">
-											<input size="2" type="text" class="cart_quantity_input form-control grey" value="1">
+											<input size="2" type="text" class="cart_quantity_input form-control grey" value="${cartLine?.quantity}">
 											<div class="cart_quantity_button clearfix">
 												<a class="cart_quantity_down btn btn-default button-minus" href="#" title="Subtract">
 													<span><i class="icon-minus"></i></span>
@@ -112,7 +115,7 @@
 											</div>
 										</td>
 										<td class="cart_total">
-											<span class="price" id="total_product_price_1_0_22">$316.51</span>
+											<span class="price" id="total_product_price_1_0_22">${cartLine?.price * cartLine?.quantity as BigDecimal}</span>
 										</td>
 										<td class="cart_delete text-center">
 											<div>
@@ -120,6 +123,7 @@
 											</div>
 										</td>
 									</tr>
+									</g:each>
 								</tbody>
 							</table>
 						</div> <!-- end order-detail-content -->

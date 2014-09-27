@@ -90,10 +90,16 @@ class CartController {
 	
 	
 	def cart(){
-		log.debug"in cart display"
+		def cartId = session.getAttribute("cartId")
+		Cart cart = Cart.get(cartId)
+		[cart:cart]
 	}
 	
 	def address(){
+		
+	}
+	
+	def shipping(){
 		
 	}
 }

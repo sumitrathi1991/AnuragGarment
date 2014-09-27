@@ -138,27 +138,6 @@
 		</div><!-- #columns -->
 	</div><!-- .columns-container -->
 <!-- #page -->
-<script type="text/javascript" src="../js/tools.js"></script>
-<script type="text/javascript" src="../js/global.js"></script>
-<script type="text/javascript" src="../js/10-bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/15-jquery.total-storage.min.js"></script>
-<script type="text/javascript" src="../js/15-jquery.uniform-modified.js"></script>
-<script type="text/javascript" src="../js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="../js/products-comparison.js"></script>
-<script type="text/javascript" src="../js/category.js"></script>
-<script type="text/javascript" src="../js/ajax-cart.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.core.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.mouse.min.js"></script>
-<script type="text/javascript" src="../js/ajax-wishlist.js"></script>
-<script type="text/javascript" src="../js/colorpicker.js"></script>
-<script type="text/javascript" src="../js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../js/custommenu.js"></script>
-<script type="text/javascript" src="../js/mobile_menu.js"></script>
-<script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
-<script type="text/javascript" src="../js/pos.bxslider.min.js"></script>
-<script type="text/javascript" src="../js/treeManagement.js"></script>
 <script type="text/javascript">
 // Billing Address Dropdown List 
  $("#addressesAreEquals").change(function() {
