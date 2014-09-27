@@ -36,7 +36,7 @@ class AdminController {
 	
 	def getItemList(){
 		log.debug"get item list "+params
-		def itemList = Item.findAll();
+		def itemList = Item.findAllByIsDeleted(false);
 		render template:"/admin/item", model : [itemList:itemList]
 	}
 	def _upload_item(){

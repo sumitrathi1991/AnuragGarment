@@ -14,7 +14,7 @@
 			<div class="span12">
 				<input type="hidden" name="itemId" value="${item.id}">
 				<div class="row-fluid">
-					<label class="strong">Quantity:${item.id}</label> 
+					<label class="strong">Quantity:</label> 
 					<input type="number" id="itemQuantity" name="itemQuantity" placeholder="Number of items" min="1" value="1" class="span12">
 				</div>
 				<div class="row-fluid">
@@ -55,9 +55,7 @@
 <!-- Modal footer -->
 <div class="modal-footer">
 	<span class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</span>
-	<button type="submit" id="submitItemSizeButton" name="submitItemSizeButton">
-		<span class="btn btn-primary"  aria-hidden="true">Add</span>
-	</button>
+	<button type="submit" id="submitItemSizeButton" class="btn btn-primary" name="submitItemSizeButton"  aria-hidden="true">Add</button>
 </div>
 </form>
 <script>

@@ -94,7 +94,10 @@
 var uploadItemUrl = "${createLink(controller:'item',action:'addItem')}";
 var itemDataUrl = "${createLink(controller:'admin',action:'getItemList')}";
 var oderItemDataUrl = "${createLink(controller:'admin',action:'getOrderedItemList')}";
-
+var publishItemUrl = "${createLink(controller:'item',action:'publishItem')}";
+var bannerListUrl = "${createLink(controller:'banner',action:'getBannerList')}";
+var brandListUrl = "${createLink(controller:'brand',action:'getBrandList')}";
+var brandDetailsUrl = "${createLink(controller:'brand',action:'getBrandDetail')}";
 registerValidation();
 
 $(document).ready(function() {

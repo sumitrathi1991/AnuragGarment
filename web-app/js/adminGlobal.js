@@ -20,18 +20,65 @@ function getItemList(){
        })
 }
 
+function getBannerList(){
+	jQuery.ajax({
+    	   type: 'POST',
+           url: bannerListUrl,
+           success: function(response,textStatus){
+        	  
+				$("#tab-BannerList").html(response);
+				},
+           error:function(XMLHttpRequest,textStatus,errorThrown){}
+       })
+}
+
+function getBrandList(){
+	jQuery.ajax({
+    	   type: 'POST',
+           url: brandListUrl,
+           success: function(response,textStatus){
+				$("#tab-BrandList").html(response);
+				},
+           error:function(XMLHttpRequest,textStatus,errorThrown){}
+       })
+}
+
 function uploadItemSize(){
-	console.log(uploadItemSizeUrl)
 	var itemSizeFormData = $('#uploadItemSizeForm').serialize();
 	jQuery.ajax({
 		type : 'POST',
 		url : uploadItemSizeUrl ,
 		data : itemSizeFormData  + '&images=' +JSON.stringify({itemImages:itemImagesArray }) ,
-		success : function(data,textStatus){
-			if(data.status == "success"){
-				console.log("success added item")
-				$('#modal-AddItem-Size').modal('hide');
-			}
+		success : function(response,textStatus){
+			$('#modal-AddItem-Size').modal('hide');
+			$("#manageTabDiv").html(response);
+		},
+		error : function(response,textStatus){}
+	});
+}
+
+function addBanner(){
+	
+	var uploadBannerFormData = $('#uploadBannerForm').serialize();
+	jQuery.ajax({
+		type : 'POST',
+		url : uploadBannerUrl ,
+		data : uploadBannerFormData ,
+		success : function(response,textStatus){
+			$('#modal-AddBanner').modal('hide');
+		},
+		error : function(response,textStatus){}
+	});
+}
+
+function addBrand(){
+	var uploadBrandFormData = $('#uploadBrandForm').serialize();
+	jQuery.ajax({
+		type : 'POST',
+		url : uploadBrandUrl ,
+		data : uploadBrandFormData ,
+		success : function(response,textStatus){
+			$('#modal-AddBrand').modal('hide');
 		},
 		error : function(response,textStatus){}
 	});

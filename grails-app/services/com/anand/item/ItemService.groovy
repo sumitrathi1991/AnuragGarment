@@ -26,15 +26,16 @@ class ItemService {
 		return filePath;
 	}
 	Item addItem(params){
-		Item item = new Item(itemName: params.itemName,itemCode : "Item2",itemDescription: params.itemDescription,itemBrand : params.itemBrand,itemFor: params.itemFor,itemType:params.itemType,itemCategory:params.itemType)
+		Item item = new Item(itemName: params.itemName,itemCode : "Item2",itemDescription: params.itemDescription,itemBrand : params.itemBrand,itemFor: params.itemFor,itemType:params.itemType,itemCategory:params.itemType,itemPrice : params.itemPrice, isDiscountable  :false)
 		ItemSize itemSize = addItemSize(params)
 		if(itemSize){
+			ItemColor itemColor = addItemColor(params)
+			if(itemColor){
+				itemSize.addToItemColor(itemColor)
+			}
 			item.addToItemSize(itemSize);
 		}
-		ItemColor itemColor = addItemColor(params)
-		if(itemColor){
-			item.addToItemColor(itemColor)
-		}
+		
 		if(!item.save(flush : true)){
 			item.errors.each {log.debug"error in saving item == "+it}
 			return
@@ -43,7 +44,7 @@ class ItemService {
 	}
 	
 	ItemSize addItemSize(params){
-		ItemSize itemSize = new ItemSize(label : params.itemSize, itemPrice : params.itemPrice, isDiscountable  :false, quantity: params.itemQuantity, isNew: true)
+		ItemSize itemSize = new ItemSize(itemSizeValue : params.itemSize,  quantity: params.itemQuantity, isNew: true)
 		if(!itemSize.save(flush:true)){
 			itemSize.errors.each{log.debug"error in saving item Size == "+it}
 			return
@@ -54,7 +55,7 @@ class ItemService {
 	ItemColor addItemColor(params){
 		List uploadedImages = []
 		uploadedImages = addItemImages(params);
-		ItemColor itemColor = new ItemColor(label : params.itemColor)
+		ItemColor itemColor = new ItemColor(itemColorValue : params.itemColor)
 		itemColor.imageList = uploadedImages
 		if(!itemColor.save(flush:true)){
 			itemColor.errors.each{log.debug"error in saving itemColor == "+it}
