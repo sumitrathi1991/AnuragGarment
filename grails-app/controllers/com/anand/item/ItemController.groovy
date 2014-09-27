@@ -69,7 +69,7 @@ class ItemController {
 			item.isPublished = true;
 		}
 		if(!item.save(flush:true)){
-			item.errors.each {log.debu"error in publishing the item "+it}
+			item.errors.each {log.debug"error in publishing the item "+it}
 			
 		}
 		def itemList = Item.findAllByIsDeleted(false);

@@ -144,7 +144,7 @@ $(document).ready(function() {
 	$("#brandTab").click(function() {
 		getBrandList();
 		});
-
+	
 	});
 	
 	$('#itemDataTable').dataTable({
@@ -154,5 +154,7 @@ $(document).ready(function() {
 		}
 
 	});
+	
+
 
 </script>

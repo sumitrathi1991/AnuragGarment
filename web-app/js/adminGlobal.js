@@ -66,6 +66,7 @@ function addBanner(){
 		data : uploadBannerFormData ,
 		success : function(response,textStatus){
 			$('#modal-AddBanner').modal('hide');
+			$("#tab-BannerList").html(response);
 		},
 		error : function(response,textStatus){}
 	});
@@ -79,6 +80,7 @@ function addBrand(){
 		data : uploadBrandFormData ,
 		success : function(response,textStatus){
 			$('#modal-AddBrand').modal('hide');
+			$("#tab-BrandList").html(response);
 		},
 		error : function(response,textStatus){}
 	});

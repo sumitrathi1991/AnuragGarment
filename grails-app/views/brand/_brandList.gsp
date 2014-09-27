@@ -22,86 +22,42 @@
 	
 	<!-- Table body -->
 	<tbody>
-	
+	<g:each in="${brandList}" var='brand'>
 		<!-- Table row -->
 		<tr class="gradeX">
-			<td>Ranbir Kapoor</td>
-			<td>Sports Shoes</td>
-			<td>2</td>
-			<td>Dwarka</td>
-			<td>2 Sep 2014</td>
-			<td>Pending</td>
+			<td>${brand.id }</td>
+			<td>${brand.brandName }</td>
+			<td>${brand.brandDescription }</td>
+			<td>${brand.image.size() }</td>
+			<td>
+				<img id="image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${brand.logo.name}"]"/>" height="50" width="55" border="0"/>
+			</td>
+			<td>
+				<g:if test="${brand.isPublished == false}">
+					<g:remoteLink controller="brand" action="publishBrand" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">
+					<span class="btn btn-primary btn-mini">
+						Un-published</span>
+					</g:remoteLink>
+				</g:if>
+				<g:else>
+					<g:remoteLink controller="brand" action="publishBrand" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">
+					<span class="btn btn-success btn-mini">
+						published</span>
+					</g:remoteLink>
+				</g:else>
+			</td>
 			<td>
 				<i class="icon-edit"></i>
-				<g:remoteLink controller="item" action="deleteItem" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
+				<g:remoteLink controller="brand" action="deleteBrand" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">
 					<i class="icon-remove-sign"></i>
 				</g:remoteLink>
-				<g:remoteLink class="linkColor" controller="item" style="font-size: medium" action="getItemDetails" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
+				<g:remoteLink class="linkColor" controller="brand" style="font-size: medium" action="getBrandDetails" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">
 					<i class="icon-list-ul"></i>
 				</g:remoteLink>
 			</td>
 		</tr>
 		<!-- // Table row END -->
-		
-		<!-- Table row -->
-		<tr class="gradeC">
-			<td>Arjun Kapoor</td>
-			<td>Formal Shoes</td>
-			<td>3</td>
-			<td>Bhadurgarh</td>
-			<td>5 Sep 2014</td>
-			<td>Pending</td>
-			<td>
-				<i class="icon-edit"></i>
-				<g:remoteLink controller="item" action="deleteItem" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
-					<i class="icon-remove-sign"></i>
-				</g:remoteLink>
-				<g:remoteLink class="linkColor" controller="item" style="font-size: medium" action="getItemDetails" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
-					<i class="icon-list-ul"></i>
-				</g:remoteLink>
-			</td>
-		</tr>
-		<!-- // Table row END -->
-		
-		<!-- Table row -->
-		<tr class="gradeC">
-			<td>Amir Khan</td>
-			<td>Casual Shoes</td>
-			<td>1</td>
-			<td>Najafgarh</td>
-			<td>3 Sep 2014</td>
-			<td>Accepted</td>
-			<td>
-				<i class="icon-edit"></i>
-				<g:remoteLink controller="item" action="deleteItem" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
-					<i class="icon-remove-sign"></i>
-				</g:remoteLink>
-				<g:remoteLink class="linkColor" controller="item" style="font-size: medium" action="getItemDetails" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
-					<i class="icon-list-ul"></i>
-				</g:remoteLink>
-			</td>
-		</tr>
-		<!-- // Table row END -->
-		
-		<!-- Table row -->
-		<tr class="gradeC">
-			<td>Imran Khan</td>
-			<td>Sports Shoes</td>
-			<td>3</td>
-			<td>Mehrauli</td>
-			<td>8 Sep 2014</td>
-			<td>Pending</td>
-			<td>
-				<i class="icon-edit"></i>
-				<g:remoteLink controller="item" action="deleteItem" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
-					<i class="icon-remove-sign"></i>
-				</g:remoteLink>
-				<g:remoteLink class="linkColor" controller="item" style="font-size: medium" action="getItemDetails" params="${[id: item.id,sortType:'id']}" update="manageTabDiv">
-					<i class="icon-list-ul"></i>
-				</g:remoteLink>
-			</td>
-		</tr>
-		<!-- // Table row END -->
+		</g:each>
 		
 		
 	</tbody>

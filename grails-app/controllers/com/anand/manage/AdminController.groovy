@@ -21,7 +21,7 @@ class AdminController {
 		User user = springSecurityService.currentUser
 		Role role = Role.findByAuthority("ROLE_BUYER")
 		def userList = UserRole.findAllByRole(role,,[sort:'id',order:'dec']).user
-		def itemList = Item.findAll();
+		def itemList = Item.findAllByIsDeleted(false);
 		[userFullName:user.fullName,userList:userList,itemList:itemList]
 		
 	}
