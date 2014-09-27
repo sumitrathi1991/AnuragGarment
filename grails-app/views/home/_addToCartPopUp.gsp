@@ -73,7 +73,7 @@
                                     	<!-- quantity wanted -->
                                         <label>Quantity:</label>
                                         <input type='button' class='btn btn-default qtyminus' value='-' field='quantity' />
-    									<input type='text' name='quantity' value='0' class='btn btn-default qty' />
+    									<input type='text' name='quantity'  id="quantity" value='0' class='btn btn-default qty' />
     									<input type='button' class='btn btn-default qtyplus' value='+'  field='quantity' />
                                         <span class="clearfix"></span>
                                         <!-- minimal quantity wanted -->
@@ -81,9 +81,7 @@
                                 <div class="box-cart-bottom">
                                     <div>
                                         <p id="add_to_cart" class="buttons_bottom_block no-print">
-                                            <button type="submit" name="Submit" class="exclusive">
-                                                <a href="#layer_cart" class="various"><span>Add to cart</span></a>
-                                            </button>
+                                                <a href="javascript:void(0)" id="addToCart" class="various exclusive"><span>Add to cart</span></a>
                                         </p>
                                     </div>
                                     
@@ -102,31 +100,3 @@
  </div>
  </div>
  <!-- / Product PopUp /-->
- 
- <!-- Layer Cart Popup -->
- <div id="layer_cart" style="display: none;">
-		<div class="clearfix">
-			<div class="layer_cart_product">
-				<h2><i class="icon-ok"></i>Product successfully added to your shopping cart</h2>
-						<div class="col-xs-12 col-md-12 product_head clearfix">
-							<div class="col-xs-6 col-md-6">
-								<strong class="">Item in cart:</strong>
-							</div>
-							<div class="col-xs-3 col-md-3">
-								<strong class="">Price:</strong>
-							</div>
-							<div class="col-xs-3 col-md-3">
-								<strong class="">Total:</strong>
-							</div>
-						</div>
-						<div id="cartData">
-						
-						</div>
-						<div>
-							Total Product : <span class="total"></span>
-						</div>
-			</div>
-		</div>
-	</div>
-   <!-- / Layer Cart Popup /--> 
- 

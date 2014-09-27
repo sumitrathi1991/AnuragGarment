@@ -109,6 +109,7 @@ class HomeController {
 		Item item = Item.get(params.itemId)
 		List imageList = decodeImageUrl(item.itemSize[0].itemColor[0].imageList)
 		JSONObject cartData = new JSONObject()
+		cartData.put("itemId", item.id)
 		cartData.put("name", item.itemName)
 		cartData.put("brand", item.itemBrand)
 		cartData.put("images",imageList)

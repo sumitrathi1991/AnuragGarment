@@ -332,8 +332,8 @@
 		</div>
 		<!--end HOOK_PRODUCT_TAB -->
 		
-		<div id="addToCart1">
-			<g:render template="/home/addToCartPopUp" />
+		<div id="addToCart">
+			<g:render template="/home/cartItem" />
 		</div>
 					
 		<!-- description & features -->

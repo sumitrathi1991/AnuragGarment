@@ -87,4 +87,13 @@ class CartController {
 		String imageUrl = grailsApplication.config.imagePublicUrl+item.itemSize[0].itemColor[0].imageList[0].name
 		return imageUrl
 	}
+	
+	
+	def cart(){
+		log.debug"in cart display"
+	}
+	
+	def address(){
+		
+	}
 }
