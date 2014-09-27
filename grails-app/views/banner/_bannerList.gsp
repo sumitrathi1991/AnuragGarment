@@ -1,7 +1,7 @@
  <!-- Widget -->
 <div class="widget widget-heading-simple widget-body-gray clearfix">
 	<div class="row-fluid" onClick="addItemOverlay()">
-		<a href="#modal-AddItem" data-toggle="modal"><span class="btn btn-primary btn-icon glyphicons circle_plus pull-right"><i></i>Add</span></a>
+		<a href="#modal-AddBanner" data-toggle="modal"><span class="btn btn-primary btn-icon glyphicons circle_plus pull-right"><i></i>Add</span></a>
 	</div>
 </div>
  <!-- Table -->
@@ -103,6 +103,10 @@
 		<!-- // Table body END -->
 		
 	</table>
+	<!-- Modal Add Item size and colors -->
+	 <div class="modal modal-lg hide fade" id="modal-AddBanner">
+        	<g:render template="/banner/upload_banner" />
+    	</div>
 <!-- // Table END -->
 <script type="text/javascript">
 	       $('#bannerDataTable').dataTable({

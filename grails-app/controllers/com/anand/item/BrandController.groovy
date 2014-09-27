@@ -11,7 +11,11 @@ class BrandController {
 	}
 	
 	def addBrand(){
-		
+		log.debug"Add brand params: "+params
+		HashMap result = new HashMap();
+		result.status = "success";
+		result.message = "Item has been added successfully."
+		respond result, [formats:['json', 'xml']];
 	}
 	
 	def deleteBrand(){

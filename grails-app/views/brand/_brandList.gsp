@@ -1,7 +1,7 @@
  <!-- Widget -->
 <div class="widget widget-heading-simple widget-body-gray clearfix">
 	<div class="row-fluid" onClick="addItemOverlay()">
-		<a href="#modal-AddItem" data-toggle="modal"><span class="btn btn-primary btn-icon glyphicons circle_plus pull-right"><i></i>Add</span></a>
+		<a href="#modal-AddBrand" data-toggle="modal"><span class="btn btn-primary btn-icon glyphicons circle_plus pull-right"><i></i>Add</span></a>
 	</div>
 </div>
       	 <!-- Table -->
@@ -109,6 +109,11 @@
 	
 </table>
 		<!-- // Table END -->
+		
+		<!-- Modal Add Item size and colors -->
+	 <div class="modal modal-lg hide fade" id="modal-AddBrand">
+        	<g:render template="/brand/upload_brand" />
+    	</div>
 <script type="text/javascript">
 	       $('#brandDataTable').dataTable({
 	   		"sPaginationType" : "bootstrap",

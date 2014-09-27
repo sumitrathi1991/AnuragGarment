@@ -11,7 +11,11 @@ class BannerController {
 	}
 	
 	def addBanner(){
-		
+		log.debug"Add banner params: "+params
+		HashMap result = new HashMap();
+		result.status = "success";
+		result.message = "Item has been added successfully."
+		respond result, [formats:['json', 'xml']];
 	}
 	
 	def editBanner(){
