@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="/css/fonts/glyphicons/css/glyphicons.css" type="text/css" media="all">
         <link rel="stylesheet" href="/css/fonts/font-awesome/css/font-awesome.min.css" type="text/css" media="all">
         
+        <!-- Uniform Pretty Checkboxes -->
+		<link href="/css/uniform.default.css" rel="stylesheet" />
         
         <link rel="stylesheet" href="/css/jquery-ui-1.9.2.custom.min.css" type="text/css" media="all">
         
@@ -45,13 +47,15 @@
 		<!-- Bootstrap -->
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 		
+		<!-- Uniform Forms Plugin -->
+		<script src="/js/jquery.uniform.min.js"></script>
 		<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
 		<script type="text/javascript" src="/js/plupload.full.js"></script>
 		<script type="text/javascript" src="/js/jquery.plupload.queue.js"></script>
 		
 		<!-- File Managers Demo Script -->
 		<script type="text/javascript" src="/js/file_managers.js"></script>
-		<script type="text/javascript" src="/js/file_managers_itemSize.js"></script>
+<%--		<script type="text/javascript" src="/js/file_managers_itemSize.js"></script>--%>
 		
 		<!-- DataTables Tables Plugin -->
 		<script src="/js/jquery.dataTables.min.js"></script>

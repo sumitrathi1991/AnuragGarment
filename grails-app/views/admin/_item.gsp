@@ -137,12 +137,11 @@ $(document).ready(function() {
 		});
 	
 	$("#bannerTab").click(function() {
-		
-		getBannerList();
+			getBannerList();
 		});
 
 	$("#brandTab").click(function() {
-		getBrandList();
+			getBrandList();
 		});
 	
 	});

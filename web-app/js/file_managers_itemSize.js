@@ -15,7 +15,7 @@ $(function()
 		$('form.dropzone').dropzone();
 	
 	/* Plupload */
-	$('#pluploadUploaderItemSize').pluploadQueue({
+	$('.pluploadUploaderClass').pluploadQueue({
 		// General settings
 		runtimes : 'gears,browserplus,html5',
 		url : "http://localhost:8080/item/uploadItemImage",

@@ -9,7 +9,6 @@
 <!-- Modal body -->
 <form id="uploadBrandForm" name="uploadBrandForm" onsubmit="return false" >
 <div class="modal-body">
-	<div class="widget-body">
 		<div class="row-fluid">
 			<div class="span12">
 				
@@ -22,10 +21,12 @@
 					<input type="text" id="brandDescription" name="brandDescription" placeholder="Enter your Brand Description" class="span12">
 				</div>
 				<div class="row-fluid">
-				<p>
-					<label class="strong">Publish now : </label> 
-					<input type="checkbox" name="publishBrand" id="publishBrand" value="1" checked="checked">
-				</p>
+					<div class="uniformjs">
+						<label class="checkbox">
+							<input type="checkbox" class="checkbox" name="publishBrand" id="publishBrand" value="1" checked="checked">
+								Publish now
+						</label>
+					</div>
 				</div>
 				
 				<div class="row-fluid">
@@ -38,7 +39,6 @@
 	            </div>
 			</div>
 		</div>
-	</div>
 </div>
 <!-- // Modal body END -->
 

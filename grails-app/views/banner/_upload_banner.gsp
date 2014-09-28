@@ -9,7 +9,6 @@
 <!-- Modal body -->
 <form id="uploadBannerForm" name="uploadBannerForm" onsubmit="return false" >
 <div class="modal-body">
-	<div class="widget-body">
 		<div class="row-fluid">
 			<div class="span12">
 				
@@ -32,10 +31,12 @@
 					</select>
 				</div>
 				<div class="row-fluid">
-				<p>
-					<label class="strong">Publish now : </label> 
-					<input type="checkbox" name="publishBanner" id="publishBanner" value="1" checked="checked">
-				</p>
+					<div class="uniformjs">
+						<label class="checkbox">
+							<input type="checkbox" class="checkbox" name="publishBanner" id="publishBanner" value="1" checked="checked">
+								Publish now
+						</label>
+					</div>
 				</div>
 				<div class="row-fluid">
 					<label class="strong">Upload Images:</label>
@@ -47,7 +48,6 @@
 	            </div>
 			</div>
 		</div>
-	</div>
 </div>
 <!-- // Modal body END -->
 
