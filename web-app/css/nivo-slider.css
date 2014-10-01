@@ -50,7 +50,7 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 /* Direction Nav */
 .pos-slideshow-container .flex-direction-nav {*height: 0;}
 .pos-slideshow-container .flex-direction-nav a,
-.nivo-directionNav a { width: 30px; height: 30px; margin: -15px 0 0; display: block; background: url(themes/default/arrows.png) no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; z-index: 9; }
+.nivo-directionNav a { width: 30px; height: 30px; margin: -15px 0 0; display: block;  position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; z-index: 9; }
 .pos-slideshow-container .flex-direction-nav .flex-next,
 .nivo-directionNav a.nivo-nextNav { background-position: 100% 0; right: 10px; }
 .pos-slideshow-container .flex-direction-nav .flex-prev,

@@ -9,19 +9,16 @@
  * ========================================================== */ 
 var itemImagesArray = []
 function addItemOverlay(){
-	/** UniformJS: Sexy form elements */
-	if ($('.uniformjs').length) $('.uniformjs').find("select, input, button, textarea").uniform();
-	multiFileUploader();
 	itemImagesArray = []
 }
-function multiFileUploader() 
+$(function() 
 {
 	/* Dropzone */
 	if ($.fn.dropzone)
 		$('form.dropzone').dropzone();
 	
 	/* Plupload */
-	$('.pluploadUploaderClass').pluploadQueue({
+	$('#pluploadUploader').pluploadQueue({
 		// General settings
 		runtimes : 'gears,browserplus,html5',
 		url : "http://localhost:8080/item/uploadItemImage",
@@ -139,4 +136,4 @@ function multiFileUploader()
 	            }
 		 }
 	});
-}
+});

@@ -44,6 +44,7 @@ function getBrandList(){
 }
 
 function uploadItemSize(){
+	console.log(uploadItemSizeUrl)
 	var itemSizeFormData = $('#uploadItemSizeForm').serialize();
 	jQuery.ajax({
 		type : 'POST',
@@ -57,31 +58,3 @@ function uploadItemSize(){
 	});
 }
 
-function addBanner(){
-	
-	var uploadBannerFormData = $('#uploadBannerForm').serialize();
-	jQuery.ajax({
-		type : 'POST',
-		url : uploadBannerUrl ,
-		data : uploadBannerFormData ,
-		success : function(response,textStatus){
-			$('#modal-AddBanner').modal('hide');
-			$("#tab-BannerList").html(response);
-		},
-		error : function(response,textStatus){}
-	});
-}
-
-function addBrand(){
-	var uploadBrandFormData = $('#uploadBrandForm').serialize();
-	jQuery.ajax({
-		type : 'POST',
-		url : uploadBrandUrl ,
-		data : uploadBrandFormData ,
-		success : function(response,textStatus){
-			$('#modal-AddBrand').modal('hide');
-			$("#tab-BrandList").html(response);
-		},
-		error : function(response,textStatus){}
-	});
-}
