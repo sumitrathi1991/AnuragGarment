@@ -78,6 +78,7 @@
                                         <span class="clearfix"></span>
                                         <!-- minimal quantity wanted -->
                                 </div> <!-- end product_attributes -->
+                                <div id="noQuantity" style="display:none;">Please enter valid quantity first.</div>
                                 <div class="box-cart-bottom">
                                     <div>
                                         <p id="add_to_cart" class="buttons_bottom_block no-print">
@@ -86,6 +87,7 @@
                                     </div>
                                     <strong></strong>
                                 </div> <!-- end box-cart-bottom -->
+                                <div id="errorMessage" style="display: none;"></div>
                             </div> <!-- end box-info-product -->
                         </form>
 					

@@ -110,7 +110,6 @@
 <!-- Add To Cart Popup Template -->
 	<div id="addToCart1">
 		<g:render template="/home/addToCartPopUp" />
-		<g:render template="/home/cartItem" />
 	</div>
 <!-- /- Add To Cart Popup Template -/ --> 
    
@@ -177,10 +176,9 @@ $('#addToCart').on('click', function(){
 	var	quantityValid = isNaN(quantity);
 	if(quantity == ''  || quantityValid || quantity < 1){
 		$('#noQuantity').show().delay(1000).fadeOut()
+		return false;
 	}
 	else{
-		//$('.fancybox-overlay').hide()
-		$('#product_preview').hide()		
 	var itemSize = $('.itemSize').html();
 	var itemColor = $('.itemColor').html()
 	var price = $('#our_price_display').text().slice(1)
@@ -191,22 +189,13 @@ $('#addToCart').on('click', function(){
 					async : false,
 					data : 'quantity='+quantity+'&item='+itemId+'&price='+price+'&itemSize='+itemSize+'&itemColor='+itemColor,
 					success : function(data) {
-						$('.fancybox-overlay').show();
-					$.fancybox({
-			        href: '#layer_cart', 
-			        maxWidth	: 900,
-					fitToView	: false,
-					width		: '100%',
-					autoSize	: false,
-					closeClick	: false,
-					openEffect	: 'fade',
-					closeEffect	: 'fade',
-					helpers	: {
-						title	: {
-							type: 'float'
-						}
-					}
-			    });
+						if(data.result == false){
+							$('#errorMessage').html(data.message);
+							$('#errorMessage').show().delay(2000).fadeOut();
+							return false;
+							}
+						else{
+							alert("in yes")
 				
 			    $('#etalage').etalage({
 			    	thumb_image_width: 300,
@@ -214,8 +203,6 @@ $('#addToCart').on('click', function(){
 			    	show_hint: true,
 
 			    });
-					
-					//$('#layer_cart').show();
 						
 				    $('#cartData').html('')
 				    for(var i =0 ; i < data.length; i++){
@@ -225,15 +212,9 @@ $('#addToCart').on('click', function(){
 							'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].total+'</span></div></div></div>')				
 					 }
 					 $('.total').html(data[0].grandTotal)
-				    	//removeCartLine();
-						/*if(data.result == false){
-							$('#errorMessage').html(data.message);
-							$('#errorMessage').show().delay(2000).fadeOut();
-							}
-						else{
-							$('#layer_cart').show();
-					}*/
-					 $('#layer_cart').show();
+				    	///removeCartLine();
+						$('#layer_cart').show();
+					}
 					},
 					error : function(XMLHttpRequest, textStatus, errorThrown) {
 					}
