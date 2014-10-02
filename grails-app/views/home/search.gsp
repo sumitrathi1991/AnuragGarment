@@ -95,10 +95,12 @@
                                     </div>
 										<ul class="col-lg-12 layered_filter_ul productColor">
 										<g:each in="${colorList}" var="color">
+										<g:each in="${color}" var="itemColor">
 										<li class="nomargin hiddable col-lg-6">
-												<input type="checkbox" class="checkbox" name="color" id="" value="${color[0]}">
-                                                <label for="color"><a href="#">${color[0]}</a></label>
+												<input type="checkbox" class="checkbox" name="color" id="" value="${itemColor[0]}">
+                                                <label for="color"><a href="#">${itemColor[0]}</a></label>
 										</li>
+										</g:each>
 										</g:each>
 										</ul>
 								</div>

@@ -46,7 +46,7 @@ class HomeController {
 		List brandList =  Item.findAll()?.itemBrand?.unique()
 		List typeList = Item.findAll()?.itemType?.unique()
 		List itemForList = Item.findAll()?.itemFor?.unique()
-		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName,typeList:typeList,itemForList : itemForList,itemType: '', itemType : '']
+		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName,typeList:typeList,itemForList : itemForList,itemType: '', itemType : '']
 	}
 
 	def filterData(){
@@ -57,19 +57,19 @@ class HomeController {
 			items = Item.findAllByItemBrand(params.brand)
 		if(params.containsKey('price')){
 			items.each {item ->
-				item.itemSize.each{ itemSize ->
-					if(itemSize.itemPrice <= (params.price as float))
+					if(item.itemPrice <= (params.price as float))
 						filterItem.add(item)
-				}
 			}
 			items = filterItem
 			filterItem = []
 		}
 		if(params.containsKey('color')){
 			items.each{ item ->
-				item.itemColor.each {
-					if(it.label == params.color)
+				item.itemSize.each { itemSize ->
+					itemSize.itemColor.each{
+					if(it.itemColorValue == params.color)
 						filterItem.add(item)
+					}
 				}
 			}
 			items = filterItem
@@ -78,7 +78,7 @@ class HomeController {
 		if(params.containsKey('itemSize')){
 			items.each{ item ->
 				item.itemSize.each {
-					if(it.label == params.itemSize)
+					if(it.itemSizeValue == params.itemSize)
 						filterItem.add(item)
 				}
 			}
@@ -140,6 +140,6 @@ class HomeController {
 		List brandList =  Item.findAll()?.itemBrand?.unique()
 		List typeList = Item.findAll()?.itemType?.unique()
 		List itemForList = Item.findAll()?.itemFor?.unique()
-		render view:"info", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList,itemType:params.itemType, itemFor : params.itemFor,typeList:typeList,itemForList:itemForList]
+		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList,itemType:params.itemType, itemFor : params.itemFor,typeList:typeList,itemForList:itemForList]
 	}
 }
