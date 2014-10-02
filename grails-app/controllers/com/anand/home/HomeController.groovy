@@ -46,7 +46,7 @@ class HomeController {
 		List brandList =  Item.findAll()?.itemBrand?.unique()
 		List typeList = Item.findAll()?.itemType?.unique()
 		List itemForList = Item.findAll()?.itemFor?.unique()
-		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName,typeList:typeList,itemForList : itemForList,itemType: '', itemType : '']
+		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName,typeList:typeList,itemForList : itemForList,itemType: params.itemType, itemFor :params.itemFor]
 	}
 
 	def filterData(){
@@ -101,6 +101,14 @@ class HomeController {
 			items = filterItem
 			filterItem = []
 		}
+		if(params.containsKey('itemCategory')){
+			items.each{ item ->
+					if(item.itemCategory == params.itemCategory)
+						filterItem.add(item)
+			}
+			items = filterItem
+			filterItem = []
+		}
 		render template:"itemGrid", model : [items : items]
 	}
 	
@@ -134,12 +142,13 @@ class HomeController {
 	
 	def renderHeaderData(){
 		log.debug"in renderHeaderData=="+params
-		List items = Item.findAllByItemForAndItemType(params.itemFor,params.itemType)
-		List sizeList = Item.findAll()?.itemSize?.label.unique()
-		List colorList = Item.findAll()?.itemColor?.label.unique()
+		List items = Item.findAllByItemForAndItemCategory(params.itemFor,params.itemCategory)
+		List sizeList = Item.findAll()?.itemSize?.itemSizeValue.unique()
+		List colorList = Item.findAll()?.itemSize?.itemColor?.itemColorValue.unique()
 		List brandList =  Item.findAll()?.itemBrand?.unique()
 		List typeList = Item.findAll()?.itemType?.unique()
 		List itemForList = Item.findAll()?.itemFor?.unique()
-		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList,itemType:params.itemType, itemFor : params.itemFor,typeList:typeList,itemForList:itemForList]
+		List itemCategoryList = Item.findAll()?.itemCategory?.unique()
+		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList,itemCategory:params.itemCategory, itemFor : params.itemFor,typeList:typeList,itemForList:itemForList,itemCategoryList:itemCategoryList]
 	}
 }

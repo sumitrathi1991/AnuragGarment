@@ -7,7 +7,10 @@
 		<meta name="generator" content="PrestaShop">
 		<meta name="robots" content="index,follow">
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
-		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<script type="text/javascript">
+		var showAddToCartpopupUrl = "${createLink(controller:'home',action:'showAddToCartPopup')}";
+		</script> 
        <head>
 			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         </head>
@@ -146,6 +149,20 @@
 										</g:each>
 										</ul>
 								</div>
+								
+								<div class="layered_filter clearfix">
+                                    <div class="layered_subtitle_heading">
+                                        <span class="layered_subtitle">Category</span>
+                                    </div>
+										<ul class="col-lg-12 layered_filter_ul itemCategory">
+										 <g:each in="${itemCategoryList}" var="category">
+										 <li class="nomargin hiddable col-lg-6">																	
+										 		<input type="checkbox" class="checkbox" name="itemCategory" id="" value="${category}">
+                                                <label for="itemSize"><a href="#">${category}</a></label>																														 										
+										</li>
+										</g:each>
+										</ul>
+								</div>
 							</div>
 							</form>
 						</div>
@@ -219,7 +236,7 @@
 							</div><!-- .row -->
 						</div><!-- #columns -->
 					</div><!-- .columns-container -->
-			
+			<g:render template="/home/addToCartPopUp" />
             <!-- Footer -->
 		</div>
 <!-- #page -->
@@ -244,16 +261,19 @@ $(document).ready(function(){
 	$('.itemFor li .checkbox').on('click', function(){
 		$('.itemFor li .checkbox').removeAttr('checked')
 		})
-	var itemType = '${itemType}'
+	$('.itemCategory li .checkbox').on('click', function(){
+		$('.itemCategory li .checkbox').removeAttr('checked')
+		})
+	var itemCategory = '${itemCategory}'
 	var itemFor = '${itemFor}'
 	var brand = '${brand}'
 		$('.brands li').each(function(){
 		if($(this).find('.checkbox').val() == brand)
 			$(this).find('.checkbox').attr('checked', true);
 		})
-		if(itemType !=''){
-		$('.itemType li').each(function(){
-		if($(this).find('.checkbox').val() == itemType)
+		if(itemCategory !=''){
+		$('.itemCategory li').each(function(){
+		if($(this).find('.checkbox').val() == itemCategory)
 			$(this).find('.checkbox').attr('checked', true);
 		})
 		}
