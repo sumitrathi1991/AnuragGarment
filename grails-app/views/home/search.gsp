@@ -7,7 +7,10 @@
 		<meta name="generator" content="PrestaShop">
 		<meta name="robots" content="index,follow">
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
-		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<script type="text/javascript">
+		var showAddToCartpopupUrl = "${createLink(controller:'home',action:'showAddToCartPopup')}";
+		</script> 
        <head>
 			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         </head>
@@ -219,7 +222,7 @@
 							</div><!-- .row -->
 						</div><!-- #columns -->
 					</div><!-- .columns-container -->
-			
+			<g:render template="/home/addToCartPopUp" />
             <!-- Footer -->
 		</div>
 <!-- #page -->

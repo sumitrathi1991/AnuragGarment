@@ -29,7 +29,7 @@
                                         </h5>
                                         <p>Brand : ${item.itemBrand}</p>
                                         <p>Size : ${item.itemSize[0].itemSizeValue}   | Color : ${item.itemSize[0].itemColor[0].itemColorValue }  </p>
-                                          <p class="product-desc">
+                                          <p class="product-desc">Description : 
                                           ${item.itemDescription}
                                           </p>
                                             <div class="content_price">

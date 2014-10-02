@@ -160,6 +160,14 @@
                     <label>Brand </label>
                     <span class="editable brand">${item.itemBrand}</span>
 				</p>
+				<div id="short_description_block">
+				 <label>Description : </label>
+                      <div id="short_description_content" class="rte align_justify description"><p>${item.itemDescription}</p></div>
+          			<p class="buttons_bottom_block">
+                  		<a href="javascript:{}" class="button"> More details</a>
+             		</p>
+                  <!---->
+             	 </div> <!-- end short_description_block -->
 								<div class="product_attributes clearfix">
 									<!-- quantity wanted -->
 									<label>Quantity:</label> <input type='button'
@@ -171,13 +179,6 @@
 									<!-- minimal quantity wanted -->
 								</div>
 								<div id="noQuantity" style="display:none;">Please enter valid quantity first.</div>
-                  <div id="short_description_block">
-                      <div id="short_description_content" class="rte align_justify description"><p>${item.itemDescription}</p></div>
-          			<p class="buttons_bottom_block">
-                  		<a href="javascript:{}" class="button"> More details</a>
-             		</p>
-                  <!---->
-             	 </div> <!-- end short_description_block -->
 				<!-- number of item in stock -->
 				<p id="pQuantityAvailable">
 					<span id="quantityAvailable">${item.itemSize[0].quantity}</span>
