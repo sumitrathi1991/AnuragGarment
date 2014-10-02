@@ -149,6 +149,20 @@
 										</g:each>
 										</ul>
 								</div>
+								
+								<div class="layered_filter clearfix">
+                                    <div class="layered_subtitle_heading">
+                                        <span class="layered_subtitle">Category</span>
+                                    </div>
+										<ul class="col-lg-12 layered_filter_ul itemCategory">
+										 <g:each in="${itemCategoryList}" var="category">
+										 <li class="nomargin hiddable col-lg-6">																	
+										 		<input type="checkbox" class="checkbox" name="itemCategory" id="" value="${category}">
+                                                <label for="itemSize"><a href="#">${category}</a></label>																														 										
+										</li>
+										</g:each>
+										</ul>
+								</div>
 							</div>
 							</form>
 						</div>
@@ -247,16 +261,19 @@ $(document).ready(function(){
 	$('.itemFor li .checkbox').on('click', function(){
 		$('.itemFor li .checkbox').removeAttr('checked')
 		})
-	var itemType = '${itemType}'
+	$('.itemCategory li .checkbox').on('click', function(){
+		$('.itemCategory li .checkbox').removeAttr('checked')
+		})
+	var itemCategory = '${itemCategory}'
 	var itemFor = '${itemFor}'
 	var brand = '${brand}'
 		$('.brands li').each(function(){
 		if($(this).find('.checkbox').val() == brand)
 			$(this).find('.checkbox').attr('checked', true);
 		})
-		if(itemType !=''){
-		$('.itemType li').each(function(){
-		if($(this).find('.checkbox').val() == itemType)
+		if(itemCategory !=''){
+		$('.itemCategory li').each(function(){
+		if($(this).find('.checkbox').val() == itemCategory)
 			$(this).find('.checkbox').attr('checked', true);
 		})
 		}
