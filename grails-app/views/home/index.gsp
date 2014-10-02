@@ -179,6 +179,8 @@ $('#addToCart').on('click', function(){
 		$('#noQuantity').show().delay(1000).fadeOut()
 	}
 	else{
+		//$('.fancybox-overlay').hide()
+		$('#product_preview').hide()		
 	var itemSize = $('.itemSize').html();
 	var itemColor = $('.itemColor').html()
 	var price = $('#our_price_display').text().slice(1)
@@ -189,7 +191,7 @@ $('#addToCart').on('click', function(){
 					async : false,
 					data : 'quantity='+quantity+'&item='+itemId+'&price='+price+'&itemSize='+itemSize+'&itemColor='+itemColor,
 					success : function(data) {
-					$('#product_preview').hide()
+						$('.fancybox-overlay').show();
 					$.fancybox({
 			        href: '#layer_cart', 
 			        maxWidth	: 900,
@@ -223,7 +225,6 @@ $('#addToCart').on('click', function(){
 							'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].total+'</span></div></div></div>')				
 					 }
 					 $('.total').html(data[0].grandTotal)
-					 alert("end")
 				    	//removeCartLine();
 						/*if(data.result == false){
 							$('#errorMessage').html(data.message);

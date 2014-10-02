@@ -160,11 +160,17 @@
                     <label>Brand </label>
                     <span class="editable brand">${item.itemBrand}</span>
 				</p>
-				<p id="product_condition">
-                    <label>Quantity </label>
-                    <input type="text" id="quantity"/>
-				</p>
-				<div id="noQuantity" style="display:none;">Please enter valid quantity first.</div>
+								<div class="product_attributes clearfix">
+									<!-- quantity wanted -->
+									<label>Quantity:</label> <input type='button'
+										class='btn btn-default qtyminus' value='-' field='quantity' />
+									<input type='text' name='quantity' id="quantity" value='0'
+										class='btn btn-default qty' /> <input type='button'
+										class='btn btn-default qtyplus' value='+' field='quantity' />
+									<span class="clearfix"></span>
+									<!-- minimal quantity wanted -->
+								</div>
+								<div id="noQuantity" style="display:none;">Please enter valid quantity first.</div>
                   <div id="short_description_block">
                       <div id="short_description_content" class="rte align_justify description"><p>${item.itemDescription}</p></div>
           			<p class="buttons_bottom_block">
@@ -180,11 +186,19 @@
 				</p>
 				<!-- availability -->
 				<p id="availability_statut">
-					<span id="availability_value">In stock</span>				
+					<span id="availability_value">In stock</span>	
 				</p>
-				
-				<button id="addToCart" itemId="${productId}">Add To Cart</button>
-				<div id="errorMessage" style="display: none;"></div>
+								<div class="box-cart-bottom">
+									<div>
+										<p id="addToCart" itemId="${productId}"
+											class="buttons_bottom_block no-print">
+											<a href="javascript:void(0)" id="addToCart"
+												class="various exclusive"><span>Add to cart</span></a>
+										</p>
+									</div>
+									<strong></strong>
+								</div>
+								<div id="errorMessage" style="display: none;"></div>
 				<p class="warning_inline" id="last_quantities" style="display: none">Warning: Last items in stock!</p>
 				<p id="availability_date" style="display: none;">
 				<span id="availability_date_label">Availability date:</span>
@@ -420,6 +434,11 @@ var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
 				async : false,
 				data : 'quantity='+quantity+'&item='+itemId+'&price='+price+'&itemSize='+itemSize+'&itemColor='+itemColor,
 				success : function(data) {
+					if(data.result == false){
+						$('#errorMessage').html(data.message);
+						$('#errorMessage').show().delay(2000).fadeOut();
+						}
+					else{
 				$.fancybox({
 			        href: '#layer_cart', 
 			        maxWidth	: 900,
@@ -451,11 +470,7 @@ var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
 				 }
 				 $('.total').html(data[0].grandTotal)
 			    removeCartLine();
-					if(data.result == false){
-						$('#errorMessage').html(data.message);
-						$('#errorMessage').show().delay(2000).fadeOut();
-						}
-					else{
+					
 						$('#layer_cart').show();
 				}
 				},

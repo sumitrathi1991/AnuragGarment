@@ -38,7 +38,7 @@ class CartController {
 		}
 		else{
 		addTocartResponse.put("result", false)
-		addTocartResponse.put("message", "The maximum quanity available is "+item.getAvailableQuantity()+".")
+		addTocartResponse.put("message", "The maximum quanity available is "+itemSize.getAvailableQuantity()+".")
 		render addTocartResponse as JSON 
 		}
 	}
@@ -90,6 +90,7 @@ class CartController {
 	
 	
 	def cart(){
+		log.debug"in cart"
 		def cartId = session.getAttribute("cartId")
 		Cart cart = Cart.get(cartId)
 		[cart:cart]
