@@ -3,6 +3,7 @@
 		font-size: 1px;
 	}
 	.example {
+		background-image: url(../images/example2x.png);
 		-webkit-background-size:13px 13px;
 		-moz-background-size:13px 13px;
 		-o-background-size:13px 13px;
@@ -78,6 +79,11 @@ div.selector, div.checker, div.button, div.radio, div.uploader {
 div.selector, div.selector *, div.radio, div.radio *, div.checker, div.checker *, div.uploader, div.uploader *, div.button, div.button * {
   margin: 0;
   padding: 0; }
+
+.highContrastDetect {
+  background: url(".../images/jquery/uniform/bg-input.png") repeat-x 0 0;
+  width: 0px;
+  height: 0px; }
 
 /* Input & Textarea */
 input.uniform-input,
@@ -414,8 +420,8 @@ div.selector {
 .checker span input {
   margin: 0 !important; }
 
-/* .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] { */
-/*   margin: 0 !important; } */
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+  margin: 0 !important; }
 
 .radio-inline, .checkbox-inline {
   cursor: default; }
