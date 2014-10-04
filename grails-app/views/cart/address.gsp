@@ -47,15 +47,16 @@
 							</li>
 						</ul>
 						<!-- /Steps -->
-						<form action="" method="">
+						<g:form action="shipping" method="POST" controller="cart">
 							<div class="addresses clearfix">
 								<div class="row">
 									<div class="col-xs-12 col-sm-6">
 										<div class="address_delivery select form-group selector1">
-											<label for="id_address_delivery">Choose a delivery address:</label>
-												<select id="id_address_delivery" name="id_address_delivery" class="address_select form-control">
-													<option value="22" selected="selected">697</option>
-													<option value="23">My address</option>
+											<label for="addressTitle">Choose a delivery address:</label>
+												<select id="addressTitle" name="addressTitle" class="address_select form-control">
+												<g:each var="address" in="${addressList}">
+													<option value="${address.addressTitle}" selected="selected">${address.addressTitle}</option>
+												</g:each>
 												</select>
 											<span class="waitimage"></span>
 										</div>
@@ -83,53 +84,33 @@
 											<li class="address_title">
 												<h3 class="page-subheading">Your delivery address</h3>
 											</li>
-											<li class="">Abc abc</li>
-											<li class="">697 </li>
-											<li class="">abc, Florida 32004</li>
-											<li class="">United States</li>
-											<li class="">9876543210</li>
-											<li class="address_update">
+											<li class="name">${addressList[0]?.firstName} ${addressList[0]?.lastName}</li>
+											<li class="address1">${addressList[0]?.address1}</li>
+											<li class="address2">${addressList[0]?.address2}</li>
+											<li class="city">${addressList[0]?.city}</li>
+											<li class="state">${addressList[0]?.state}</li>
+											<li class="phoneNumber">${addressList[0]?.phoneNumber}</li>
+											<%--<li class="address_update">
 												<a class="button button-small btn btn-default" href="#" title="Update">
 													<span>Update<i class="icon-chevron-right right"></i></span>
 												</a>
 											</li>
-										</ul>
-									</div>
-									<div class="col-xs-12 col-sm-6">
-										<ul class="address alternate_item box" id="address_invoice">
-											<li class="address_title">
-												<h3 class="page-subheading">Your billing address</h3>
-											</li>
-											<li class="address_firstname lastname">Abc abc</li>
-											<li class="address_address1 address2">697 </li>
-											<li class="address_city, State:name postcode">abc, Florida 32004</li>
-											<li class="address_Country:name">United States</li>
-											<li class="address_phone">9876543210</li>
-											<li class="address_update">
-												<a class="button button-small btn btn-default" href="#" title="Update">
-													<span>Update
-														<i class="icon-chevron-right right"></i>
-													</span>
-												</a>
-											</li>
-										</ul>
+										--%></ul>
 									</div>
 								</div> <!-- end row -->
 								<p class="address_add submit">
-									<a href="address.htm" title="Add" class="button button-small btn btn-default">
-										<span>Add a new address<i class="icon-chevron-right right"></i></span>
-									</a>
+								<g:link action="createAddress" controller="cart" title="Add" class="button button-small btn btn-defaulticon-chevron-right right">Add a new address</g:link>
 								</p>
 							</div> <!-- end addresses -->
 							<p class="cart_navigation clearfix">
-								<g:link href="order-step4.htm" class="button btn btn-default standard-checkout button-medium" title="Proceed to checkout" action="shipping" controller="cart">
+								<button class="button btn btn-default standard-checkout button-medium" title="Proceed to checkout">
 									<span>Proceed to checkout<i class="icon-chevron-right right"></i></span>
-								</g:link>
+								</button>
 								<g:link class="button-exclusive btn btn-default" title="Continue shopping" controller="home" action="index">
 									<i class="icon-chevron-left"></i>Continue shopping
 								</g:link>
 							</p>
-						</form>
+						</g:form>
 						
 	
 					</div><!-- #center_column -->
@@ -140,14 +121,14 @@
 <!-- #page -->
 <script type="text/javascript">
 // Billing Address Dropdown List 
- $("#addressesAreEquals").change(function() {
+/* $("#addressesAreEquals").change(function() {
 	if($(this).is(':checked')){
 		$("#address_invoice_form").slideUp(100);
 	}
 	else{
 		$("#address_invoice_form").slideDown(100);
 	}
- });
+ });*/
  
  // Brands Logo Slider
 $('.pos-logo .bxslider').bxSlider({

@@ -5,6 +5,7 @@ import grails.converters.JSON
 import org.codehaus.groovy.grails.web.json.JSONArray
 import org.codehaus.groovy.grails.web.json.JSONObject
 
+import com.anand.address.Address
 import com.anand.item.Item
 import com.anand.item.ItemSize
 
@@ -97,10 +98,40 @@ class CartController {
 	}
 	
 	def address(){
-		
+		List addressList = Address.list()
+		def cartId = session.getAttribute("cartId")
+		Cart cart = Cart.get(cartId)
+		[addressList:addressList]
 	}
 	
 	def shipping(){
+		log.debug"in shipping == "+params
+		def cartId = session.getAttribute("cartId")
+		Cart cart = Cart.get(cartId)
+		Address address = Address.findByAddressTitle(params.addressTitle)
+		log.debug"address == "+address
+		cart.shipToAddress = address
+		if(!cart.save(flush:true)){
+			cart.errors.each{log.debug"error in saving cart == "+cart}
+		}
+	}
+	
+	def createAddress(){
 		
+	}
+	
+	def saveAddress(){
+		log.debug"in saveAddress == "+params
+		
+		JSONObject jsonObject = new JSONObject()
+		Address address = new Address(params)
+		if(!address.save(flush:true)){
+			address.errors.each{log.debug"error in saving address == "+it}
+			jsonObject.put("result",'error')
+		}
+		else{
+			jsonObject.put("result",'success')
+		}
+		render jsonObject as JSON
 	}
 }
