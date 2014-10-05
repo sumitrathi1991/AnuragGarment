@@ -139,32 +139,39 @@ $('#addToCart').on('click', function(){
 							return false;
 							}
 						else{
-							alert("in yes")
-				
-			    $('#etalage').etalage({
-			    	thumb_image_width: 300,
-			    	thumb_image_height: 400,
-			    	show_hint: true,
-
-			    });
+							$.fancybox({
+						        href: '#layer_cart', 
+						        maxWidth	: 900,
+								fitToView	: false,
+								width		: '100%',
+								autoSize	: false,
+								closeClick	: false,
+								openEffect	: 'fade',
+								closeEffect	: 'fade',
+								helpers	: {
+									title	: {
+										type: 'float'
+									}
+								}
+						    });
 						
-				    $('#cartData').html('')
-				    for(var i =0 ; i < data.length; i++){
-							$('#cartData').append('<div class="col-xs-12 col-md-12 product_row clearfix"><div class="col-xs-6 col-md-6"><div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src='+data[i].image+' width="70px" alt="Sed posuere" title="Sed posuere"></div>'+
-							'<div class="layer_cart_product_info"><span id="layer_cart_product_title" class="product-name">'+data[i].name+'<a href="javascript:void(0)" cartLineId='+data[i].cartLineId+' cartId='+data[i].cartId+' class="icon-remove-sign remove_cart_product"></a></span><ul><li><strong class="dark">Quantity:</strong><span id="layer_cart_product_quantity">'+data[i].quantity+'</span>'+
-							'<span class="divider">|</span></li><li><strong class="dark">Color:</strong><span id="layer_cart_product_price">'+data[i].color+'</span><span class="divider">|</span></li><li><strong class="dark">Size:</strong><span id="layer_cart_product_price">'+data[i].size+'</span></li></ul></div></div>'+
-							'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].total+'</span></div></div></div>')				
-					 }
-					 $('.total').html(data[0].grandTotal)
-				    	///removeCartLine();
-						$('#layer_cart').show();
-					}
+						    $('#cartData').html('')
+						    for(var i =0 ; i < data.length; i++){
+									$('#cartData').append('<div class="col-xs-12 col-md-12 product_row clearfix"><div class="col-xs-6 col-md-6"><div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src='+data[i].image+' width="70px" alt="Sed posuere" title="Sed posuere"></div>'+
+									'<div class="layer_cart_product_info"><span id="layer_cart_product_title" class="product-name">'+data[i].name+'<a href="javascript:void(0)" cartLineId='+data[i].cartLineId+' cartId='+data[i].cartId+' class="icon-remove-sign remove_cart_product"></a></span><ul><li><strong class="dark">Quantity:</strong><span id="layer_cart_product_quantity">'+data[i].quantity+'</span>'+
+									'<span class="divider">|</span></li><li><strong class="dark">Color:</strong><span id="layer_cart_product_price">'+data[i].color+'</span><span class="divider">|</span></li><li><strong class="dark">Size:</strong><span id="layer_cart_product_price">'+data[i].size+'</span></li></ul></div></div>'+
+									'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].total+'</span></div></div></div>')				
+							 }
+							 $('.total').html(data[0].grandTotal);
+						    	///removeCartLine();
+								
+							}
 					},
 					error : function(XMLHttpRequest, textStatus, errorThrown) {
 					}
 				});
 	}
-	})		
+	});		
 
 registerValidation();
 var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";

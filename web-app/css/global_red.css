@@ -5537,7 +5537,7 @@ span.exclusive {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
- .submit #SubmitBtn, .submit #SubmitLogin, .submit #submitAddress, .submit #Back-btn{margin: 15px 0 0 0;}
+ .submit #SubmitBtn, .submit #SubmitLogin, .submit #submitAddress, .submit #Back-btn, .submit .Cart-btn{margin: 15px 0 0 0;}
 .submit #SubmitBtn, .submit #SubmitLogin{float:left;}
 .submit #Back-btn{float:right;}
 .submit > .fa-spinner{ float:left; margin:17px 0 0 10px }

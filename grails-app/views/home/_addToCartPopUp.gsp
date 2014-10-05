@@ -82,7 +82,7 @@
                                 <div class="box-cart-bottom">
                                     <div>
                                         <p id="add_to_cart" class="buttons_bottom_block no-print">
-                                                <a href="javascript:void(0)" id="addToCart" class="various exclusive"><span>Add to cart</span></a>
+                                                <button type="button" id="addToCart" class="exclusive"><span>Add to cart</span></button>
                                         </p>
                                     </div>
                                     <strong></strong>
@@ -114,14 +114,20 @@
 								<strong class="">Total:</strong>
 							</div>
 						</div>
-						<div id="cartData">
+						<div id="cartData" class="product_body"></div>
+						<div class="col-xs-12 col-md-12 product_footer clearfix">
+							<div class="col-xs-6 col-md-6">
+								<strong>Product Total:</strong>
+							</div> 
+							<div class="col-xs-6 col-md-6">
+								<strong class="total"></strong>
+							</div>
+							<div class="submit">
+								<button onclick="hide()" class="btn btn-default button btn-grey button-medium Cart-btn"><span>Continue</span></button>
+								<g:link action="cart" controller="cart" class="btn btn-default button button-medium Cart-btn"><span>Checkout</span></g:link>
+							</div>
+						</div>
 						
-						</div>
-						<div>
-							Total Product : <span class="total"></span>
-						</div>
-						<g:link action="cart" controller="cart">Checkout</g:link>
-						<button onclick="hide()">Continue</button>
 						
 			</div>
 		</div>
