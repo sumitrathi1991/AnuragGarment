@@ -287,6 +287,8 @@
       	max-height: 300px;
       	overflow-x:hidden;
       }
+      #layer_cart .product_body .cart_quantity{ padding: 0 25px; }
+      #layer_cart .product_body .cart_quantity .cart_quantity_input{ width:100% }
       #layer_cart .layer_cart_product .product_head [class^="col"] strong, #layer_cart .layer_cart_product .product_footer [class^="col"] strong{ font-size:14px;}
       #layer_cart .layer_cart_product .product_row{ padding-top: 15px; }
       #layer_cart .layer_cart_product .product_footer [class^="col"] strong{font-size:14px; color: #E5574E;}
