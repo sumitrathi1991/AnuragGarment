@@ -46,7 +46,8 @@ class HomeController {
 		List brandList =  Item.findAll()?.itemBrand?.unique()
 		List typeList = Item.findAll()?.itemType?.unique()
 		List itemForList = Item.findAll()?.itemFor?.unique()
-		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName,typeList:typeList,itemForList : itemForList,itemType: params.itemType, itemFor :params.itemFor]
+		List itemCategoryList = Item.findAll()?.itemCategory?.unique()
+		render view:"search", model:[items:items,sizeList:sizeList,colorList:colorList,brandList :brandList, brand:params.itemBrand,userFullName:userFullName,typeList:typeList,itemForList : itemForList,itemType: params.itemType, itemFor :params.itemFor,itemCategoryList:itemCategoryList]
 	}
 
 	def filterData(){

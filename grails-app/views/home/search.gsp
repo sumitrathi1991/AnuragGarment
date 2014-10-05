@@ -29,20 +29,6 @@
                 <!-- /Breadcrumb -->
 				<div class="row">
 					<div id="left_column" class="column col-sm-3"><!-- Block categories module -->
-				<div id="categories_block_left" class="block">
-                    <h2 class="title_block">
-                        <span>Categories</span>
-                    </h2>
-					<div class="block_content" style="">
-						<ul class="tree dynamized">					
-							<li><span class="grower CLOSE"> </span><a href="#" title="">Flats</a>	</li>																
-                        	<li><span class="grower CLOSE"> </span><a href="#" title="">Athletic Shoes</a></li>
-                            <li><span class="grower CLOSE"> </span><a href="#" title="">Heels </a></li>
-							<li class="last"><span class="grower CLOSE"> </span><a href="#" title="">Others</a></li>
-						</ul>
-					</div>
-				</div>
-                
 
                 <!-- Block layered navigation module -->
                 
