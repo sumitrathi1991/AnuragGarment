@@ -170,20 +170,10 @@ $('.pos-logo .bxslider').bxSlider({
     pager: false,
 });
 
-$(window).load(function() {
-	$("#loginViewID").hide();
-        
-    });
-
 function changeTab(obj){
 	$('#home-page-tabs li').removeClass('active')
 	$(obj).parent().addClass('active')
 }
-
-jQuery(function( $ ){
-		
-				
-});
 </script>
 </body>
 </html>
