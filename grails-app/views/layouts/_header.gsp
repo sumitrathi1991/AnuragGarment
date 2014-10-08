@@ -64,14 +64,14 @@
 	<div class="nav-container visible-lg visible-md">
 		<div class="container">
 			<div id="pt_custommenu" class="pt_custommenu clearfix">
-				<div id="pt_menu_home" class="pt_menu act">
-					<div class="parentMenu" onClick="homeView()">
+				<div id="home" class="pt_menu act">
+					<div class="parentMenu">
 						<g:link action="index" controller="home">
 							<span>Home</span>
 						</g:link>
 					</div>
 				</div>
-				<div id="pt_menu3" class="pt_menu nav-1">
+				<div id="women" class="pt_menu nav-1">
 					<div class="parentMenu">
 						<g:link action="showProducts" controller="home"
 							params="[itemFor:'women']">
@@ -128,7 +128,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="pt_menu12" class="pt_menu nav-2">
+				<div id="men" class="pt_menu nav-2">
 					<div class="parentMenu">
 						<g:link action="showProducts" controller="home"
 							params="[itemFor:'men']">
@@ -186,7 +186,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="pt_menu13" class="pt_menu nav-3">
+				<div id="kids" class="pt_menu nav-3">
 					<div class="parentMenu">
 						<g:link action="showProducts" controller="home"
 							params="[itemFor:'kids']">
@@ -243,7 +243,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="pt_menu14" class="pt_menu nav-4">
+				<div id="wholeSale" class="pt_menu nav-4">
 					<div class="parentMenu" id="BrandsType">
 						<a href="#wholesaler"><span>Wholesale</span></a>
 					</div>

@@ -17,9 +17,9 @@ class HomeController {
 		[itemList : newItemList,featuredItems:featuredItemList,userFullName:userFullName]
 	}
 	
-	def getCategoryProduct(){
+	def getProductType(){
 	log.debug"in getCategoryProduct == "+params
-	List itemList = Item.findAllByItemCategory(params.itemCategory)
+	List itemList = Item.findAllByItemType(params.itemType)
 	render template:"items", model:[itemList :itemList]
 	}
 	

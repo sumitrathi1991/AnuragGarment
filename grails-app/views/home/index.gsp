@@ -12,6 +12,7 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
 		<meta name="apple-mobile-web-app-capable" content="yes"> 
         <script>
+        var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
         var showAddToCartpopupUrl = "${createLink(controller:'home',action:'showAddToCartPopup')}";
         </script>
         </head>
@@ -32,8 +33,8 @@
 				<div class="row">
 					<div id="center_column" class="center_column  col-sm-12">
 		           		<ul id="home-page-tabs" class="nav nav-tabs clearfix">
-							<li class="active"><g:remoteLink data-toggle="tab" class="blocknewproducts" action="getCategoryProduct" controller="home" params="[itemCategory:'new']" update="category">New products</g:remoteLink></li>
-							<li><g:remoteLink data-toggle="tab"  class="blockbestsellers" action="getCategoryProduct" controller="home" params="[itemCategory:'bestSeller']" update="category">Best Sellers</g:remoteLink></li>
+							<li class="active"><g:remoteLink data-toggle="tab" class="blocknewproducts" action="getProductType" controller="home" params="[itemType:'new']" update="category" after="changeTab(this)">New products</g:remoteLink></li>
+							<li><g:remoteLink data-toggle="tab"  class="blockbestsellers" action="getProductType" controller="home" params="[itemType:'bestSeller']" update="category" after="changeTab(this)">Best Sellers</g:remoteLink></li>
 						</ul>
 			<div id="category">
 				<g:render template="items"></g:render>
@@ -78,7 +79,7 @@
 											 </div>           
                                             <div class="button-container">
                                                 <div class="actions">
-                                                  <button class="button ajax_add_to_cart_button btn btn-default" productId="${featuredItem.id}" onclick="showAddToCartPopup()" title="Add to cart"><span>Add to cart</span>
+                                                  <button class="button ajax_add_to_cart_button btn btn-default" productId="${featuredItem.id}" onclick="showAddToCartPopup(this)" title="Add to cart"><span>Add to cart</span>
                                                  </button>                                        
                                                     <div class="wishlist">
                                                         <g:link class="addToWishlist wishlistProd_13" action="productDetail" controller="home" params="[productId : "${featuredItem.id}"]" title="Product Detail">
@@ -114,65 +115,6 @@
 <!-- /- Add To Cart Popup Template -/ --> 
    
 <script type="text/javascript">
-$('#addToCart').on('click', function(){
-	var itemId = $(this).attr('itemId');
-	var quantity = $('#quantity').val();
-	var	quantityValid = isNaN(quantity);
-	if(quantity == ''  || quantityValid || quantity < 1){
-		$('#noQuantity').show().delay(1000).fadeOut()
-		return false;
-	}
-	else{
-	var itemSize = $('.itemSize').html();
-	var itemColor = $('.itemColor').html()
-	var price = $('#our_price_display').text().slice(1)
-	var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
-				jQuery.ajax({
-					type : 'POST',
-					url : addToCartUrl,
-					async : false,
-					data : 'quantity='+quantity+'&item='+itemId+'&price='+price+'&itemSize='+itemSize+'&itemColor='+itemColor,
-					success : function(data) {
-						if(data.result == false){
-							$('#errorMessage').html(data.message);
-							$('#errorMessage').show().delay(2000).fadeOut();
-							return false;
-							}
-						else{
-							$.fancybox({
-						        href: '#layer_cart', 
-						        maxWidth	: 900,
-								fitToView	: false,
-								width		: '100%',
-								autoSize	: false,
-								closeClick	: false,
-								openEffect	: 'fade',
-								closeEffect	: 'fade',
-								helpers	: {
-									title	: {
-										type: 'float'
-									}
-								}
-						    });
-						
-						    $('#cartData').html('')
-						    for(var i =0 ; i < data.length; i++){
-									$('#cartData').append('<div class="col-xs-12 col-md-12 product_row clearfix"><div class="col-xs-6 col-md-6"><div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src='+data[i].image+' width="70px" alt="Sed posuere" title="Sed posuere"></div>'+
-									'<div class="layer_cart_product_info"><span id="layer_cart_product_title" class="product-name">'+data[i].name+'<a href="javascript:void(0)" cartLineId='+data[i].cartLineId+' cartId='+data[i].cartId+' class="icon-remove-sign remove_cart_product"></a></span><ul><li><strong class="dark">Quantity:</strong><span id="layer_cart_product_quantity">'+data[i].quantity+'</span>'+
-									'<span class="divider">|</span></li><li><strong class="dark">Color:</strong><span id="layer_cart_product_price">'+data[i].color+'</span><span class="divider">|</span></li><li><strong class="dark">Size:</strong><span id="layer_cart_product_price">'+data[i].size+'</span></li></ul></div></div>'+
-									'<div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].price+'</span></div><div class="col-xs-3 col-md-3 text-center"><span class="layer_cart_product_price">'+data[i].total+'</span></div></div></div>')				
-							 }
-							 $('.total').html(data[0].grandTotal);
-						    	///removeCartLine();
-								
-							}
-					},
-					error : function(XMLHttpRequest, textStatus, errorThrown) {
-					}
-				});
-	}
-	});		
-
 registerValidation();
 var registerUrl = "${createLink(controller:'Admin',action:'registerUser')}";
 
@@ -232,6 +174,11 @@ $(window).load(function() {
 	$("#loginViewID").hide();
         
     });
+
+function changeTab(obj){
+	$('#home-page-tabs li').removeClass('active')
+	$(obj).parent().addClass('active')
+}
 
 jQuery(function( $ ){
 		

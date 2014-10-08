@@ -6480,7 +6480,7 @@ ul.step {
   cursor: pointer; }
 
 .cancel, .cancel a {
-  background: url(../../../modules/productcomments/img/delete.gif) no-repeat 0 -16px !important; }
+  background: url(images/delete.gif) no-repeat 0 -16px !important; }
 
 .cancel a, .star a {
   display: block;

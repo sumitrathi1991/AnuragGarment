@@ -84,7 +84,7 @@
         				<div id="send_friend_form">
                 		<h2 class="title">Send to a friend</h2>
                         <div class="product clearfix">
-                            <img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemSize[0].itemColor[0].imageList[0].name}}"]"/>" height="270" width="270" alt="Shoes">
+                            <%--<img src="<g:createLink action="renderImage" controller="image" params="[imageName : "${item.itemSize[0].itemColor[0].imageList[0].name}}"]"/>--%>" height="270" width="270" alt="Shoes">
                             <div class="product_desc">
                                 <p class="product_name"><strong>Shoes</strong></p>
                                 <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>

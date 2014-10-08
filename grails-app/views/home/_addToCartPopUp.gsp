@@ -135,7 +135,8 @@
    <!-- / Layer Cart Popup /--> 
 <script>
 function hide(){
-$('.fancybox-overlay').hide()
+$('.fancybox-overlay, .fancybox-opened').hide()
+$('#layer_cart').hide()
 }
 </script> 
  

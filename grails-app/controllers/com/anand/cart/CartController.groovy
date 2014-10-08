@@ -11,6 +11,7 @@ import com.anand.item.ItemSize
 
 class CartController {
 	def grailsApplication
+	def springSecurityService
 	
 	def addToCart(){
 		log.debug"in cart == "+params
@@ -43,7 +44,6 @@ class CartController {
 		render addTocartResponse as JSON 
 		}
 	}
-	
 	
 	JSONArray getCartData(Cart cart){
 		JSONArray jsonArray = new JSONArray()

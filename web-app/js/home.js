@@ -5,9 +5,6 @@ function loginView(){
 $("#homeViewId").hide();
 $("#loginViewID").show();
 }
-function homeView(){
-$("#loginViewID").hide();
-}
 function showSpinner(){
 	 $('#forgotPasswordSpinner').show();
 	 $('#updateForgotPasswordMessage').hide();
@@ -71,13 +68,6 @@ $(document).ready(function(){
 								}
 							}
 					    });
-						
-					    $('#etalage').etalage({
-					    	thumb_image_width: 300,
-					    	thumb_image_height: 400,
-					    	show_hint: true,
-
-					    });
 					    $('#cartData').html('')
 					    for(var i =0 ; i < data.length; i++){
 								$('#cartData').append('<div class="col-xs-12 col-md-12 product_row clearfix"><div class="col-xs-6 col-md-6"><div class="product-image-container layer_cart_img"><img class="layer_cart_img img-responsive" src='+data[i].image+' width="70px" alt="Sed posuere" title="Sed posuere"></div>'+
@@ -87,7 +77,6 @@ $(document).ready(function(){
 						 }
 						 $('.total').html(data[0].grandTotal)
 					    removeCartLine();
-							
 								$('#layer_cart').show();
 						}
 						},

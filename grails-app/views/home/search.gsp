@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0"> 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<script type="text/javascript">
+		var addToCartUrl = "${createLink(controller:'cart',action:'addToCart')}";
 		var showAddToCartpopupUrl = "${createLink(controller:'home',action:'showAddToCartPopup')}";
 		</script> 
        <head>
@@ -265,6 +266,8 @@ $(document).ready(function(){
 		}
 
 		if(itemFor != ''){
+		$('#pt_custommenu div').removeClass('act')
+		$('#'+itemFor).addClass('act')	
 		$('.itemFor li').each(function(){
 		if($(this).find('.checkbox').val() == itemFor)
 			$(this).find('.checkbox').attr('checked', true);
