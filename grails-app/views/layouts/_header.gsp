@@ -20,7 +20,6 @@
 								<ul class="dropdown-menu">
 								    <li><a href="">Account</a></li>
 								    <li><a href="">Order</a></li>
-								    <li><a href="">Wallet</a></li>
 								    <li><a href="">Wishlist</a></li>
 								    <li><a onClick="loginOut()">Logout</a></li>
 								</ul>

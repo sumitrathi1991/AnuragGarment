@@ -31,20 +31,7 @@
 				<div id="center_column" class="center_column  col-sm-12">
 					<h1 id="cart_title" class="page-heading">Address</h1>
 
-					<!-- Steps -->
-					<ul class="step clearfix" id="order_step">
-						<li class="step_done second"><a href="order-step2.htm"><em>01.</em>
-								Login</a></li>
-						<li class="step_done step_done_last third"><a
-							href="order-step3.htm"><em>02.</em> Address</a></li>
-						<li class="step_current four"><span><em>03.</em>
-								Shipping</span></li>
-						<li class="step_done first"><a href="order-step1.htm"><em>04.</em>
-								Summary</a></li>		
-						<li id="step_end" class="step_todo last"><span><em>05.</em>
-								Payment</span></li>
-					</ul>
-					<!-- /Steps -->
+					<g:render template="checkoutSteps"/>
 					<form action="" method="">
 						<div class="order_carrier_content box">
 							<p class="carrier_title">Choose your delivery method</p>
@@ -97,12 +84,12 @@
 							</p>
 						</div>
 						<p class="cart_navigation clearfix">
-							<a id="tc-btn"
-								class="button btn btn-default standard-checkout button-medium"
-								title="Proceed to checkout" style=""> <span>Proceed
+							<g:link class="button btn btn-default standard-checkout button-medium"
+								title="Proceed to checkout" action="cart" controller="cart"> <span>Proceed
 									to checkout<i class="icon-chevron-right right"></i>
 							</span>
-							</a> <a href="index.htm" class="button-exclusive btn btn-default"
+							</g:link>
+							<a href="index.htm" class="button-exclusive btn btn-default"
 								title="Continue shopping"> <i class="icon-chevron-left"></i>Continue
 								shopping
 							</a>

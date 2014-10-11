@@ -27,26 +27,7 @@
 				<div class="row">
 					<div id="center_column" class="center_column  col-sm-12">
 						<h1 id="cart_title" class="page-heading">Address</h1>
-
-						<!-- Steps -->
-						<ul class="step clearfix" id="order_step">
-							<li class="step_done step_done_last second">
-											<a href="order-step2.htm"><em>01.</em> Login</a>
-									</li>
-							<li class="step_current third">
-											<span><em>02.</em> Address</span>
-									</li>
-							<li class="step_todo four">
-											<span><em>03.</em> Shipping</span>
-									</li>
-							<li class="step_done first">
-											<a href="order-step1.htm"><em>04.</em> Summary</a>
-									</li>
-							<li id="step_end" class="step_todo last">
-								<span><em>05.</em> Payment</span>
-							</li>
-						</ul>
-						<!-- /Steps -->
+							<g:render template="checkoutSteps"/>
 						<g:form action="shipping" method="POST" controller="cart">
 							<div class="addresses clearfix">
 								<div class="row">

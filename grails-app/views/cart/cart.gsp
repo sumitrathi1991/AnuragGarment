@@ -28,26 +28,7 @@
 						<h1 id="cart_title" class="page-heading">Shopping-cart summary
 							<span class="heading-counter">Your shopping cart contains: <span id="summary_products_quantity">${cart?.cartLines?.size() } product</span></span>
 						</h1>
-
-						<!-- Steps -->
-						<ul class="step clearfix" id="order_step">
-							<li class="step_todo second">
-											<span><em>01.</em> Login</span>
-									</li>
-							<li class="step_todo third">
-											<span><em>02.</em> Address</span>
-									</li>
-							<li class="step_todo four">
-											<span><em>03.</em> Shipping</span>
-									</li>
-							<li class="step_current  first">
-											<span><em>04.</em> Summary</span>
-									</li>
-							<li id="step_end" class="step_todo last">
-								<span><em>05.</em> Payment</span>
-							</li>
-						</ul>
-						<!-- /Steps -->
+						<g:render template="checkoutSteps"/>				
 						<g:if test="${cart?.cartLines?.size() == 0}">
 						<p id="emptyCartWarning" class="alert alert-warning">Your shopping cart is empty.</p>
 						</g:if>
