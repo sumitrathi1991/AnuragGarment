@@ -57,7 +57,7 @@
 										</tr>
 										<tr class="cart_total_delivery">
 											<td colspan="3" class="text-right">Total shipping</td>
-											<td colspan="2" class="price" id="total_shipping">$2.00</td>
+											<td colspan="2" class="price" id="total_shipping">${cart.shippingCharge}</td>
 										</tr>
 										<tr class="cart_total_voucher" style="display:none">
 											<td colspan="3" class="text-right">Total vouchers</td>
@@ -70,7 +70,7 @@
 								</tfoot>
 								<tbody>
 								<g:each var="cartLine" in="${cart?.cartLines}">
-									<tr class="cart_item last_item first_item address_22 odd">
+									<tr class="cart_item last_item first_item address_22 odd" id="${cartLine?.id}">
 										<td class="cart_product">
 											<a href="#"><img src="../images/product_thumb.jpg" alt="Faded Short" width="100" height="100"></a>
 										</td>
@@ -100,7 +100,7 @@
 										</td>
 										<td class="cart_delete text-center">
 											<div>
-												<a title="Delete" class="cart_quantity_delete" href="#"><i class="icon-trash"></i></a>
+												<a title="Delete" class="cart_quantity_delete" cart="${cart.id}" cartLine="${cartLine?.id}"><i class="icon-trash"></i></a>
 											</div>
 										</td>
 									</tr>
@@ -124,6 +124,25 @@
 		</div><!-- #columns -->
 	</div><!-- .columns-container -->
 <script type="text/javascript">
+$('.cart_quantity_delete').on("click", function(){
+	var cartLine = $(this).attr('cartLine')
+	var cart = $(this).attr('cart')
+	var obj = $(this).parents('tr')
+	jQuery.ajax({
+		type : 'POST',
+		url : '/cart/updateCart',
+		async : false,
+		data : 'cartLine='+cartLine+'&cart='+cart,
+		success : function(data) {
+			$(obj).fadeOut();
+			$('#total_product').html(data.total)
+			$('#total_price').html(data.grandTotal)
+	},
+	error : function(XMLHttpRequest, textStatus, errorThrown) {
+		}
+	});
+})
+
 $('.pos-logo .bxslider').bxSlider({
             auto: 0,
             slideWidth:200,

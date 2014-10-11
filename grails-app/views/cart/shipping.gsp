@@ -52,7 +52,7 @@
 															src="../images/product_thumb40x40.jpg" alt=""></td>
 														<td>My carrierDelivery next day!</td>
 														<td class="delivery_option_price">
-															<div class="delivery_option_price">200/-</div>
+															<div class="delivery_option_price">${cart.shippingCharge}</div>
 														</td>
 													</tr>
 												</tbody>
@@ -74,7 +74,7 @@
 								<!-- end delivery_options -->
 							</div>
 							<!-- end delivery_options_address -->
-							<div id="extra_carrier" style="display: none;"></div>
+							<div id="extra_carrier" style="display: none;">
 							<p class="carrier_title">Terms of service</p>
 							<p class="checkbox">
 								<input type="checkbox" name="cgv" id="cgv" value="1"> <label
@@ -82,6 +82,7 @@
 									adhere to them unconditionally.</label> <a href="#" class="iframe">(Read
 									the Terms of Service)</a>
 							</p>
+							</div>
 						</div>
 						<p class="cart_navigation clearfix">
 							<g:link class="button btn btn-default standard-checkout button-medium"
@@ -105,7 +106,7 @@
 	<!-- .columns-container -->
 	<!-- #page -->
 
-	<div id="agree-tc">
+	<div id="agree-tc" style="display: none;">
 		<h4>YOU MUST AGREE TO THE TERMS OF SERVICE BEFORE CONTINUING.</h4>
 	</div>
 

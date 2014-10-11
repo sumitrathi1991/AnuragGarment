@@ -75,7 +75,7 @@ class CartController {
 		}
 	}
 	
-	String updateCart(){
+	def updateCart(){
 		log.debug"in updateCart == "+params
 		Cart cart = Cart.get(params.cart)
 		JSONObject updateResponse = new JSONObject()
@@ -89,6 +89,7 @@ class CartController {
 		else{
 			updateResponse.put("result", 'success')
 			updateResponse.put("total", cart.getProductTotal())
+			updateResponse.put("grandTotal", cart.getGrandTotal())
 		}
 		render updateResponse as JSON
 	}
@@ -120,11 +121,11 @@ class CartController {
 		def cartId = session.getAttribute("cartId")
 		Cart cart = Cart.get(cartId)
 		Address address = Address.findByAddressTitle(params.addressTitle)
-		log.debug"address == "+address
 		cart.shipToAddress = address
 		if(!cart.save(flush:true)){
 			cart.errors.each{log.debug"error in saving cart == "+cart}
 		}
+		[cart:cart]
 	}
 	
 	def createAddress(){

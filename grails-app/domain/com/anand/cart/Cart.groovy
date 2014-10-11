@@ -7,7 +7,7 @@ class Cart {
 	Address shipToAddress
 	Address billToAddress
 	boolean isBillSameAsShip
-	float shippingCharge = 0.00
+	float shippingCharge = 50.00
 	float cachedGrandTotal = 0.00
 	
 	static hasMany = [cartLines:CartLine]
