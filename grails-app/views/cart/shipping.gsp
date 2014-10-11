@@ -33,14 +33,14 @@
 
 					<!-- Steps -->
 					<ul class="step clearfix" id="order_step">
-						<li class="step_done first"><a href="order-step1.htm"><em>01.</em>
-								Summary</a></li>
-						<li class="step_done second"><a href="order-step2.htm"><em>02.</em>
+						<li class="step_done second"><a href="order-step2.htm"><em>01.</em>
 								Login</a></li>
 						<li class="step_done step_done_last third"><a
-							href="order-step3.htm"><em>03.</em> Address</a></li>
-						<li class="step_current four"><span><em>04.</em>
+							href="order-step3.htm"><em>02.</em> Address</a></li>
+						<li class="step_current four"><span><em>03.</em>
 								Shipping</span></li>
+						<li class="step_done first"><a href="order-step1.htm"><em>04.</em>
+								Summary</a></li>		
 						<li id="step_end" class="step_todo last"><span><em>05.</em>
 								Payment</span></li>
 					</ul>

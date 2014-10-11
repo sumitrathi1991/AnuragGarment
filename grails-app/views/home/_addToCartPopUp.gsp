@@ -127,7 +127,7 @@
 							</div>
 							<div class="submit">
 								<a href="javascript:$.fancybox.close();" class="btn btn-default button btn-grey button-medium Cart-btn"><span>Continue</span></a>
-								<g:link action="cart" controller="cart" class="btn btn-default button button-medium Cart-btn"><span>Checkout</span></g:link>
+								<g:link action="continueCheckout" controller="cart" class="btn btn-default button button-medium Cart-btn"><span>Checkout</span></g:link>
 							</div>
 						</div>
 						

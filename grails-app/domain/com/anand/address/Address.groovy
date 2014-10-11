@@ -2,9 +2,7 @@ package com.anand.address
 
 class Address {
 
-	String firstName
-	String lastName
-	String emailAddress
+	String fullName
 	String address1
 	String address2
 	String phoneNumber
@@ -14,10 +12,8 @@ class Address {
 	String addressTitle
 	
 	static constraints = {
-		firstName nullable:false;
-		lastName nullable:false;
+		fullName nullable:false;
 		address1 nullable:false;
-		emailAddress nullable:false;
 		address2 nullable:true;
 		zipcode nullable:false;
 		city nullable:false;

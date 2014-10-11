@@ -30,17 +30,17 @@
 
 						<!-- Steps -->
 						<ul class="step clearfix" id="order_step">
-							<li class="step_done first">
-											<a href="order-step1.htm"><em>01.</em> Summary</a>
-									</li>
 							<li class="step_done step_done_last second">
-											<a href="order-step2.htm"><em>02.</em> Login</a>
+											<a href="order-step2.htm"><em>01.</em> Login</a>
 									</li>
 							<li class="step_current third">
-											<span><em>03.</em> Address</span>
+											<span><em>02.</em> Address</span>
 									</li>
 							<li class="step_todo four">
-											<span><em>04.</em> Shipping</span>
+											<span><em>03.</em> Shipping</span>
+									</li>
+							<li class="step_done first">
+											<a href="order-step1.htm"><em>04.</em> Summary</a>
 									</li>
 							<li id="step_end" class="step_todo last">
 								<span><em>05.</em> Payment</span>
@@ -84,7 +84,7 @@
 											<li class="address_title">
 												<h3 class="page-subheading">Your delivery address</h3>
 											</li>
-											<li class="name">${addressList[0]?.firstName} ${addressList[0]?.lastName}</li>
+											<li class="name">${addressList[0]?.fullName}</li>
 											<li class="address1">${addressList[0]?.address1}</li>
 											<li class="address2">${addressList[0]?.address2}</li>
 											<li class="city">${addressList[0]?.city}</li>
@@ -120,6 +120,7 @@
 	</div><!-- .columns-container -->
 <!-- #page -->
 <script type="text/javascript">
+
 // Billing Address Dropdown List 
 /* $("#addressesAreEquals").change(function() {
 	if($(this).is(':checked')){

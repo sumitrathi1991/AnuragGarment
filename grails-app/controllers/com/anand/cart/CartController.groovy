@@ -65,6 +65,16 @@ class CartController {
 		return jsonArray
 	}
 	
+	def continueCheckout() {
+		log.debug"in continueCheckout"
+		if (springSecurityService.isLoggedIn()) {
+			redirect action : "address"
+		}
+		else {
+			redirect controller : 'home', action: 'loginView' 
+		}
+	}
+	
 	String updateCart(){
 		log.debug"in updateCart == "+params
 		Cart cart = Cart.get(params.cart)
@@ -98,10 +108,11 @@ class CartController {
 	}
 	
 	def address(){
+		log.debug"address"
 		List addressList = Address.list()
 		def cartId = session.getAttribute("cartId")
 		Cart cart = Cart.get(cartId)
-		[addressList:addressList]
+		render view :"address", model: [addressList:addressList]
 	}
 	
 	def shipping(){
@@ -130,7 +141,8 @@ class CartController {
 			jsonObject.put("result",'error')
 		}
 		else{
-			jsonObject.put("result",'success')
+			redirect action : 'address'
+			render "success"
 		}
 		render jsonObject as JSON
 	}

@@ -33,18 +33,14 @@
 							<h1 class="page-subheading">Your addresses</h1>
 							<p class="info-title">To add a new address, please fill out the form below.</p>
 							<p class="required"><sup>*</sup>Required field</p>
-							<g:formRemote name="addAddress" url="[action:'saveAddress', controller:'cart']" class="std" id="addAddress"  onSuccess="showMessage(data)">
+							<g:formRemote name="addAddress" url="[action:'saveAddress', controller:'cart']" class="std" id="addAddress"  after="showMessage(data)">
 							<!--h3 class="page-subheading">Your address</h3-->
 								<div class="form-group">
-									<label for="firstName">First name <sup>*</sup></label>
-									<input class="form-control" type="text" name="firstName" id="firstName" value="">
-								</div>
-								<div class="required form-group">
-									<label for="lastName">Last name <sup>*</sup></label>
-									<input class="form-control" type="text" id="lastName" name="lastName" value="">
+									<label for="fullName">Full name <sup>*</sup></label>
+									<input class="form-control" type="text" name="fullName" id="fullName" value="">
 								</div>
 								<div class="form-group">
-									<label for="address1">Address <sup>*</sup></label>
+									<label for="address1">Address (Line 1)<sup>*</sup></label>
 									<input class="form-control" type="text" id="address1" name="address1" value="">
 								</div>
 								<div class="required form-group">
@@ -55,25 +51,20 @@
 									<label for="city">City <sup>*</sup></label>
 									<input class="form-control" type="text" name="city" id="city" value="" >
 								</div>
-								<div class="required form-group">
-									<label for="emailAddress">Email <sup>*</sup></label>
-									<input class="form-control" type="text" name="emailAddress" id="emailAddress" value="" >
-								</div>
 								<div class="form-group">
 									<label for="id_state">State <sup>*</sup></label>
 									<select name="state" id="state" class="form-control">
-										<option value="">-</option>
 										<option value="1">New Delhi</option>
 									</select>
 								</div>
 								<div class="form-group">
 									<label for="zipcode">Zip/Postal Code <sup>*</sup></label>
-									<input class="form-control" type="text" id="zipcode" name="zipcode" value="">
+									<input class="form-control" type="text" id="zipcode" name="zipcode" value="" maxlength="6">
 								</div>
 								<div class="clearfix"></div>
 								<div class="required form-group">
 									<label for="phoneNumber">Mobile phone <sup>**</sup></label>
-									<input class="form-control" type="tel" id="phoneNumber" name="phoneNumber" value="">
+									<input class="form-control" type="tel" id="phoneNumber" name="phoneNumber" value="" maxlength="10">
 								</div>
 									<div class="clearfix"></div>
 								<div class="form-group" id="adress_alias">
@@ -125,9 +116,7 @@ function validateAddress(){
  });
 
 function showMessage(data){
-	if(data.result == 'success')
-		$('#resultSuccess').show().delay(2000).fadeOut();
-	else
+	if(data.result == 'error')
 		$('#resultError').show().delay(2000).fadeOut();
 }
  
@@ -154,20 +143,13 @@ jQuery.validator.addMethod("phone", function (phone_number, element) {
 function validateAddressForm() {
 	$('#addAddress').validate({
 		rules: {
-		firstName: {
-				required: true,
-			},
-			lastName: {
+		fullName: {
 				required: true,
 			},
 			phoneNumber: {
 				required: true,
 				maxlength: 10,
 				phone: true
-			},
-			emailAddress: {
-				required: true,
-				email: true
 			},
 			address1: {
 				required: true,
@@ -188,20 +170,13 @@ function validateAddressForm() {
 			},
 		},
 		messages: {
-			firstName: {
-				required: "<i class='icon-warning-sign'>Please provide First Name</i> ",
-			},
-			lastName: {
-				required: "<i class='icon-warning-sign'>Please provide Last Name</i> ",
+			fullName: {
+				required: "<i class='icon-warning-sign'>Please provide Full Name</i> ",
 			},
 			phoneNumber: {
 				required: "<i class='icon-warning-sign'> Please provide phoneNumber</i>",
 				maxlength: "<i class='icon-warning-sign'> At most 10 characters long</i> ",
 				phoneUS: "<i class='icon-warning-sign'> Please enter valid number</i>"
-			},
-			emailAddress: {
-				required: "<i class='icon-warning-sign'> Please provide a email address</i>",
-				email: "<i class='icon-warning-sign'> Please enter a valid email address</i>"
 			},
 			address1: {
 				required: "<i class='icon-warning-sign'> Please provide address1</i>",
