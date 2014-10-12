@@ -9,6 +9,7 @@
  * ========================================================== */ 
 var itemImagesArray = []
 function addItemOverlay(){
+	
 	/** UniformJS: Sexy form elements */
 	if ($('.uniformjs').length) $('.uniformjs').find("select, input, button, textarea").uniform();
 	multiFileUploader();
@@ -16,6 +17,7 @@ function addItemOverlay(){
 }
 function multiFileUploader () 
 {
+	
 	/* Dropzone */
 	if ($.fn.dropzone)
 		$('form.dropzone').dropzone();
@@ -24,11 +26,11 @@ function multiFileUploader ()
 	$('.pluploadUploaderClass').pluploadQueue({
 		// General settings
 		runtimes : 'gears,browserplus,html5',
-		url : "http://localhost:8080/item/uploadItemImage",
+		url : fileUploadUrl,
 		max_file_size : '1000mb',
 		max_file_count: 20, // user can add no more then 20 files at a time
 		chunk_size : '1mb',
-		rename: true,
+		
 		multiple_queues : true,
 
 		// Resize images on clientside if we can
@@ -91,7 +93,8 @@ function multiFileUploader ()
 	            	console.log('[FilesAdded]');
 	  
 	                plupload.each(files, function(file) {
-	                	console.log('  File:'+ file);
+	                	console.log('  File:'+ file.name);
+	                	
 	                });
 	            },
 	  
@@ -107,15 +110,12 @@ function multiFileUploader ()
 	            FileUploaded: function(up, file, info) {
 	                // Called when file has finished uploading
 	            	console.log('[FileUploaded] File:'+file+"Info:"+ info);
-	            	console.log(file)
-	            	console.log(info)
-	            	console.log(info.response)
+	            	
 	            	var obj = jQuery.parseJSON(info.response)
 	            	
 	            	itemImagesArray.push(obj.uploadedFileName)
 	            	console.log(obj.uploadedFileName)
-	            	console.log("image url")
-	            	console.log(itemImagesArray)
+	            	
 	            },
 	  
 	            ChunkUploaded: function(up, file, info) {

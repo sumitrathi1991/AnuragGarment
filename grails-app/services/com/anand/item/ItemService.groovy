@@ -13,11 +13,11 @@ import org.apache.commons.lang.RandomStringUtils
 @Transactional
 class ItemService {
 
-	def grailsApplication
+	def grailsApplication,metadataService
     def serviceMethod() {
 
     }
-	String uploadFile(Object file,String extension){
+	String uploadFile(String fileName,Object file,String extension){
 		String filePath = grailsApplication.config.file.upload.path+RandomStringUtils.randomAlphanumeric(12)+"."+extension
 		if (!file?.empty ){
 			file.transferTo(new File(filePath))
@@ -54,7 +54,7 @@ class ItemService {
 	
 	ItemColor addItemColor(params){
 		List uploadedImages = []
-		uploadedImages = addItemImages(params);
+		uploadedImages = metadataService.addItemImages(params);
 		ItemColor itemColor = new ItemColor(itemColorValue : params.itemColor)
 		itemColor.imageList = uploadedImages
 		if(!itemColor.save(flush:true)){
@@ -64,15 +64,5 @@ class ItemService {
 		return itemColor
 	}
 	
-	List addItemImages(params){
-		List uploadedImages = []
-		JSONObject jObject  = new JSONObject(params.images); // json
-		//JSONObject data = jObject.getJSONObject("itemImages"); // get data object
-		log.debug"data "+jObject.itemImages.size()
-		for(int i=0;i<jObject.itemImages.size();i++){
-			Image image = new Image(name: "product"+i+".jpeg",imageUrl : jObject.itemImages[i], imageSize: "1234", width:"50", height :"50").save()
-			uploadedImages.add(image)
-		}
-		return uploadedImages
-	}
+	
 }

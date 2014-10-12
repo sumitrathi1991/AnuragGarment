@@ -17,6 +17,10 @@ class UrlMappings {
 			controller = 'image'
 			action = 'renderImage'
 		}
+		name "renderImageById": "/adminImage/$imageId" {
+			controller = 'image'
+			action = 'renderImageById'
+		}
 		
 		"/password/reset/$token"(controller:"register", parseRequest:true, action:"resetPassword")
 		"/authenticate/user/$token"(controller:"register", action:"authenticateUser", parseRequest:true)

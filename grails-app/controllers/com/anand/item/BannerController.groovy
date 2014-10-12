@@ -5,6 +5,7 @@ import com.anand.image.Image
 
 class BannerController {
 
+	def bannerService
     def index() { }
 	
 	def createBanner(){
@@ -18,19 +19,19 @@ class BannerController {
 	}
 	
 	def getBannerList(){
-		log.debug"get banner list params: "+params
-		List bannerList = Banner.findAllByIsPublishedAndIsDeleted(true,false);
-		log.debug"bannerList "+bannerList
+		List bannerList = bannerService.getBannerList();
 		render template:"/banner/bannerList", model : [bannerList:bannerList]
 	}
 	
 	def addBanner(){
-		log.debug"Add banner params: "+params
+		bannerService.addBanner(params)
 		/*HashMap result = new HashMap();
 		result.status = "success";
 		result.message = "Item has been added successfully."
+		log.debug"result "+result
 		respond result, [formats:['json', 'xml']];*/
-		render template:"/banner/bannerList"
+		List bannerList = bannerService.getBannerList();
+		render template:"/banner/bannerList", model : [bannerList:bannerList]
 	}
 	
 	def editBanner(){
@@ -38,10 +39,27 @@ class BannerController {
 	}
 	
 	def deleteBanner(){
-		
+		Banner banner = Banner.findByIdAndIsDeleted(params.id,false);
+		banner.isDeleted = true;
+		if(!banner.save(flush:true)){
+			banner.errors.each {log.debug"error in publishing the item "+it}
+		}
+		List bannerList = bannerService.getBannerList();
+		render template:"/banner/bannerList", model : [bannerList:bannerList]
 	}
 	
 	def publishBanner(){
-		
+		Banner banner = Banner.findByIdAndIsDeleted(params.id,false);
+		if(banner.isPublished == true){
+			banner.isPublished = false;
+		}else{
+			banner.isPublished = true;
+		}
+		if(!banner.save(flush:true)){
+			banner.errors.each {log.debug"error in publishing the item "+it}
+			
+		}
+		List bannerList = bannerService.getBannerList();
+		render template:"/banner/bannerList", model : [bannerList:bannerList]
 	}
 }

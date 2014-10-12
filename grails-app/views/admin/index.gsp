@@ -98,6 +98,7 @@ var publishItemUrl = "${createLink(controller:'item',action:'publishItem')}";
 var bannerListUrl = "${createLink(controller:'banner',action:'getBannerList')}";
 var brandListUrl = "${createLink(controller:'brand',action:'getBrandList')}";
 var brandDetailsUrl = "${createLink(controller:'brand',action:'getBrandDetail')}";
+var fileUploadUrl = "${createLink(controller:'item',action:'uploadItemImage')}";
 registerValidation();
 
 $(document).ready(function() {

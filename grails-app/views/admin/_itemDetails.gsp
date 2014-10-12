@@ -54,8 +54,10 @@
 								</g:each>
 							</td>
 							<td>
-								<g:each in="${itemSize.itemColor.imageList}" var='image'>
-									<img id="image" src="${image.imageUrl}" height="50" width="55" border="0"/>
+							<g:each in="${itemSize.itemColor}" var='itemColor'>
+								<g:each in="${itemColor.imageList}" var='image'>
+									<img id="image" src="<g:createLink action="renderImageById" controller="image" params="[imageId : "${image.id}"]"/>" height="60" width="55" border="0"/>
+								</g:each>
 								</g:each>
 							</td>
 							

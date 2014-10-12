@@ -28,19 +28,19 @@
 			<td>${brand.id }</td>
 			<td>${brand.brandName }</td>
 			<td>${brand.brandDescription }</td>
-			<td>${brand.image.size() }</td>
+			<td>${brand.image?.size() }</td>
 			<td>
-				<img id="image" src="<g:createLink action="renderImage" controller="image" params="[imageName : "${brand.logo.name}"]"/>" height="50" width="55" border="0"/>
+				<img id="image" src="<g:createLink action="renderImageById" controller="image" params="[imageId : "${brand.logo.id}"]"/>" height="50" width="55" border="0"/>
 			</td>
 			<td>
 				<g:if test="${brand.isPublished == false}">
-					<g:remoteLink controller="brand" action="publishBrand" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">
+					<g:remoteLink controller="brand" action="publishBrand" params="${[id: brand.id,sortType:'id']}" update="tab-BrandList">
 					<span class="btn btn-primary btn-mini">
 						Un-published</span>
 					</g:remoteLink>
 				</g:if>
 				<g:else>
-					<g:remoteLink controller="brand" action="publishBrand" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">
+					<g:remoteLink controller="brand" action="publishBrand" params="${[id: brand.id,sortType:'id']}" update="tab-BrandList">
 					<span class="btn btn-success btn-mini">
 						published</span>
 					</g:remoteLink>
@@ -48,7 +48,7 @@
 			</td>
 			<td>
 				<i class="icon-edit"></i>
-				<g:remoteLink controller="brand" action="deleteBrand" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">
+				<g:remoteLink controller="brand" action="deleteBrand" params="${[id: brand.id,sortType:'id']}" update="tab-BrandList">
 					<i class="icon-remove-sign"></i>
 				</g:remoteLink>
 				<g:remoteLink class="linkColor" controller="brand" style="font-size: medium" action="getBrandDetails" params="${[id: brand.id,sortType:'id']}" update="manageTabDiv">

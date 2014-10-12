@@ -41,7 +41,7 @@
 				<div class="row-fluid">
 					<label class="strong">Upload Images:</label>
 						<!-- Plupload -->
-							<div id="pluploadUploaderItemSize" class="pluploadUploaderClass">
+							<div id="bannerSize" class="pluploadUploaderClass">
 								<p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
 							</div>
 						<!-- // Plupload END -->

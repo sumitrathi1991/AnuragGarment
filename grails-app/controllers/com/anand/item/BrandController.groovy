@@ -5,6 +5,7 @@ import com.anand.image.Image
 
 class BrandController {
 
+	def brandService
     def index() { }
 	def createBrand(){
 		for(int i=1;i<8;i++){
@@ -18,21 +19,32 @@ class BrandController {
 	
 	def getBrandList(){
 		log.debug"getItemDetails params: "+params
-		List brandList = Brand.findAllByIsPublishedAndIsDeleted(true,false);
-		log.debug"brand List "+brandList
+		List brandList = brandService.getBrandList();
 		render template:"/brand/brandList", model : [brandList:brandList]
 	}
 	
 	def addBrand(){
 		log.debug"Add brand params: "+params
-		HashMap result = new HashMap();
+		brandService.addBrand(params)
+		/*HashMap result = new HashMap();
 		result.status = "success";
 		result.message = "Item has been added successfully."
-		respond result, [formats:['json', 'xml']];
+		log.debug"result "+result
+		respond result, [formats:['json', 'xml']];*/
+		List brandList = brandService.getBrandList();
+		log.debug"bannerList form add brand"+brandList
+		render template:"/brand/brandList", model : [brandList:brandList]
 	}
 	
 	def deleteBrand(){
-		
+		Brand brand = Brand.findByIdAndIsDeleted(params.id,false);
+		brand.isDeleted = true;
+		if(!brand.save(flush:true)){
+			brand.errors.each {log.debug"error in publishing the item "+it}
+			
+		}
+		List brandList = brandService.getBrandList();
+		render template:"/brand/brandList", model : [brandList:brandList]
 	}
 	
 	def editBrand(){
@@ -40,9 +52,7 @@ class BrandController {
 	}
 	
 	def publishBrand(){
-		log.debug"publish item params: "+params
 		Brand brand = Brand.findByIdAndIsDeleted(params.id,false);
-		log.debug"item "+brand.isPublished
 		if(brand.isPublished == true){
 			brand.isPublished = false;
 		}else{
@@ -52,7 +62,7 @@ class BrandController {
 			brand.errors.each {log.debug"error in publishing the item "+it}
 			
 		}
-		List brandList = brand.findAllByIsDeleted(false);
+		List brandList = brandService.getBrandList();
 		render template:"/brand/brandList", model : [brandList:brandList]
 	}
 	

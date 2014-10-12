@@ -40,7 +40,7 @@ class ItemController {
 	List uploadImage(){
 		List uploadedImages = []
 		for(int i=1; i<10; i++){
-			Image image = new Image(name: "product"+i+".jpeg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpeg", imageSize: "1234", width:"50", height :"50").save()
+			Image image = new Image(name: "product"+i+".jpg",imageUrl : grailsApplication.config.grails.anand.imageUrl+"product"+i+".jpg", imageSize: "1234", width:"50", height :"50").save()
 			uploadedImages.add(image)
 		}
 		return uploadedImages
@@ -116,14 +116,16 @@ class ItemController {
 	def getItemDetails(){
 		log.debug"getItemDetails params: "+params
 		Item item = Item.findById(params.id);
+		log.debug"item images : "+item.itemSize.itemColor.imageList.id
 		render template:"/admin/itemDetails", model : [item:item]
 	}
 	
 	def uploadItemImage(){
 		String fileName = params.name
+		log.debug"file name "+fileName
 		def file = request.getFile("file")
 		String extension = fileName.substring(fileName.lastIndexOf(".")+ 1);
-		String filePath= itemService.uploadFile(file,extension);
+		String filePath= itemService.uploadFile(fileName,file,extension);
 		int index=filePath.lastIndexOf("/");
 		fileName=filePath.substring(index+1);
 		HashMap res = new HashMap();

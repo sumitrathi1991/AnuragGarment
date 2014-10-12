@@ -25,7 +25,7 @@ function getBannerList(){
     	   type: 'POST',
            url: bannerListUrl,
            success: function(response,textStatus){
-        	  
+        	   $("#tab-BannerList").html("");
 				$("#tab-BannerList").html(response);
 				},
            error:function(XMLHttpRequest,textStatus,errorThrown){}
@@ -37,6 +37,7 @@ function getBrandList(){
     	   type: 'POST',
            url: brandListUrl,
            success: function(response,textStatus){
+        	   $("#tab-BrandList").html("");
 				$("#tab-BrandList").html(response);
 				},
            error:function(XMLHttpRequest,textStatus,errorThrown){}
@@ -63,9 +64,10 @@ function addBanner(){
 	jQuery.ajax({
 		type : 'POST',
 		url : uploadBannerUrl ,
-		data : uploadBannerFormData ,
+		data : uploadBannerFormData + '&images=' +JSON.stringify({itemImages:itemImagesArray }) ,
 		success : function(response,textStatus){
 			$('#modal-AddBanner').modal('hide');
+			
 			$("#tab-BannerList").html(response);
 		},
 		error : function(response,textStatus){}
@@ -77,8 +79,9 @@ function addBrand(){
 	jQuery.ajax({
 		type : 'POST',
 		url : uploadBrandUrl ,
-		data : uploadBrandFormData ,
+		data : uploadBrandFormData  + '&images=' +JSON.stringify({itemImages:itemImagesArray }) ,
 		success : function(response,textStatus){
+			console.log("inside success");
 			$('#modal-AddBrand').modal('hide');
 			$("#tab-BrandList").html(response);
 		},
